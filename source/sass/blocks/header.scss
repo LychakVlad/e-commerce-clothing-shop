@@ -1,0 +1,13 @@
+.header {
+  padding: 28px 0;
+
+  background-color: $color-neon-blue;
+
+  .container {
+    display: flex;
+  }
+
+  &__logo {
+    color: $color-default-white;
+  }
+}

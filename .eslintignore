@@ -1,0 +1,4 @@
+docs/*.js
+source/js/vendor/*.js
+gulpfile.js
+webpack.config.js
