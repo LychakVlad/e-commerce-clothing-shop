@@ -1,4 +1,4 @@
-mixin header(headerMods, currentUrl)
+mixin header(currentUrl)
   -
     const headerLinks = [
       {
@@ -15,22 +15,41 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)
+  header.header
     .container
       if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon('logo', 129, 16)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon('logo', 129, 16)
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
         .main-nav__wrapper
           ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+            li.main-nav__item
+              a(href="#") Женщины
+            li.main-nav__item
+              a(href="#") Мужчины
+            li.main-nav__item
+              span Поиск
+            li.main-nav__item
+              form.main-nav__item-form
+                input(type="text").main-nav__item-input
+          ul.lang__list
+            li.lang-nav__item
+              a(href="#") RU
+            li.lang-nav__item
+              a(href="#") UA
+            li.lang-nav__item
+              a(href="#") EN
+          ul.pannel__list
+            li.pannel__list-item
+              a(href="#")
+                +icon('personal-acc', 16, 18)
+            li.pannel__list-item
+              a(href="#")
+                +icon('fav-icon', 19, 16)
+            li.pannel__list-item
+              a(href="#")
+                +icon('cart-icon', 16, 18)
+

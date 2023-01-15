@@ -1,7 +1,6 @@
 .header {
   padding: 28px 0;
-  background-color: $color-neon-blue;
-  font-family: 'Jost';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9,7 +8,38 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #0F303F;
+  color: $color-blue-whale;
+
+  .main-nav__item-input{
+    border: none;
+    border-bottom: 2px solid #0F303F;
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+    width: 150px;
+  }
+
+  .main-nav__wrapper{
+    display: flex;
+    align-items: flex-start;
+    ul{
+      list-style: none;
+    }
+    li{
+      display:inline-block;
+    }
+  }
+
+  .lang__list{
+    margin-right: 57px;
+  }
+
+  .main-nav__list{
+    margin: 0px 96px 0px 108px;
+  }
+
+
+
 
   .container {
     display: flex;

@@ -34,6 +34,11 @@ body {
   background-color: $color-default-white;
 }
 
+ul,
+li{
+  margin: 0;
+}
+
 a {
   color: $color-default-black;
   text-decoration: none;
