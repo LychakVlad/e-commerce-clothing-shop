@@ -1,7 +1,15 @@
 .header {
   padding: 28px 0;
-
   background-color: $color-neon-blue;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0F303F;
 
   .container {
     display: flex;

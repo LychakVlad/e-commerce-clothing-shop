@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../fonts/.woff") format("woff"), url("../fonts/.woff2") format("woff2");
 }
 
 *,
@@ -618,6 +618,15 @@ button,
 .header {
   padding: 28px 0;
   background-color: #2c39f2;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0F303F;
 }
 
 .header .container {
