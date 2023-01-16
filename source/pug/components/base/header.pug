@@ -35,21 +35,25 @@ mixin header(currentUrl)
             li.main-nav__item
               form.main-nav__item-form
                 input(type="text").main-nav__item-input
-          ul.lang__list
-            li.lang-nav__item
+      .header__lang
+        .header__lang-wrapper
+          ul.header__lang-list
+            li.header__lang-item
               a(href="#") RU
-            li.lang-nav__item
+            li.header__lang-item
               a(href="#") UA
-            li.lang-nav__item
+            li.header__lang-item
               a(href="#") EN
-          ul.pannel__list
-            li.pannel__list-item
+      .header__menu
+        .header__menu-wrapper
+          ul.header__menu-list
+            li.header__menu-item
               a(href="#")
                 +icon('personal-acc', 16, 18)
-            li.pannel__list-item
+            li.header__menu-item
               a(href="#")
                 +icon('fav-icon', 19, 16)
-            li.pannel__list-item
+            li.header__menu-item
               a(href="#")
                 +icon('cart-icon', 16, 18)
 

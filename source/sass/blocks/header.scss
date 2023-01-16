@@ -1,16 +1,27 @@
 .header {
-  padding: 28px 0;
+  padding: 22px 0;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-blue-whale;
 
-  .main-nav__item-input{
+  ul{
+  list-style: none;
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  a{
+    color: $color-blue-whale;
+  }
+
+.main-nav__item-input{
     border: none;
     border-bottom: 2px solid #0F303F;
     background-color: transparent;
@@ -19,33 +30,38 @@
     width: 150px;
   }
 
-  .main-nav__wrapper{
+.header__lang-item{
+  margin-left: 12px;
+  :focus{
+    color: $color-cinnabar;
+    text-decoration: underline;
+    text-decoration-color: $color-cinnabar;
+    text-underline-offset: 28px;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.header__menu-item{
+  margin-left: 12px;
+}
+
+.main-nav__list{
+  a:hover{
+    color: #B7C1C5;
+    transition: all .3s ease;
+  }
+  li:last-child{
+    margin-left: 20px;
+  }
+}
+
+.main-nav__item{
+  margin-left: 40px;
+}
+.container {
     display: flex;
-    align-items: flex-start;
-    ul{
-      list-style: none;
-    }
-    li{
-      display:inline-block;
-    }
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .lang__list{
-    margin-right: 57px;
-  }
-
-  .main-nav__list{
-    margin: 0px 96px 0px 108px;
-  }
-
-
-
-
-  .container {
-    display: flex;
-  }
-
-  &__logo {
-    color: $color-default-white;
-  }
 }

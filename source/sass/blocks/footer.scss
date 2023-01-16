@@ -1,5 +1,18 @@
 .footer {
-  padding: 40px 0;
+  background-color: $color-default-white;
+}
 
-  background-color: $color-neon-blue;
+.footer__bottom-menu{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+  align-items: center;
+  color: $color-blue-whale;
+  a{
+    color: $color-blue-whale;
+  }
+  a:hover{
+    color: $black-to-right;
+    text-decoration: underline;
+  }
 }
