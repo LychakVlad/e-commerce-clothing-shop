@@ -2,6 +2,74 @@
   background-color: $color-default-white;
 }
 
+.footer__upper-menu{
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #EAE9E8;
+  text-align: center;
+}
+
+.footer__heading{
+&--h2{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 31px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color-blue-whale;
+}
+}
+
+.footer__heading{
+  margin: 65px 0px 48px;
+}
+
+.footer__nav-list{
+  margin: 30px 0px 64px;
+  :last-child{
+    margin-right: 0px;
+  }
+  a{
+    color: $color-alto;
+  }
+  a:hover{
+    color: $color-blue-whale;
+    transition: all .3s ease;
+  }
+}
+
+.footer__search-input{
+  border: none;
+  border-bottom: 2px solid #0F303F;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  width: 250px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $color-blue-whale;
+}
+
+.footer__nav-item{
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.footer__search-button{
+  background-color: inherit;
+  border: none;
+  :hover{
+    transform: scale(1.5);
+    transition: all .2s ease;
+  }
+}
+
 .footer__bottom-menu{
   display: flex;
   justify-content: space-between;
@@ -11,8 +79,8 @@
   a{
     color: $color-blue-whale;
   }
-  a:hover{
-    color: $black-to-right;
-    text-decoration: underline;
+  :hover{
+    color: $color-desert-storm;
+    transition: all .3s ease;
   }
 }
