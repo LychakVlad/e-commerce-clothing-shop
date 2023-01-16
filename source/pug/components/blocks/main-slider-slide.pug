@@ -1,0 +1,8 @@
+mixin main-slider-slide(data)
+  .main-slider__slide-wrapper
+    .main-slider__slide-text-block
+      p.main-slider__slide-sup-title бренд
+      h2.main-slider__slide-title= data.title
+      a(href="#").main-slider__slide-collection-link смотреть коллекцию
+    .main-slider__slide-img
+      +picture("content", data.img, "png", 942, 585, "banner")

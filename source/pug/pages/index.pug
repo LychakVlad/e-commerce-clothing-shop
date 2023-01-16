@@ -9,8 +9,26 @@ block variables
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
+  -
+    const banners ={
+      second: {
+        title: 'george gina lucy',
+        img: 'banner-2',
+      },
+      third: {
+        title: 'deha',
+        img: 'banner-3',
+      },
+      fourth: {
+        title: 'birkenstock',
+        img: 'banner-4',
+      },
+    };
+
+
 block main
   main
-    
+    +main-slider(banners)
+
 
 block modals

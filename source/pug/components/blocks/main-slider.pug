@@ -1,0 +1,8 @@
+mixin main-slider(data)
+  .main-slider.swiper
+    .main-slider__wrapper.swiper-wrapper
+      each item in data
+        .swiper-slide
+          +main-slider-slide(item)
+    .swiper-pagination
+

@@ -1,0 +1,45 @@
+.main-slider__slide-wrapper{
+  display:flex;
+  justify-content: space-between;
+}
+
+.main-slider__slide-sup-title{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-blue-whale;
+}
+
+.main-slider__slide-title{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: $color-blue-whale;
+  max-width: 400px;
+  margin: 20px 0px 35px;
+}
+
+.main-slider__slide-collection-link{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: $color-cinnabar;
+  a:hover{
+    transition: all .3s ease;
+    color: #973b27;
+  }
+}
+
+.main-slider__slide-text-block{
+  margin:auto;
+}

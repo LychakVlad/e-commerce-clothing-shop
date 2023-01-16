@@ -426,7 +426,8 @@ body {
 
 ul,
 li,
-h2 {
+h2,
+p {
   margin: 0px;
   padding: 0px;
 }
@@ -616,7 +617,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -663,7 +664,7 @@ button,
   text-decoration: underline;
   -webkit-text-decoration-color: #E64926;
   text-decoration-color: #E64926;
-  text-underline-offset: 28px;
+  text-underline-offset: 26px;
   text-decoration-thickness: 2px;
 }
 
@@ -1424,6 +1425,59 @@ button,
 .custom-select.slide-up.not-empty .custom-select__text,
 .custom-select.slide-up.is-open .custom-select__text {
   opacity: 1;
+}
+
+.main-slider__slide-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-slider__slide-sup-title {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #0F303F;
+}
+
+.main-slider__slide-title {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #0F303F;
+  max-width: 400px;
+  margin: 20px 0px 35px;
+}
+
+.main-slider__slide-collection-link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #E64926;
+}
+
+.main-slider__slide-collection-link a:hover {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #973b27;
+}
+
+.main-slider__slide-text-block {
+  margin: auto;
 }
 
 /* @mixin hover-focus {

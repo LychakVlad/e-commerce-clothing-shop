@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -90,7 +91,52 @@
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <div class="main-slider swiper">
+          <div class="main-slider__wrapper swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main-slider__slide-wrapper">
+                <div class="main-slider__slide-text-block">
+                  <p class="main-slider__slide-sup-title">бренд</p>
+                  <h2 class="main-slider__slide-title">george gina lucy</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
+                </div>
+                <div class="main-slider__slide-img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/banner-2.webp, img/content/banner-2@2x.webp 2x"><img src="img/content/banner-2.png" srcset="img/content/banner-2@2x.png 2x" width="942" height="585" alt="banner">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-slider__slide-wrapper">
+                <div class="main-slider__slide-text-block">
+                  <p class="main-slider__slide-sup-title">бренд</p>
+                  <h2 class="main-slider__slide-title">deha</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
+                </div>
+                <div class="main-slider__slide-img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/banner-3.webp, img/content/banner-3@2x.webp 2x"><img src="img/content/banner-3.png" srcset="img/content/banner-3@2x.png 2x" width="942" height="585" alt="banner">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-slider__slide-wrapper">
+                <div class="main-slider__slide-text-block">
+                  <p class="main-slider__slide-sup-title">бренд</p>
+                  <h2 class="main-slider__slide-title">birkenstock</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
+                </div>
+                <div class="main-slider__slide-img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/banner-4.webp, img/content/banner-4@2x.webp 2x"><img src="img/content/banner-4.png" srcset="img/content/banner-4@2x.png 2x" width="942" height="585" alt="banner">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </main>
       <footer class="footer">
         <div class="footer__upper-menu">
           <h2 class="footer__heading footer__heading--h2">Будьте в курсе событий</h2>
@@ -122,5 +168,6 @@
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
