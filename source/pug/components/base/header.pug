@@ -33,8 +33,10 @@ mixin header(currentUrl)
             li.main-nav__item
               span Поиск
             li.main-nav__item
-              form.main-nav__item-form
-                input(type="text").main-nav__item-input
+              .main-nav__item-form
+                form
+                  .main-nav__item-input-wrapper
+                    input(type="text").main-nav__item-input
       .header__lang
         .header__lang-wrapper
           ul.header__lang-list

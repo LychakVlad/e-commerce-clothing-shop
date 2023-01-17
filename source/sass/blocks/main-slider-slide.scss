@@ -11,6 +11,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $color-blue-whale;
+
+  &--center{
+    color: $color-desert-storm;
+  }
+
 }
 
 .main-slider__slide-title{
@@ -23,6 +28,12 @@
   color: $color-blue-whale;
   max-width: 400px;
   margin: 20px 0px 35px;
+
+  &--center {
+    max-width: 700px;
+    color: $color-desert-storm;
+    }
+
 }
 
 .main-slider__slide-collection-link{
@@ -34,12 +45,35 @@
   letter-spacing: 0.045em;
   text-transform: uppercase;
   color: $color-cinnabar;
-  a:hover{
-    transition: all .3s ease;
-    color: #973b27;
+
+  &--center{
+    color: $color-desert-storm;
   }
+  
 }
 
 .main-slider__slide-text-block{
+
+  a:hover{
+    transition: all .3s ease;
+    color: #a3432b;
+  }
+
+  &--auto-margin {
   margin:auto;
+  }
+
+  &--center {
+  text-align:center;
+  position: absolute;
+  right: 35%;
+  top: 35%;
+
+  a:hover{
+    transition: all .3s ease;
+    color: #949393;
+  }
+
+  }
+
 }

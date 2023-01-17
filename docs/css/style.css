@@ -1446,6 +1446,10 @@ button,
   color: #0F303F;
 }
 
+.main-slider__slide-sup-title--center {
+  color: #EAE9E8;
+}
+
 .main-slider__slide-title {
   font-family: "Cormorant Garamond";
   font-style: normal;
@@ -1456,6 +1460,11 @@ button,
   color: #0F303F;
   max-width: 400px;
   margin: 20px 0px 35px;
+}
+
+.main-slider__slide-title--center {
+  max-width: 700px;
+  color: #EAE9E8;
 }
 
 .main-slider__slide-collection-link {
@@ -1469,15 +1478,33 @@ button,
   color: #E64926;
 }
 
-.main-slider__slide-collection-link a:hover {
+.main-slider__slide-collection-link--center {
+  color: #EAE9E8;
+}
+
+.main-slider__slide-text-block a:hover {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: #973b27;
+  color: #a3432b;
 }
 
-.main-slider__slide-text-block {
+.main-slider__slide-text-block--auto-margin {
   margin: auto;
+}
+
+.main-slider__slide-text-block--center {
+  text-align: center;
+  position: absolute;
+  right: 35%;
+  top: 35%;
+}
+
+.main-slider__slide-text-block--center a:hover {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #949393;
 }
 
 /* @mixin hover-focus {
