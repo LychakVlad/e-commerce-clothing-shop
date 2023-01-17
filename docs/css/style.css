@@ -1526,11 +1526,11 @@ button,
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #787878;
+  color: #8c8c8c;
 }
 
 .swiper-pagination--main .swiper-pagination-bullet-active {
-  color: #aaaaaa;
+  color: #9b9b9b;
 }
 
 .swiper-pagination--main .swiper-pagination-bullet {
@@ -1540,6 +1540,110 @@ button,
 
 .swiper-pagination--main :last-child {
   padding-right: 0px;
+}
+
+.main-content-block__text-block {
+  max-width: 468px;
+}
+
+.main-content-block__text-block--first {
+  position: absolute;
+  bottom: 36%;
+  left: 10%;
+}
+
+.main-content-block__text-block a:hover {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #c6c6c6;
+}
+
+.main-content-block__title {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 102.5%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.main-content-block__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.main-content-block {
+  background-color: #ffffff;
+  margin-top: 120px;
+}
+
+.main-content-block__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-content-block__column--right {
+  background-color: #CEC6C4;
+  min-width: 800px;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-content-block__column--left {
+  position: relative;
+  width: 100%;
+}
+
+.main-content-block__img-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  max-width: 310px;
+  bottom: 31%;
+}
+
+.main-content-block__img-wrapper {
+  width: 600px;
+  height: 600px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-content-block__img img {
+  width: 100%;
 }
 
 /* @mixin hover-focus {

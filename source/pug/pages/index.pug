@@ -32,10 +32,18 @@ block variables
       },
     };
 
+  -
+    const fisrtTextBlock ={
+      title: 'new arrival',
+      text: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip',
+      collection: true,
+      first: true,
+    }
 
 block main
   main
     +main-slider(banners)
+    +main-page-content-block(fisrtTextBlock)
 
 
 block modals

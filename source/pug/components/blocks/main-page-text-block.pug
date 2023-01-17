@@ -1,0 +1,17 @@
+mixin main-page-text-block(data)
+  if(data.first)
+    .main-content-block__text-block.main-content-block__text-block--first
+      if(data.title)
+        h2.main-content-block__title= data.title
+      if(data.text)
+        p.main-content-block__text= data.text
+      if(data.collection)
+        a(href="#").main-slider__slide-collection-link.main-slider__slide-collection-link--center cмотреть коллекцию
+  else
+    .main-content-block__text-block
+      if(data.title)
+        h2.main-content-block__title= data.title
+      if(data.text)
+        p.main-content-block__text= data.text
+      if(data.collection)
+        a(href="#").main-slider__slide-collection-link.main-slider__slide-collection-link--center cмотреть коллекцию

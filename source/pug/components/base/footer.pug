@@ -20,10 +20,12 @@ mixin footer(footerMods)
   footer.footer(class=footerMods)
     .footer__upper-menu
       h2.footer__heading.footer__heading--h2 Будьте в курсе событий
-      form.footer__search
-        input(type="email").footer__search-input
-        button(type='submit').footer__search-button
-          +icon('mail-submitt', 18, 18)
+      .footer__search
+        form
+          .footer__search-input-wrapper
+            input(type="email").footer__search-input
+            button(type='submit').footer__search-button
+              +icon('mail-submitt', 18, 18)
       nav.footer__nav
         .footer__nav-wrapper
           ul.footer__nav-list
