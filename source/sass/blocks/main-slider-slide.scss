@@ -1,6 +1,11 @@
 .main-slider__slide-wrapper{
   display:flex;
   justify-content: space-between;
+
+  &--slide-background{
+    max-width: 1442px;
+    max-height: 584px;
+  }
 }
 
 .main-slider__slide-sup-title{
@@ -49,7 +54,7 @@
   &--center{
     color: $color-desert-storm;
   }
-  
+
 }
 
 .main-slider__slide-text-block{
@@ -76,4 +81,11 @@
 
   }
 
+}
+
+.main-slider__slide-img{
+  img{
+  width: 100%;
+  max-height: 584px;
+  }
 }

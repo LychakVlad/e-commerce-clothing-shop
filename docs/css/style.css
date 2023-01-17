@@ -1436,6 +1436,11 @@ button,
   justify-content: space-between;
 }
 
+.main-slider__slide-wrapper--slide-background {
+  max-width: 1442px;
+  max-height: 584px;
+}
+
 .main-slider__slide-sup-title {
   font-family: "Cormorant Garamond";
   font-style: normal;
@@ -1505,6 +1510,36 @@ button,
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: #949393;
+}
+
+.main-slider__slide-img img {
+  width: 100%;
+  max-height: 584px;
+}
+
+.swiper-pagination--main {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #787878;
+}
+
+.swiper-pagination--main .swiper-pagination-bullet-active {
+  color: #aaaaaa;
+}
+
+.swiper-pagination--main .swiper-pagination-bullet {
+  padding: 0px 51px 40px 0px;
+  background-color: inherit;
+}
+
+.swiper-pagination--main :last-child {
+  padding-right: 0px;
 }
 
 /* @mixin hover-focus {

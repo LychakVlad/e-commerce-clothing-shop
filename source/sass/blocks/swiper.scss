@@ -1,0 +1,29 @@
+.swiper-pagination{
+
+  &--main{
+  font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #787878;
+
+    .swiper-pagination-bullet-active{
+      color: #aaaaaa;
+    }
+
+    .swiper-pagination-bullet{
+      padding: 0px 51px 40px 0px;
+      background-color: inherit;
+    }
+
+    :last-child{
+      padding-right: 0px;
+    }
+  }
+
+}
+
