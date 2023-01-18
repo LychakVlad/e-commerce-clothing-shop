@@ -1,0 +1,7 @@
+mixin clothes-slider(data)
+  .clothes-slider.swiper
+    .clothes-slider__wrapper.swiper-wrapper
+      each item in data
+        .clothes-slider__slide.swiper-slide
+          +item-card(item)
+    .clothes-slider__pagination.swiper-pagination

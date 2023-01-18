@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.main-slider', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -23,6 +23,13 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
     autoHeight: true,
+  });
+
+  const secondSwiper = new Swiper('.clothes-slider', {
+    autoHeight: true,
+    slidesPerView: 4,
+    spaceBetween: 45,
+    slidesPerGroup: 1,
   });
 
   // Modules

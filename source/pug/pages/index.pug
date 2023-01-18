@@ -38,12 +38,49 @@ block variables
       text: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip',
       collection: true,
       first: true,
-    }
+    };
+
+  -
+    const firstClothesSliderCards = {
+      first:{
+        img: 'clothes-1',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+      second:{
+        img: 'clothes-2',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+      third:{
+        img: 'clothes-3',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+      fourth:{
+        img: 'clothes-4',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+    };
 
 block main
   main
     +main-slider(banners)
     +main-page-content-block(fisrtTextBlock)
+    +clothes-slider-block(firstClothesSliderCards)
 
 
 block modals
