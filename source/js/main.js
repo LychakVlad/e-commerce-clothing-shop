@@ -26,10 +26,15 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const secondSwiper = new Swiper('.clothes-slider', {
-    autoHeight: true,
-    slidesPerView: 4,
+    loop: true,
     spaceBetween: 45,
-    slidesPerGroup: 1,
+    slidesPerGroup: 2,
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.clothes-slider__button-next',
+      prevEl: '.clothes-slider__button-prev',
+    },
+
   });
 
   // Modules

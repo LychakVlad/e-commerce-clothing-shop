@@ -7,7 +7,7 @@ mixin item-card(data)
         p.item-card__title= data.title
       if(data.type)
         p.item-card__type= data.type
-      if(oldPrice)
+      if(data.oldPrice)
         span.item-card__old-price= data.oldPrice
       if(data.price)
         if(data.discount)

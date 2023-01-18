@@ -1,7 +1,4 @@
-.clothes-slider-block__wrapper{
-  text-align: center;
 
-}
 .clothes-slider-block__title{
   font-family: 'Cormorant';
   font-style: normal;
@@ -17,4 +14,10 @@
 
 .middle-line{
   margin: 95px 0px 81px;
+  svg{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  }
 }

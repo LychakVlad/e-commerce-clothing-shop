@@ -1,2 +1,50 @@
-.item-card{
+.item-card__title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $color-arapawa;
+  margin-top: 29px;
+}
+
+.item-card__type{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: $color-arapawa;
+  margin-bottom: 5px;
+}
+
+.item-card__price{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #0F303F;
+
+  &--color-orange{
+    color: #FD5454;
+  }
+
+}
+
+.item-card__old-price{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: line-through;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #CECECE;
+  margin-right: 4px;
 }

@@ -1542,20 +1542,29 @@ button,
   padding-right: 0px;
 }
 
-.clothes-slider__slide {
-  max-width: 230px;
+.clothes-slider {
+  max-width: 1055px;
+  width: 100%;
 }
 
-.clothes-slider {
-  margin: auto;
+.clothes-slider .swiper-button-prev,
+.clothes-slider .swiper-button-next {
+  color: #254A5A;
+  font-size: 80px;
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: -80px -70px 0px;
+  z-index: 1;
 }
 
 .clothes-slider__wrapper {
-  margin: auto;
+  text-align: center;
 }
 
-.clothes-slider-block__wrapper {
-  text-align: center;
+.clothes-slider__slide {
+  max-width: 230px;
 }
 
 .clothes-slider-block__title {
@@ -1573,6 +1582,13 @@ button,
 
 .middle-line {
   margin: 95px 0px 81px;
+}
+
+.middle-line svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .main-content-block__text-block {
@@ -1688,6 +1704,56 @@ button,
   letter-spacing: 0.045em;
   text-transform: uppercase;
   color: #EAE9E8;
+}
+
+.item-card__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #254A5A;
+  margin-top: 29px;
+}
+
+.item-card__type {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #254A5A;
+  margin-bottom: 5px;
+}
+
+.item-card__price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #0F303F;
+}
+
+.item-card__price--color-orange {
+  color: #FD5454;
+}
+
+.item-card__old-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: line-through;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #CECECE;
+  margin-right: 4px;
 }
 
 /* @mixin hover-focus {
