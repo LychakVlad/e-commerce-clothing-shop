@@ -1673,7 +1673,7 @@ button,
   color: #ffffff;
   position: absolute;
   max-width: 310px;
-  bottom: 31%;
+  bottom: 23%;
 }
 
 .main-content-block__img-wrapper {
@@ -1689,6 +1689,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .main-content-block__img img {
@@ -1789,8 +1790,8 @@ button,
 
 .main-page-second-content-block__svg {
   position: absolute;
-  top: -10%;
-  right: 0;
+  top: -3.5%;
+  right: 37%;
 }
 
 .main-page-second-content-block__svg svg {

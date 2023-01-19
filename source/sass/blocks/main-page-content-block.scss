@@ -34,7 +34,7 @@
   color: $color-default-white;
   position: absolute;
   max-width: 310px;
-  bottom: 31%;
+  bottom: 23%;
 }
 
 .main-content-block__img-wrapper{
@@ -44,6 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .main-content-block__img{
