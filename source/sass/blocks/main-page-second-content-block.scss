@@ -1,0 +1,33 @@
+.main-page-second-content-block{
+  background: #254A5A;
+  margin-bottom: 125px;
+}
+
+.main-page-second-content-block__wrapper{
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1050px;
+  padding: 142px 0px 147px;
+  position: relative;
+}
+
+.main-page-second-content-block__img{
+  position: absolute;
+  top: 15%;
+  left: 55%;
+
+  img{
+    width: 100%;
+  }
+}
+.main-page-second-content-block__svg{
+  position: absolute;
+  top: -10%;
+  right: 0;
+
+  svg{
+    width: 100%;
+  }
+}
