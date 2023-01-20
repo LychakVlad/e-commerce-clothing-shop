@@ -3,5 +3,5 @@ mixin header-menu-column(data)
     h3.header-menu__title= data.title
     ul.header-menu__list
     each item in data.category
-      li
-        a(href="#").header-menu__item= item
+      li.header-menu__item
+        a(href="#")= item

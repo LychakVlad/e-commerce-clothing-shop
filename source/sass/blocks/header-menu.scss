@@ -1,0 +1,37 @@
+.header-menu{
+  border-top: 1px solid #EAE9E8;
+}
+
+.header-menu__wrapper{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.header-menu__top-block{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-menu__brand{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-arapawa;
+  transition: all .3s ease;
+}
+
+.header-menu__bottom-block{
+  padding: 20px 0px 25px;
+  max-width: 521px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  a:hover{
+    color: rgb(81, 140, 165);
+  }
+}

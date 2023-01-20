@@ -1,0 +1,32 @@
+.header-menu__column{
+  max-width: 190px
+  border: 1px solid #EAE9E8;
+}
+
+.header-menu__title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 17px;
+  color: $color-blue-whale;
+}
+.header-menu__list{
+}
+.header-menu__item{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  list-style: none;
+
+  a{
+    color: $color-blue-whale;
+  }
+
+  :hover{
+      color: $color-cinnabar;
+      list-style: circle;
+  }
+}

@@ -1798,6 +1798,85 @@ button,
   width: 100%;
 }
 
+.header-menu__column {
+  max-width: 190px;
+}
+
+.header-menu__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 17px;
+  color: #0F303F;
+}
+
+.header-menu__item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  list-style: none;
+}
+
+.header-menu__item a {
+  color: #0F303F;
+}
+
+.header-menu__item :hover {
+  color: #E64926;
+  list-style: circle;
+}
+
+.header-menu {
+  border-top: 1px solid #EAE9E8;
+}
+
+.header-menu__wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.header-menu__top-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-menu__brand {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #254A5A;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header-menu__bottom-block {
+  padding: 20px 0px 25px;
+  max-width: 521px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-menu__bottom-block a:hover {
+  color: rgb(81, 140, 165);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
