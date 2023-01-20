@@ -5,15 +5,39 @@ mixin header(currentUrl)
         href: "index.html",
         text: "Главная"
       },
-      {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
-      },
     ]
+
+  -
+    const headerMenuItems = {
+      first: {
+        title: 'Одежда',
+        category: ['Свитшоты и худи','Платья юбки','Футболки и топы','Брюки и шорты','Рубашки','Комбинезоны','Леггинсы','Куртки','Пальто','Плащи','Желетки','Ветровки',
+        ],
+      },
+      second: {
+        title: 'Обувь',
+        category: ['Кроссовки', 'Шлепанцы',
+        ],
+      },
+      third: {
+        title: 'Сумки',
+        category: ['Сумки','Рюкзаки','Кроссбоди','Поясные','Спортивные','Шопперы',
+        ],
+      },
+      fourth: {
+        title: 'Аксессуары',
+        category: ['Головные уборы','Перчатки','Шарфы и платки','Носки','Гетры',
+        ],
+      },
+      fivth: {
+        title: 'Белье',
+        category: ['Разное',
+        ],
+      },
+    }
+
+  -
+    const headerBrands = ['Deha', 'American vintage', 'george gina lucy', 'birkenstock']
 
   header.header
     .container
@@ -58,4 +82,11 @@ mixin header(currentUrl)
             li.header__menu-item
               a(href="#")
                 +icon('cart-icon', 16, 18)
-
+  .header-menu
+    .header-menu__wrapper
+      .header-menu__top-block
+        each item in headerMenuItems
+          +header-menu-column(item)
+      .header-menu__bottom-block
+        each brand in headerBrands
+          a(href="#").header-menu__brand= brand
