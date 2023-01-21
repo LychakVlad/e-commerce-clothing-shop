@@ -8,6 +8,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-blue-whale;
+  z-index: 3;
+  background-color: $color-default-white;
 
   ul{
   list-style: none;
