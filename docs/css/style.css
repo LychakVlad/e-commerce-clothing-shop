@@ -1799,7 +1799,10 @@ button,
 }
 
 .header-menu__column {
-  max-width: 190px;
+  min-width: 230px;
+  margin-bottom: 44px;
+  margin-right: 30px;
+  border-right: 1px solid #EAE9E8;
 }
 
 .header-menu__title {
@@ -1817,7 +1820,8 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  list-style: none;
+  list-style-type: none;
+  margin-bottom: 8px;
 }
 
 .header-menu__item a {
@@ -1827,6 +1831,9 @@ button,
 .header-menu__item :hover {
   color: #E64926;
   list-style: circle;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header-menu {
@@ -1845,6 +1852,12 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-left: -80px;
+  border-bottom: 1px solid #EAE9E8;
+}
+
+.header-menu__top-block :last-child {
+  border-right: none;
 }
 
 .header-menu__brand {

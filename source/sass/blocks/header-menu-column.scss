@@ -1,6 +1,8 @@
 .header-menu__column{
-  max-width: 190px
-  border: 1px solid #EAE9E8;
+  min-width: 230px;
+  margin-bottom: 44px;
+  margin-right: 30px;
+  border-right: 1px solid #EAE9E8;
 }
 
 .header-menu__title{
@@ -19,7 +21,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  list-style: none;
+  list-style-type: none;
+  margin-bottom: 8px;
 
   a{
     color: $color-blue-whale;
@@ -28,5 +31,6 @@
   :hover{
       color: $color-cinnabar;
       list-style: circle;
+      transition: all .3s ease;
   }
 }

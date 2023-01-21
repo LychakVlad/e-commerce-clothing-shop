@@ -10,6 +10,11 @@
 .header-menu__top-block{
   display: flex;
   justify-content: space-between;
+  margin-left: -80px;
+  border-bottom: 1px solid #EAE9E8;
+  :last-child{
+    border-right: none;
+  }
 }
 
 .header-menu__brand{
