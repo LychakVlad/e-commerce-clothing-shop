@@ -1839,11 +1839,24 @@ button,
 }
 
 .header-menu {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   border-top: 1px solid #EAE9E8;
   z-index: 2;
   position: absolute;
   background: #ffffff;
   width: 1543px;
+  margin-top: 68px;
+}
+
+.header-menu._active {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .header-menu__wrapper {
@@ -1857,7 +1870,6 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 120px;
 }
 
 .header-menu__top-block {
@@ -1867,6 +1879,8 @@ button,
   grid-template-columns: repeat(5, 230px);
   gap: 40px;
   border-bottom: 1px solid #EAE9E8;
+  padding-left: 180px;
+  width: 100%;
 }
 
 .header-menu__top-block :last-child {

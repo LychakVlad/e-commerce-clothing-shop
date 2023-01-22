@@ -39,6 +39,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  const menuButton = document.querySelector('.nav-menu-open');
+  if (menuButton) {
+    const headerMenu = document.querySelector('.header-menu');
+    menuButton.addEventListener("click", function (e) {
+      headerMenu.classList.toggle('_active');
+    });
+  }
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

@@ -50,9 +50,9 @@ mixin header(currentUrl)
       nav.main-nav
         .main-nav__wrapper
           ul.main-nav__list
-            li.main-nav__item
+            li.main-nav__item.nav-menu-open
               a(href="#") Женщины
-            li.main-nav__item
+            li.main-nav__item.nav-menu-open
               a(href="#") Мужчины
             li.main-nav__item
               span Поиск
@@ -82,7 +82,7 @@ mixin header(currentUrl)
             li.header__menu-item
               a(href="#")
                 +icon('cart-icon', 16, 18)
-  .header-menu
+  .header-menu._active
     .header-menu__wrapper
       .header-menu__top-block
         each item in headerMenuItems
