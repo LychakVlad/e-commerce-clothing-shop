@@ -39,12 +39,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  const menuButton = document.querySelector('.nav-menu-open');
+  const menuButton = document.querySelectorAll('.nav-menu-open');
   if (menuButton) {
     const headerMenu = document.querySelector('.header-menu');
-    menuButton.addEventListener("click", function (e) {
-      headerMenu.classList.toggle('_active');
-    });
+    for (var i = 0; i < menuButton.length; i++) {
+      menuButton[i].addEventListener("click", function (e) {
+        headerMenu.classList.toggle('_active');
+      });
+    }
   }
 
 
