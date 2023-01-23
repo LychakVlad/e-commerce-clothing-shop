@@ -633,6 +633,8 @@ button,
   text-transform: uppercase;
   color: #0F303F;
   z-index: 3;
+  position: fixed;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -687,6 +689,15 @@ button,
 
 .header .main-nav__item {
   margin-left: 40px;
+}
+
+.header .main-nav__item :focus {
+  color: #E64926;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #E64926;
+  text-decoration-color: #E64926;
+  text-underline-offset: 28px;
+  text-decoration-thickness: 2px;
 }
 
 .header .container {
@@ -1847,7 +1858,7 @@ button,
   transition: all 0.4s ease;
   border-top: 1px solid #EAE9E8;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   background: #ffffff;
   width: 1543px;
   margin-top: 68px;
