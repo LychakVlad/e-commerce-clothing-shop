@@ -1,21 +1,29 @@
-
-
-.clothes-slider{
-  max-width: 1055px;
-  width: 100%;
-
+.clothes-slider-block{
+  position: relative;
   .swiper-button-prev,
   .swiper-button-next{
+    position: absolute;
     color:#254A5A;
-    font-size: 80px;
     width: 90px;
     height: 90px;
     background-color: $color-default-white;
     border-radius: 50%;
-    margin: -80px -70px 0px;
-    z-index: 1;
-
   }
+
+  .swiper-button-prev{
+    top:40%;
+    left:  12%;
+  }
+  .swiper-button-next{
+    top:40%;
+    right:  12%;
+  }
+
+}
+
+.clothes-slider{
+  max-width: 1055px;
+  width: 100%;
 
 }
 
