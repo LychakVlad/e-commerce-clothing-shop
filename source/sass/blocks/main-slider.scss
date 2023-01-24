@@ -9,10 +9,11 @@
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #8c8c8c;
+    color: #ffffff;
 
     .swiper-pagination-bullet-active{
-      color: #9b9b9b;
+      color: #ffffff;
+
     }
 
     .swiper-pagination-bullet{
@@ -20,10 +21,26 @@
       background-color: inherit;
     }
 
+    :nth-child(4){
+      color: rgba(37, 74, 90, 1);
+      ;
+    }
+    :nth-child(3){
+      color: rgba(37, 74, 90, 1);
+      ;
+    }
+
     :last-child{
       padding-right: 0px;
     }
   }
 
+}
+
+.main-slider{
+  margin-top: 68px;
+}
+.main-slider__wrapper{
+  height: 100vh;
 }
 

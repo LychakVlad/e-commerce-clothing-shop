@@ -22,8 +22,10 @@
   &--left{
     position: relative;
     min-width: 640px;
+    min-height: 700px;
     height: 100%;
     width: 100%;
+    margin: auto;
   }
 }
 
@@ -36,6 +38,8 @@
   text-align: center;
   color: $color-default-white;
   max-width: 310px;
+  position: absolute;
+  bottom: 25%;
 }
 
 .main-content-block__img-wrapper{
@@ -43,13 +47,16 @@
   min-height: 600px;
   background-color: $color-default-white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .main-content-block__img{
   img{
     width: 100%;
+
   }
   &--left{
     img{
