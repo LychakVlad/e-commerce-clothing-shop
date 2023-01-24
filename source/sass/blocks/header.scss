@@ -62,14 +62,8 @@
 
 .main-nav__item{
   margin-left: 40px;
-    :focus{
-      color: $color-cinnabar;
-      text-decoration: underline;
-      text-decoration-color: $color-cinnabar;
-      text-underline-offset: 28px;
-      text-decoration-thickness: 2px;
-    }
 }
+
 .container {
     display: flex;
     align-items: center;

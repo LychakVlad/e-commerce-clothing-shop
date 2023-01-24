@@ -26,6 +26,17 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const secondSwiper = new Swiper('.clothes-slider', {
+    breakpoints: {
+      1200: {
+        slidesPerView: 4
+      },
+      700: {
+        slidesPerView: 3
+      },
+      320: {
+        slidesPerView: 2
+      }
+    },
     loop: true,
     spaceBetween: 45,
     slidesPerGroup: 2,
@@ -34,7 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.clothes-slider__button-next',
       prevEl: '.clothes-slider__button-prev',
     },
-
   });
 
   // Modules

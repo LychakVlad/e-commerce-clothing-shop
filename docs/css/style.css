@@ -691,15 +691,6 @@ button,
   margin-left: 40px;
 }
 
-.header .main-nav__item :focus {
-  color: #E64926;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #E64926;
-  text-decoration-color: #E64926;
-  text-underline-offset: 28px;
-  text-decoration-thickness: 2px;
-}
-
 .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1981,6 +1972,12 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+}
+
+@media (max-width: 990px) {
+  .main-content-block__wrapper {
+    display: block;
   }
 }
 

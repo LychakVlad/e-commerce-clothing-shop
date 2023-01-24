@@ -64,3 +64,14 @@
   color: $color-desert-storm;
 
 }
+
+@media (max-width: 990px) {
+  .main-content-block__wrapper{
+    display:block;
+  }
+
+
+@media (max-width: 770px) {
+
+}
+}
