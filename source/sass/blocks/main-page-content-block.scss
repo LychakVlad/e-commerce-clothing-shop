@@ -10,9 +10,11 @@
 .main-content-block__column{
   &--right{
     background-color: #CEC6C4;
-    min-width: 810px;
-    min-height: 700px;
-    height: 100%;
+    max-width: 810px;
+    max-height: 700px;
+    min-width: 375px;
+    min-height: 600px;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,7 +27,10 @@
     min-height: 700px;
     height: 100%;
     width: 100%;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 }
 
@@ -43,8 +48,12 @@
 }
 
 .main-content-block__img-wrapper{
+  max-width: 375px;
+  max-height: 500px;
   min-width: 600px;
   min-height: 600px;
+  width: 100%;
+  height: auto;
   background-color: $color-default-white;
   display: flex;
   flex-direction: column;
@@ -61,8 +70,13 @@
   &--left{
     img{
       position: absolute;
-      width: 100vw;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
       max-height: 700px;
+      min-height: 600px;
+      min-width: 375px;
     }
   }
 }
