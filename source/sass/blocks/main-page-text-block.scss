@@ -3,9 +3,9 @@
   max-width: 468px;
 
   &--first{
-    margin: auto;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   a:hover{
     transition: all .3s ease;

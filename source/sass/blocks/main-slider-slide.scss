@@ -1,13 +1,8 @@
 .main-slider__slide-wrapper{
   display:flex;
-  justify-content: space-between;
-
-  &--slide-background{
-    max-width: 1442px;
-    max-height: 584px;
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+  min-height: 585px;
 }
 
 .main-slider__slide-sup-title{
@@ -60,14 +55,11 @@
 }
 
 .main-slider__slide-text-block{
+  margin:auto;
 
   a:hover{
     transition: all .3s ease;
     color: #a3432b;
-  }
-
-  &--auto-margin {
-  margin:auto;
   }
 
   &--center {
@@ -85,14 +77,11 @@
 
 .main-slider__slide-img{
   &--center{
+  width: 100%;
   position: absolute;
-  img{
-    width: 100%;
-    height: auto;
-  }
+  min-height: 465px;
   }
   img{
   width: 100%;
-  height: auto;
   }
 }

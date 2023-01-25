@@ -730,6 +730,7 @@ button,
 
 .footer {
   background-color: #ffffff;
+  margin-top: 125px;
 }
 
 .footer__upper-menu {
@@ -1439,16 +1440,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.main-slider__slide-wrapper--slide-background {
-  max-width: 1442px;
-  max-height: 584px;
   width: 100%;
   height: auto;
+  min-height: 585px;
 }
 
 .main-slider__slide-sup-title {
@@ -1497,15 +1491,15 @@ button,
   color: #EAE9E8;
 }
 
+.main-slider__slide-text-block {
+  margin: auto;
+}
+
 .main-slider__slide-text-block a:hover {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: #a3432b;
-}
-
-.main-slider__slide-text-block--auto-margin {
-  margin: auto;
 }
 
 .main-slider__slide-text-block--center {
@@ -1521,17 +1515,13 @@ button,
 }
 
 .main-slider__slide-img--center {
-  position: absolute;
-}
-
-.main-slider__slide-img--center img {
   width: 100%;
-  height: auto;
+  position: absolute;
+  min-height: 465px;
 }
 
 .main-slider__slide-img img {
   width: 100%;
-  height: auto;
 }
 
 .swiper-pagination--main {
@@ -1568,14 +1558,17 @@ button,
 }
 
 .main-slider {
-  margin-top: 68px;
+  width: 100vw;
   height: 100vh;
   max-width: 1541px;
-  width: 100%;
+  max-height: 585px;
+  margin: 68px auto 120px;
 }
 
 .main-slider__wrapper {
   width: 100%;
+  max-height: 585px;
+  min-height: 465px;
 }
 
 .clothes-slider-block {
@@ -1646,9 +1639,16 @@ button,
 }
 
 .main-content-block__text-block--first {
-  margin: auto;
-  width: 100%;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .main-content-block__text-block a:hover {
@@ -1683,7 +1683,9 @@ button,
   background-color: #ffffff;
   margin-top: 120px;
   max-width: 1541px;
+  max-height: 700px;
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -1691,33 +1693,11 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.main-content-block__column--right {
-  background-color: #CEC6C4;
-  max-width: 640px;
-  max-height: 700px;
-  min-width: 375px;
-  height: auto;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  height: 100%;
 }
 
-.main-content-block__column--left {
-  position: relative;
-  max-width: 640px;
-  max-height: 700px;
-  min-height: 600px;
-  min-width: 375px;
-  height: 100%;
+.main-content-block__column {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1730,6 +1710,14 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.main-content-block__column--right {
+  background-color: #CEC6C4;
+}
+
+.main-content-block__column--left {
+  position: relative;
 }
 
 .main-content-block__img-text {
@@ -1746,20 +1734,14 @@ button,
 }
 
 .main-content-block__img-wrapper {
-  min-width: 375px;
-  min-height: 500px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
   max-width: 600px;
   max-height: 600px;
-  width: 100%;
-  height: auto;
-  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1774,24 +1756,15 @@ button,
 }
 
 .main-content-block__img--right img {
-  width: 100%;
-  height: auto;
-  max-width: 380px;
-  max-height: 380px;
-  min-width: 317px;
-  min-height: 317px;
+  min-width: 316px;
 }
 
 .main-content-block__img--left img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
-  max-height: 700px;
-  max-width: 640px;
-  min-height: 600px;
-  min-width: 375px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .main-content-block__collection {
@@ -1858,6 +1831,9 @@ button,
 .main-page-second-content-block {
   background: #254A5A;
   margin-bottom: 125px;
+  max-width: 1541px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main-page-second-content-block__wrapper {
