@@ -1,4 +1,7 @@
 .clothes-slider-block{
+  max-width: 1155px;
+  width: 100%;
+  margin: auto;
   position: relative;
   .swiper-button-prev,
   .swiper-button-next{
@@ -12,11 +15,9 @@
 
   .swiper-button-prev{
     top:40%;
-    left:  12%;
   }
   .swiper-button-next{
     top:40%;
-    right:  12%;
   }
 
 }
