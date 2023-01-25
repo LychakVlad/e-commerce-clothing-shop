@@ -77,9 +77,10 @@
 
 .main-slider__slide-img{
   &--center{
-  width: 100%;
+    img{
   position: absolute;
   min-height: 465px;
+    }
   }
   img{
   width: 100%;
