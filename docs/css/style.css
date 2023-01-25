@@ -1516,7 +1516,11 @@ button,
 
 .main-slider__slide-img--center img {
   position: absolute;
-  min-height: 465px;
+  min-height: 585px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .main-slider__slide-img img {
@@ -1685,6 +1689,7 @@ button,
   max-height: 700px;
   width: 100%;
   height: 100vh;
+  margin: auto;
 }
 
 .main-content-block__wrapper {
@@ -1713,7 +1718,7 @@ button,
 .main-content-block__column--right {
   background-color: #CEC6C4;
   max-width: 901px;
-  min-height: 700px;
+  max-height: 700px;
 }
 
 .main-content-block__column--left {
@@ -1768,6 +1773,11 @@ button,
 
 .main-content-block__img--left img {
   max-width: 770px;
+  min-height: 700px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .main-content-block__collection {
@@ -2051,6 +2061,8 @@ button,
 @media (max-width: 768px) {
   .main-content-block__wrapper {
     display: block;
+    min-width: 100%;
+    height: auto;
   }
 }
 

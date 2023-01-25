@@ -5,6 +5,7 @@
   max-height: 700px;
   width: 100%;
   height: 100vh;
+  margin: auto;
 }
 
 .main-content-block__wrapper{
@@ -23,7 +24,7 @@
   &--right{
     background-color: #CEC6C4;
     max-width: 901px;
-    min-height: 700px;
+    max-height: 700px;
   }
 
   &--left{
@@ -72,6 +73,9 @@
     position: absolute;
     img{
       max-width: 770px;
+      min-height: 700px;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
@@ -91,7 +95,10 @@
 @media (max-width: 768px) {
   .main-content-block__wrapper{
     display: block;
+    min-width: 100%;
+    height: auto;
   }
+
 }
 
 

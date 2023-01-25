@@ -79,7 +79,9 @@
   &--center{
     img{
   position: absolute;
-  min-height: 465px;
+  min-height: 585px;
+  object-fit: cover;
+  object-position: center;
     }
   }
   img{
