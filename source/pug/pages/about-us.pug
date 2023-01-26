@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "About us" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "about-us.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    .title-block
+      .title-block__wrapper
+        +picture("content", 'ab-us-main-img', "png", 1440, 585, "bg-img").title-block__bg-img
+        .title-block__text-block
+          h1.title-block__title О нас
+          p.title-block__text Бутик Allegria специализируется на продаже комфортной и современной одежды для свободного времени в стиле кэжуал . Мы считаем, что одежда - это источник радости, что и отражено в названии нашего бутика.
+
+
+block modals

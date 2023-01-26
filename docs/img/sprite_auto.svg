@@ -6,7 +6,12 @@
 <clipPath id="clip0_8964_4">
 <rect width="115" height="14" fill="white" transform="translate(663)"/>
 </clipPath>
-</defs><symbol id="cart-icon" viewBox="0 0 16 19"><g fill="none">
+</defs><symbol id="ab-us-svg-1" viewBox="0 0 246 205"><g fill="none">
+<rect x="0.276916" y="203.499" width="318.411" height="0.393326" transform="rotate(-39.6603 0.276916 203.499)" fill="#CEC6C4" stroke="#CEC6C4" stroke-width="0.393326"/>
+<path d="M203.606 93.5588C206.636 83.0979 206.833 72.0202 204.177 61.4582C201.522 50.8962 196.11 41.2287 188.494 33.444C180.877 25.6594 171.331 20.0367 160.829 17.151C150.328 14.2652 139.249 14.2198 128.724 17.0194C118.199 19.819 108.607 25.3632 100.927 33.0852C93.2474 40.8072 87.7559 50.43 85.0142 60.9699C82.2724 71.5098 82.3787 82.5887 85.3221 93.0741C88.2654 103.559 93.9404 113.075 101.767 120.648" stroke="#CEC6C4"/>
+</g></symbol><symbol id="ab-us-svg-2" viewBox="0 0 246 205"><g fill="none">
+<rect x="0.276916" y="203.499" width="318.411" height="0.393326" transform="rotate(-39.6603 0.276916 203.499)" fill="#CEC6C4" stroke="#CEC6C4" stroke-width="0.393326"/>
+</g></symbol><symbol id="cart-icon" viewBox="0 0 16 19"><g fill="none">
 <rect x="0.5" y="6.5" width="15" height="12" stroke="#0F303F"/>
 <path d="M13 6C13 4.67392 12.4732 3.40215 11.5355 2.46447C10.5979 1.52678 9.32608 1 8 1C6.67392 1 5.40215 1.52678 4.46447 2.46447C3.52678 3.40215 3 4.67392 3 6" stroke="#0F303F"/>
 </g></symbol><symbol id="fav-icon" viewBox="0 0 21 18"><g fill="none">
