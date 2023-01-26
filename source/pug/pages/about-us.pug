@@ -9,6 +9,23 @@ block variables
   - const footerMods = ""
   - const currentUrl = "about-us.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
+block main
+  style.
+    .about-us-container{
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-us-color-block{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EAE9E8;
+      min-height:320px;
+      padding: 0 20px;
+    }
 
   -
     const firstTextBlock = {
@@ -24,10 +41,41 @@ block variables
       text: 'American Vintage в первую очередь – это качественный трикотаж, изящная красота и летящий крой.',
     };
 
+  -
+    const thirdTextBlock = {
+      type: 'regular-block-side',
+      title: 'О нас',
+      text: ['Броские сумки George Gina & Lucy поднимают настроение и своим обладательницам и окружающим.','Birkenstock – это обувь с мягкой ортопедической стелькой, позволяющая долгое время находиться в обуви не уставая.','Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.'],
+    };
 
-block main
+  -
+    const fourthTextBlock = {
+      type: 'regular-block',
+      text: 'Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.',
+    };
+
+  -
+    const firstImgBlock = {
+      first: 'ab-us-img-1',
+      second: 'ab-us-img-2',
+    };
+
+  -
+    const secondImgBlock = {
+      first: 'ab-us-img-3',
+      second: 'ab-us-img-4',
+    };
+
   main
     +bg-img-text-block(firstTextBlock)
-    +sub-text-block(secondTextBlock)
+    .about-us-container
+      +sub-text-block(secondTextBlock)
+      +sub-img-block(firstImgBlock)
+      +sub-text-block(thirdTextBlock)
+      +sub-img-block(secondImgBlock)
+    .about-us-color-block
+      +sub-text-block(fourthTextBlock)
+
+
 
 block modals

@@ -6,7 +6,14 @@
   width: 100%;
   text-align: center;
   margin: auto;
+  padding: 0 20px;
+
+  &-side{
+    text-align: left;
   }
+
+  }
+
 }
 
 .text-block__title{
@@ -25,12 +32,24 @@
   &--regular{
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 25px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
   color: #0F303F;
+
+  &-side{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #0F303F;
+    margin-bottom: 33px;
+  }
+
   }
 
 }
@@ -48,13 +67,22 @@
   &--regular{
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 14px;
   line-height: 17px;
   color: #0F303F;
   text-align: center;
+
   &-side{
-    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0F303F;
+    margin-bottom: 28px;
   }
+
   }
+
 }

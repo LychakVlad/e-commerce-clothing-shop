@@ -22,7 +22,8 @@ mixin sub-text-block(data)
       if(data.title)
         h2.text-block__title.text-block__title--regular-side= data.title
       if(data.text)
-        p.text-block__text.text-block__text--regular-side= data.text
+        each item in data.text
+          p.text-block__text.text-block__text--regular-side= item
   else if (data.type == 'center-black')
     .text-block.text-block--center-black
       if(data.brand)

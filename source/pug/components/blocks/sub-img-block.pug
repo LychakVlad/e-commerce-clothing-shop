@@ -1,0 +1,4 @@
+mixin sub-img-block(data)
+  .sub-img-block__wrapper
+    +picture("content", data.first, "png", 410, 410, "banner").sub-img-block__big-img
+    +picture("content", data.second, "png", 280, 280, "banner").sub-img-block__small-img

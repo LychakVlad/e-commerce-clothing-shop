@@ -1,5 +1,5 @@
 .title-block{
-  margin: 68px auto;
+  margin: 68px auto 130px;
   width: 100vw;
   height: 100vh;
   max-width: 1541px;
@@ -8,18 +8,16 @@
 .title-block__wrapper{
   display:flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-height: 595px;
 }
 .title-block__bg-img{
-  width: 100%;
-  position:absolute;
   img{
+  position:absolute;
   width: 100%;
+  min-height: 585px;
   object-fit: cover;
   object-position: center;
-  max-width: 1541px;
-  max-height: 595px;
   }
 
 }

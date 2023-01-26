@@ -1,0 +1,20 @@
+.sub-img-block__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 130px 0px 120px;
+}
+
+.sub-img-block__small-img{
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .sub-img-block__wrapper{
+    flex-direction: column;
+  }
+  .sub-img-block__big-img{
+    align-self: center;
+    margin-bottom: 100px;
+  }
+
+}
