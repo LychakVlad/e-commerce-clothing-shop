@@ -9,14 +9,25 @@ block variables
   - const footerMods = ""
   - const currentUrl = "about-us.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
+
+  -
+    const firstTextBlock = {
+      img: 'ab-us-main-img',
+      type: 'center-bg',
+      title: 'О нас',
+      text: 'Бутик Allegria специализируется на продаже комфортной и современной одежды для свободного времени в стиле кэжуал . Мы считаем, что одежда - это источник радости, что и отражено в названии нашего бутика.',
+    };
+
+  -
+    const secondTextBlock = {
+      type: 'regular-block',
+      text: 'American Vintage в первую очередь – это качественный трикотаж, изящная красота и летящий крой.',
+    };
+
+
 block main
   main
-    .title-block
-      .title-block__wrapper
-        +picture("content", 'ab-us-main-img', "png", 1440, 585, "bg-img").title-block__bg-img
-        .title-block__text-block
-          h1.title-block__title О нас
-          p.title-block__text Бутик Allegria специализируется на продаже комфортной и современной одежды для свободного времени в стиле кэжуал . Мы считаем, что одежда - это источник радости, что и отражено в названии нашего бутика.
-
+    +bg-img-text-block(firstTextBlock)
+    +sub-text-block(secondTextBlock)
 
 block modals

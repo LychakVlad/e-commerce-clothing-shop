@@ -1,7 +1,9 @@
 .main-slider__slide-wrapper{
   display:flex;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  max-height: 585px;
+
 }
 
 .main-slider__slide-sup-title{
