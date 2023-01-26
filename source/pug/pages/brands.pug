@@ -1,0 +1,80 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Brands" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "brands.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  style.
+
+
+  -
+    const firstBgBlock = {
+      img: 'brand-bg-img-1',
+      type: 'center-bg',
+      title: 'american vintage',
+      brand: 'Бренд',
+      text: 'American Vintage - модная торговая марка по производству трикотажной одежды для мужчин и женщин. ',
+    };
+
+  -
+    const secondBgBlock = {
+      img: 'brand-bg-img-2',
+      type: 'center-bg',
+      title: 'Deha',
+      brand: 'Бренд',
+      text: 'Бренд DEHA принадлежит компании Meeting Group SpA, которая является лидером на итальянском рынке спортивной одежды премиум-класса. ',
+    };
+
+  -
+    const thirdBgBlock = {
+      img: 'brand-bg-img-3',
+    };
+
+  -
+    const fourthBgBlock = {
+      img: 'brand-bg-img-4',
+      type: 'center-bg',
+      title: 'BIRKENSTOCK',
+      brand: 'Бренд',
+      text: 'BIRKENSTOCK — известная немецкая компания, занимающаяся производством ортопедической обуви.',
+    };
+
+
+
+
+  -
+    const secondTextBlock = {
+      type: 'regular-block',
+      text: 'American Vintage в первую очередь – это качественный трикотаж, изящная красота и летящий крой.',
+    };
+
+  -
+    const thirdTextBlock = {
+      type: 'regular-block-side',
+      title: 'О нас',
+      text: ['Броские сумки George Gina & Lucy поднимают настроение и своим обладательницам и окружающим.','Birkenstock – это обувь с мягкой ортопедической стелькой, позволяющая долгое время находиться в обуви не уставая.','Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.'],
+    };
+
+  -
+    const fourthTextBlock = {
+      type: 'regular-block',
+      text: 'Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.',
+    };
+
+
+
+  main
+    +bg-img-text-block(firstBgBlock)
+    +bg-img-text-block(secondBgBlock)
+    +bg-img-text-block(thirdBgBlock)
+    +bg-img-text-block(fourthBgBlock)
+
+
+
+block modals

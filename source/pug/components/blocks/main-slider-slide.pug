@@ -8,10 +8,5 @@ mixin main-slider-slide(data)
       if(data.img)
         +picture("content", data.img, "png", 941, 584, "banner").main-slider__slide-img
   else
-    +picture("content", data.img, "png", 1440, 584, "banner").main-slider__slide-img.main-slider__slide-img--center
-    .main-slider__slide-wrapper.main-slider__slide-wrapper--slide-background
-      .main-slider__slide-text-block.main-slider__slide-text-block--center
-        p.main-slider__slide-sup-title.main-slider__slide-sup-title--center бренд
-        h2.main-slider__slide-title.main-slider__slide-title--center= data.title
-        a(href="#").main-slider__slide-collection-link.main-slider__slide-collection-link--center смотреть коллекцию
+    +bg-img-text-block(data)
 

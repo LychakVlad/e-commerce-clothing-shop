@@ -1455,10 +1455,6 @@ button,
   color: #0F303F;
 }
 
-.main-slider__slide-sup-title--center {
-  color: #EAE9E8;
-}
-
 .main-slider__slide-title {
   font-family: "Cormorant Garamond";
   font-style: normal;
@@ -1485,10 +1481,6 @@ button,
   letter-spacing: 0.045em;
   text-transform: uppercase;
   color: #E64926;
-}
-
-.main-slider__slide-collection-link--center {
-  color: #EAE9E8;
 }
 
 .main-slider__slide-text-block {
@@ -2018,15 +2010,26 @@ button,
   text-align: left;
 }
 
-.text-block__title--center {
-  font-family: "Cormorant";
+.text-block__brand {
+  font-family: "Cormorant Garamond";
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 28px;
+  line-height: 20px;
   text-transform: uppercase;
   color: #EAE9E8;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.text-block__title--center {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #EAE9E8;
+  margin-bottom: 30px;
 }
 
 .text-block__title--regular {
@@ -2054,8 +2057,8 @@ button,
 .text-block__text--center {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 200;
+  font-size: 16px;
   line-height: 19px;
   color: #ffffff;
 }
@@ -2080,12 +2083,23 @@ button,
   margin-bottom: 28px;
 }
 
+.text-block__collection-link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #EAE9E8;
+}
+
 .title-block {
-  margin: 68px auto 130px;
+  margin: 0px auto 130px;
   width: 100vw;
   height: 100vh;
   max-width: 1541px;
-  max-height: 595px;
+  max-height: 585px;
 }
 
 .title-block__wrapper {
@@ -2101,6 +2115,7 @@ button,
   position: absolute;
   width: 100%;
   min-height: 585px;
+  max-width: 1541px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
@@ -2184,6 +2199,18 @@ button,
   .header__lang {
     display: none;
   }
+
+  .footer__search-button {
+    display: none;
+  }
+
+  .footer__bottom-menu a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2224,6 +2251,20 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__bottom-menu a {
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  .footer__nav-item {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 15px;
   }
 }
 

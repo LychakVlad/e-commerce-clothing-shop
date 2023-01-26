@@ -16,17 +16,28 @@
 
 }
 
+.text-block__brand{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #EAE9E8;
+  margin-bottom: 20px;
+}
+
 .text-block__title{
 
   &--center{
-  font-family: 'Cormorant';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: $color-desert-storm;
-  margin-bottom: 15px;
+    font-family: "Cormorant Garamond";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #EAE9E8;
+    margin-bottom: 30px;
   }
 
   &--regular{
@@ -58,8 +69,8 @@
   &--center{
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 200;
+  font-size: 16px;
   line-height: 19px;
   color: $color-default-white;
   }
@@ -85,4 +96,15 @@
 
   }
 
+}
+
+.text-block__collection-link{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: $color-desert-storm;
 }

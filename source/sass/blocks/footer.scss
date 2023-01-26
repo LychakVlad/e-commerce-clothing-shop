@@ -77,6 +77,7 @@
   padding: 15px 0px;
   align-items: center;
   color: $color-blue-whale;
+
   a{
     color: $color-blue-whale;
   }
@@ -85,3 +86,42 @@
     transition: all .3s ease;
   }
 };
+
+@media (max-width: 960px) {
+
+  .footer__search-button{
+    display: none;
+  }
+
+  .footer__bottom-menu{
+
+    a{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 200;
+      font-size: 12px;
+      line-height: 15px;
+    }
+}
+}
+
+@media (max-width: 400px) {
+
+  .footer__bottom-menu{
+    a{
+      font-weight: 300;
+      font-size: 9px;
+      line-height: 10px;
+    }
+}
+
+
+  .footer__nav-item{
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
+}
+
+

@@ -7,6 +7,8 @@ mixin sub-text-block(data)
         h2.text-block__title.text-block__title--center= data.title
       if(data.text)
         p.text-block__text.text-block__text--center= data.text
+      if(data.collection)
+        a(href="#").text-block__collection-link смотреть коллекцию
   else if (data.type == 'regular-block')
     .text-block.text-block--regular
       if(data.brand)
