@@ -57,7 +57,24 @@ window.addEventListener('DOMContentLoaded', () => {
         headerMenu.classList.toggle('_active');
       });
     }
-  }
+  };
+
+
+  document.querySelectorAll('.faq-accordion-item__question').forEach((item) =>
+    item.addEventListener('click', () => {
+      const parent = item.parentNode;
+
+      if (parent.classList.contains('active')) {
+        parent.classList.remove('active');
+      } else {
+        document
+          .querySelectorAll('.faq-accordion-item')
+          .forEach((child) => child.classList.remove('active'))
+
+        parent.classList.add('active')
+      }
+    })
+  )
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

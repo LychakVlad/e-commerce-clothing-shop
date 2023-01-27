@@ -19,7 +19,7 @@
   line-height: 100%;
   text-transform: uppercase;
   color: $color-blue-whale;
-  padding: 58px 0px;
+  padding-top: 58px;
 }
 
 .faq__accordion-block-title{
@@ -31,16 +31,43 @@
   text-transform: uppercase;
   color: $color-blue-whale;
   padding-bottom: 17px;
+  margin-top: 40px;
   border-bottom: 1px solid #EAE9E8;
 }
 
 .faq__accordion{
   max-width: 470px;
+  width: 100%;
 }
 
 .faq-accordion-item{
   border-bottom: 1px solid #EAE9E8;
+  background-color: $color-default-white;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.active{
+    .faq-accordion-item__answer{
+    transition: all .3s ease;
+    max-height: 100%;
+    padding-bottom: 26px;
+    }
+
+    .faq-accordion-item__question{
+      &::before{
+        transform: rotate(0deg);
+        background: $color-cinnabar;
+      }
+
+      &::after{
+        background:$color-cinnabar;
+      }
+    }
+
+  }
 }
+
 
 .faq-accordion-item__question{
   font-family: 'Inter';
@@ -53,48 +80,35 @@
   opacity: 0.7;
   position: relative;
   transition: all .3s ease;
-
-
-  &::after{
-    content:" ";
-    position: absolute;
-    top: 51%;
-    right: 0px;
-    transform: translate(-50%, -50%);
-    height: 2px;
-    width: 15px;
-    background: #0F303F;
-    opacity: 1;
-  }
+  overflow: hidden;
 
   &::before{
-    content:" ";
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: $color-blue-whale;
     position: absolute;
-    top: 19%;
-    right: 15px;
-    transform: translate(50%, 50%) ;
-    height: 15px;
-    width: 2px;
-    background: #0F303F;
-    opacity: 1;
+    right: 0;
+    top: 24px;
+    transform: rotate(-90deg);
+    transition: transform .3s ease 0s;
   }
 
-  &.active{
-    &::after{
-      background: $color-cinnabar;
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
-    &::before{
-      width: 0;
-      background: $color-cinnabar;
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
+  &::after{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: $color-blue-whale;
+    position: absolute;
+    right: 0;
+    top: 24px;
   }
-}
+
+
+  }
 
 
 .faq-accordion-item__answer{
-  padding-bottom: 27px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 200;
@@ -103,4 +117,5 @@
   color: #0F303F;
   opacity: 0.7;
   max-width: 440px;
+  max-height: 0;
 }
