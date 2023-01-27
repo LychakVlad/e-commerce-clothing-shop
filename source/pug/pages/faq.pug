@@ -1,0 +1,32 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Faq" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "faq.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const questionBlock = {
+      question: 'Вопрос от покупателя',
+      answer: 'Оплата осуществляется наличными денежными средствами курьеру непосредственно при доставке заказа на адрес получателя. Выбрав данный способ оплаты, Вы получаете возможность рассмотреть и примерить заказанный товар. Если какая-то позиция Вам не подошла, Вы можете просто вернуть ее курьеру, не оплачивая.',
+    }
+
+
+block main
+
+  main
+    .faq__block
+      .faq__container
+        h2.faq__title Популярные вопросы
+        .faq__wrapper
+          .faq__accordion
+            p.faq__accordion-block-title Покупки
+            +faq-accordion-item(questionBlock)
+          .faq__feedback
+
+
+block modals
