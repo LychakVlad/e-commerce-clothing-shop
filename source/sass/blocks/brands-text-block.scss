@@ -1,0 +1,37 @@
+.brands-content-block{
+  max-width: 1070px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.brands-text-block__img{
+  &--left{
+    margin-right: 20px;
+  }
+  &--right{
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-content-block{
+    flex-direction: column;
+  }
+
+  .brands-text-block__img{
+    align-self: center;
+    &--left{
+      margin-bottom: 60px;
+      margin-right: 0px;
+    }
+    &--right{
+      margin-top: 60px;
+      margin-left: 0px;
+    }
+  }
+
+}

@@ -11,12 +11,13 @@ mixin sub-text-block(data)
         a(href="#").text-block__collection-link смотреть коллекцию
   else if (data.type == 'regular-block')
     .text-block.text-block--regular
-      if(data.brand)
-        p.text-block__brand= data.brand
-      if(data.title)
-        h2.text-block__title.text-block__title--regular= data.title
-      if(data.text)
-        p.text-block__text.text-block__text--regular= data.text
+      .text-block__wrapper.text-block__wrapper--regular
+        if(data.brand)
+          p.text-block__brand= data.brand
+        if(data.title)
+          h2.text-block__title.text-block__title--regular= data.title
+        if(data.text)
+          p.text-block__text.text-block__text--regular= data.text
   else if (data.type == 'regular-block-side')
     .text-block.text-block--regular-side
       if(data.brand)

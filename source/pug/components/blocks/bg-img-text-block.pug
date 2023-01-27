@@ -1,5 +1,6 @@
 mixin bg-img-text-block(data)
     .title-block
       .title-block__wrapper
-        +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img
+        if(data.img)
+          +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img
         +sub-text-block(data)
