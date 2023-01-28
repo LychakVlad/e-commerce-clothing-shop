@@ -6,7 +6,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #ffffff;
@@ -17,21 +16,13 @@
     }
 
     .swiper-pagination-bullet{
-      padding: 0px 51px 40px 0px;
       background-color: inherit;
-    }
-
-    :nth-child(4){
-      color: rgba(37, 74, 90, 1);
-      ;
-    }
-    :nth-child(3){
-      color: rgba(37, 74, 90, 1);
-      ;
-    }
-
-    :last-child{
-      padding-right: 0px;
+      width: 40px;
+      height: 18px;
+      border-radius: 10%;
+      -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
+      -moz-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
+      box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
     }
   }
 
@@ -49,4 +40,3 @@
   max-height: 585px;
   min-height: 465px;
 }
-
