@@ -10,6 +10,7 @@
 }
 
 .footer__heading{
+
 &--h2{
   font-family: 'Cormorant Garamond';
   font-style: normal;
@@ -20,6 +21,7 @@
   text-transform: uppercase;
   color: $color-blue-whale;
 }
+
 }
 
 .footer__heading{
@@ -28,15 +30,18 @@
 
 .footer__nav-list{
   margin: 30px 0px 64px;
+
   :last-child{
     margin-right: 0px;
   }
+
   a{
     color: $color-alto;
-  }
-  a:hover{
+
+  @include hover {
     color: $color-blue-whale;
     transition: all .3s ease;
+    }
   }
 }
 
@@ -64,7 +69,8 @@
 .footer__search-button{
   background-color: inherit;
   border: none;
-  :hover{
+
+  @include hover {
     transform: scale(1.5);
     transition: all .2s ease;
   }
@@ -75,14 +81,14 @@
   justify-content: space-between;
   padding: 15px 0px;
   align-items: center;
-  color: $color-blue-whale;
 
   a{
     color: $color-blue-whale;
-  }
-  :hover{
-    color: $color-desert-storm;
-    transition: all .3s ease;
+
+    @include hover {
+      color: $color-submarine;
+      transition: all .3s ease;
+    }
   }
 };
 

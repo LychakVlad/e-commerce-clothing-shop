@@ -37,13 +37,15 @@
 
 .header__lang-item{
   margin-left: 12px;
-  :focus{
-    color: $color-cinnabar;
+
+  @include active {
     text-decoration: underline;
     text-decoration-color: $color-cinnabar;
     text-underline-offset: 27px;
     text-decoration-thickness: 2px;
-  }
+    color: $color-cinnabar;
+    }
+
 }
 
 
@@ -52,10 +54,14 @@
 }
 
 .main-nav__list{
-  a:hover{
-    color: $color-desert-storm;
+
+  p{
+  @include hover {
+    color: $color-submarine;
     transition: all .3s ease;
   }
+}
+
   li:last-child{
     margin-left: 20px;
   }

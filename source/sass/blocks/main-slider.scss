@@ -1,7 +1,7 @@
 .swiper-pagination{
 
   &--main{
-  font-family: 'Inter';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -10,6 +10,9 @@
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 20px;
+    -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
+    -moz-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
+    box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
 
     .swiper-pagination-bullet-active{
       color: #ffffff;
@@ -21,9 +24,6 @@
       width: 35px;
       height: 18px;
       border-radius: 15%;
-      -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
-      -moz-box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
-      box-shadow: inset 6px 10px 38px 2px rgba(0,0,0,0.44);
     }
   }
 
@@ -35,9 +35,12 @@
   max-width: 1541px;
   max-height: 585px;
   margin: 68px auto 120px;
+
 }
+
 .main-slider__wrapper{
   width: 100%;
   max-height: 585px;
   min-height: 465px;
 }
+
