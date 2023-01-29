@@ -2368,9 +2368,9 @@ button,
   }
 
   .main-slider__slide-img img {
-    min-height: 585px;
-    -o-object-fit: cover;
-    object-fit: cover;
+    max-height: 585px;
+    -o-object-fit: contain;
+    object-fit: contain;
     -o-object-position: center;
     object-position: center;
   }
@@ -2381,6 +2381,18 @@ button,
 
   .main-slider__wrapper {
     max-height: 800px;
+  }
+
+  .title-block--main {
+    max-height: 800px;
+  }
+
+  .title-block__wrapper--main {
+    max-height: 800px;
+  }
+
+  .title-block__bg-img--main img {
+    min-height: 800px;
   }
 }
 
@@ -2464,6 +2476,12 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-slider__slide-text-block {
+    margin-bottom: 0px;
   }
 }
 

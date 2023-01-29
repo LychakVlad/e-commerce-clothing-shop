@@ -22,3 +22,25 @@
   }
 
 }
+@media (max-width: 960px) {
+  .title-block{
+    &--main{
+      max-height: 800px;
+    }
+  }
+
+  .title-block__wrapper{
+    &--main{
+      max-height: 800px;
+    }
+  }
+
+  .title-block__bg-img{
+    &--main{
+      img{
+        min-height: 800px;
+      }
+    }
+  }
+}
+

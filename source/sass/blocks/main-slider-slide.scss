@@ -75,11 +75,21 @@
   .main-slider__slide-img{
 
     img{
-      min-height: 585px;
-      object-fit: cover;
+      max-height: 585px;
+      object-fit: contain;
       object-position: center;
     }
 
   }
 
   }
+
+
+@media (max-width: 700px) {
+
+  .main-slider__slide-text-block{
+    margin-bottom: 0px;
+  }
+
+}
+
