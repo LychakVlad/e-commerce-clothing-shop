@@ -44,3 +44,12 @@
   min-height: 465px;
 }
 
+@media (max-width: 960px) {
+  .main-slider{
+    max-height: 800px;
+  }
+
+  .main-slider__wrapper{
+    max-height: 800px;
+  }
+}

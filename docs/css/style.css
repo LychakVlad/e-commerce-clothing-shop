@@ -1438,7 +1438,8 @@ button,
   text-transform: uppercase;
   color: #0F303F;
   max-width: 310px;
-  margin: 20px 0px 35px;
+  margin-top: 20px;
+  margin-bottom: 35px;
 }
 
 .main-slider__slide-collection-link {
@@ -2349,6 +2350,37 @@ button,
     font-weight: 200;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .main-slider__slide-wrapper {
+    display: block;
+    max-height: 800px;
+  }
+
+  .main-slider__slide-text-block {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .main-slider__slide-title {
+    max-width: none;
+  }
+
+  .main-slider__slide-img img {
+    min-height: 585px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+
+  .main-slider {
+    max-height: 800px;
+  }
+
+  .main-slider__wrapper {
+    max-height: 800px;
   }
 }
 
