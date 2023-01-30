@@ -27,10 +27,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const secondSwiper = new Swiper('.clothes-slider', {
     breakpoints: {
-      1200: {
+      800: {
         slidesPerView: 4
       },
-      700: {
+      570: {
         slidesPerView: 3
       },
       320: {

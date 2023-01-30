@@ -637,6 +637,7 @@ button,
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #EAE9E8;
+  min-width: 320px;
 }
 
 .header ul {
@@ -1475,6 +1476,7 @@ button,
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  max-width: 180px;
   -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
   box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
 }
@@ -1523,10 +1525,12 @@ button,
 
 .clothes-slider-block .swiper-button-prev {
   top: 40%;
+  left: -1%;
 }
 
 .clothes-slider-block .swiper-button-next {
   top: 40%;
+  right: -1%;
 }
 
 .clothes-slider {
@@ -1569,7 +1573,7 @@ button,
 .main-content-block__text-block {
   position: relative;
   max-width: 442px;
-  padding: 0px 20px;
+  padding: 0px 40px;
 }
 
 .main-content-block__text-block--first {
@@ -1675,6 +1679,7 @@ button,
   height: 100%;
   max-width: 600px;
   max-height: 600px;
+  min-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1693,6 +1698,10 @@ button,
 
 .main-content-block__img--right {
   max-height: 380px;
+}
+
+.main-content-block__img--right img {
+  min-height: 316px;
 }
 
 .main-content-block__img--left {
@@ -2355,10 +2364,11 @@ button,
   .main-slider__slide-wrapper {
     display: block;
     max-height: 800px;
+    text-align: center;
+    margin: auto;
   }
 
   .main-slider__slide-text-block {
-    text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
   }
@@ -2369,8 +2379,9 @@ button,
 
   .main-slider__slide-img img {
     max-height: 585px;
-    -o-object-fit: contain;
-    object-fit: contain;
+    min-height: 310px;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
     -o-object-position: center;
     object-position: center;
   }
@@ -2393,6 +2404,19 @@ button,
 
   .title-block__bg-img--main img {
     min-height: 800px;
+  }
+}
+
+@media (max-width: 770px) {
+  .clothes-slider-block .swiper-button-prev,
+  .clothes-slider-block .swiper-button-next {
+    width: 60px;
+    height: 60px;
+  }
+
+  .clothes-slider-block .swiper-button-prev::after,
+  .clothes-slider-block .swiper-button-next::after {
+    font-size: 30px;
   }
 }
 

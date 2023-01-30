@@ -60,10 +60,11 @@
   .main-slider__slide-wrapper{
     display:block;
     max-height: 800px;
+    text-align:center;
+    margin: auto;
   }
 
   .main-slider__slide-text-block{
-    text-align:center;
     margin-bottom: 40px;
     margin-top: 40px;
   }
@@ -73,10 +74,10 @@
   }
 
   .main-slider__slide-img{
-
     img{
       max-height: 585px;
-      object-fit: contain;
+      min-height: 310px;
+      object-fit: scale-down;
       object-position: center;
     }
 
