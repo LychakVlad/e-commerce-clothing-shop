@@ -6,7 +6,7 @@
   background: $color-default-white;
   max-width: 1543px;
   width: 100vw;
-  margin-top: 66px;
+  margin-top: 64px;
 
 }
 
@@ -16,6 +16,7 @@
 
 .header-menu__wrapper{
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,18 +74,25 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 830px;
+    height: 100%;
+    max-height: 100%;
   }
 
+  .header-menu__column{
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+  }
 
   .header-menu__top-block{
     display: flex;
     flex-direction: column;
     align-items: center;
     border: none;
+    margin: auto;
 
     &:first-child{
-      margin-top: 50px;
+      margin-top: 250px;
     }
     &:last-child{
       margin-bottom: 20px;
