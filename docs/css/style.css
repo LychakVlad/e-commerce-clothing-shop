@@ -633,7 +633,6 @@ button,
   text-transform: uppercase;
   color: #0F303F;
   z-index: 3;
-  position: fixed;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #EAE9E8;
@@ -2430,15 +2429,11 @@ button,
 
 @media (max-width: 960px) {
   .main-nav {
-    position: fixed;
-    left: 0;
-    top: 10%;
+    display: none;
   }
 
   .header__lang {
-    position: fixed;
-    right: 20%;
-    top: 10%;
+    display: none;
   }
 
   .header__burger-menu-icon {
@@ -2532,7 +2527,7 @@ button,
   .header-menu__column.open .header-menu__list {
     opacity: 1;
     max-height: 400px;
-    padding-top: 47px;
+    padding-top: 27px;
   }
 
   .header-menu__column .header-menu__column {
@@ -2613,7 +2608,7 @@ button,
   }
 
   .header-menu__top-block:first-child {
-    margin-top: 250px;
+    margin-top: 150px;
   }
 
   .header-menu__top-block:last-child {

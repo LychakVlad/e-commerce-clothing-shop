@@ -9,7 +9,6 @@
   text-transform: uppercase;
   color: $color-blue-whale;
   z-index: 3;
-  position: fixed;
   width: 100%;
   background-color: $color-default-white;
   border-bottom: 1px solid #EAE9E8;
@@ -142,15 +141,11 @@
 
 @media (max-width: 960px) {
   .main-nav{
-    position: fixed;
-    left: 0;
-    top: 10%;
+    display: none;
   }
 
   .header__lang{
-    position: fixed;
-    right: 20%;
-    top: 10%;
+    display: none;
   }
 
   .header__burger-menu-icon{

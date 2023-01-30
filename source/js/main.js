@@ -98,6 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
           .forEach((child) => child.classList.remove('open'))
 
         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+        accordionContent.style.maxHeight = null
         parent.classList.add('open')
       }
     })
