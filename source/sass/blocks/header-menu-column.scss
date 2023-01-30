@@ -1,6 +1,6 @@
 .header-menu__column{
-  min-width: 230px;
-  padding-bottom: 44px;
+  max-width: 230px;
+  padding: 0px 15px 44px;
   border-right: 1px solid #EAE9E8;
 }
 
@@ -31,5 +31,20 @@
       color: $color-cinnabar;
       list-style: circle;
       transition: all .2s ease;
+  }
+}
+
+
+@media (max-width: 960px) {
+  .header-menu__list{
+    display: none;
+  }
+
+  .header-menu__column{
+    border-right: none;
+  }
+
+  .header-menu__title{
+    margin: 0px;
   }
 }

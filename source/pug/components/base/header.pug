@@ -67,8 +67,6 @@ mixin header(currentUrl)
             li.header__lang-item
               a(href="#") RU
             li.header__lang-item
-              a(href="#") UA
-            li.header__lang-item
               a(href="#") EN
       .header__menu
         .header__menu-wrapper
@@ -78,10 +76,12 @@ mixin header(currentUrl)
                 +icon('personal-acc', 16, 18)
             li.header__menu-item
               a(href="#")
-                +icon('fav-icon', 19, 16)
+                +icon('fav-icon', 20, 20)
             li.header__menu-item
               a(href="#")
                 +icon('cart-icon', 16, 18)
+            li.header__menu-item
+              span.header__burger-menu-icon
   .header-menu
     .header-menu__wrapper
       .header-menu__top-block

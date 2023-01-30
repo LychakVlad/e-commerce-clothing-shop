@@ -44,6 +44,7 @@
 
 .main-slider__slide-text-block{
   margin:auto;
+  padding: 0 20px;
 }
 
 .main-slider__slide-img{
@@ -67,6 +68,7 @@
   .main-slider__slide-text-block{
     margin-bottom: 40px;
     margin-top: 40px;
+    min-height: 200px;
   }
 
   .main-slider__slide-title{
@@ -76,8 +78,8 @@
   .main-slider__slide-img{
     img{
       max-height: 585px;
-      min-height: 310px;
-      object-fit: scale-down;
+      min-height: 400px;
+      object-fit: contain;
       object-position: center;
     }
 
