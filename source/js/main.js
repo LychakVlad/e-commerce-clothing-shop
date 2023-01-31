@@ -96,9 +96,11 @@ window.addEventListener('DOMContentLoaded', () => {
         document
           .querySelectorAll('.header-menu__column')
           .forEach((child) => child.classList.remove('open'))
+        document
+          .querySelectorAll('.header-menu__list')
+          .forEach((child) => child.style.maxHeight = null)
 
         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-        accordionContent.style.maxHeight = null
         parent.classList.add('open')
       }
     })
