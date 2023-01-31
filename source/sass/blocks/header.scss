@@ -8,9 +8,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-blue-whale;
-  position:fixed;
   z-index: 3;
-  width: 100%;
+  width: 100vw;
   background-color: $color-default-white;
   border-bottom: 1px solid #EAE9E8;
   min-width: 320px;
@@ -40,8 +39,8 @@
   .header__menu-list{
     display: flex;
 
-    &:last-child{
-      margin-left: 15px;
+    li:last-child{
+      margin-left: 22px;
     }
   }
 
@@ -56,12 +55,14 @@
       width: 20px;
       top: 0px;
       margin-bottom: 3px;
+      padding-top: 2px;
 
       .header__burger-menu-icon{
       &::after{
         top: 0;
         width: 20px;
         transform: rotate(90deg);
+        transition: all .3s ease;
       }
     }
     }

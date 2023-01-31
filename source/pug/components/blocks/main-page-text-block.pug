@@ -2,7 +2,7 @@ mixin main-page-text-block(data)
   if(data.first)
     .main-content-block__text-block.main-content-block__text-block--first
       if(data.title)
-        h2.main-content-block__title= data.title
+        h2.main-content-block__title.main-content-block__title--first= data.title
       if(data.text)
         p.main-content-block__text= data.text
       if(data.collection)

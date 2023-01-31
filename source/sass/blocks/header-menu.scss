@@ -7,8 +7,7 @@
   background: $color-default-white;
   width: 100%;
   left: 0;
-  top: 0;
-  margin-top: 64px;
+  top:10%;
 }
 
 .header-menu._active{
@@ -22,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
 }
 
 .header-menu__top-block{
@@ -31,8 +30,6 @@
   gap: 40px;
   border-bottom: 1px solid #EAE9E8;
   max-width: 1150px;
-  margin: auto;
-  width: 100%;
   :last-child{
     border: none;
     grid-template-columns: 80px;
@@ -87,9 +84,11 @@
   }
 
   .header-menu__menu{
-    margin: 120px 0px 40px;
+    margin: 40px 0px 40px;
     width: 100%;
+    height: 100%;
     max-width: 950px;
+    max-height: 18px;
     padding: 0px 25px;
     display: flex;
     justify-content: space-between;
@@ -97,8 +96,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $color-blue-whale;
@@ -114,8 +113,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $color-blue-whale;
@@ -207,8 +206,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $color-blue-whale;
@@ -239,4 +238,11 @@
     padding-bottom: 25px;
   }
 
+  .header-menu__lang-wrapper{
+    :first-child{
+      margin-right: 9px;
+      margin-left: 8px;
+    }
+
+}
 }

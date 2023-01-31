@@ -40,9 +40,11 @@
   line-height: 17px;
   text-align: center;
   color: $color-default-white;
+
   max-width: 310px;
   position: absolute;
   bottom: 25%;
+  padding: 0 10px;
 }
 
 .main-content-block__img-wrapper{
@@ -95,11 +97,6 @@
   .main-content-block__wrapper{
     display: block;
   }
-
-}
-
-
-@media (max-width: 770px) {
 
 }
 

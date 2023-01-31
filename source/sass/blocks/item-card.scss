@@ -48,3 +48,9 @@
   color: #CECECE;
   margin-right: 4px;
 }
+
+@media (max-width: 400px) {
+  .item-card__price{
+    display: block;
+  }
+}

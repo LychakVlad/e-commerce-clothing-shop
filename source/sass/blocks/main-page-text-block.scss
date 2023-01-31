@@ -1,7 +1,8 @@
 .main-content-block__text-block{
   position: relative;
   max-width: 442px;
-  padding: 0px 40px;
+  padding: 0px 20px;
+  width: 100%;
 
   &--first{
     display: flex;
@@ -34,3 +35,13 @@
   color: $color-default-white;
   margin-bottom: 40px;
 }
+
+
+@media (max-width: 400px) {
+  .main-content-block__title{
+    &--first{
+      font-size: 60px;
+    }
+  }
+}
+
