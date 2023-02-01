@@ -69,14 +69,20 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.faq-accordion-item__question').forEach((item) =>
     item.addEventListener('click', () => {
       const parent = item.parentNode;
+      const accordionContent = item.nextElementSibling
 
       if (parent.classList.contains('active')) {
         parent.classList.remove('active');
+        accordionContent.style.maxHeight = null
       } else {
         document
           .querySelectorAll('.faq-accordion-item')
           .forEach((child) => child.classList.remove('active'))
+        document
+          .querySelectorAll('.faq-accordion-item__answer')
+          .forEach((child) => child.style.maxHeight = null)
 
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
         parent.classList.add('active')
       }
     })

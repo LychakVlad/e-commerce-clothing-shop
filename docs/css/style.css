@@ -1959,6 +1959,7 @@ button,
   position: fixed;
   background: #ffffff;
   width: 100%;
+  height: 100vh;
   left: 0;
   top: 10%;
 }
@@ -2311,12 +2312,11 @@ button,
 }
 
 .faq-accordion-item.active .faq-accordion-item__answer {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   height: 100%;
-  max-height: 100%;
-  padding-bottom: 26px;
+  margin: 10px 0px 26px;
 }
 
 .faq-accordion-item.active .faq-accordion-item__question::before {
@@ -2383,6 +2383,9 @@ button,
   opacity: 0.7;
   max-width: 440px;
   max-height: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* @mixin hover-focus {
@@ -2675,6 +2678,9 @@ button,
   .header-menu__wrapper {
     width: 100%;
     height: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .header-menu__column {

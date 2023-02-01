@@ -6,8 +6,9 @@
   position: fixed;
   background: $color-default-white;
   width: 100%;
+  height: 100vh;
   left: 0;
-  top:10%;
+  top: 10%;
 }
 
 .header-menu._active{
@@ -167,6 +168,7 @@
   .header-menu__wrapper{
     width: 100%;
     height: 100%;
+    justify-content: space-between;
   }
 
   .header-menu__column{
