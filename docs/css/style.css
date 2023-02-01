@@ -2388,6 +2388,34 @@ button,
   transition: all 0.3s ease-out;
 }
 
+.faq__feedback-block {
+  background: #EAE9E8;
+}
+
+.faq__feedback__wrapper {
+  padding: 28px 25px;
+}
+
+.faq__feedback__text.faq__feedback__text {
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.faq__feedback__text.faq__feedback__text--title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  max-width: 250px;
+}
+
+.faq__feedback__text.faq__feedback__text--sub {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 170%;
+  color: #0F303F;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

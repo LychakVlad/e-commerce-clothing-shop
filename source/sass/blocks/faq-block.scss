@@ -121,8 +121,31 @@
 }
 
 
+.faq__column{}
+.faq__feedback-block{
+  background: #EAE9E8;
+}
+.faq__feedback__wrapper{
+  padding: 28px 25px;
+}
+.faq__feedback__text.faq__feedback__text{
+  font-family: 'Inter';
+  font-style: normal;
 
-
+  &--title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    max-width: 250px;
+  }
+  &--sub{
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 170%;
+    color: $color-blue-whale;
+  }
+}
 
 
 
