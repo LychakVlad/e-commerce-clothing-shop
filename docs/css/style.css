@@ -997,9 +997,24 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 0px;
+  max-width: 250px;
+  height: 50px;
+  width: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
   color: #ffffff;
-  background-color: #2c39f2;
+  background-color: #0F303F;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -1007,8 +1022,8 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.btn--red {
-  background-color: #ff1553;
+.btn--orange {
+  background-color: #E64926;
 }
 
 .btn:disabled {
@@ -1020,14 +1035,28 @@ button,
   opacity: 0.8;
 }
 
+.custom-textarea {
+  border: 1px solid #254A5A;
+  margin: 15px 0px;
+  padding: 10px;
+}
+
+.custom-textarea textarea {
+  height: 100px;
+}
+
+.custom-input {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #254A5A;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
-  padding: 20px 0;
+  width: 250px;
   /*&.is-valid {
     input {
       border: 2px solid $color-malachite;
@@ -1038,6 +1067,56 @@ button,
       }
     }
   }*/
+}
+
+.custom-input ::-webkit-input-placeholder,
+.custom-textarea ::-webkit-input-placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #B7C1C5;
+}
+
+.custom-input ::-moz-placeholder,
+.custom-textarea ::-moz-placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #B7C1C5;
+}
+
+.custom-input :-ms-input-placeholder,
+.custom-textarea :-ms-input-placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #B7C1C5;
+}
+
+.custom-input ::-ms-input-placeholder,
+.custom-textarea ::-ms-input-placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #B7C1C5;
+}
+
+.custom-input ::placeholder,
+.custom-textarea ::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #B7C1C5;
 }
 
 .custom-input label,
@@ -1059,28 +1138,12 @@ button,
   -ms-flex-positive: 1;
   flex-grow: 1;
   min-height: 40px;
-  margin-left: 30px;
-  padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  background-color: inherit;
+  border: none;
   outline: none;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
-}
-
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
 .custom-input__error,
@@ -2282,7 +2345,7 @@ button,
   line-height: 100%;
   text-transform: uppercase;
   color: #0F303F;
-  padding: 58px 0px 18px;
+  margin: 58px 0px;
 }
 
 .faq__accordion-block-title {
@@ -2301,6 +2364,10 @@ button,
 .faq__accordion {
   max-width: 470px;
   width: 100%;
+}
+
+.faq__accordion :first-child {
+  margin-top: 0px;
 }
 
 .faq-accordion-item {
@@ -2390,6 +2457,7 @@ button,
 
 .faq__feedback-block {
   background: #EAE9E8;
+  max-width: 300px;
 }
 
 .faq__feedback__wrapper {
@@ -2399,6 +2467,7 @@ button,
 .faq__feedback__text.faq__feedback__text {
   font-family: "Inter";
   font-style: normal;
+  color: #0F303F;
 }
 
 .faq__feedback__text.faq__feedback__text--title {
@@ -2407,13 +2476,14 @@ button,
   line-height: 25px;
   text-transform: uppercase;
   max-width: 250px;
+  margin-bottom: 20px;
 }
 
 .faq__feedback__text.faq__feedback__text--sub {
-  font-weight: 100;
+  font-weight: 400;
   font-size: 14px;
   line-height: 170%;
-  color: #0F303F;
+  color: #B7C1C5;
 }
 
 /* @mixin hover-focus {

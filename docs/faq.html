@@ -257,25 +257,28 @@
               <div class="faq__column">
                 <div class="faq__feedback-block">
                   <div class="faq__feedback__wrapper">
-                    <div class="faq__feedback__text faq__feedback__text--title">Есть вопросы или предложения? НАПИШИТЕ НАМ</div>
-                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
-                      <label><span class="custom-input__label">Введите ваше имя</span>
-                        <input type="text" name="user-name" minlength="2">
-                      </label>
-                      <div class="custom-input__error">Не корректное имя</div>
-                    </div>
-                    <div class="custom-input" data-validate-type="email">
-                      <label><span class="custom-input__label">Введите ваш email</span>
-                        <input type="text" name="user-email">
-                      </label>
-                      <div class="custom-input__error">Не корректный email</div>
-                    </div>
-                    <div class="faq__feedback__text faq__feedback__text--sub">Что Вас интересует:</div>
-                    <div class="custom-textarea">
-                      <label><span class="custom-textarea__label">Расскажите о себе</span>
-                        <textarea name="user-info"></textarea>
-                      </label>
-                    </div>
+                    <form>
+                      <div class="faq__feedback__text faq__feedback__text--title">Есть вопросы или предложения? НАПИШИТЕ НАМ</div>
+                      <div class="custom-input" data-validate-type="text" data-limitations="name">
+                        <label>
+                          <input type="text" name="user-name" minlength="2" placeholder="Имя">
+                        </label>
+                        <div class="custom-input__error">Не корректное имя</div>
+                      </div>
+                      <div class="custom-input" data-validate-type="email">
+                        <label>
+                          <input type="email" name="user-email" placeholder="E-mail">
+                        </label>
+                        <div class="custom-input__error">Не корректный email</div>
+                      </div>
+                      <div class="faq__feedback__text faq__feedback__text--sub">Что Вас интересует:</div>
+                      <div class="custom-textarea">
+                        <label>
+                          <textarea name="user-info" placeholder="Текст сообщения"></textarea>
+                        </label>
+                      </div>
+                      <button class="btn btn--orange" type="submit">Отправить</button>
+                    </form>
                   </div>
                 </div>
               </div>

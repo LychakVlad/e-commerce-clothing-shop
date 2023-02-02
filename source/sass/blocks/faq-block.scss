@@ -19,7 +19,7 @@
   line-height: 100%;
   text-transform: uppercase;
   color: $color-blue-whale;
-  padding: 58px 0px 18px;
+  margin: 58px 0px;
 }
 
 .faq__accordion-block-title{
@@ -38,6 +38,9 @@
 .faq__accordion{
   max-width: 470px;
   width: 100%;
+  :first-child{
+    margin-top: 0px;
+  }
 }
 
 .faq-accordion-item{
@@ -121,9 +124,9 @@
 }
 
 
-.faq__column{}
 .faq__feedback-block{
   background: #EAE9E8;
+  max-width: 300px;
 }
 .faq__feedback__wrapper{
   padding: 28px 25px;
@@ -131,6 +134,7 @@
 .faq__feedback__text.faq__feedback__text{
   font-family: 'Inter';
   font-style: normal;
+  color: $color-blue-whale;
 
   &--title{
     font-weight: 500;
@@ -138,12 +142,13 @@
     line-height: 25px;
     text-transform: uppercase;
     max-width: 250px;
+    margin-bottom: 20px;
   }
   &--sub{
-    font-weight: 100;
+    font-weight: 400;
     font-size: 14px;
     line-height: 170%;
-    color: $color-blue-whale;
+    color: #B7C1C5;
   }
 }
 

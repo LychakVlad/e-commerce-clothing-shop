@@ -1,17 +1,30 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  max-width: 250px;
+  height: 50px;
+  width: 100%;
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-blue-whale;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--orange {
+    background-color: $color-cinnabar;
   }
 
   &:disabled {

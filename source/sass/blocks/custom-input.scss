@@ -1,10 +1,31 @@
+.custom-textarea{
+  border: 1px solid #254A5A;
+  margin: 15px 0px;
+  padding: 10px;
+  textarea{
+  height: 100px;
+  }
+}
+
+.custom-input{
+  margin-bottom: 15px;
+  border-bottom: 1px solid #254A5A;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
-
   display: flex;
-  width: 500px;
-  padding: 20px 0;
+  width: 250px;
+
+  ::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #B7C1C5;
+    }
 
   label {
     display: flex;
@@ -15,21 +36,17 @@
     textarea {
       flex-grow: 1;
       min-height: 40px;
-      margin-left: 30px;
-      padding: 10px;
-
-      border: 2px solid rgba($color-default-black, 0.2);
-      border-radius: 5px;
+      background-color: inherit;
+      border: none;
       outline: none;
 
       transition: border $trans-default;
 
+
       &:hover {
-        border: 2px solid rgba($color-default-black, 0.5);
       }
 
       &:focus {
-        border: 2px solid rgba($color-default-black, 0.8);
       }
     }
   }
