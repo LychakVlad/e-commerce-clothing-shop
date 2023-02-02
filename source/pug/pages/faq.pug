@@ -42,7 +42,7 @@ block main
                   .faq__feedback__text.faq__feedback__text--title Есть вопросы или предложения? НАПИШИТЕ НАМ
                   +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
                   +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
-                  .faq__feedback__text.faq__feedback__text--sub Что Вас интересует:
+                  .faq__feedback__text.faq__feedback__text--sub Что Вас интересует?
                   +custom-textarea({inputName: "user-info", inputPlaceholder: "Текст сообщения"})
                   +btn({text: "Отправить", type: "submit"})(class='btn--orange')
 

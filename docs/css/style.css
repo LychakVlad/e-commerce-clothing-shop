@@ -1035,7 +1035,7 @@ button,
 }
 
 .custom-textarea {
-  border: 1px solid #254A5A;
+  border: 1px solid #DBDBDB;
   margin: 15px 0px;
   padding: 10px;
 }
@@ -1046,7 +1046,7 @@ button,
 
 .custom-input {
   margin-bottom: 15px;
-  border-bottom: 1px solid #254A5A;
+  border-bottom: 1px solid #DBDBDB;
 }
 
 .custom-input,
@@ -1073,9 +1073,9 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 .custom-input ::-moz-placeholder,
@@ -1083,9 +1083,9 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 .custom-input :-ms-input-placeholder,
@@ -1093,9 +1093,9 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 .custom-input ::-ms-input-placeholder,
@@ -1103,9 +1103,9 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 .custom-input ::placeholder,
@@ -1113,9 +1113,9 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 .custom-input label,
@@ -1140,6 +1140,12 @@ button,
   background-color: inherit;
   border: none;
   outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #0F303F;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
@@ -1746,7 +1752,7 @@ button,
 .main-content-block__text {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
@@ -1799,7 +1805,7 @@ button,
 .main-content-block__img-text {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
@@ -2143,7 +2149,7 @@ button,
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
-  line-height: 20px;
+  line-height: 22px;
   text-transform: uppercase;
   color: #EAE9E8;
   margin-bottom: 20px;
@@ -2203,7 +2209,7 @@ button,
   font-style: normal;
   font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 22px;
   color: #ffffff;
 }
 
@@ -2212,7 +2218,7 @@ button,
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 22px;
   text-align: center;
   color: #0F303F;
   max-width: 627px;
@@ -2225,7 +2231,7 @@ button,
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 22px;
   color: #0F303F;
   text-align: center;
   max-width: 627px;
@@ -2236,7 +2242,7 @@ button,
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 22px;
   color: #0F303F;
   margin-bottom: 28px;
   max-width: 627px;
@@ -2309,6 +2315,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 110px;
+  line-height: 22px;
 }
 
 .brands-text-block__img--left {
@@ -2320,10 +2327,10 @@ button,
 }
 
 .faq__container {
-  max-width: 850px;
+  max-width: 950px;
   width: 100%;
   margin: 68px auto 0px;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .faq__wrapper {
@@ -2399,7 +2406,7 @@ button,
 .faq-accordion-item__question {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 17px;
   color: #0F303F;
@@ -2442,9 +2449,9 @@ button,
 .faq-accordion-item__answer {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
   color: #0F303F;
   opacity: 0.7;
   max-width: 440px;
@@ -2455,7 +2462,7 @@ button,
 }
 
 .faq__feedback-block {
-  background: #EAE9E8;
+  background: #F4F4F4;
   max-width: 300px;
 }
 
@@ -2480,9 +2487,9 @@ button,
 
 .faq__feedback__text.faq__feedback__text--sub {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
-  color: #B7C1C5;
+  color: #6C6C6C;
 }
 
 /* @mixin hover-focus {
@@ -3014,6 +3021,11 @@ button,
     display: block;
     margin-right: 0px;
     margin-bottom: 15px;
+  }
+
+  .footer__heading--h2 {
+    font-weight: 600;
+    font-size: 26px;
   }
 
   .main-content-block__title--first {
