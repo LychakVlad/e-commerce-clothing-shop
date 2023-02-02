@@ -152,6 +152,21 @@
   }
 }
 
+@media (max-width: 800px) {
+  .faq__wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .faq__column{
+    width: auto;
+  }
 
+  .faq__title{
+    text-align: center;
+  }
 
+  .faq__feedback-block{
+    margin-top: 45px;
+  }
+}
