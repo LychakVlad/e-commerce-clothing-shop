@@ -1012,7 +1012,6 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  text-transform: uppercase;
   color: #ffffff;
   background-color: #0F303F;
   border: none;
@@ -1074,7 +1073,7 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
@@ -1084,7 +1083,7 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
@@ -1094,7 +1093,7 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
@@ -1104,7 +1103,7 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
@@ -1114,7 +1113,7 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
@@ -2340,8 +2339,8 @@ button,
 .faq__title {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
   color: #0F303F;
@@ -2351,7 +2350,7 @@ button,
 .faq__accordion-block-title {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 22px;
   line-height: 17px;
   text-transform: uppercase;
@@ -2400,12 +2399,12 @@ button,
 .faq-accordion-item__question {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
   line-height: 17px;
   color: #0F303F;
   padding: 18px 0px;
-  opacity: 0.7;
+  opacity: 0.8;
   position: relative;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -2443,7 +2442,7 @@ button,
 .faq-accordion-item__answer {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 16px;
   line-height: 17px;
   color: #0F303F;
@@ -2481,7 +2480,7 @@ button,
 
 .faq__feedback__text.faq__feedback__text--sub {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 170%;
   color: #B7C1C5;
 }
