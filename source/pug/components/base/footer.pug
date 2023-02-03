@@ -32,6 +32,10 @@ mixin footer(footerMods)
             each link in footerLinks
               li.footer__nav-item
                 a(href=link.href)= link.text
+            li.footer__nav-item
+              p(data-open-modal="success") Возврат и обмен
+            li.footer__nav-item
+              p(data-open-modal="feedback") Оплата и доставка
     .container
       .footer__bottom-menu
         .footer__all-right

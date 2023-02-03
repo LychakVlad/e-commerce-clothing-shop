@@ -427,6 +427,7 @@ body {
 ul,
 li,
 h2,
+h3,
 p {
   margin: 0px;
   padding: 0px;
@@ -834,8 +835,10 @@ button,
   margin-right: 0px;
 }
 
-.footer__nav-list a {
+.footer__nav-list a,
+.footer__nav-list p {
   color: #CEC6C4;
+  cursor: pointer;
 }
 
 .footer__search-input {
@@ -911,6 +914,32 @@ button,
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.modal__content-block {
+  margin-bottom: 32px;
+  max-width: 410px;
+}
+
+.modal__content-block--return {
+  max-width: 610px;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #0F303F;
+}
+
+.modal__description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0F303F;
+  margin-top: 13px;
 }
 
 .modal::-webkit-scrollbar {
@@ -949,6 +978,10 @@ button,
   width: 600px;
   padding: 40px;
   background-color: #ffffff;
+}
+
+.modal__content :nth-child(3) {
+  margin-bottom: 0;
 }
 
 .modal__close-btn {
@@ -3055,7 +3088,8 @@ button,
     transition: all 0.3s ease;
   }
 
-  .footer__nav-list a:hover:not(.focus-visible) {
+  .footer__nav-list a:hover:not(.focus-visible),
+  .footer__nav-list p:hover:not(.focus-visible) {
     color: #0F303F;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

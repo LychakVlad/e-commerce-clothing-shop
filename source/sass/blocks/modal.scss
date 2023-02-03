@@ -25,6 +25,34 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
+  font-family: 'Inter';
+  font-style: normal;
+
+  &__content-block{
+    margin-bottom: 32px;
+    max-width: 410px;
+
+    &--return{
+      max-width: 610px;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-blue-whale;
+  }
+
+  &__description{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-blue-whale;
+
+    margin-top: 13px;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -63,6 +91,10 @@
     padding: 40px;
 
     background-color: $color-default-white;
+
+    :nth-child(3){
+      margin-bottom: 0;
+    }
 
     @include vp-767 {
       width: 100%;

@@ -31,7 +31,10 @@
 <path d="M13 6C13 4.67392 12.4732 3.40215 11.5355 2.46447C10.5979 1.52678 9.32608 1 8 1C6.67392 1 5.40215 1.52678 4.46447 2.46447C3.52678 3.40215 3 4.67392 3 6" stroke="#0F303F"/>
 </g></symbol><symbol id="fav-icon" viewBox="0 0 21 18"><g fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.31802 2.31802C4.07538 0.56066 6.92462 0.56066 8.68198 2.31802L10.5 4.13604L12.318 2.31802C14.0754 0.56066 16.9246 0.56066 18.682 2.31802C20.4393 4.07538 20.4393 6.92462 18.682 8.68198L10.5 16.864L2.31802 8.68198C0.56066 6.92462 0.56066 4.07538 2.31802 2.31802Z" stroke="#0F303F" stroke-linecap="round"/>
-</g></symbol><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol><symbol id="logo" viewBox="0 0 129 16"><g fill="none">
+</g></symbol><symbol id="icon-close" viewBox="0 0 22 22"><g fill="none">
+<path d="M1 1L21 21" stroke="#0F303F"/>
+<path d="M21 1L0.999999 21" stroke="#0F303F"/>
+</g></symbol><symbol id="logo" viewBox="0 0 129 16"><g fill="none">
 <g clip-path="url(#clip0_155_1536)">
 <path d="M10.4191 15.7846L9.4082 13.0251H2.74338L1.65907 15.7846H0L6.23273 0L12.1027 15.7846H10.4191ZM6.15936 3.95834L3.19993 11.7287H8.92719L6.15936 3.95834Z" fill="#0F303F"/>
 <path d="M20.6914 15.7846V0.552734H22.3016V14.4395H27.0424V15.7846H20.6914Z" fill="#0F303F"/>
@@ -384,6 +387,12 @@
                 <li class="footer__nav-item"><a href="about-us.html">О нас</a></li>
                 <li class="footer__nav-item"><a href="faq.html">Распростроненные вопросы</a></li>
                 <li class="footer__nav-item"><a href="brands.html">Бренды</a></li>
+                <li class="footer__nav-item">
+                  <p data-open-modal="success">Возврат и обмен</p>
+                </li>
+                <li class="footer__nav-item">
+                  <p data-open-modal="feedback">Оплата и доставка</p>
+                </li>
               </ul>
             </div>
           </nav>
@@ -395,6 +404,60 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal__content-block">
+            <h3 class="modal__title">ОПЛАТА</h3>
+            <p class="modal__description">Наличными при получении</p>
+            <p class="modal__description">Оплата осуществляется наличными денежными средствами курьеру непосредственно при доставке заказа на адрес получателя. Выбрав данный способ оплаты, Вы получаете возможность рассмотрь и примерить заказанный товар.</p>
+            <p class="modal__description">Если какая-то позиция Вам не подошла, Вы можете просто вернуть ее курьеру, не оплачивая.</p>
+          </div>
+          <div class="modal__content-block">
+            <h3 class="modal__title">Картой на сайте (Visa, Mastercard)</h3>
+            <p class="modal__description">На сайте нашего интернет-магазина мы принимаем оплату платежными картами Visa и Mastercard. Безопасность проведения платежей у нас гарантирована системой eCommerceConnect с использованием современного стандарта «3-D Secure».</p>
+          </div>
+          <div class="modal__content-block">
+            <h3 class="modal__title">ДОСТАВКА</h3>
+            <p class="modal__description">На отделение «Нова Пошта»</p>
+            <p class="modal__description">Доставка заказов клиентам интернет-магазина ALLEGRIA осуществляется по территории всей Украины курьерской службой "Нова пошта".</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal__content-block modal__content-block--return">
+            <h3 class="modal__title">ВОЗВРАТ И ОБМЕН</h3>
+            <p class="modal__description">Возврат товаров, приобретенных в интернет-магазине ALLEGRIA, происходит согласно Закону Украины «О защите прав потребителей».</p>
+            <p class="modal__description">Вы можете вернуть товар на протяжении 14 дней со дня покупки.</p>
+          </div>
+          <div class="modal__content-block modal__content-block--return">
+            <h3 class="modal__title">Как оформить заявку на возврат?</h3>
+            <p class="modal__description">Если купленная вещь Вам не понравилась или не подошла — свяжитесь с нашим контакт центром по телефону 000 00 000 и мы поможем оформить заявку на возврат.</p>
+          </div>
+          <div class="modal__content-block modal__content-block--return">
+            <h3 class="modal__title">Какие есть условия по возврату товара?</h3>
+            <p class="modal__description">Обмен и возврат товара производится в том случае, если указанный товар не был в употреблении, полностью сохранен его товарный вид — без повреждений и следов ношения, оригинальная упаковка, а также бирки, пломбы, ярлыки, фирменные знаки.</p>
+            <p class="modal__description">Не возвращаются и не подлежат обмену купальники, нижнее белье, чулочно-носочные изделия, предметы личной гигиены, перчатки.</p>
+            <p class="modal__description">Вы можете осуществить возврат товар непосредственно в наших розничных магазинах, расположенных в Киеве, Харькове, Днепре и Одессе. Для жителей других городов Украины пересылка товара перевозчиком Новой Почтой или любым другим, на склад интернет магазина ALLEGRIA, расположенного в городе Харькове, осуществляется за счет компании.</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

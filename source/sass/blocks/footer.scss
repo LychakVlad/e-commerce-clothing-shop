@@ -35,8 +35,9 @@
     margin-right: 0px;
   }
 
-  a{
+  a, p {
     color: $color-alto;
+    cursor: pointer;
 
   @include hover {
     color: $color-blue-whale;
