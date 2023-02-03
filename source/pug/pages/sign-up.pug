@@ -1,0 +1,41 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Sign-up" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "sign-up.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+
+  main
+    .sign-up__wrapper
+      .sign-up__block
+        h3.sign-up__title Регистрация
+        .sign-up__inputs-block
+          +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name", class='custom-input--long')
+          +custom-input({inputError: "Не корректная фаммилия", inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Фамилия"})(data-validate-type="text", data-limitations="surename", class='custom-input--long')
+          +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email", class='custom-input--long')
+          +custom-input({inputType: "tel", inputError: "Не корректный номер", inputName: "user-tel", inputPlaceholder: "Номер телефона", inputName: "user-tel"})(data-validate-type="tel", class='custom-input--long')
+          +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
+          +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Повторите пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
+        +custom-toggle({inputLabel: "Подписаться на рассылку", inputError: "Согласие является обязательным", inputName: "user-agreement"})(data-validate-type="checkbox").custom-toggle--checkbox
+        +custom-toggle({inputLabel: 'Я согласен c политикой конфиденциальности', inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+        .sign-up__button-block
+          +btn({text: "Зарегистрироваться", type: "submit"})
+          p.sign-up__text=  'У меня уже есть аккаунт - '
+            a(href="sign-in.html") войти
+
+
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="feedback")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-return()

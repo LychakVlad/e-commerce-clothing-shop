@@ -1093,7 +1093,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 250px;
+  min-width: 250px;
   /*&.is-valid {
     input {
       border: 2px solid $color-malachite;
@@ -1224,7 +1224,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   width: 500px;
-  padding: 20px 0;
+  padding: 10px 0;
   /*&.is-valid {
     label span {
       color: $color-eucalyptus;
@@ -1262,13 +1262,22 @@ button,
   margin-left: 0;
 }
 
+.custom-toggle--checkbox {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0F303F;
+}
+
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 15px;
+  height: 15px;
+  border: 1px solid #b7c1c5;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
@@ -1279,8 +1288,8 @@ button,
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: rgba(255, 255, 255, 0);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -2574,7 +2583,6 @@ button,
 
 .sign-in__text-block a {
   position: relative;
-  cursor: pointer;
   color: #E64926;
 }
 
@@ -2651,6 +2659,95 @@ button,
   color: #0F303F;
   max-width: 323px;
   margin: 24px 0px 22px;
+}
+
+.sign-up__wrapper {
+  width: 100%;
+  max-width: 551px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 100px auto 140px;
+}
+
+.sign-up__block {
+  max-width: 551px;
+  padding: 0 16px;
+}
+
+.sign-up__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #0F303F;
+  margin-bottom: 40px;
+}
+
+.sign-up__inputs-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.sign-up__button-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.sign-up__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0F303F;
+}
+
+.sign-up__text a {
+  position: relative;
+  color: #E64926;
+}
+
+.sign-up__text a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #E64926;
+  border-radius: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  -o-transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.sign-up__text a:hover::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0.2em, 0);
+  transform: translate3d(0, 0.2em, 0);
 }
 
 /* @mixin hover-focus {
@@ -3033,6 +3130,15 @@ button,
   .clothes-slider-block .swiper-button-next::after {
     font-size: 30px;
   }
+
+  .sign-up__button-block {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .sign-up__text {
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3159,6 +3265,17 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .custom-input--long {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .sign-up__inputs-block {
+    display: block;
   }
 }
 

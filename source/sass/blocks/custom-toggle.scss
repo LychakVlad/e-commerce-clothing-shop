@@ -3,7 +3,7 @@
 
   display: flex;
   width: 500px;
-  padding: 20px 0;
+  padding: 10px 0;
 
   &__error {
     position: absolute;
@@ -41,15 +41,23 @@
   }
 
   &--checkbox {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0F303F;
+
     .custom-toggle__icon {
       position: absolute;
-      top: 2px;
+      top: 0;
       left: 0;
 
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
 
-      border: 1px solid rgba($color-default-black, 0.2);
+      border: 1px solid rgba(#B7C1C5, 1);
 
       transition: border $trans-default;
 
@@ -59,8 +67,8 @@
         top: 50%;
         left: 50%;
 
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
 
         background-color: $color-transparent;
 
