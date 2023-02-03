@@ -1,0 +1,30 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "email-sent" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "email-sent.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  main
+    .email-sent__wrapper
+      .email-sent__block
+        .email-sent__block-wrapper
+          +picture("content", 'email-sent', "png", 124, 124, "mail")
+          p.email-sent__text Ссылка для восстановления пароля отправлено на test@mail.com
+          +btn({text: "На главную", href: "index.html"})(aria-label="Send email" class='btn--small')
+
+
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="feedback")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-return()

@@ -20,9 +20,9 @@ block main
         +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
         +btn({text: "Войти", type: "submit"})
         .sign-in__text-block
-          span.sign-in__forgot-pass Забыли пароль
+          a(href="forgot-pass.html").sign-in__forgot-pass Забыли пароль
           span= ' / '
-          span.sign-in__to-sign-up У меня нет акаунта
+          a(href="#").sign-in__to-sign-up У меня нет акаунта
 
 
 

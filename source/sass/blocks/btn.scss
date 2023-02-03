@@ -25,6 +25,11 @@
     background-color: $color-cinnabar;
   }
 
+  &--small{
+    width: 139px;
+    height: 39px;
+  }
+
   &:disabled {
     opacity: 0.5;
 
