@@ -1,0 +1,34 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Sign-in" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "sign-in.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  main
+    .sign-in__wrapper
+      .sign-in__block
+        h3.sign-in__title Вход
+        +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
+        +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
+        +btn({text: "Войти", type: "submit"})
+        .sign-in__text-block
+          span.sign-in__forgot-pass Забыли пароль
+          span= ' / '
+          span.sign-in__to-sign-up У меня нет акаунта
+
+
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="feedback")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-return()

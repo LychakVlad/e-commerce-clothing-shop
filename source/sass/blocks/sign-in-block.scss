@@ -1,0 +1,63 @@
+.sign-in__wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.sign-in__block{
+  max-width: 250px;
+}
+.sign-in__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 40px;
+  color: $color-blue-whale;
+}
+
+
+.sign-in__text-block {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-cinnabar;
+
+  margin-top: 20px;
+  text-align: center;
+
+  span{
+  position: relative;
+  cursor: pointer;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: $color-cinnabar;
+
+      border-radius: 1px;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    &:hover {
+      &::after{
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+      }
+    }
+  }
+}

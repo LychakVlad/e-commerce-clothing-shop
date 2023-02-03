@@ -111,6 +111,14 @@
 }
 }
 
+@media (max-width: 770px) {
+  .footer__nav-item{
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+}
+
 @media (max-width: 400px) {
 
   .footer__bottom-menu{
@@ -120,13 +128,6 @@
       line-height: 10px;
     }
 }
-
-
-  .footer__nav-item{
-    display: block;
-    margin-right: 0px;
-    margin-bottom: 15px;
-  }
 
   .footer__heading{
     &--h2{
