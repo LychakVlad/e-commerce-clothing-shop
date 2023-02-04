@@ -50,13 +50,13 @@
       background-color: $color-transparent;
 
       // TODO исправить для разных блоков с разным фоном (автозаполн)
-      box-shadow: inset 0 0 0 1000px  #f4f4f4;
+      box-shadow: inset 0 0 0 1000px  transparent;
       transition: border $trans-default;
 
-      &:autofill,
+      &:autofill
       &:-internal-autofill-selected {
         background-color: $color-transparent !important;
-        //box-shadow: none;
+        box-shadow: inset 0 0 0 1000px  transparent;
 
       }
 
@@ -107,13 +107,3 @@
   }*/
 }
 
-
-
-@media (max-width: 550px) {
-  .custom-input{
-    &--long{
-      width: 100%;
-      max-width: 400px;
-    }
-  }
-}

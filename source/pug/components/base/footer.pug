@@ -18,27 +18,27 @@ mixin footer(footerMods)
 
 
   footer.footer(class=footerMods)
-    .footer__upper-menu
-      h2.footer__heading.footer__heading--h2 Будьте в курсе событий
-      .footer__search
-        form
-          .footer__search-input-wrapper
-            input(type="email").footer__search-input
-            button(type='submit').footer__search-button
-              +icon('mail-submitt', 18, 18)
-      nav.footer__nav
-        .footer__nav-wrapper
-          ul.footer__nav-list
-            each link in footerLinks
-              li.footer__nav-item
-                a(href=link.href)= link.text
-            li.footer__nav-item
-              a(href="#" data-open-modal="success") Возврат и обмен
-            li.footer__nav-item
-              a(href="#" data-open-modal="feedback") Оплата и доставка
     .container
+      .footer__upper-menu
+        h2.footer__heading.footer__heading--h2 Будьте в курсе событий
+        .footer__search
+          form
+            .footer__search-input-wrapper
+              input(type="email").footer__search-input
+              button(type='submit').footer__search-button
+                +icon('mail-submitt', 18, 18)
+        nav.footer__nav
+          .footer__nav-wrapper
+            ul.footer__nav-list
+              each link in footerLinks
+                li.footer__nav-item
+                  a(href=link.href)= link.text
+              li.footer__nav-item
+                a(href="#" data-open-modal="success") Возврат и обмен
+              li.footer__nav-item
+                a(href="#" data-open-modal="feedback") Оплата и доставка
       .footer__bottom-menu
-        .footer__all-right
-          p Все права защищены © 2020 Allegria.com
-        .footer__dev
-          a(href="https://github.com/LychakVlad" target="_blank") Разработка
+          .footer__all-right
+            p Все права защищены © 2020 Allegria.com
+          .footer__dev
+            a(href="https://github.com/LychakVlad" target="_blank") Разработка

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>UI-kit</title>
+    <title>ui-kit</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -72,6 +72,148 @@
 </g></symbol></svg>
     </div>
     <div class="wrapper">
+      <header class="header">
+        <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную">
+            <svg width="129" height="16" aria-hidden="true">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item nav-menu-open _active">
+                  <p>Женщины</p>
+                </li>
+                <li class="main-nav__item nav-menu-open">
+                  <p>Мужчины</p>
+                </li>
+                <li class="main-nav__item">
+                  <div class="main-nav__item-form">
+                    <form>
+                      <p>Поиск</p>
+                      <div class="main-nav__item-input-wrapper">
+                        <input class="main-nav__item-input" type="text">
+                      </div>
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header__lang">
+            <div class="header__lang-wrapper">
+              <ul class="header__lang-list">
+                <li class="header__lang-item"><a href="#">RU</a></li>
+                <li class="header__lang-item"><a href="#">EN</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__menu">
+            <div class="header__menu-wrapper">
+              <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="sign-in.html">
+                    <svg width="16" height="18" aria-hidden="true">
+                      <use xlink:href="#personal-acc"></use>
+                    </svg></a></li>
+                <li class="header__menu-item"><a href="#">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="#fav-icon"></use>
+                    </svg></a></li>
+                <li class="header__menu-item"><a href="#">
+                    <svg width="16" height="18" aria-hidden="true">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg></a></li>
+                <li class="header__menu-item header__menu-item--trigger"><span class="header__burger-menu-icon"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header-menu">
+        <div class="header-menu__wrapper">
+          <div class="header-menu__menu">
+            <div class="header-menu__menu-left-block"><span>Мужчины</span><span>Женщины</span></div>
+            <div class="header-menu__menu-right-block header-menu__menu-right-block--top">
+              <div class="header-menu__item-search"><span>Поиск</span>
+                <div class="header-menu__item-form">
+                  <form>
+                    <div class="header-menu__item-input-wrapper">
+                      <input class="header-menu__item-input" type="text">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+            </div>
+          </div>
+          <div class="header-menu__top-block">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Одежда</h3>
+              <ul class="header-menu__list" data-accordion="content">
+                <li class="header-menu__item"><a href="#">Свитшоты и худи</a></li>
+                <li class="header-menu__item"><a href="#">Платья юбки</a></li>
+                <li class="header-menu__item"><a href="#">Футболки и топы</a></li>
+                <li class="header-menu__item"><a href="#">Брюки и шорты</a></li>
+                <li class="header-menu__item"><a href="#">Рубашки</a></li>
+                <li class="header-menu__item"><a href="#">Комбинезоны</a></li>
+                <li class="header-menu__item"><a href="#">Леггинсы</a></li>
+                <li class="header-menu__item"><a href="#">Куртки</a></li>
+                <li class="header-menu__item"><a href="#">Пальто</a></li>
+                <li class="header-menu__item"><a href="#">Плащи</a></li>
+                <li class="header-menu__item"><a href="#">Желетки</a></li>
+                <li class="header-menu__item"><a href="#">Ветровки</a></li>
+              </ul>
+            </div>
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Обувь</h3>
+              <ul class="header-menu__list" data-accordion="content">
+                <li class="header-menu__item"><a href="#">Кроссовки</a></li>
+                <li class="header-menu__item"><a href="#">Шлепанцы</a></li>
+              </ul>
+            </div>
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Сумки</h3>
+              <ul class="header-menu__list" data-accordion="content">
+                <li class="header-menu__item"><a href="#">Сумки</a></li>
+                <li class="header-menu__item"><a href="#">Рюкзаки</a></li>
+                <li class="header-menu__item"><a href="#">Кроссбоди</a></li>
+                <li class="header-menu__item"><a href="#">Поясные</a></li>
+                <li class="header-menu__item"><a href="#">Спортивные</a></li>
+                <li class="header-menu__item"><a href="#">Шопперы</a></li>
+              </ul>
+            </div>
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Аксессуары</h3>
+              <ul class="header-menu__list" data-accordion="content">
+                <li class="header-menu__item"><a href="#">Головные уборы</a></li>
+                <li class="header-menu__item"><a href="#">Перчатки</a></li>
+                <li class="header-menu__item"><a href="#">Шарфы и платки</a></li>
+                <li class="header-menu__item"><a href="#">Носки</a></li>
+                <li class="header-menu__item"><a href="#">Гетры</a></li>
+              </ul>
+            </div>
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Белье</h3>
+              <ul class="header-menu__list" data-accordion="content">
+                <li class="header-menu__item"><a href="#">Разное</a></li>
+              </ul>
+            </div>
+            <div class="header-menu__menu-right-block header-menu__menu-right-block--bottom">
+              <div class="header-menu__item-search"><span>Поиск</span>
+                <div class="header-menu__item-form">
+                  <form>
+                    <div class="header-menu__item-input-wrapper">
+                      <input class="header-menu__item-input" type="text">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+            </div>
+          </div>
+          <div class="header-menu__bottom-block"><a class="header-menu__brand" href="#">Deha</a><a class="header-menu__brand" href="#">American vintage</a><a class="header-menu__brand" href="#">george gina lucy</a><a class="header-menu__brand" href="#">birkenstock</a>
+          </div>
+        </div>
+      </div>
       <style>
         main {
           margin-top: 100px;
@@ -215,36 +357,36 @@
             <div data-validate>
               <form method="post">
                 <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
+                  <label>
                     <input type="text" name="user-name" minlength="2">
                   </label>
                   <div class="custom-input__error">Не корректное имя</div>
                 </div>
                 <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
+                  <pre>+custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
-                  <label><span class="custom-input__label">Введите ваш телефон</span>
+                  <label>
                     <input type="tel" name="user-phone">
                   </label>
                   <div class="custom-input__error">Не корректный телефон</div>
                 </div>
                 <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
+                  <pre>+custom-input({inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
-                  <label><span class="custom-input__label">Введите ваш email</span>
+                  <label>
                     <input type="email" name="user-email">
                   </label>
                   <div class="custom-input__error">Не корректный email</div>
                 </div>
                 <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
+                  <pre>+custom-input({inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
                 <div class="custom-textarea">
-                  <label><span class="custom-textarea__label">Расскажите о себе</span>
+                  <label>
                     <textarea name="user-info"></textarea>
                   </label>
                 </div>
                 <p>Пример вызова</p><code>
-                  <pre>+custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})</pre></code>
+                  <pre>+custom-textarea({inputName: "user-info"})</pre></code>
                 <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
                   <ul class="custom-select__list" role="listbox">
@@ -566,6 +708,42 @@ const navigationChanger = new NavigationChanger();
 navigationChanger.init();
 
       </script>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__upper-menu">
+            <h2 class="footer__heading footer__heading--h2">Будьте в курсе событий</h2>
+            <div class="footer__search">
+              <form>
+                <div class="footer__search-input-wrapper">
+                  <input class="footer__search-input" type="email">
+                  <button class="footer__search-button" type="submit">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="#mail-submitt"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-wrapper">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a href="about-us.html">О нас</a></li>
+                  <li class="footer__nav-item"><a href="faq.html">Распростроненные вопросы</a></li>
+                  <li class="footer__nav-item"><a href="brands.html">Бренды</a></li>
+                  <li class="footer__nav-item"><a href="#" data-open-modal="success">Возврат и обмен</a></li>
+                  <li class="footer__nav-item"><a href="#" data-open-modal="feedback">Оплата и доставка</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="footer__bottom-menu">
+            <div class="footer__all-right">
+              <p>Все права защищены © 2020 Allegria.com</p>
+            </div>
+            <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Разработка</a></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <div class="modal modal--preload modal--feedback" data-modal="feedback">
       <div class="modal__wrapper">

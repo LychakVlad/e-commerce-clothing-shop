@@ -5,6 +5,7 @@
   width: 500px;
   padding: 10px 0;
 
+
   &__error {
     position: absolute;
     bottom: 0;
@@ -15,6 +16,8 @@
     opacity: 0;
 
     transition: opacity $trans-default;
+
+    pointer-events: none;
   }
 
   input {

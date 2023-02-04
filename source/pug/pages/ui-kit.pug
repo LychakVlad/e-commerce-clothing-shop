@@ -1,7 +1,13 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "UI-kit"
+  - const title = "ui-kit" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "ui-kit.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   style.
@@ -151,22 +157,22 @@ block main
         h2 Form elements
         div(data-validate)
           form(method="post")
-            +custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name")
+            +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name")
             p Пример вызова
             code
-              pre +custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
-            +custom-input({inputType: "tel",inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
+              pre +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
+            +custom-input({inputType: "tel",inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
             p Пример вызова
             code
-              pre +custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
-            +custom-input({inputType: "email", inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
+              pre +custom-input({inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
+            +custom-input({inputType: "email",inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
             p Пример вызова
             code
-              pre +custom-input({inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
-            +custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})
+              pre +custom-input({inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
+            +custom-textarea({inputName: "user-info"})
             p Пример вызова
             code
-              pre +custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})
+              pre +custom-textarea({inputName: "user-info"})
             +custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1", isActive: true}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
             code
               pre

@@ -11,7 +11,6 @@
 
 .footer__heading{
 
-&--h2{
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 600;
@@ -20,7 +19,6 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: $color-blue-whale;
-}
 
 }
 
@@ -130,10 +128,8 @@
 }
 
   .footer__heading{
-    &--h2{
       font-weight: 600;
       font-size: 26px;
-    }
   }
 
 }
