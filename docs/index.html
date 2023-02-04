@@ -73,10 +73,10 @@
     </div>
     <div class="wrapper">
       <header class="header">
-        <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную">
+        <div class="container"><span class="header__logo">
             <svg width="129" height="16" aria-hidden="true">
               <use xlink:href="#logo"></use>
-            </svg></a>
+            </svg></span>
           <nav class="main-nav">
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
@@ -86,10 +86,9 @@
                 <li class="main-nav__item nav-menu-open">
                   <p>Мужчины</p>
                 </li>
-                <li class="main-nav__item"><span>Поиск</span></li>
                 <li class="main-nav__item">
                   <div class="main-nav__item-form">
-                    <form>
+                    <form><span>Поиск</span>
                       <div class="main-nav__item-input-wrapper">
                         <input class="main-nav__item-input" type="text">
                       </div>
@@ -146,9 +145,9 @@
             </div>
           </div>
           <div class="header-menu__top-block">
-            <div class="header-menu__column">
-              <h3 class="header-menu__title">Одежда</h3>
-              <ul class="header-menu__list">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Одежда</h3>
+              <ul class="header-menu__list" data-accordion="content">
                 <li class="header-menu__item"><a href="#">Свитшоты и худи</a></li>
                 <li class="header-menu__item"><a href="#">Платья юбки</a></li>
                 <li class="header-menu__item"><a href="#">Футболки и топы</a></li>
@@ -163,16 +162,16 @@
                 <li class="header-menu__item"><a href="#">Ветровки</a></li>
               </ul>
             </div>
-            <div class="header-menu__column">
-              <h3 class="header-menu__title">Обувь</h3>
-              <ul class="header-menu__list">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Обувь</h3>
+              <ul class="header-menu__list" data-accordion="content">
                 <li class="header-menu__item"><a href="#">Кроссовки</a></li>
                 <li class="header-menu__item"><a href="#">Шлепанцы</a></li>
               </ul>
             </div>
-            <div class="header-menu__column">
-              <h3 class="header-menu__title">Сумки</h3>
-              <ul class="header-menu__list">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Сумки</h3>
+              <ul class="header-menu__list" data-accordion="content">
                 <li class="header-menu__item"><a href="#">Сумки</a></li>
                 <li class="header-menu__item"><a href="#">Рюкзаки</a></li>
                 <li class="header-menu__item"><a href="#">Кроссбоди</a></li>
@@ -181,9 +180,9 @@
                 <li class="header-menu__item"><a href="#">Шопперы</a></li>
               </ul>
             </div>
-            <div class="header-menu__column">
-              <h3 class="header-menu__title">Аксессуары</h3>
-              <ul class="header-menu__list">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Аксессуары</h3>
+              <ul class="header-menu__list" data-accordion="content">
                 <li class="header-menu__item"><a href="#">Головные уборы</a></li>
                 <li class="header-menu__item"><a href="#">Перчатки</a></li>
                 <li class="header-menu__item"><a href="#">Шарфы и платки</a></li>
@@ -191,9 +190,9 @@
                 <li class="header-menu__item"><a href="#">Гетры</a></li>
               </ul>
             </div>
-            <div class="header-menu__column">
-              <h3 class="header-menu__title">Белье</h3>
-              <ul class="header-menu__list">
+            <div class="header-menu__column" data-accordion="parent">
+              <h3 class="header-menu__title" data-accordion="button">Белье</h3>
+              <ul class="header-menu__list" data-accordion="content">
                 <li class="header-menu__item"><a href="#">Разное</a></li>
               </ul>
             </div>
@@ -221,7 +220,7 @@
               <div class="title-block title-block--main">
                 <div class="title-block__wrapper title-block__wrapper--main">
                   <picture class="title-block__bg-img title-block__bg-img--main">
-                    <source type="image/webp" srcset="img/content/banner-1.webp, img/content/banner-1@2x.webp 2x"><img src="img/content/banner-1.png" srcset="img/content/banner-1@2x.png 2x" width="1440" height="585" alt="bg-img">
+                    <source type="image/webp" srcset="img/content/banner-1.webp"><img src="img/content/banner-1.png" srcset="img/content/banner-1@2x.png 2x" width="1440" height="585" alt="bg-img">
                   </picture>
                   <div class="text-block text-block--center">
                     <p class="text-block__brand">Бренд</p>
@@ -237,7 +236,7 @@
                   <h2 class="main-slider__slide-title">george gina lucy</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
                 </div>
                 <picture class="main-slider__slide-img">
-                  <source type="image/webp" srcset="img/content/banner-2.webp, img/content/banner-2@2x.webp 2x"><img src="img/content/banner-2.png" srcset="img/content/banner-2@2x.png 2x" width="941" height="584" alt="banner">
+                  <source type="image/webp" srcset="img/content/banner-2.webp"><img src="img/content/banner-2.png" srcset="img/content/banner-2@2x.png 2x" width="941" height="584" alt="banner">
                 </picture>
               </div>
             </div>
@@ -248,7 +247,7 @@
                   <h2 class="main-slider__slide-title">deha</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
                 </div>
                 <picture class="main-slider__slide-img">
-                  <source type="image/webp" srcset="img/content/banner-3.webp, img/content/banner-3@2x.webp 2x"><img src="img/content/banner-3.png" srcset="img/content/banner-3@2x.png 2x" width="941" height="584" alt="banner">
+                  <source type="image/webp" srcset="img/content/banner-3.webp"><img src="img/content/banner-3.png" srcset="img/content/banner-3@2x.png 2x" width="941" height="584" alt="banner">
                 </picture>
               </div>
             </div>
@@ -259,7 +258,7 @@
                   <h2 class="main-slider__slide-title">birkenstock</h2><a class="main-slider__slide-collection-link" href="#">смотреть коллекцию</a>
                 </div>
                 <picture class="main-slider__slide-img">
-                  <source type="image/webp" srcset="img/content/banner-4.webp, img/content/banner-4@2x.webp 2x"><img src="img/content/banner-4.png" srcset="img/content/banner-4@2x.png 2x" width="941" height="584" alt="banner">
+                  <source type="image/webp" srcset="img/content/banner-4.webp"><img src="img/content/banner-4.png" srcset="img/content/banner-4@2x.png 2x" width="941" height="584" alt="banner">
                 </picture>
               </div>
             </div>
@@ -270,7 +269,7 @@
           <div class="main-content-block__wrapper">
             <div class="main-content-block__column main-content-block__column--left">
               <picture class="main-content-block__img main-content-block__img--left">
-                <source type="image/webp" srcset="img/content/main-block-img.webp, img/content/main-block-img@2x.webp 2x"><img src="img/content/main-block-img.png" srcset="img/content/main-block-img@2x.png 2x" width="640" height="699" alt="img">
+                <source type="image/webp" srcset="img/content/main-block-img.webp"><img src="img/content/main-block-img.png" srcset="img/content/main-block-img@2x.png 2x" width="640" height="699" alt="img">
               </picture>
               <div class="main-content-block__text-block main-content-block__text-block--first">
                 <h2 class="main-content-block__title main-content-block__title--first">new arrival</h2>
@@ -281,7 +280,7 @@
               <div class="main-content-block__img-wrapper">
                 <p class="main-content-block__img-text">Мы производим и продаем не только одежду, но и обувь и аксессуары, созданные нашими дизайнеров.</p>
                 <picture class="main-content-block__img main-content-block__img--right">
-                  <source type="image/webp" srcset="img/content/block-img.webp, img/content/block-img@2x.webp 2x"><img src="img/content/block-img.png" srcset="img/content/block-img@2x.png 2x" width="380" height="380" alt="img">
+                  <source type="image/webp" srcset="img/content/block-img.webp"><img src="img/content/block-img.png" srcset="img/content/block-img@2x.png 2x" width="380" height="380" alt="img">
                 </picture>
               </div>
             </div>
@@ -296,7 +295,7 @@
                   <div class="item-card">
                     <div class="item-card__wrapper">
                       <picture>
-                        <source type="image/webp" srcset="img/content/clothes-1.webp, img/content/clothes-1@2x.webp 2x"><img src="img/content/clothes-1.png" srcset="img/content/clothes-1@2x.png 2x" width="230" height="365" alt="card">
+                        <source type="image/webp" srcset="img/content/clothes-1.webp"><img src="img/content/clothes-1.png" srcset="img/content/clothes-1@2x.png 2x" width="230" height="365" alt="card">
                       </picture>
                       <p class="item-card__title">Replay</p>
                       <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
@@ -307,7 +306,7 @@
                   <div class="item-card">
                     <div class="item-card__wrapper">
                       <picture>
-                        <source type="image/webp" srcset="img/content/clothes-2.webp, img/content/clothes-2@2x.webp 2x"><img src="img/content/clothes-2.png" srcset="img/content/clothes-2@2x.png 2x" width="230" height="365" alt="card">
+                        <source type="image/webp" srcset="img/content/clothes-2.webp"><img src="img/content/clothes-2.png" srcset="img/content/clothes-2@2x.png 2x" width="230" height="365" alt="card">
                       </picture>
                       <p class="item-card__title">Replay</p>
                       <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
@@ -318,7 +317,7 @@
                   <div class="item-card">
                     <div class="item-card__wrapper">
                       <picture>
-                        <source type="image/webp" srcset="img/content/clothes-3.webp, img/content/clothes-3@2x.webp 2x"><img src="img/content/clothes-3.png" srcset="img/content/clothes-3@2x.png 2x" width="230" height="365" alt="card">
+                        <source type="image/webp" srcset="img/content/clothes-3.webp"><img src="img/content/clothes-3.png" srcset="img/content/clothes-3@2x.png 2x" width="230" height="365" alt="card">
                       </picture>
                       <p class="item-card__title">Replay</p>
                       <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
@@ -329,7 +328,7 @@
                   <div class="item-card">
                     <div class="item-card__wrapper">
                       <picture>
-                        <source type="image/webp" srcset="img/content/clothes-4.webp, img/content/clothes-4@2x.webp 2x"><img src="img/content/clothes-4.png" srcset="img/content/clothes-4@2x.png 2x" width="230" height="365" alt="card">
+                        <source type="image/webp" srcset="img/content/clothes-4.webp"><img src="img/content/clothes-4.png" srcset="img/content/clothes-4@2x.png 2x" width="230" height="365" alt="card">
                       </picture>
                       <p class="item-card__title">Replay</p>
                       <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
@@ -357,7 +356,7 @@
             </div>
             <div class="main-page-second-content-block__column">
               <picture class="main-page-second-content-block__img">
-                <source type="image/webp" srcset="img/content/main-block-img-2.webp, img/content/main-block-img-2@2x.webp 2x"><img src="img/content/main-block-img-2.png" srcset="img/content/main-block-img-2@2x.png 2x" width="474" height="543" alt="img">
+                <source type="image/webp" srcset="img/content/main-block-img-2.webp"><img src="img/content/main-block-img-2.png" srcset="img/content/main-block-img-2@2x.png 2x" width="474" height="543" alt="img">
               </picture>
               <svg class="main-page-second-content-block__svg" width="180" height="264" aria-hidden="true">
                 <use xlink:href="#main-page-decor"></use>
@@ -387,20 +386,18 @@
                 <li class="footer__nav-item"><a href="about-us.html">О нас</a></li>
                 <li class="footer__nav-item"><a href="faq.html">Распростроненные вопросы</a></li>
                 <li class="footer__nav-item"><a href="brands.html">Бренды</a></li>
-                <li class="footer__nav-item">
-                  <p data-open-modal="success">Возврат и обмен</p>
-                </li>
-                <li class="footer__nav-item">
-                  <p data-open-modal="feedback">Оплата и доставка</p>
-                </li>
+                <li class="footer__nav-item"><a href="#" data-open-modal="success">Возврат и обмен</a></li>
+                <li class="footer__nav-item"><a href="#" data-open-modal="feedback">Оплата и доставка</a></li>
               </ul>
             </div>
           </nav>
         </div>
         <div class="container">
           <div class="footer__bottom-menu">
-            <div class="footer__all-right"><a href="#">Все права защищены © 2020 Allegria.com</a></div>
-            <div class="footer__dev"><a href="#">Дизайн и разработка</a></div>
+            <div class="footer__all-right">
+              <p>Все права защищены © 2020 Allegria.com</p>
+            </div>
+            <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Разработка</a></div>
           </div>
         </div>
       </footer>

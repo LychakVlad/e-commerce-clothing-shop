@@ -33,12 +33,12 @@ mixin footer(footerMods)
               li.footer__nav-item
                 a(href=link.href)= link.text
             li.footer__nav-item
-              p(data-open-modal="success") Возврат и обмен
+              a(href="#" data-open-modal="success") Возврат и обмен
             li.footer__nav-item
-              p(data-open-modal="feedback") Оплата и доставка
+              a(href="#" data-open-modal="feedback") Оплата и доставка
     .container
       .footer__bottom-menu
         .footer__all-right
-          a(href="#") Все права защищены © 2020 Allegria.com
+          p Все права защищены © 2020 Allegria.com
         .footer__dev
-          a(href="#") Дизайн и разработка
+          a(href="https://github.com/LychakVlad" target="_blank") Разработка

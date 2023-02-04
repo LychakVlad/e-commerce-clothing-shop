@@ -38,10 +38,10 @@
   a, p {
     color: $color-alto;
     cursor: pointer;
+    transition: color $trans-default;
 
   @include hover {
     color: $color-blue-whale;
-    transition: all .3s ease;
     }
   }
 }
@@ -70,10 +70,10 @@
 .footer__search-button{
   background-color: inherit;
   border: none;
+  transition: transform $trans-default;
 
   @include hover {
     transform: scale(1.5);
-    transition: all .2s ease;
   }
 }
 
@@ -85,10 +85,10 @@
 
   a{
     color: $color-blue-whale;
+    transition: color $trans-default;
 
     @include hover {
       color: $color-submarine;
-      transition: all .3s ease;
     }
   }
 };

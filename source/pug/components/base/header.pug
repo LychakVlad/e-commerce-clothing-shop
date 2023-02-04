@@ -41,7 +41,7 @@ mixin header(currentUrl)
 
   header.header
     .container
-      if(currentUrl === "index.html")
+      if(currentUrl= 'index.html')
         span.header__logo
           +icon('logo', 129, 16)
       else
@@ -55,10 +55,9 @@ mixin header(currentUrl)
             li.main-nav__item.nav-menu-open
               p Мужчины
             li.main-nav__item
-              span Поиск
-            li.main-nav__item
               .main-nav__item-form
                 form
+                  span Поиск
                   .main-nav__item-input-wrapper
                     input(type="text").main-nav__item-input
       .header__lang

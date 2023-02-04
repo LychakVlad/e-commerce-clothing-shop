@@ -8,15 +8,6 @@
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
       @content;
-
-      color: $color-blue-whale;
-      color: $color-submarine;
-      color: $color-cinnabar;
-
-      transform: scale(1.5);
-      transition: all .2s ease;
-      transition: all .3s ease;
-
     }
   }
 }
@@ -24,26 +15,12 @@
 @mixin focus {
   &.focus-visible:focus {
     @content;
-
-    text-decoration: underline;
-    text-decoration-color: $color-cinnabar;
-    text-underline-offset: 27px;
-    text-decoration-thickness: 2px;
-    color: $color-cinnabar;
-
   }
 }
 
 @mixin active {
   &.focus-visible:active {
     @content;
-
-    text-decoration: underline;
-    text-decoration-color: $color-cinnabar;
-    text-underline-offset: 27px;
-    text-decoration-thickness: 2px;
-    color: $color-cinnabar;
-
   }
 }
 
