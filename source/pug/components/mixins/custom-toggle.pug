@@ -5,6 +5,7 @@ mixin custom-toggle(options = {})
   - const inputId = options.inputId ? options.inputId : false
   - const inputChecked = options.inputChecked || false
   - const inputName = options.inputName ? options.inputName : false
+  - const labelLink = options.labelLink ? options.labelLink : false;
 
   .custom-toggle&attributes(attributes)
     label
@@ -12,5 +13,7 @@ mixin custom-toggle(options = {})
       span.custom-toggle__icon
       if inputLabel
         span.custom-toggle__label!=inputLabel
+         if labelLink
+           a(href=labelLink.href, target="_blank").link!=labelLink.text
     if inputError
       .custom-toggle__error!=inputError

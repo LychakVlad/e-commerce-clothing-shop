@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: $color-transparent;
 
     input,
     textarea {
@@ -46,9 +47,18 @@
       font-size: 14px;
       line-height: 170%;
       color: $color-blue-whale;
+      background-color: $color-transparent;
 
+      // TODO исправить для разных блоков с разным фоном (автозаполн)
+      box-shadow: inset 0 0 0 1000px  #f4f4f4;
       transition: border $trans-default;
 
+      &:autofill,
+      &:-internal-autofill-selected {
+        background-color: $color-transparent !important;
+        //box-shadow: none;
+
+      }
 
       &:hover {
       }

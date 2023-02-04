@@ -1,6 +1,7 @@
 .clothes-slider-block{
   max-width: 1155px;
   width: 100%;
+  // TODO нет отступов внешних в компоненте
   margin: auto;
   position: relative;
   .swiper-button-prev,
@@ -46,7 +47,7 @@
     .swiper-button-next{
       width: 60px;
       height: 60px;
-      
+
       &::after{
         font-size: 30px;
     }

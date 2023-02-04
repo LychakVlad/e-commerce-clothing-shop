@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
+  // TODO вынести слайдеры в отдельную папочку с инициализацией в sliders/index.js
   const swiper = new Swiper('.main-slider', {
     loop: true,
     pagination: {
@@ -49,12 +50,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  // TODO вынести в функцию
   const menuButton = document.querySelectorAll('.nav-menu-open');
+  // TODO НЕ МНОЖЬ ВЛОЖЕННОСТЬ
+  // if (!menuButton) {
+  //   return;
+  // }
   if (menuButton) {
+
     const headerMenu = document.querySelector('.header-menu');
     const burgerIcon = document.querySelector('.header__menu-item--trigger')
 
+    // привет из 2014 es4 var
     for (var i = 0; i < menuButton.length; i++) {
+      // forEach()
       menuButton[i].addEventListener("click", function (e) {
         headerMenu.classList.toggle('_active');
       });
@@ -65,52 +75,57 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   };
 
+  const handlerAccordion = (event) => {
+    const item = event.target;
+    const parent = item.closest('[data-accordion="parent"]');
+    const accordionContent = parent.querySelector('[data-accordion="content"]');
 
-  document.querySelectorAll('.faq-accordion-item__question').forEach((item) =>
-    item.addEventListener('click', () => {
-      const parent = item.parentNode;
-      const accordionContent = item.nextElementSibling
+    if (parent.classList.contains('active')) {
+      parent.classList.remove('active');
+      accordionContent.style.maxHeight = null;
+    } else {
+      document
+        .querySelectorAll('.faq-accordion-item')
+        .forEach((child) => child.classList.remove('active'))
+      document
+        .querySelectorAll('.faq-accordion-item__answer')
+        .forEach((child) => child.style.maxHeight = null)
 
-      if (parent.classList.contains('active')) {
-        parent.classList.remove('active');
-        accordionContent.style.maxHeight = null
-      } else {
-        document
-          .querySelectorAll('.faq-accordion-item')
-          .forEach((child) => child.classList.remove('active'))
-        document
-          .querySelectorAll('.faq-accordion-item__answer')
-          .forEach((child) => child.style.maxHeight = null)
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+      parent.classList.add('active')
+    }
+  }
 
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-        parent.classList.add('active')
-      }
-    })
-  )
+  // TOTO сначала переменная, потом проверка что переменная существует, а только потом уже что-то с ней делаем
+  document.querySelectorAll('[data-accordion="button"]')
+    .forEach((item) => {
+      item.addEventListener('click', handlerAccordion);
+    });
 
 
-  document.querySelectorAll('.header-menu__title').forEach((item) =>
-    item.addEventListener('click', () => {
-      const parent = item.parentNode;
-      const accordionContent = item.nextElementSibling
 
-      if (parent.classList.contains('open')) {
-        parent.classList.remove('open');
-        accordionContent.style.maxHeight = null
-
-      } else {
-        document
-          .querySelectorAll('.header-menu__column')
-          .forEach((child) => child.classList.remove('open'))
-        document
-          .querySelectorAll('.header-menu__list')
-          .forEach((child) => child.style.maxHeight = null)
-
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-        parent.classList.add('open')
-      }
-    })
-  )
+  // document.querySelectorAll('.header-menu__title').forEach((item) =>
+  //   item.addEventListener('click', () => {
+  //     const parent = item.parentNode;
+  //     const accordionContent = item.nextElementSibling
+  //
+  //     if (parent.classList.contains('open')) {
+  //       parent.classList.remove('open');
+  //       accordionContent.style.maxHeight = null
+  //
+  //     } else {
+  //       document
+  //         .querySelectorAll('.header-menu__column')
+  //         .forEach((child) => child.classList.remove('open'))
+  //       document
+  //         .querySelectorAll('.header-menu__list')
+  //         .forEach((child) => child.style.maxHeight = null)
+  //
+  //       accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+  //       parent.classList.add('open')
+  //     }
+  //   })
+  // )
 
 
 
@@ -122,6 +137,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+
   });
 });
 

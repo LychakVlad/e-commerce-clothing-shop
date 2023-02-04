@@ -25,7 +25,7 @@ block main
           +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
           +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Повторите пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
         +custom-toggle({inputLabel: "Подписаться на рассылку", inputError: "Согласие является обязательным", inputName: "user-agreement"})(data-validate-type="checkbox").custom-toggle--checkbox
-        +custom-toggle({inputLabel: 'Я согласен c политикой конфиденциальности', inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+        +custom-toggle({inputLabel: 'Я согласен c&nbsp;', labelLink: {text: 'политикой конфиденциальности', href: "#"}, inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
         .sign-up__button-block
           +btn({text: "Зарегистрироваться", type: "submit"})
           p.sign-up__text=  'У меня уже есть аккаунт - '
