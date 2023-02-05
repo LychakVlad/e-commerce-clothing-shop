@@ -4,11 +4,11 @@
   display: flex;
   width: 500px;
   padding: 10px 0;
-
+  margin-bottom: 6px;
 
   &__error {
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     left: 0;
 
     color: $color-torch-red;

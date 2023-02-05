@@ -658,7 +658,7 @@ button,
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
-  background-color: #254A5A;
+  background-color: #0F303F;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -670,13 +670,8 @@ button,
   background-color: #E64926;
 }
 
-.btn--small {
-  width: 139px;
-  height: 39px;
-}
-
 .btn:disabled {
-  opacity: 0.5;
+  background-color: rgba(25, 54, 66, 0.2);
   pointer-events: none;
 }
 
@@ -686,7 +681,6 @@ button,
 
 .custom-textarea {
   border: 1px solid #DBDBDB;
-  margin: 15px 0px;
   padding: 10px;
 }
 
@@ -695,7 +689,7 @@ button,
 }
 
 .custom-input {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   border-bottom: 1px solid #DDDDDD;
 }
 
@@ -705,7 +699,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 250px;
   /*&.is-valid {
     input {
       border: 2px solid $color-malachite;
@@ -798,60 +791,36 @@ button,
   line-height: 170%;
   color: #0F303F;
   background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: inset 0 0 0 1000px transparent;
-  box-shadow: inset 0 0 0 1000px transparent;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
-}
-
-.custom-input label input:-webkit-autofill .custom-input label input:-internal-autofill-selected,
-.custom-input label input:-webkit-autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-input label input:-webkit-autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-input label input:-webkit-autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-input label textarea:-webkit-autofill .custom-input label input:-internal-autofill-selected,
-.custom-input label textarea:-webkit-autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-input label textarea:-webkit-autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-input label textarea:-webkit-autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-textarea label input:-webkit-autofill .custom-input label input:-internal-autofill-selected,
-.custom-textarea label input:-webkit-autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-textarea label input:-webkit-autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-textarea label input:-webkit-autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-textarea label textarea:-webkit-autofill .custom-input label input:-internal-autofill-selected,
-.custom-textarea label textarea:-webkit-autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-textarea label textarea:-webkit-autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-textarea label textarea:-webkit-autofill .custom-textarea label textarea:-internal-autofill-selected {
-  background-color: rgba(255, 255, 255, 0) !important;
   -webkit-box-shadow: inset 0 0 0 1000px transparent;
   box-shadow: inset 0 0 0 1000px transparent;
 }
 
-.custom-input label input:autofill .custom-input label input:-internal-autofill-selected,
-.custom-input label input:autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-input label input:autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-input label input:autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-input label textarea:autofill .custom-input label input:-internal-autofill-selected,
-.custom-input label textarea:autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-input label textarea:autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-input label textarea:autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-textarea label input:autofill .custom-input label input:-internal-autofill-selected,
-.custom-textarea label input:autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-textarea label input:autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-textarea label input:autofill .custom-textarea label textarea:-internal-autofill-selected,
-.custom-textarea label textarea:autofill .custom-input label input:-internal-autofill-selected,
-.custom-textarea label textarea:autofill .custom-input label textarea:-internal-autofill-selected,
-.custom-textarea label textarea:autofill .custom-textarea label input:-internal-autofill-selected,
-.custom-textarea label textarea:autofill .custom-textarea label textarea:-internal-autofill-selected {
+.custom-input label input:-webkit-autofill,
+.custom-input label textarea:-webkit-autofill,
+.custom-textarea label input:-webkit-autofill,
+.custom-textarea label textarea:-webkit-autofill {
   background-color: rgba(255, 255, 255, 0) !important;
-  -webkit-box-shadow: inset 0 0 0 1000px transparent;
-  box-shadow: inset 0 0 0 1000px transparent;
+}
+
+.custom-input label input:autofill,
+.custom-input label input:-internal-autofill-selected,
+.custom-input label textarea:autofill,
+.custom-input label textarea:-internal-autofill-selected,
+.custom-textarea label input:autofill,
+.custom-textarea label input:-internal-autofill-selected,
+.custom-textarea label textarea:autofill,
+.custom-textarea label textarea:-internal-autofill-selected {
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 
 .custom-input__error,
 .custom-textarea__error {
   position: absolute;
-  right: 0;
-  bottom: -5px;
+  left: 0;
+  bottom: -25px;
   color: #ff1553;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
@@ -861,14 +830,14 @@ button,
 
 .custom-input.is-invalid input,
 .custom-textarea.is-invalid input {
-  border: 2px solid #ff1553;
+  border-bottom: 2px solid #ff1553;
 }
 
 .custom-input.is-invalid input:focus,
 .custom-input.is-invalid input:hover,
 .custom-textarea.is-invalid input:focus,
 .custom-textarea.is-invalid input:hover {
-  border: 2px solid rgba(255, 21, 83, 0.5);
+  border-bottom: 2px solid rgba(255, 21, 83, 0.5);
 }
 
 .custom-input.is-invalid .custom-input__error,
@@ -883,6 +852,7 @@ button,
   display: flex;
   width: 500px;
   padding: 10px 0;
+  margin-bottom: 6px;
   /*&.is-valid {
     label span {
       color: $color-eucalyptus;
@@ -892,7 +862,7 @@ button,
 
 .custom-toggle__error {
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
   color: #ff1553;
   opacity: 0;
@@ -1076,7 +1046,6 @@ button,
   padding: 5px 10px;
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   outline: none;
   cursor: pointer;
   -webkit-transition: border 0.3s ease;
@@ -1115,6 +1084,12 @@ button,
 }
 
 .custom-select__item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: #0F303F;
   padding: 5px;
   outline: none;
   cursor: pointer;
@@ -1147,6 +1122,12 @@ button,
 }
 
 .custom-select__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: #0F303F;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 80%;
@@ -1168,17 +1149,17 @@ button,
 .custom-select__icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 20px;
-  height: 10px;
   margin-left: auto;
-  background-color: #000000;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
-  clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3.5px 7px 3.5px;
+  border-color: transparent transparent #000000 transparent;
 }
 
 .custom-select.open-up .custom-select__list {
@@ -2731,6 +2712,34 @@ button,
   padding: 0 16px;
 }
 
+.sign-up__block a {
+  position: relative;
+  color: #E64926;
+}
+
+.sign-up__block a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #E64926;
+  border-radius: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  -o-transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.sign-up__block a:hover::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0.2em, 0);
+  transform: translate3d(0, 0.2em, 0);
+}
+
 .sign-up__title {
   font-family: "Inter";
   font-style: normal;
@@ -2773,34 +2782,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #0F303F;
-}
-
-.sign-up__text a {
-  position: relative;
-  color: #E64926;
-}
-
-.sign-up__text a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: #E64926;
-  border-radius: 1px;
-  opacity: 0;
-  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, -webkit-transform 300ms;
-  -o-transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
-}
-
-.sign-up__text a:hover::after {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0.2em, 0);
-  transform: translate3d(0, 0.2em, 0);
 }
 
 /* @mixin hover-focus {

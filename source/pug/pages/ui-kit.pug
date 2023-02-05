@@ -11,9 +11,6 @@ block variables
 
 block main
   style.
-    main {
-      margin-top: 100px;
-    }
 
     main > .container {
       padding-top: 30px;
@@ -67,12 +64,12 @@ block main
       left: 50%;
       top: 0;
       transform: translateX(-50%);
-      background-color: #2c39f2;
+      background-color: #9b9b9b;
       z-index: -1;
     }
 
     .header-ui {
-      background-color: #2c39f2;
+      background-color: #9b9b9b;
       padding: 20px 0;
       position: fixed;
       width: 100vw;
@@ -144,10 +141,10 @@ block main
         p Пример вызова
         code
           pre +btn({text: "Текст", href: "#"})
-        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--orange
         p Пример вызова
         code
-          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--orange
         +btn({text: "Текст"})(disabled)
         p Пример вызова
         code

@@ -215,10 +215,6 @@
         </div>
       </div>
       <style>
-        main {
-          margin-top: 100px;
-        }
-        
         main > .container {
           padding-top: 30px;
           padding-bottom: 30px;
@@ -271,12 +267,12 @@
           left: 50%;
           top: 0;
           transform: translateX(-50%);
-          background-color: #2c39f2;
+          background-color: #9b9b9b;
           z-index: -1;
         }
         
         .header-ui {
-          background-color: #2c39f2;
+          background-color: #9b9b9b;
           padding: 20px 0;
           position: fixed;
           width: 100vw;
@@ -345,9 +341,9 @@
             <a class="btn" href="#">Текст</a>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Текст", href: "#"})</pre></code>
-            <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст</a>
+            <a class="btn btn--orange" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст</a>
             <p>Пример вызова</p><code>
-              <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</pre></code>
+              <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--orange</pre></code>
             <button class="btn" type="button" disabled>Текст</button>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Текст"})(disabled)</pre></code>

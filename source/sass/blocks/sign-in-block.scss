@@ -128,6 +128,32 @@
 .sign-up__block{
   max-width: 551px;
   padding: 0 16px;
+
+  a{
+    position: relative;
+    color: $color-cinnabar;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: $color-cinnabar;
+
+        border-radius: 1px;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+      }
+
+      &:hover {
+        &::after{
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+        }
+      }
+  }
 }
 .sign-up__title{
   font-family: 'Inter';
@@ -165,31 +191,6 @@
   line-height: 16px;
   color: $color-blue-whale;
 
-  a{
-    position: relative;
-    color: $color-cinnabar;
-
-      &::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.1em;
-        background-color: $color-cinnabar;
-
-        border-radius: 1px;
-        opacity: 0;
-        transition: opacity 300ms, transform 300ms;
-      }
-
-      &:hover {
-        &::after{
-        opacity: 1;
-        transform: translate3d(0, 0.2em, 0);
-        }
-      }
-  }
 }
 
 @media (max-width: 770px) {
