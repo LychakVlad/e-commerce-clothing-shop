@@ -56,25 +56,17 @@ block main
       text: 'Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.',
     };
 
-  -
-    const firstImgBlock = {
-      first: 'ab-us-img-1',
-      second: 'ab-us-img-2',
-    };
-
-  -
-    const secondImgBlock = {
-      first: 'ab-us-img-3',
-      second: 'ab-us-img-4',
-    };
-
   main
     +bg-img-text-block(firstTextBlock)
     .about-us-container
       +sub-text-block(secondTextBlock)
-      +sub-img-block(firstImgBlock)
+      .sub-img-block__wrapper
+        +picture("content", 'ab-us-img-1', "png", 410, 410, "banner").sub-img-block__big-img
+        +picture("content", 'ab-us-img-2', "png", 280, 280, "banner").sub-img-block__small-img
       +sub-text-block(thirdTextBlock)
-      +sub-img-block(secondImgBlock)
+      .sub-img-block__wrapper
+        +picture("content", 'ab-us-img-3', "png", 280, 280, "banner").sub-img-block__small-img
+        +picture("content", 'ab-us-img-4', "png", 410, 410, "banner").sub-img-block__big-img
     .about-us-color-block
       +sub-text-block(fourthTextBlock)
 
