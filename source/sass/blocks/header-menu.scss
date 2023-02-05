@@ -5,13 +5,13 @@
   position: fixed;
   background: $color-default-white;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   left: 0;
   top: 10%;
   transition: transform $trans-default, opacity $trans-default;;
 
 
-  &._active{
+  &.is-active{
     transform: translateY(0px);
     opacity: 1;
   }
@@ -57,9 +57,11 @@
   display: flex;
   justify-content: space-between;
 
-  a:hover{
+  a{
+    @include hover {
     color: rgb(81, 140, 165);
   }
+}
 }
 
 .header-menu__menu{

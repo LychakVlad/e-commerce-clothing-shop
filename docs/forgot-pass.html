@@ -73,56 +73,53 @@
     </div>
     <div class="wrapper">
       <header class="header">
-        <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную">
+        <div class="container container--header"><a class="header__logo" href="index.html" aria-label="Переход на главную">
             <svg width="129" height="16" aria-hidden="true">
               <use xlink:href="#logo"></use>
             </svg></a>
-          <nav class="main-nav">
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item nav-menu-open _active">
-                  <p>Женщины</p>
-                </li>
-                <li class="main-nav__item nav-menu-open">
-                  <p>Мужчины</p>
-                </li>
-                <li class="main-nav__item">
-                  <div class="main-nav__item-form">
-                    <form>
-                      <p>Поиск</p>
-                      <div class="main-nav__item-input-wrapper">
-                        <input class="main-nav__item-input" type="text">
+          <nav class="header-nav">
+            <div class="header-nav__wrapper">
+              <ul class="header-nav__list">
+                <li class="header-nav__item nav-menu-open"><a href="#"> Женщины</a></li>
+                <li class="header-nav__item nav-menu-open"><a href="#"> Мужчины</a></li>
+                <li class="header-nav__item">
+                  <form>
+                    <div class="header-nav__item-form"><a href="#"> Поиск</a>
+                      <div class="custom-input --search" data-validate-type="text" data-limitations="search">
+                        <label>
+                          <input type="text" name="search-input" minlength="2">
+                        </label>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </li>
               </ul>
             </div>
           </nav>
-          <div class="header__lang">
-            <div class="header__lang-wrapper">
-              <ul class="header__lang-list">
-                <li class="header__lang-item"><a href="#">RU</a></li>
-                <li class="header__lang-item"><a href="#">EN</a></li>
+          <div class="header-lang">
+            <div class="header-lang__wrapper">
+              <ul class="header-lang__list">
+                <li class="header-lang__item"><a href="#">RU</a></li>
+                <li class="header-lang__item"><a href="#">EN</a></li>
               </ul>
             </div>
           </div>
-          <div class="header__menu">
-            <div class="header__menu-wrapper">
-              <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="sign-in.html">
+          <div class="header-icons">
+            <div class="header-icons__wrapper">
+              <ul class="header-icons__list">
+                <li class="header-icons__icon"><a href="sign-in.html">
                     <svg width="16" height="18" aria-hidden="true">
                       <use xlink:href="#personal-acc"></use>
                     </svg></a></li>
-                <li class="header__menu-item"><a href="#">
+                <li class="header-icons__icon"><a href="#">
                     <svg width="20" height="20" aria-hidden="true">
                       <use xlink:href="#fav-icon"></use>
                     </svg></a></li>
-                <li class="header__menu-item"><a href="#">
+                <li class="header-icons__icon"><a href="#">
                     <svg width="16" height="18" aria-hidden="true">
                       <use xlink:href="#cart-icon"></use>
                     </svg></a></li>
-                <li class="header__menu-item header__menu-item--trigger"><span class="header__burger-menu-icon"></span></li>
+                <li class="header-icons__icon header-menu-open"><a class="header-icons__burger-icon" href="#"></a></li>
               </ul>
             </div>
           </div>
@@ -235,7 +232,12 @@
             <div class="footer__search">
               <form>
                 <div class="footer__search-input-wrapper">
-                  <input class="footer__search-input" type="email">
+                  <div class="custom-input --footer" data-validate-type="email">
+                    <label>
+                      <input type="email" name="user-email" placeholder="E-mail">
+                    </label>
+                    <div class="custom-input__error">Не корректный email</div>
+                  </div>
                   <button class="footer__search-button" type="submit">
                     <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="#mail-submitt"></use>

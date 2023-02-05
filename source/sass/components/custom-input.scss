@@ -9,6 +9,24 @@
 .custom-input{
   margin-bottom: 25px;
   border-bottom: 1px solid  #DDDDDD;
+
+  &.--search {
+    border-bottom: 1px solid  #0F303F;
+    width: 150px;
+    margin: 0;
+    max-height: 20px;
+  }
+
+  &.--footer{
+    border-bottom: 1px solid  #0F303F;
+    width: 250px;
+    margin-right: 20px;
+    input{
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+  }
+}
 }
 
 .custom-input,

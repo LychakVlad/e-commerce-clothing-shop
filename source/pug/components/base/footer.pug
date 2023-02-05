@@ -24,7 +24,7 @@ mixin footer(footerMods)
         .footer__search
           form
             .footer__search-input-wrapper
-              input(type="email").footer__search-input
+              +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email").--footer
               button(type='submit').footer__search-button
                 +icon('mail-submitt', 18, 18)
         nav.footer__nav

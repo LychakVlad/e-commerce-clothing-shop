@@ -40,47 +40,46 @@ mixin header(currentUrl)
     const headerBrands = ['Deha', 'American vintage', 'george gina lucy', 'birkenstock']
 
   header.header
-    .container
+    .container.container--header
       if(currentUrl === 'index.html')
         span.header__logo
           +icon('logo', 129, 16)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon('logo', 129, 16)
-      nav.main-nav
-        .main-nav__wrapper
-          ul.main-nav__list
-            li.main-nav__item.nav-menu-open._active
-              p Женщины
-            li.main-nav__item.nav-menu-open
-              p Мужчины
-            li.main-nav__item
-              .main-nav__item-form
-                form
-                  p Поиск
-                  .main-nav__item-input-wrapper
-                    input(type="text").main-nav__item-input
-      .header__lang
-        .header__lang-wrapper
-          ul.header__lang-list
-            li.header__lang-item
+      nav.header-nav
+        .header-nav__wrapper
+          ul.header-nav__list
+            li.header-nav__item.nav-menu-open
+              a(href="#")  Женщины
+            li.header-nav__item.nav-menu-open
+              a(href="#")  Мужчины
+            li.header-nav__item
+              form
+                .header-nav__item-form
+                  a(href="#")  Поиск
+                  +custom-input({inputName: "search-input", inputMinLength: "2"})(data-validate-type="text", data-limitations="search").--search
+      .header-lang
+        .header-lang__wrapper
+          ul.header-lang__list
+            li.header-lang__item
               a(href="#") RU
-            li.header__lang-item
+            li.header-lang__item
               a(href="#") EN
-      .header__menu
-        .header__menu-wrapper
-          ul.header__menu-list
-            li.header__menu-item
+      .header-icons
+        .header-icons__wrapper
+          ul.header-icons__list
+            li.header-icons__icon
               a(href="sign-in.html")
                 +icon('personal-acc', 16, 18)
-            li.header__menu-item
+            li.header-icons__icon
               a(href="#")
                 +icon('fav-icon', 20, 20)
-            li.header__menu-item
+            li.header-icons__icon
               a(href="#")
                 +icon('cart-icon', 16, 18)
-            li.header__menu-item.header__menu-item--trigger
-              span.header__burger-menu-icon
+            li.header-icons__icon.header-menu-open
+              a(href="#").header-icons__burger-icon
   .header-menu
     .header-menu__wrapper
       .header-menu__menu

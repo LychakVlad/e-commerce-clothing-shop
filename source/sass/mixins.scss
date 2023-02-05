@@ -19,9 +19,11 @@
 }
 
 @mixin active {
+  @media  (active: active) {
   &.focus-visible:active {
     @content;
   }
+}
 }
 
 @mixin hover-focus {

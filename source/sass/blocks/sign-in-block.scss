@@ -53,7 +53,7 @@
       transition: opacity 300ms, transform 300ms;
     }
 
-    &:hover {
+    @include hover {
       &::after{
       opacity: 1;
       transform: translate3d(0, 0.2em, 0);
@@ -147,7 +147,7 @@
         transition: opacity 300ms, transform 300ms;
       }
 
-      &:hover {
+      @include hover {
         &::after{
         opacity: 1;
         transform: translate3d(0, 0.2em, 0);

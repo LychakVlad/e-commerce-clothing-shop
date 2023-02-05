@@ -60,18 +60,18 @@ window.addEventListener('DOMContentLoaded', () => {
   if (menuButton) {
 
     const headerMenu = document.querySelector('.header-menu');
-    const burgerIcon = document.querySelector('.header__menu-item--trigger')
+    const burgerIcon = document.querySelector('.header-menu-open')
 
     // привет из 2014 es4 var
     for (var i = 0; i < menuButton.length; i++) {
       // forEach()
       menuButton[i].addEventListener("click", function (e) {
-        headerMenu.classList.toggle('_active');
+        headerMenu.classList.toggle('is-active');
       });
     }
     burgerIcon.addEventListener('click', () => {
-      burgerIcon.classList.toggle('active')
-      headerMenu.classList.toggle('_active');
+      burgerIcon.classList.toggle('is-active')
+      headerMenu.classList.toggle('is-active');
     })
   };
 
@@ -80,19 +80,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const parent = item.closest('[data-accordion="parent"]');
     const accordionContent = parent.querySelector('[data-accordion="content"]');
 
-    if (parent.classList.contains('active')) {
-      parent.classList.remove('active');
+    if (parent.classList.contains('is-active')) {
+      parent.classList.remove('is-active');
       accordionContent.style.maxHeight = null;
     } else {
       document
         .querySelectorAll('.faq-accordion-item')
-        .forEach((child) => child.classList.remove('active'))
+        .forEach((child) => child.classList.remove('is-active'))
       document
         .querySelectorAll('.faq-accordion-item__answer')
         .forEach((child) => child.style.maxHeight = null)
 
       accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-      parent.classList.add('active')
+      parent.classList.add('is-active')
     }
   }
 
