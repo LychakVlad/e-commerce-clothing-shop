@@ -47,7 +47,7 @@
     margin-left: 12px;
     max-height: 18px;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: transform $trans-default;
 
     &.active{
       transform: rotate(45deg);
@@ -61,7 +61,6 @@
         top: 0;
         width: 20px;
         transform: rotate(90deg);
-        transition: all .3s ease;
       }
     }
     }
@@ -91,7 +90,7 @@
   p{
   @include hover {
     color: $color-submarine;
-    transition: all .3s ease;
+    transition: color $trans-default;
   }
 }
 
@@ -117,7 +116,6 @@
 
 
 .header__burger-menu-icon{
-  transition: all .3s ease;
   position: relative;
   width: 20px;
   height: 1px;

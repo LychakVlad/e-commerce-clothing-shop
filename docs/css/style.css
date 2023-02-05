@@ -1411,9 +1411,11 @@ button,
   margin-left: 12px;
   max-height: 18px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .header .header__menu-item.active {
@@ -1432,9 +1434,6 @@ button,
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .header .header__lang-list {
@@ -1486,9 +1485,6 @@ button,
 }
 
 .header__burger-menu-icon {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   position: relative;
   width: 20px;
   height: 1px;
@@ -1936,10 +1932,10 @@ button,
   flex-direction: column;
 }
 
-.main-content-block__text-block a:hover {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.main-content-block__text-block.focus-visible:focus {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   color: #c6c6c6;
 }
 
@@ -2197,24 +2193,23 @@ button,
 
 .header-menu__item a {
   color: #0F303F;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.header-menu__item :hover {
+.header-menu__item.focus-visible:focus a {
   color: #E64926;
-  list-style: circle;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
-.header-menu__item :hover::before {
+.header-menu__item.focus-visible:focus::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #E64926;
   position: absolute;
-  top: 25%;
+  top: 32%;
   left: -10%;
 }
 
@@ -2222,9 +2217,6 @@ button,
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
   z-index: 2;
   opacity: 0;
   position: fixed;
@@ -2233,6 +2225,11 @@ button,
   height: 100vh;
   left: 0;
   top: 10%;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .header-menu._active {
@@ -2282,9 +2279,6 @@ button,
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #254A5A;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .header-menu__bottom-block {
@@ -2537,9 +2531,6 @@ button,
 }
 
 .faq-accordion-item.active .faq-accordion-item__answer {
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   height: 100%;
   margin: 10px 0px 26px;
 }
@@ -2565,12 +2556,14 @@ button,
   padding: 18px 0px;
   opacity: 0.8;
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .faq-accordion-item__question::before {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   content: "";
   width: 20px;
   height: 2px;
@@ -2581,11 +2574,6 @@ button,
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .faq-accordion-item__question::after {
@@ -2608,9 +2596,9 @@ button,
   opacity: 0.7;
   max-width: 440px;
   max-height: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: max-height 0.3s ease, margin 0.3s ease;
+  -o-transition: max-height 0.3s ease, margin 0.3s ease;
+  transition: max-height 0.3s ease, margin 0.3s ease;
 }
 
 .faq__feedback-block {
@@ -2987,9 +2975,9 @@ button,
   }
 
   .header-menu__list {
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     opacity: 0;
     max-height: 0;
     padding: 0;
@@ -3008,9 +2996,6 @@ button,
   .header-menu__column {
     border-right: none;
     padding: 0 20px;
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
   }
 
   .header-menu__column.active .header-menu__title::before {
@@ -3437,9 +3422,9 @@ button,
 
   .header .main-nav__list p:hover:not(.focus-visible) {
     color: #8F9597;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
   }
 
   .footer__nav-list a:hover:not(.focus-visible),
@@ -3455,5 +3440,27 @@ button,
 
   .footer__bottom-menu a:hover:not(.focus-visible) {
     color: #8F9597;
+  }
+
+  .main-content-block__text-block:hover:not(.focus-visible) {
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #c6c6c6;
+  }
+
+  .header-menu__item:hover:not(.focus-visible) a {
+    color: #E64926;
+  }
+
+  .header-menu__item:hover:not(.focus-visible)::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E64926;
+    position: absolute;
+    top: 32%;
+    left: -10%;
   }
 }

@@ -215,6 +215,10 @@
         </div>
       </div>
       <style>
+        .main {
+          font-family: 'Inter';
+        }
+        
         main > .container {
           padding-top: 30px;
           padding-bottom: 30px;
@@ -256,7 +260,6 @@
           margin: 0 0 20px 0;
           padding: 20px 0;
           position: relative;
-          color: #ffffff;
         }
         
         section > h2::before {
@@ -278,6 +281,8 @@
           width: 100vw;
           z-index: 99;
           box-shadow: 0 0 3px 1px #000000;
+        
+          font-family: 'Inter';
         }
         
         .header-ui__nav {
@@ -302,7 +307,7 @@
         
         .header-ui__inner-link:hover,
         .header-ui__inner-link.is-active {
-          color: #ff1553;
+          color: #0F303F;;
         }
         
         .header-ui__inner-link.is-inactive {
@@ -316,7 +321,7 @@
         
       </style>
       <header class="header-ui">
-        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>Вернуться на разводящую</span></a>
           <ul class="header-ui__inner-list">
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
@@ -716,42 +721,6 @@ const navigationChanger = new NavigationChanger();
 navigationChanger.init();
 
       </script>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__upper-menu">
-            <h2 class="footer__heading footer__heading--h2">Будьте в курсе событий</h2>
-            <div class="footer__search">
-              <form>
-                <div class="footer__search-input-wrapper">
-                  <input class="footer__search-input" type="email">
-                  <button class="footer__search-button" type="submit">
-                    <svg width="18" height="18" aria-hidden="true">
-                      <use xlink:href="#mail-submitt"></use>
-                    </svg>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <nav class="footer__nav">
-              <div class="footer__nav-wrapper">
-                <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="about-us.html">О нас</a></li>
-                  <li class="footer__nav-item"><a href="faq.html">Распростроненные вопросы</a></li>
-                  <li class="footer__nav-item"><a href="brands.html">Бренды</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="success">Возврат и обмен</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="feedback">Оплата и доставка</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="footer__bottom-menu">
-            <div class="footer__all-right">
-              <p>Все права защищены © 2020 Allegria.com</p>
-            </div>
-            <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Разработка</a></div>
-          </div>
-        </div>
-      </footer>
     </div>
     <div class="modal modal--preload modal--feedback" data-modal="feedback">
       <div class="modal__wrapper">

@@ -9,8 +9,9 @@
     justify-content: center;
     flex-direction: column;
   }
-  a:hover{
-    transition: all .3s ease;
+  
+  @include hover-focus {
+    transition: color $trans-default;
     color: #c6c6c6;
   }
 }

@@ -1,6 +1,5 @@
 .header-menu{
   transform: translateY(-100%);
-  transition: all .4s ease;
   z-index: 2;
   opacity: 0;
   position: fixed;
@@ -9,11 +8,13 @@
   height: 100vh;
   left: 0;
   top: 10%;
-}
+  transition: transform $trans-default, opacity $trans-default;;
 
-.header-menu._active{
-  transform: translateY(0px);
-  opacity: 1;
+
+  &._active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .header-menu__wrapper{
@@ -46,7 +47,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-arapawa;
-  transition: all .3s ease;
 }
 
 .header-menu__bottom-block{

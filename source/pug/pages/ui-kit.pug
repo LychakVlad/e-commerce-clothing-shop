@@ -5,12 +5,16 @@ block variables
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
-  - const hasFooter = true
+  - const hasFooter = false
   - const footerMods = ""
   - const currentUrl = "ui-kit.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   style.
+
+    .main {
+      font-family: 'Inter';
+    }
 
     main > .container {
       padding-top: 30px;
@@ -53,7 +57,6 @@ block main
       margin: 0 0 20px 0;
       padding: 20px 0;
       position: relative;
-      color: #ffffff;
     }
 
     section > h2::before {
@@ -75,6 +78,8 @@ block main
       width: 100vw;
       z-index: 99;
       box-shadow: 0 0 3px 1px #000000;
+
+      font-family: 'Inter';
     }
 
     .header-ui__nav {
@@ -99,7 +104,7 @@ block main
 
     .header-ui__inner-link:hover,
     .header-ui__inner-link.is-active {
-      color: #ff1553;
+      color: #0F303F;;
     }
 
     .header-ui__inner-link.is-inactive {
@@ -115,7 +120,7 @@ block main
     nav.header-ui__nav.container
       a.components-backwards(href="sitemap.html")
         span &larr;
-        span вернуться на разводящую
+        span Вернуться на разводящую
       ul.header-ui__inner-list
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
