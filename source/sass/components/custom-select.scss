@@ -53,18 +53,18 @@
     padding: 5px 10px;
 
     background-color: $color-transparent;
-    border: 2px solid rgba($color-default-black, 0.2);
+    border: 2px solid rgba($color-blue-whale, 0.2);
     outline: none;
     cursor: pointer;
 
     transition: border $trans-default;
 
     &:hover {
-      border: 2px solid rgba($color-default-black, 0.5);
+      border: 2px solid rgba($color-blue-whale, 0.8);
     }
 
     &:focus {
-      border: 2px solid rgba($color-default-black, 0.8);
+      border: 2px solid rgba($color-blue-whale, 0.8);
     }
   }
 
@@ -82,7 +82,7 @@
     list-style: none;
 
     background-color: $color-default-white;
-    border: 2px solid $color-default-black;
+    border: 2px solid rgba($color-blue-whale, 0.8);
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -165,7 +165,7 @@
     height: 0;
     border-style: solid;
     border-width: 0 3.5px 7px 3.5px;
-    border-color: transparent transparent #000000 transparent;
+    border-color: transparent transparent $color-blue-whale transparent;
   }
 
   &.open-up {

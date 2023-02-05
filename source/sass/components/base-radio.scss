@@ -1,0 +1,88 @@
+.radio {
+  margin-bottom: -6px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 17px;
+
+    font-family: 'Inter';
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+
+    color: $color-blue-whale;
+  }
+
+  &__input {
+    border: 1px solid #F4F4F4;
+
+    margin-right: 4px;
+    margin-bottom: 6px;
+
+    display: inline-block;
+
+    label {
+      display: block;
+
+      padding: 6px 14px 3px;
+
+      cursor: pointer;
+      background-color: rgba($color-default-white, $alpha: 0.6);
+
+      transition: background-color $trans-600;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          .radio__text {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: $color-alto;
+
+      .radio__text {
+        color: $color-default-white;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-blue-whale;
+    opacity: 0.6;
+    transition: color $trans-600, opacity $trans-600;
+  }
+}
+
+.radio--ellips {
+  .radio__input {
+    label {
+      padding: 6px 20px;
+      border-radius: 150px;
+
+      background-color: $color-transparent;
+
+      .radio__text {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: $color-default-white;
+
+      .radio__text {
+        color: $color-blue-whale;
+      }
+    }
+  }
+}

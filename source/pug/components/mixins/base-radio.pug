@@ -1,0 +1,20 @@
+mixin base-radio(settings , radioArr)
+  if (settings.mod)
+    div(class="radio " +settings.mod)
+      if (settings.title)
+        p.radio__title= settings.title
+      each item in radioArr
+        .radio__input
+          input(type="radio", class="visually-hidden", id=item.id, name=settings.name, checked=item.checked ? true : false)
+          label(for=item.id)
+            span.radio__text= item.value
+
+  else
+    .radio
+      if (settings.title)
+        p.radio__title= settings.title
+      each item in radioArr
+        .radio__input
+          input(type="radio", class="visually-hidden" id=item.id, name=settings.name, checked=item.checked ? true : false)
+          label(for=item.id)
+            span.radio__text= item.value
