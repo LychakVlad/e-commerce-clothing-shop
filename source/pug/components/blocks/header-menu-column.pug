@@ -1,7 +1,0 @@
-mixin header-menu-column(data)
-  .header-menu__column(data-accordion="parent")
-    h3.header-menu__title(data-accordion="button")= data.title
-    ul.header-menu__list(data-accordion="content")
-      each item in data.category
-        li.header-menu__item
-          a(href="#")= item

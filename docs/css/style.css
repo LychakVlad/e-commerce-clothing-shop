@@ -1789,6 +1789,45 @@ button,
   pointer-events: auto;
 }
 
+.swiper-pagination--main {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  max-width: 180px;
+  -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
+}
+
+.swiper-pagination--main .swiper-pagination-bullet-active {
+  color: #ffffff;
+}
+
+.swiper-pagination--main .swiper-pagination-bullet {
+  background-color: inherit;
+  width: 35px;
+  height: 18px;
+  border-radius: 15%;
+}
+
+.main-slider {
+  height: 100vh;
+  max-width: 1541px;
+  max-height: 585px;
+  margin: 0px auto 120px;
+}
+
+.main-slider__wrapper {
+  width: 100%;
+  max-height: 585px;
+  min-height: 465px;
+}
+
 .main-slider__slide-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1843,45 +1882,6 @@ button,
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
-}
-
-.swiper-pagination--main {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-  max-width: 180px;
-  -webkit-box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
-  box-shadow: inset 6px 10px 38px 2px rgba(0, 0, 0, 0.44);
-}
-
-.swiper-pagination--main .swiper-pagination-bullet-active {
-  color: #ffffff;
-}
-
-.swiper-pagination--main .swiper-pagination-bullet {
-  background-color: inherit;
-  width: 35px;
-  height: 18px;
-  border-radius: 15%;
-}
-
-.main-slider {
-  height: 100vh;
-  max-width: 1541px;
-  max-height: 585px;
-  margin: 0px auto 120px;
-}
-
-.main-slider__wrapper {
-  width: 100%;
-  max-height: 585px;
-  min-height: 465px;
 }
 
 .clothes-slider-block {
@@ -2189,55 +2189,6 @@ button,
   width: 100%;
 }
 
-.header-menu__column {
-  max-width: 230px;
-  padding: 0px 15px 44px;
-  border-right: 1px solid #EAE9E8;
-}
-
-.header-menu__title {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 17px;
-  color: #0F303F;
-  margin: 45px 0px 30px;
-}
-
-.header-menu__item {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  list-style-type: none;
-  margin-bottom: 8px;
-  position: relative;
-}
-
-.header-menu__item a {
-  color: #0F303F;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.header-menu__item.focus-visible:focus a {
-  color: #E64926;
-}
-
-.header-menu__item.focus-visible:focus::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #E64926;
-  position: absolute;
-  top: 32%;
-  left: -10%;
-}
-
 .header-menu {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -2325,6 +2276,55 @@ button,
 
 .header-menu__menu-right-block--bottom {
   display: none;
+}
+
+.header-menu__column {
+  max-width: 230px;
+  padding: 0px 15px 44px;
+  border-right: 1px solid #EAE9E8;
+}
+
+.header-menu__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 17px;
+  color: #0F303F;
+  margin: 45px 0px 30px;
+}
+
+.header-menu__item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  list-style-type: none;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.header-menu__item a {
+  color: #0F303F;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header-menu__item.focus-visible:focus a {
+  color: #E64926;
+}
+
+.header-menu__item.focus-visible:focus::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #E64926;
+  position: absolute;
+  top: 32%;
+  left: -10%;
 }
 
 .text-block {
@@ -3458,6 +3458,10 @@ button,
     color: #c6c6c6;
   }
 
+  .header-menu__bottom-block a:hover:not(.focus-visible) {
+    color: rgb(81, 140, 165);
+  }
+
   .header-menu__item:hover:not(.focus-visible) a {
     color: #E64926;
   }
@@ -3471,10 +3475,6 @@ button,
     position: absolute;
     top: 32%;
     left: -10%;
-  }
-
-  .header-menu__bottom-block a:hover:not(.focus-visible) {
-    color: rgb(81, 140, 165);
   }
 
   .sign-in__text-block a:hover:not(.focus-visible)::after {

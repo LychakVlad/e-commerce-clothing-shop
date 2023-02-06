@@ -80,35 +80,4 @@ mixin header(currentUrl)
                 +icon('cart-icon', 16, 18)
             li.header-icons__icon.header-menu-open
               a(href="#").header-icons__burger-icon
-  .header-menu
-    .header-menu__wrapper
-      .header-menu__menu
-        .header-menu__menu-left-block
-          span Мужчины
-          span Женщины
-        .header-menu__menu-right-block.header-menu__menu-right-block--top
-          .header-menu__item-search
-            span Поиск
-            .header-menu__item-form
-              form
-                .header-menu__item-input-wrapper
-                  input(type="text").header-menu__item-input
-          .header-menu__lang-wrapper
-            a(href="#").header__lang-item RU
-            a(href="#").header__lang-item EN
-      .header-menu__top-block
-        each item in headerMenuItems
-          +header-menu-column(item)
-        .header-menu__menu-right-block.header-menu__menu-right-block--bottom
-          .header-menu__item-search
-            span Поиск
-            .header-menu__item-form
-              form
-                .header-menu__item-input-wrapper
-                  input(type="text").header-menu__item-input
-          .header-menu__lang-wrapper
-            a(href="#").header__lang-item RU
-            a(href="#").header__lang-item EN
-      .header-menu__bottom-block
-        each brand in headerBrands
-          a(href="#").header-menu__brand= brand
+  +header-menu(headerMenuItems, headerBrands)
