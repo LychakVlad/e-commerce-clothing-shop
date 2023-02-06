@@ -4,9 +4,29 @@ mixin title-block(data, main)
       .title-block__wrapper.title-block__wrapper--main
         if(data.img)
           +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img.title-block__bg-img--main
+        .title-block__text-wrapper
+          if(data.brand)
+            p.title-block__brand= data.brand
+          if(data.title)
+            +title({titleStyle: 'Cormoran', titleType: 'h1', titleText: 'ГОВНО', titleColor: 'white'})
+          if(data.text)
+            each item in data.text
+              p.title-block__text= item
+          if(data.collection)
+            a(href="#").title-block__collection cмотреть коллекцию
   else
     .title-block
       .title-block__wrapper
         if(data.img)
           +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img
+        .title-block__text-wrapper
+          if(data.brand)
+            p.title-block__brand= data.brand
+          if(data.title)
+            +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: 'ГОВНО', titleColor: 'white'})
+          if(data.text)
+            each item in data.text
+              p.title-block__text= item
+          if(data.collection)
+            a(href="#").title-block__collection cмотреть коллекцию
 

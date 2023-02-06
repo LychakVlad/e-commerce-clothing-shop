@@ -1,0 +1,46 @@
+.title{
+
+  &--style-inter{
+
+    font-family: 'Inter';
+    font-style: normal;
+
+  }
+
+  &--style-cormoran{
+
+    font-family: 'Cormorant';
+    font-style: normal;
+
+  }
+
+  &--color-white{
+    color: $color-default-white;
+  }
+
+  &--color-blue-whale{
+    color: $color-default-white;
+  }
+
+  &--h1{
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 100px;
+  }
+
+  &--h2{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  &--h3{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    }
+
+  }
+
+

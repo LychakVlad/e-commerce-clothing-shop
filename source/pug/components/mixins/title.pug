@@ -1,0 +1,39 @@
+mixin title(options = {})
+  - const titleType = options.titleType ? options.titleType : false
+  - const titleStyle = options.titleStyle ? options.titleStyle : false
+  - const titleText = options.titleText ? options.titleText : false
+  - const titleСolor = options.titleColor ? options.titleColor : false
+
+  .title&attributes(attributes)
+    if (titleStyle === 'Inter')
+      if (titleType === 'h1')
+        if(titleColor === 'white')
+          h1.title.title--h1.title--style-inter.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h1.title.title--h1.title--style-inter.title--color-blue-whale= titleText
+      if (titleType === 'h2')
+        if(titleColor === 'white')
+          h2.title.title--h2.title--style-inter.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h2.title.title--h2.title--style-inter.title--color-blue-whale= titleText
+      if (titleType === 'h3')
+        if(titleColor === 'white')
+          h3.title.title--h3.title--style-inter.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h3.title.title--h3.title--style-inter.title--color-blue-whale= titleText
+    else
+      if (titleType === 'h1')
+        if(titleColor === 'white')
+          h1.title.title--h1.title--style-cormoran.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h1.title.title--h1.title--style-cormoran.title--color-blue-whale= titleText
+      if (titleType === 'h2')
+        if(titleColor === 'white')
+          h2.title.title--h2.title--style-cormoran.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h2.title.title--h2.title--style-cormoran.title--color-blue-whale= titleText
+      if (titleType === 'h3')
+        if(titleColor === 'white')
+          h3.title.title--h3.title--style-cormoran.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h3.title.title--h3.title--style-cormoran.title--color-blue-whale= titleText

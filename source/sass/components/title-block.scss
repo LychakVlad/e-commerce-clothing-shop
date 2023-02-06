@@ -1,4 +1,4 @@
-// TODO нейминг
+
 .title-block{
   margin: 0px auto 130px;
   width: 100vw;
@@ -12,6 +12,7 @@
   height: 100vh;
   max-height: 595px;
 }
+
 .title-block__bg-img{
   img{
   position:absolute;
@@ -23,6 +24,12 @@
   }
 
 }
+
+.title-block__text-wrapper{
+  position: relative;
+}
+
+
 @media (max-width: 960px) {
   .title-block{
     &--main{

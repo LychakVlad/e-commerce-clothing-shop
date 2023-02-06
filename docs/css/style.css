@@ -1274,6 +1274,43 @@ button,
   opacity: 1;
 }
 
+.title--style-inter {
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.title--style-cormoran {
+  font-family: "Cormorant";
+  font-style: normal;
+}
+
+.title--color-white {
+  color: #ffffff;
+}
+
+.title--color-blue-whale {
+  color: #ffffff;
+}
+
+.title--h1 {
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 100px;
+}
+
+.title--h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.title--h3 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+}
+
 .radio {
   margin-bottom: -6px;
 }
@@ -1371,6 +1408,10 @@ button,
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+}
+
+.title-block__text-wrapper {
+  position: relative;
 }
 
 .text-block {
