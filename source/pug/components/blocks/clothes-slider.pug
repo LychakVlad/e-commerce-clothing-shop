@@ -1,8 +1,13 @@
 mixin clothes-slider(data)
-  .clothes-slider.swiper
-    .clothes-slider__wrapper.swiper-wrapper
-      each item in data
-        .clothes-slider__slide.swiper-slide
-          +item-card(item)
-  .clothes-slider__button-prev.swiper-button-prev
-  .clothes-slider__button-next.swiper-button-next
+  .clothes-slider-block
+    .container
+      .clothes-slider-block__title Популярное
+        .clothes-slider.swiper
+          .clothes-slider__wrapper.swiper-wrapper
+            each item in data
+              .clothes-slider__slide.swiper-slide
+                +item-card(item)
+        .clothes-slider__button-prev.swiper-button-prev
+        .clothes-slider__button-next.swiper-button-next
+    .middle-line
+      +icon('middle-line', 1443, 14)

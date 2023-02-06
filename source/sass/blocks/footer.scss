@@ -1,6 +1,7 @@
 .footer {
   background-color: $color-default-white;
   border-top: 1px solid #EAE9E8;
+  overflow: hidden;
 
 
 &__upper-menu{
@@ -15,6 +16,10 @@
   padding: 15px 0px;
   align-items: center;
   position: relative;
+
+  font-family: 'Inter';
+  font-style: normal;
+  color: $color-blue-whale;
 
   a{
     color: $color-blue-whale;
@@ -102,7 +107,8 @@
 
   &__bottom-menu{
 
-    a{
+
+    a, p{
       font-family: 'Inter';
       font-style: normal;
       font-weight: 200;
@@ -126,7 +132,7 @@
   .footer{
 
   &__bottom-menu{
-    a{
+    a, p{
       font-weight: 300;
       font-size: 9px;
       line-height: 10px;

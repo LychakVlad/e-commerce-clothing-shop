@@ -1,13 +1,12 @@
-mixin bg-img-text-block(data, main)
+mixin title-block(data, main)
   if(main)
     .title-block.title-block--main
       .title-block__wrapper.title-block__wrapper--main
         if(data.img)
           +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img.title-block__bg-img--main
-        +sub-text-block(data)
   else
     .title-block
       .title-block__wrapper
         if(data.img)
           +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img
-        +sub-text-block(data)
+

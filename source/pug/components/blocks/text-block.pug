@@ -1,0 +1,8 @@
+mixin text-block(data)
+  .text-block
+    .text-block__wrapper
+      if(data.title)
+        h2.text-block__title= data.title
+      if(data.text)
+        each item in data.text
+          p.text-block__text= item

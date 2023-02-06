@@ -39,6 +39,20 @@
   max-width: 230px;
 }
 
+.clothes-slider-block__title{
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: $color-blue-whale;
+  margin: 120px 0px 75px;
+}
+
+
 
 @media (max-width: 770px) {
   .clothes-slider-block{

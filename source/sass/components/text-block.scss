@@ -1,0 +1,33 @@
+.text-block{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  font-family: 'Inter';
+  font-style: normal;
+  color: #0F303F;
+
+  max-width: 627px;
+}
+
+.text-block__wrapper{
+  margin: auto 0;
+}
+
+
+.text-block__title{
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  padding-bottom: 12px;
+}
+
+.text-block__text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  padding-top: 20px;
+}

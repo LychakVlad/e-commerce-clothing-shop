@@ -1,9 +1,0 @@
-mixin brands-text-block(data, left)
-  if(left)
-    .brands-content-block
-      +picture("content", data.img, "png", 261, 350, "photo").brands-text-block__img.brands-text-block__img--left
-      +sub-text-block(data)
-  else
-    .brands-content-block
-      +sub-text-block(data)
-      +picture("content", data.img, "png", 261, 350, "photo").brands-text-block__img.brands-text-block__img--right

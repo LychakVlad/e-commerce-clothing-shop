@@ -11,36 +11,13 @@ block variables
 
 block main
   style.
-    .about-us-container{
-      max-width: 840px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .about-us-color-block{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #EAE9E8;
-      min-height:320px;
-      max-width: 1541px;
-      margin: auto;
-      padding: 0 20px;
-    }
 
   -
     const firstTextBlock = {
       img: 'ab-us-main-img',
       type: 'center-bg',
       title: 'О нас',
-      text: 'Бутик Allegria специализируется на продаже комфортной и современной одежды для свободного времени в стиле кэжуал . Мы считаем, что одежда - это источник радости, что и отражено в названии нашего бутика.',
-    };
-
-  -
-    const secondTextBlock = {
-      type: 'regular-block',
-      text: 'American Vintage в первую очередь – это качественный трикотаж, изящная красота и летящий крой.',
+      text: ['Бутик Allegria специализируется на продаже комфортной и современной одежды для свободного времени в стиле кэжуал . Мы считаем, что одежда - это источник радости, что и отражено в названии нашего бутика.'],
     };
 
   -
@@ -53,22 +30,27 @@ block main
   -
     const fourthTextBlock = {
       type: 'regular-block',
-      text: 'Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.',
+      text: ['Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.'],
     };
 
   main
-    +bg-img-text-block(firstTextBlock)
-    .about-us-container
-      +sub-text-block(secondTextBlock)
-      .sub-img-block__wrapper
-        +picture("content", 'ab-us-img-1', "png", 410, 410, "banner").sub-img-block__big-img
-        +picture("content", 'ab-us-img-2', "png", 280, 280, "banner").sub-img-block__small-img
-      +sub-text-block(thirdTextBlock)
-      .sub-img-block__wrapper
-        +picture("content", 'ab-us-img-3', "png", 280, 280, "banner").sub-img-block__small-img
-        +picture("content", 'ab-us-img-4', "png", 410, 410, "banner").sub-img-block__big-img
-    .about-us-color-block
-      +sub-text-block(fourthTextBlock)
+    +title-block(firstTextBlock)
+    .container.container--small
+      p.about-us__text American Vintage в первую очередь – это качественный трикотаж, изящная красота и летящий крой.
+      .about-us__wrapper
+        .about-us__big-img
+          +picture("content", 'ab-us-img-1', "png", 410, 410, "banner")
+        .about-us__small-img
+          +picture("content", 'ab-us-img-2', "png", 280, 280, "banner")
+      +text-block(thirdTextBlock)
+      .about-us__wrapper
+        .about-us__small-img
+          +picture("content", 'ab-us-img-3', "png", 280, 280, "banner")
+        .about-us__big-img
+          +picture("content", 'ab-us-img-4', "png", 410, 410, "banner").about-us__big-img
+    .about-us__color-block
+      p.about-us__text Для всех представленных в бутике брендов важным приоритетом является экологическая безопасность одежды и производства.
+
 
 
 

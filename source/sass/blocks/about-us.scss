@@ -1,0 +1,39 @@
+.about-us__color-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EAE9E8;
+  min-height:320px;
+  max-width: 1541px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-us__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 130px 0px 120px;
+  align-items: center ;
+}
+
+.about-us__text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  color: $color-blue-whale;
+}
+
+@media (max-width: 768px) {
+  .about-us__wrapper{
+    flex-direction: column;
+    justify-content: center;
+
+  :last-child{
+    margin-top: 50px;
+  }
+}
+}

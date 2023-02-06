@@ -11,6 +11,10 @@
     max-height: 18px;
   }
 
+  &--small{
+    max-width: 963px;
+  }
+
   @include vp-1439 {
     padding: 0 32px;
   }

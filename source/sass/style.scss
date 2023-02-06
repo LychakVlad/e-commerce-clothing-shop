@@ -24,10 +24,17 @@
 @import "components/custom-toggle";
 @import "components/custom-select";
 @import "components/base-radio";
-@import "components/bg-img-text-block";
-@import "components/brands-text-block";
+@import "components/title-block";
+@import "components/text-block";
 
 // TODO компонент заголовка
+
+
+// Sliders
+// ---------------------------------
+
+@import "sliders/main-slider";
+@import "sliders/clothes-slider";
 
 // Blocks
 // ---------------------------------
@@ -35,17 +42,15 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/modal";
-@import "blocks/main-slider";
-@import "sliders/clothes-slider";
-@import "blocks/clothes-slider-block";
 @import "blocks/main-page-text-block";
 @import "blocks/main-page-content-block";
 @import "blocks/item-card";
 @import "blocks/main-page-second-content-block";
 @import "blocks/header-menu";
-@import "blocks/sub-text-block";
-@import "blocks/faq-block";
-@import "blocks/sign-in-block";
+@import "blocks/faq";
+@import "blocks/brands";
+@import "blocks/about-us";
+@import "blocks/sign-in";
 
 // ---------------------------------
 
