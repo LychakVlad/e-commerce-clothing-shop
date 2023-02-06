@@ -5,10 +5,11 @@ mixin main-slider(data)
         .swiper-slide
           if(item.side)
             .main-slider__slide-wrapper
-              .main-slider__slide-text-block.main-slider__slide-text-block--auto-margin
-                p.main-slider__slide-sup-title бренд
-                h2.main-slider__slide-title= item.title
-                a(href="#").main-slider__slide-collection-link смотреть коллекцию
+              .main-slider__slide-text-block
+                p.main-slider__brand бренд
+                +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: item.title, titleColor: 'blue-whale'})
+                .main-slider__collection
+                  a(href="#") смотреть коллекцию
               if(item.img)
                 +picture("content", item.img, "png", 941, 584, "banner").main-slider__slide-img
           else

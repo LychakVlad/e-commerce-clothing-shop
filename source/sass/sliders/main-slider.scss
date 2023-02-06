@@ -53,7 +53,7 @@
 
 }
 
-.main-slider__slide-sup-title{
+.main-slider__brand{
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 500;
@@ -62,22 +62,11 @@
   text-transform: uppercase;
   color: $color-blue-whale;
 
+  margin-bottom: 15px;
+
 }
 
-.main-slider__slide-title{
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 46px;
-  line-height: 44px;
-  text-transform: uppercase;
-  color: $color-blue-whale;
-  max-width: 310px;
-  margin-top: 20px;
-  margin-bottom: 35px;
-}
-
-.main-slider__slide-collection-link{
+.main-slider__collection{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -85,8 +74,12 @@
   line-height: 22px;
   letter-spacing: 0.045em;
   text-transform: uppercase;
-  color: $color-cinnabar;
 
+  margin-top: 30px;
+
+  a{
+    color: $color-cinnabar;
+  }
 }
 
 .main-slider__slide-text-block{

@@ -1,5 +1,7 @@
 .title{
 
+  text-transform: uppercase;
+
   &--style-inter{
 
     font-family: 'Inter';
@@ -9,30 +11,29 @@
 
   &--style-cormoran{
 
-    font-family: 'Cormorant';
+    font-family: 'Cormorant Garamond';
     font-style: normal;
 
   }
 
   &--color-white{
-    color: $color-default-white;
+    color: #F4F4F4;
   }
 
   &--color-blue-whale{
-    color: $color-default-white;
+    color: $color-blue-whale;
   }
 
   &--h1{
     font-weight: 500;
     font-size: 90px;
-    line-height: 100px;
+    line-height: 10px;
   }
 
   &--h2{
     font-weight: 500;
     font-size: 40px;
     line-height: 48px;
-    text-transform: uppercase;
   }
 
   &--h3{

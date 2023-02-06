@@ -1274,35 +1274,38 @@ button,
   opacity: 1;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 .title--style-inter {
   font-family: "Inter";
   font-style: normal;
 }
 
 .title--style-cormoran {
-  font-family: "Cormorant";
+  font-family: "Cormorant Garamond";
   font-style: normal;
 }
 
 .title--color-white {
-  color: #ffffff;
+  color: #F4F4F4;
 }
 
 .title--color-blue-whale {
-  color: #ffffff;
+  color: #0F303F;
 }
 
 .title--h1 {
   font-weight: 500;
   font-size: 90px;
-  line-height: 100px;
+  line-height: 10px;
 }
 
 .title--h2 {
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
-  text-transform: uppercase;
 }
 
 .title--h3 {
@@ -1383,19 +1386,16 @@ button,
 }
 
 .title-block {
-  margin: 0px auto 130px;
-  width: 100vw;
+  margin: 0px auto;
+  width: 100%;
   height: 100vh;
   max-width: 1541px;
   max-height: 585px;
 }
 
 .title-block__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   max-height: 595px;
 }
 
@@ -1411,7 +1411,56 @@ button,
 }
 
 .title-block__text-wrapper {
+  height: 100%;
+  margin: auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.title-block__brand {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F4F4F4;
+  margin-bottom: 10px;
+}
+
+.title-block__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #F4F4F4;
+  max-width: 627px;
+  margin: 15px auto 0px;
+}
+
+.title-block__collection {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #eae9e8;
+  margin-top: 15px;
 }
 
 .text-block {
@@ -1496,7 +1545,7 @@ button,
   max-height: 585px;
 }
 
-.main-slider__slide-sup-title {
+.main-slider__brand {
   font-family: "Cormorant Garamond";
   font-style: normal;
   font-weight: 500;
@@ -1504,22 +1553,10 @@ button,
   line-height: 20px;
   text-transform: uppercase;
   color: #0F303F;
+  margin-bottom: 15px;
 }
 
-.main-slider__slide-title {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 46px;
-  line-height: 44px;
-  text-transform: uppercase;
-  color: #0F303F;
-  max-width: 310px;
-  margin-top: 20px;
-  margin-bottom: 35px;
-}
-
-.main-slider__slide-collection-link {
+.main-slider__collection {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1527,6 +1564,10 @@ button,
   line-height: 22px;
   letter-spacing: 0.045em;
   text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.main-slider__collection a {
   color: #E64926;
 }
 
