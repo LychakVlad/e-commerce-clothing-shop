@@ -1278,6 +1278,10 @@ button,
   text-transform: uppercase;
 }
 
+.title h1 {
+  margin: 0;
+}
+
 .title--style-inter {
   font-family: "Inter";
   font-style: normal;
@@ -1493,10 +1497,6 @@ button,
   max-width: 490px;
 }
 
-.text-block--main h1 {
-  margin: 0;
-}
-
 .text-block__wrapper {
   margin: auto 0;
 }
@@ -1544,6 +1544,56 @@ button,
 
 .text-block__collection a.focus-visible:focus {
   opacity: 0.8;
+}
+
+.item-card__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #254A5A;
+  margin-top: 29px;
+}
+
+.item-card__type {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #254A5A;
+  margin-bottom: 5px;
+}
+
+.item-card__price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #0F303F;
+}
+
+.item-card__price--color-orange {
+  color: #FD5454;
+}
+
+.item-card__old-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: line-through;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #CECECE;
+  margin-right: 4px;
 }
 
 .swiper-pagination--main {
@@ -2093,210 +2143,6 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-}
-
-.main-content-block {
-  background-color: #ffffff;
-  margin-top: 120px;
-  max-width: 1541px;
-  margin: auto;
-}
-
-.main-content-block__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.main-content-block__column {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.main-content-block__column--right {
-  background-color: #CEC6C4;
-  max-width: 901px;
-  min-height: 600px;
-}
-
-.main-content-block__column--left {
-  position: relative;
-  max-width: 1000px;
-  min-height: 700px;
-}
-
-.main-content-block__img-text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #ffffff;
-  max-width: 310px;
-  position: absolute;
-  bottom: 25%;
-  padding: 0 10px;
-}
-
-.main-content-block__img-wrapper {
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  max-width: 600px;
-  max-height: 600px;
-  min-height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.main-content-block__img img {
-  width: 100%;
-}
-
-.main-content-block__img--right {
-  max-height: 380px;
-}
-
-.main-content-block__img--right img {
-  min-height: 316px;
-}
-
-.main-content-block__img--left {
-  position: absolute;
-  width: 100%;
-}
-
-.main-content-block__img--left img {
-  height: 700px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
-
-.main-content-block__collection {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  color: #EAE9E8;
-}
-
-.item-card__title {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #254A5A;
-  margin-top: 29px;
-}
-
-.item-card__type {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: capitalize;
-  color: #254A5A;
-  margin-bottom: 5px;
-}
-
-.item-card__price {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  color: #0F303F;
-}
-
-.item-card__price--color-orange {
-  color: #FD5454;
-}
-
-.item-card__old-price {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  text-decoration: line-through;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  color: #CECECE;
-  margin-right: 4px;
-}
-
-.main-page-second-content-block {
-  background: #254A5A;
-  margin-bottom: 125px;
-  max-width: 1541px;
-  width: 100%;
-  margin: 0px auto 130px;
-}
-
-.main-page-second-content-block__wrapper {
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  max-width: 1050px;
-  padding: 142px 0px 147px;
-  position: relative;
-}
-
-.main-page-second-content-block__img {
-  position: absolute;
-  top: 15%;
-  left: 55%;
-}
-
-.main-page-second-content-block__img img {
-  width: 100%;
-}
-
-.main-page-second-content-block__svg {
-  position: absolute;
-  top: -3.5%;
-  right: 37%;
-}
-
-.main-page-second-content-block__svg svg {
-  width: 100%;
 }
 
 .header-menu {
@@ -2859,6 +2705,116 @@ button,
   color: #0F303F;
 }
 
+.content-block {
+  background-color: #ffffff;
+  margin-top: 120px;
+  max-width: 1541px;
+  margin: auto;
+}
+
+.content-block__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.content-block__column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.content-block__column--right {
+  background-color: #CEC6C4;
+  max-width: 901px;
+  min-height: 600px;
+}
+
+.content-block__column--left {
+  position: relative;
+  max-width: 1000px;
+  min-height: 700px;
+}
+
+.content-block__img-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 310px;
+  position: absolute;
+  bottom: 25%;
+  padding: 0 10px;
+}
+
+.content-block__img-wrapper {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content-block__img img {
+  width: 100%;
+}
+
+.content-block__img--right {
+  max-height: 380px;
+}
+
+.content-block__img--right img {
+  min-height: 316px;
+}
+
+.content-block__img--left {
+  position: absolute;
+  width: 100%;
+}
+
+.content-block__img--left img {
+  height: 700px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.content-block__collection {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #EAE9E8;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -3256,31 +3212,6 @@ button,
 }
 
 @media (max-width: 768px) {
-  .main-content-block__wrapper {
-    display: block;
-  }
-
-  .main-page-second-content-block__img {
-    display: none;
-  }
-
-  .main-page-second-content-block__wrapper {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .main-page-second-content-block {
-    margin: 0 auto;
-  }
-
-  .main-page-second-content-block__svg {
-    right: 3%;
-  }
-
   .brands-content-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3316,6 +3247,10 @@ button,
 
   .about-us__wrapper :last-child {
     margin-top: 50px;
+  }
+
+  .content-block__wrapper {
+    display: block;
   }
 }
 
@@ -3404,6 +3339,10 @@ button,
 }
 
 @media (max-width: 400px) {
+  .item-card__price {
+    display: block;
+  }
+
   .footer__bottom-menu a,
   .footer__bottom-menu p {
     font-weight: 300;
@@ -3414,10 +3353,6 @@ button,
   .footer__heading {
     font-weight: 600;
     font-size: 26px;
-  }
-
-  .item-card__price {
-    display: block;
   }
 }
 

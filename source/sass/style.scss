@@ -27,15 +27,16 @@
 @import "components/base-radio";
 @import "components/title-block";
 @import "components/text-block";
-
-// TODO компонент заголовка
+@import "components/item-card";
 
 
 // Sliders
 // ---------------------------------
 
+
 @import "sliders/main-slider";
 @import "sliders/clothes-slider";
+
 
 // Blocks
 // ---------------------------------
@@ -43,15 +44,12 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/modal";
-@import "blocks/main-page-text-block";
-@import "blocks/main-page-content-block";
-@import "blocks/item-card";
-@import "blocks/main-page-second-content-block";
 @import "blocks/header-menu";
 @import "blocks/faq";
 @import "blocks/brands";
 @import "blocks/about-us";
 @import "blocks/sign-in";
+@import "blocks/content-block";
 
 // ---------------------------------
 

@@ -1,16 +1,16 @@
-.main-content-block{
+.content-block{
   background-color: $color-default-white;
   margin-top: 120px;
   max-width: 1541px;
   margin: auto;
 }
 
-.main-content-block__wrapper{
+.content-block__wrapper{
   display: flex;
   width: 100%;
 }
 
-.main-content-block__column{
+.content-block__column{
   width: 100%;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
   }
 }
 
-.main-content-block__img-text{
+.content-block__img-text{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 200;
@@ -45,7 +45,7 @@
   padding: 0 10px;
 }
 
-.main-content-block__img-wrapper{
+.content-block__img-wrapper{
   background-color: $color-default-white;
   width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@
   position: relative;
 }
 
-.main-content-block__img{
+.content-block__img{
   img{
     width: 100%;
   }
@@ -79,7 +79,7 @@
   }
 }
 
-.main-content-block__collection{
+.content-block__collection{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -92,9 +92,72 @@
 }
 
 @media (max-width: 768px) {
-  .main-content-block__wrapper{
+  .content-block__wrapper{
     display: block;
   }
 
 }
+
+
+
+
+
+
+
+
+// @media (max-width: 768px) {
+//   .content-block__img{
+//     display: none;
+//   }
+
+//   .content-block__wrapper{
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .content-block{
+//     margin: 0 auto;
+//   }
+
+//   .content-block__svg{
+//     right: 3%;
+//   }
+// }
+
+// .content-block{
+//   background: #254A5A;
+//   margin-bottom: 125px;
+//   max-width: 1541px;
+//   width: 100%;
+//   margin: 0px auto 130px;
+// }
+
+// .content-block__wrapper{
+//   margin: auto;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+//   max-width: 1050px;
+//   padding: 142px 0px 147px;
+//   position: relative;
+// }
+
+// .content-block__img{
+//   position: absolute;
+//   top: 15%;
+//   left: 55%;
+
+//   img{
+//     width: 100%;
+//   }
+// }
+// .content-block__svg{
+//   position: absolute;
+//   top: -3.5%;
+//   right: 37%;
+
+//   svg{
+//     width: 100%;
+//   }
+// }
 
