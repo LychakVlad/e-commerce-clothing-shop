@@ -53,8 +53,8 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
   color: #F4F4F4;
 
@@ -70,9 +70,17 @@
   line-height: 22px;
   letter-spacing: .045em;
   text-transform: uppercase;
-  color: #eae9e8;
 
-  margin-top: 15px;
+  margin-top: 25px;
+
+  a{
+    color: #eae9e8;
+    transition: opacity $trans-default;
+
+    @include hover-focus{
+      opacity: 0.8;
+    }
+  }
 }
 
 

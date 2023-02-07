@@ -1299,7 +1299,7 @@ button,
 .title--h1 {
   font-weight: 500;
   font-size: 90px;
-  line-height: 10px;
+  line-height: 100%;
 }
 
 .title--h2 {
@@ -1443,8 +1443,8 @@ button,
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
   color: #F4F4F4;
   max-width: 627px;
@@ -1459,8 +1459,18 @@ button,
   line-height: 22px;
   letter-spacing: 0.045em;
   text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.title-block__collection a {
   color: #eae9e8;
-  margin-top: 15px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.title-block__collection a.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .text-block {
@@ -1472,10 +1482,19 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: left;
+  position: relative;
   font-family: "Inter";
   font-style: normal;
   color: #0F303F;
   max-width: 627px;
+}
+
+.text-block--main {
+  max-width: 490px;
+}
+
+.text-block--main h1 {
+  margin: 0;
 }
 
 .text-block__wrapper {
@@ -1495,6 +1514,36 @@ button,
   font-size: 16px;
   line-height: 24px;
   padding-top: 20px;
+}
+
+.text-block__text--color-white {
+  color: #F4F4F4;
+}
+
+.text-block__text--fw-300 {
+  font-weight: 300;
+}
+
+.text-block__collection {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.text-block__collection a {
+  color: #eae9e8;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.text-block__collection a.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .swiper-pagination--main {
@@ -1569,11 +1618,19 @@ button,
 
 .main-slider__collection a {
   color: #E64926;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.main-slider__collection a.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .main-slider__slide-text-block {
   margin: auto;
   padding: 0 20px;
+  max-width: 320px;
 }
 
 .main-slider__slide-img img {
@@ -2036,54 +2093,6 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-}
-
-.main-content-block__text-block {
-  position: relative;
-  max-width: 442px;
-  padding: 0px 20px;
-  width: 100%;
-}
-
-.main-content-block__text-block--first {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.main-content-block__text-block.focus-visible:focus {
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  color: #c6c6c6;
-}
-
-.main-content-block__title {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 90px;
-  line-height: 102.5%;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.main-content-block__text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  margin-bottom: 40px;
 }
 
 .main-content-block {
@@ -3407,10 +3416,6 @@ button,
     font-size: 26px;
   }
 
-  .main-content-block__title--first {
-    font-size: 60px;
-  }
-
   .item-card__price {
     display: block;
   }
@@ -3427,6 +3432,18 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .title-block__collection a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .text-block__collection a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .main-slider__collection a:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 
   .header .header-nav__list a:hover:not(.focus-visible) {
@@ -3449,13 +3466,6 @@ button,
     -webkit-transform: scale(1.4);
     -ms-transform: scale(1.4);
     transform: scale(1.4);
-  }
-
-  .main-content-block__text-block:hover:not(.focus-visible) {
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-    color: #c6c6c6;
   }
 
   .header-menu__bottom-block a:hover:not(.focus-visible) {

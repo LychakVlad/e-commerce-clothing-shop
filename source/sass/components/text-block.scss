@@ -2,12 +2,21 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  position: relative;
 
   font-family: 'Inter';
   font-style: normal;
   color: #0F303F;
 
   max-width: 627px;
+
+  &--main{
+    max-width: 490px;
+
+    h1{
+      margin: 0;
+    }
+  }
 }
 
 .text-block__wrapper{
@@ -30,4 +39,33 @@
   line-height: 24px;
 
   padding-top: 20px;
+
+  &--color-white{
+    color: #F4F4F4;
+  }
+
+  &--fw-300{
+    font-weight: 300;
+  }
+}
+
+.text-block__collection{
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+
+  margin-top: 25px;
+
+  a{
+    color: #eae9e8;
+    transition: opacity $trans-default;
+
+    @include hover-focus{
+      opacity: 0.8;
+    }
+  }
 }

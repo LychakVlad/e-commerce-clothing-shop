@@ -1,8 +1,19 @@
-mixin text-block(data)
-  .text-block
-    .text-block__wrapper
+mixin text-block(data, page)
+  if (page === 'main')
+    .text-block.text-block--main
       if(data.title)
-        h2.text-block__title= data.title
+        +title({titleStyle: 'Cormoran', titleType: 'h1', titleText: data.title, titleColor: 'white'})
       if(data.text)
         each item in data.text
-          p.text-block__text= item
+          p.text-block__text.text-block__text--color-white.text-block__text--fw-300= item
+      if(data.collection)
+        .text-block__collection
+          a(href="#") Cмотреть коллекцию
+  else
+    .text-block
+      .text-block__wrapper
+        if(data.title)
+          +title({titleStyle: 'Inter', titleType: 'h2', titleText: data.title, titleColor: 'blue-whale'})
+        if(data.text)
+          each item in data.text
+            p.text-block__text= item

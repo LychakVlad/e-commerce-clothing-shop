@@ -79,12 +79,18 @@
 
   a{
     color: $color-cinnabar;
+    transition: opacity $trans-default;
+
+    @include hover-focus{
+      opacity: 0.8;
+    }
   }
 }
 
 .main-slider__slide-text-block{
   margin:auto;
   padding: 0 20px;
+  max-width: 320px;
 }
 
 .main-slider__slide-img{
