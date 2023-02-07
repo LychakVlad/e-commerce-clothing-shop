@@ -1,9 +1,13 @@
 .clothes-slider-block{
-  max-width: 1155px;
-  width: 100%;
-  // TODO нет отступов внешних в компоненте
-  margin: auto;
-  position: relative;
+    width: 100%;
+    position: relative;
+
+    margin-bottom: 100px;
+
+    h2{
+      text-align: center;
+    }
+
   .swiper-button-prev,
   .swiper-button-next{
     position: absolute;
@@ -15,12 +19,12 @@
   }
 
   .swiper-button-prev{
-    top:40%;
-    left: -1%;
+    top: 50%;
+    left: -5%;
   }
   .swiper-button-next{
-    top:40%;
-    right: -1%;
+    top:50%;
+    right: -5%;
   }
 
 }
@@ -28,6 +32,8 @@
 .clothes-slider{
   max-width: 1055px;
   width: 100%;
+
+  margin-top: 75px;
 
 }
 
@@ -38,20 +44,6 @@
 .clothes-slider__slide{
   max-width: 230px;
 }
-
-.clothes-slider-block__title{
-  font-family: 'Cormorant';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  color: $color-blue-whale;
-  margin: 120px 0px 75px;
-}
-
 
 
 @media (max-width: 770px) {

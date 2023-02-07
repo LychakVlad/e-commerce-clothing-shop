@@ -15,6 +15,10 @@
     max-width: 963px;
   }
 
+  &--medium{
+    max-width: 1050px;
+  }
+
   @include vp-1439 {
     padding: 0 32px;
   }

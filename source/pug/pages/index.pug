@@ -85,11 +85,15 @@ block variables
       },
     };
 
+  -
+    const clothesSliderTitle = 'Популярное'
+
 block main
   main
     +main-slider(banners)
     +content-block(fisrtTextBlock, 'first')
-    +clothes-slider(firstClothesSliderCards)
+    +clothes-slider(firstClothesSliderCards, clothesSliderTitle)
+    +icon('middle-line', 1443, 14).middle-line
     +content-block(secondTextBlock, 'second')
 
 

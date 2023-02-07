@@ -616,14 +616,10 @@ button,
   transition: none !important;
 }
 
-.middle-line {
-  margin: 95px 0px 81px;
-}
-
 .middle-line svg {
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -649,6 +645,10 @@ button,
 
 .container--small {
   max-width: 963px;
+}
+
+.container--medium {
+  max-width: 1050px;
 }
 
 .container--no-p {
@@ -1491,6 +1491,7 @@ button,
   font-style: normal;
   color: #0F303F;
   max-width: 627px;
+  padding: 0 16px;
 }
 
 .text-block--main {
@@ -1626,7 +1627,7 @@ button,
   height: 100vh;
   max-width: 1541px;
   max-height: 585px;
-  margin: 0px auto 120px;
+  margin: 0px auto;
 }
 
 .main-slider__wrapper {
@@ -1692,10 +1693,13 @@ button,
 }
 
 .clothes-slider-block {
-  max-width: 1155px;
   width: 100%;
-  margin: auto;
   position: relative;
+  margin-bottom: 100px;
+}
+
+.clothes-slider-block h2 {
+  text-align: center;
 }
 
 .clothes-slider-block .swiper-button-prev,
@@ -1709,18 +1713,19 @@ button,
 }
 
 .clothes-slider-block .swiper-button-prev {
-  top: 40%;
-  left: -1%;
+  top: 50%;
+  left: -5%;
 }
 
 .clothes-slider-block .swiper-button-next {
-  top: 40%;
-  right: -1%;
+  top: 50%;
+  right: -5%;
 }
 
 .clothes-slider {
   max-width: 1055px;
   width: 100%;
+  margin-top: 75px;
 }
 
 .clothes-slider__wrapper {
@@ -1729,19 +1734,6 @@ button,
 
 .clothes-slider__slide {
   max-width: 230px;
-}
-
-.clothes-slider-block__title {
-  font-family: "Cormorant";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  color: #0F303F;
-  margin: 120px 0px 75px;
 }
 
 .header {
@@ -1904,6 +1896,7 @@ button,
   background-color: #ffffff;
   border-top: 1px solid #EAE9E8;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .footer__upper-menu {
@@ -2444,18 +2437,14 @@ button,
 }
 
 .brands-content-block {
-  max-width: 1070px;
   width: 100%;
-  margin: 0 auto;
-  padding: 80px 20px;
+  margin: 120px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 110px;
-  line-height: 22px;
 }
 
 .brands-text-block__img--left {
@@ -2709,7 +2698,13 @@ button,
   background-color: #ffffff;
   margin-top: 120px;
   max-width: 1541px;
-  margin: auto;
+  margin: 120px auto;
+}
+
+.content-block--second {
+  background: #254A5A;
+  height: 100%;
+  height: 500px;
 }
 
 .content-block__wrapper {
@@ -2717,6 +2712,12 @@ button,
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+.content-block__wrapper--second {
+  margin: auto;
+  height: 100%;
+  position: relative;
 }
 
 .content-block__column {
@@ -2744,6 +2745,10 @@ button,
   position: relative;
   max-width: 1000px;
   min-height: 700px;
+}
+
+.content-block__column--second {
+  position: relative;
 }
 
 .content-block__img-text {
@@ -2804,6 +2809,25 @@ button,
   object-position: center;
 }
 
+.content-block__img--second {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  max-width: 474px;
+  max-height: 543px;
+  width: 100%;
+  height: 100%;
+}
+
+.content-block__img--second img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 .content-block__collection {
   font-family: "Inter";
   font-style: normal;
@@ -2813,6 +2837,16 @@ button,
   letter-spacing: 0.045em;
   text-transform: uppercase;
   color: #EAE9E8;
+}
+
+.content-block__svg {
+  position: absolute;
+  top: -5%;
+  right: 43%;
+}
+
+.content-block__svg svg {
+  width: 100%;
 }
 
 /* @mixin hover-focus {
@@ -3251,6 +3285,23 @@ button,
 
   .content-block__wrapper {
     display: block;
+  }
+
+  .content-block__img--second {
+    display: none;
+  }
+
+  .content-block__column--second {
+    height: 100%;
+  }
+
+  .content-block__column--second:last-child {
+    display: none;
+  }
+
+  .content-block__svg {
+    top: -5%;
+    right: 15%;
   }
 }
 
