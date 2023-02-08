@@ -13,11 +13,13 @@ block variables
 block main
 
   main
-    .sign-in__wrapper
-      .sign-in__block
-        h3.forgot-pass__title восстановить пароль
-        +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
-        +btn({text: "Отправить", href: "email-sent.html"})(aria-label="Send email")
+    div(data-validate)
+      form(method="post")
+        .sign-in__wrapper
+          .sign-in__block
+            h3.forgot-pass__title восстановить пароль
+            +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
+            +btn({text: "Отправить", href: "email-sent.html"})(aria-label="Send email")
 
 
 

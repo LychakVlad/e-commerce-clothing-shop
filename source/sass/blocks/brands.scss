@@ -5,15 +5,6 @@
   justify-content: space-between;
 }
 
-.brands-text-block__img{
-  &--left{
-    margin-right: 20px;
-  }
-  &--right{
-    margin-left: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   .brands-content-block{
     flex-direction: column;

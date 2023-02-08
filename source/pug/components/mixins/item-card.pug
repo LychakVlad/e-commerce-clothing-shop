@@ -2,16 +2,20 @@ mixin item-card(data)
   .item-card
     .item-card__wrapper
       if(data.img)
-        +picture("content", data.img, "png", 230, 365, "card")
-      if(data.title)
-        p.item-card__title= data.title
-      if(data.type)
-        p.item-card__type= data.type
-      if(data.oldPrice)
-        span.item-card__old-price= data.oldPrice
-      if(data.price)
-        if(data.discount)
-          span.item-card__price.item-card__price--color-orange= data.price
-        else
-          span.item-card__price= data.price
+        .item-card__img
+          +picture("content", data.img, "png", 230, 365, "card")
+      .item-card__text-block
+        .item-card__top
+          if(data.title)
+            p.item-card__title= data.title
+        .item-card__bottom
+          if(data.type)
+            p.item-card__type= data.type
+          if(data.oldPrice)
+            span.item-card__old-price= data.oldPrice
+          if(data.price)
+            if(data.discount)
+              span.item-card__price.item-card__price--color-orange= data.price
+            else
+              span.item-card__price= data.price
 

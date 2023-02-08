@@ -62,18 +62,22 @@ window.addEventListener('DOMContentLoaded', () => {
     const headerMenu = document.querySelector('.header-menu');
     const burgerIcon = document.querySelector('.header-menu-open')
 
-    // привет из 2014 es4 var
-    for (var i = 0; i < menuButton.length; i++) {
-      // forEach()
-      menuButton[i].addEventListener("click", function (e) {
+    menuButton.forEach((item) => {
+      item.addEventListener("mouseenter", function (e) {
         headerMenu.classList.toggle('is-active');
       });
-    }
-    burgerIcon.addEventListener('click', () => {
-      burgerIcon.classList.toggle('is-active')
+    });
+
+    headerMenu.addEventListener('mouseleave', () => {
       headerMenu.classList.toggle('is-active');
     })
-  };
+
+    burgerIcon.addEventListener('click', () => {
+      headerMenu.classList.toggle('is-active');
+      burgerIcon.classList.toggle('is-active');
+    })
+  }
+
 
   const handlerAccordion = (event) => {
     const item = event.target;

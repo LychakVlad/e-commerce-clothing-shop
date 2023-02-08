@@ -212,17 +212,21 @@
         </div>
       </div>
       <main>
-        <div class="sign-in__wrapper">
-          <div class="sign-in__block">
-            <h3 class="forgot-pass__title">восстановить пароль</h3>
-            <div class="custom-input" data-validate-type="email">
-              <label>
-                <input type="email" name="user-email" placeholder="E-mail">
-              </label>
-              <div class="custom-input__error">Не корректный email</div>
+        <div data-validate>
+          <form method="post">
+            <div class="sign-in__wrapper">
+              <div class="sign-in__block">
+                <h3 class="forgot-pass__title">восстановить пароль</h3>
+                <div class="custom-input" data-validate-type="email">
+                  <label>
+                    <input type="email" name="user-email" placeholder="E-mail">
+                  </label>
+                  <div class="custom-input__error">Не корректный email</div>
+                </div>
+                <a class="btn" href="email-sent.html" aria-label="Send email">Отправить</a>
+              </div>
             </div>
-            <a class="btn" href="email-sent.html" aria-label="Send email">Отправить</a>
-          </div>
+          </form>
         </div>
       </main>
       <footer class="footer">

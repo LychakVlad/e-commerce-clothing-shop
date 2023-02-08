@@ -13,16 +13,18 @@ block variables
 block main
 
   main
-    .sign-in__wrapper
-      .sign-in__block
-        h3.sign-in__title Вход
-        +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
-        +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
-        +btn({text: "Войти", type: "submit"})
-        .sign-in__text-block
-          a(href="forgot-pass.html").sign-in__forgot-pass Забыли пароль
-          span= ' / '
-          a(href="sign-up.html").sign-in__to-sign-up У меня нет акаунта
+    div(data-validate)
+      form(method="post")
+        .sign-in__wrapper
+          .sign-in__block
+            h3.sign-in__title Вход
+            +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
+            +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})
+            +btn({text: "Войти", type: "submit"})
+            .sign-in__text-block
+              a(href="forgot-pass.html").sign-in__forgot-pass Забыли пароль
+              span= ' / '
+              a(href="sign-up.html").sign-in__to-sign-up У меня нет акаунта
 
 
 

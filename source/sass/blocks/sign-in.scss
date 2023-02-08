@@ -172,7 +172,7 @@
 .sign-up__inputs-block{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  column-gap: 20px;
   width: 100%;
 }
 
