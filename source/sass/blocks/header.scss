@@ -1,5 +1,5 @@
 .header {
-  padding: 18px 0;
+  padding: 24px 0 26px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -83,7 +83,7 @@
   &:active {
     text-decoration: underline;
     text-decoration-color: $color-cinnabar;
-    text-underline-offset: 18px;
+    text-underline-offset: 26px;
     text-decoration-thickness: 2px;
     color: $color-cinnabar;
     }
@@ -161,7 +161,7 @@
   .header-lang{
     display: none;
   }
-  
+
   .header-icons__icon{
   .header-icons{
 

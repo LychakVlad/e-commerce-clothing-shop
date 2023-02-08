@@ -21,6 +21,11 @@ mixin title(options = {})
           h3.title.title--h3.title--style-inter.title--color-white= titleText
         if(titleColor === 'blue-whale')
           h3.title.title--h3.title--style-inter.title--color-blue-whale= titleText
+      if (titleType === 'h4')
+        if(titleColor === 'white')
+          h4.title.title--h4.title--style-inter.title--color-white= titleText
+        if(titleColor === 'blue-whale')
+          h4.title.title--h4.title--style-inter.title--color-blue-whale= titleText
     else
       if (titleType === 'h1')
         if(titleColor === 'white')

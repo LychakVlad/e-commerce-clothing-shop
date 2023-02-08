@@ -1,20 +1,29 @@
 .footer {
   background-color: $color-default-white;
-  border-top: 1px solid #EAE9E8;
   overflow: hidden;
-  margin: 0 auto;
 
 
 &__upper-menu{
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+
+  &::after{
+    content: ' ';
+    height: 1px;
+    width: 1541px;
+    background-color: #eae9e8;
+    left: -8%;
+    top: -25%;
+    position: absolute;
+  }
 }
 
 &__bottom-menu{
   display: flex;
   justify-content: space-between;
-  padding: 15px 0px;
+  padding: 20px 0px;
   align-items: center;
   position: relative;
 
@@ -34,7 +43,7 @@
   &::after{
     content: ' ';
     height: 1px;
-    width: 1600px;
+    width: 1541px;
     background-color: #eae9e8;
     left: -8%;
     top: 0;

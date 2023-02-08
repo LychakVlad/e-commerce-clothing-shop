@@ -54,30 +54,37 @@ block main
 
   main
     .faq__block
-      .faq__container
-        h2.faq__title Популярные вопросы
+      .container.container--small
+        .faq__title
+          +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Популярные вопросы', titleColor: 'blue-whale'})
         .faq__wrapper
           .faq__column
             .faq__accordion
-              p.faq__accordion-block-title Покупки
+              .faq__accordion-block-title
+                +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Покупки', titleColor: 'blue-whale'})
               each item in firstQuestionBlock
                 .faq-accordion-item(data-accordion="parent")
-                  .faq-accordion-item__question(data-accordion="button")= item.question
+                  .faq-accordion-item__question(data-accordion="button")
+                    +title({titleStyle: 'Inter', titleType: 'h4', titleText: item.question, titleColor: 'blue-whale'})
                   .faq-accordion-item__answer(data-accordion="content")= item.answer
-              p.faq__accordion-block-title Возврат и обмен
+              .faq__accordion-block-title
+                +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Возврат и обмен', titleColor: 'blue-whale'})
               each item in secondQuestionBlock
                 .faq-accordion-item(data-accordion="parent")
-                  .faq-accordion-item__question(data-accordion="button")= item.question
+                  .faq-accordion-item__question(data-accordion="button")
+                    +title({titleStyle: 'Inter', titleType: 'h4', titleText: item.question, titleColor: 'blue-whale'})
                   .faq-accordion-item__answer(data-accordion="content")= item.answer
           .faq__column
             .faq__feedback-block
-              .faq__feedback__wrapper
-                form
-                  .faq__feedback__text.faq__feedback__text--title Есть вопросы или предложения? НАПИШИТЕ НАМ
+              form
+                .faq__feedback__wrapper
+                  .faq__feedback__text.faq__feedback__text--title
+                    +title({titleStyle: 'Inter', titleType: 'h4', titleText: 'Есть вопросы или предложения? Напишите нам', titleColor: 'blue-whale'})
                   +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
                   +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
                   .faq__feedback__text.faq__feedback__text--sub Что Вас интересует?
-                  +custom-textarea({inputName: "user-info", inputPlaceholder: "Текст сообщения"})
+                  .faq__feedback-textarea
+                    +custom-textarea({inputName: "user-info", inputPlaceholder: "Текст сообщения"})
                   +btn({text: "Отправить", type: "submit"})(class='btn--orange')
 
 
