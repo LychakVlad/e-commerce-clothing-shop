@@ -2,6 +2,8 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import { initCustomSelect } from './modules/form/init-custom-select';
 import { initFormValidate } from './modules/form/init-form-validate';
+import initMainSwiper from './modules/sliders/index';
+import initClothesSwiper from './modules/sliders/index';
 
 
 // ---------------------------------
@@ -14,39 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // TODO вынести слайдеры в отдельную папочку с инициализацией в sliders/index.js
-  const swiper = new Swiper('.main-slider', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
-      },
-    },
-    autoHeight: true,
-  });
-
-  const secondSwiper = new Swiper('.clothes-slider', {
-    breakpoints: {
-      800: {
-        slidesPerView: 4
-      },
-      570: {
-        slidesPerView: 3
-      },
-      320: {
-        slidesPerView: 2
-      }
-    },
-    loop: true,
-    spaceBetween: 45,
-    slidesPerGroup: 2,
-    slidesPerView: 4,
-    navigation: {
-      nextEl: '.clothes-slider__button-next',
-      prevEl: '.clothes-slider__button-prev',
-    },
-  });
 
   // Modules
   // ---------------------------------
@@ -141,7 +110,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
-
+    window.initMainSwiper();
+    window.initClothesSwiper();
+    
   });
 });
 
