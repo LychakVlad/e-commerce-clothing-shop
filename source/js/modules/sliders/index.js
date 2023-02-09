@@ -18,7 +18,7 @@ window.initMainSwiper = () => {
 
 
 window.initClothesSwiper = () => {
-  if (!document.querySelector('.clothes-slider')) {
+  if (!document.querySelector('.main-slider')) {
     return;
   }
   const clothesSwiper = new Swiper('.clothes-slider', {
