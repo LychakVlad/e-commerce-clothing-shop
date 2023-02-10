@@ -27,6 +27,30 @@
   color: $color-blue-whale;
 }
 
+.about-us__big-img{
+  width: 100%;
+  height: 410px;
+  max-width: 410px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.about-us__small-img{
+  width: 100%;
+  height: 280px;
+  max-width: 280px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @media (max-width: 768px) {
   .about-us__wrapper{
     flex-direction: column;

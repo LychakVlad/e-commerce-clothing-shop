@@ -5,6 +5,18 @@
   justify-content: space-between;
 }
 
+.brands-text-block__img{
+  width: 100%;
+  height: 365px;
+  max-width: 264px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @media (max-width: 768px) {
   .brands-content-block{
     flex-direction: column;
