@@ -1,6 +1,6 @@
 const menuButton = document.querySelectorAll('.nav-menu-open');
 const headerMenu = document.querySelector('.header-menu');
-const burgerIcon = document.querySelector('.header-menu-open')
+const burgerIcon = document.querySelector('.header-menu-open');
 
 const initHeaderMenu = () => {
   if (!headerMenu) {
@@ -8,7 +8,7 @@ const initHeaderMenu = () => {
   }
 
   menuButton.forEach((item) => {
-    item.addEventListener("mouseenter", function (e) {
+    item.addEventListener('mouseenter', function (e) {
       headerMenu.classList.toggle('is-active');
     });
   });

@@ -1,12 +1,11 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
-import { initCustomSelect } from './modules/form/init-custom-select';
-import { initFormValidate } from './modules/form/init-form-validate';
-
-import { initHeaderMenu } from './modules/header-menu';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
+import {initCustomSelect} from './modules/form/init-custom-select';
+import {initFormValidate} from './modules/form/init-form-validate';
+import {initHeaderMenu} from './modules/init-header-menu';
 
 import './modules/sliders/index';
-
+import {initAccordion} from './modules/handlerAccordion';
 
 
 // ---------------------------------
@@ -20,35 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-
-  const handlerAccordion = (event) => {
-    const item = event.target;
-    const parent = item.closest('[data-accordion="parent"]');
-    const accordionContent = parent.querySelector('[data-accordion="content"]');
-
-    if (parent.classList.contains('is-active')) {
-      parent.classList.remove('is-active');
-      accordionContent.style.maxHeight = null;
-    } else {
-      document
-          .querySelectorAll('.faq-accordion-item')
-          .forEach((child) => child.classList.remove('is-active'))
-      document
-          .querySelectorAll('.faq-accordion-item__answer')
-          .forEach((child) => child.style.maxHeight = null)
-
-      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-      parent.classList.add('is-active')
-    }
-  }
-
-
-  document.querySelectorAll('[data-accordion="button"]')
-      .forEach((item) => {
-        item.addEventListener('click', handlerAccordion);
-      });
-
-
+  initHeaderMenu();
+  initAccordion();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
@@ -59,8 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     window.initMainSwiper();
     window.initClothesSwiper();
-
-    initHeaderMenu();
   });
 });
 
