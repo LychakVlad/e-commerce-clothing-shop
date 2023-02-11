@@ -1,13 +1,15 @@
 const header = document.querySelector('.header');
-const firstBlock = document.querySelector('.main-slider');
-const headerHeight = header.offsetHeight;
-const firstBlockHeight = firstBlock.offsetHeight;
-
+const mainPage = document.querySelector('main');
 
 const headerScroll = () => {
   if (!header) {
     return;
   }
+
+  const firstBlock = mainPage.firstElementChild;
+  const headerHeight = header.offsetHeight;
+  const firstBlockHeight = firstBlock.offsetHeight;
+
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
 

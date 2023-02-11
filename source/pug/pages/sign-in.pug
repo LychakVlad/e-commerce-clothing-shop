@@ -17,7 +17,7 @@ block main
       form(method="post")
         .sign-in__wrapper
           .sign-in__block
-            h3.sign-in__title Вход
+            +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Вход', titleColor: 'blue-whale'})
             +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
             +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})
             +btn({text: "Войти", type: "submit"})
