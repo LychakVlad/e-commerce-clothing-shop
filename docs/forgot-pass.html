@@ -139,7 +139,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__top-block">
@@ -204,7 +204,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__bottom-block"><a class="header-menu__brand" href="#">Deha</a><a class="header-menu__brand" href="#">American vintage</a><a class="header-menu__brand" href="#">george gina lucy</a><a class="header-menu__brand" href="#">birkenstock</a>
@@ -215,15 +215,21 @@
         <div data-validate>
           <form method="post">
             <div class="sign-in__wrapper">
-              <div class="sign-in__block">
-                <h3 class="forgot-pass__title">восстановить пароль</h3>
-                <div class="custom-input" data-validate-type="email">
-                  <label>
-                    <input type="email" name="user-email" placeholder="E-mail">
-                  </label>
-                  <div class="custom-input__error">Не корректный email</div>
+              <div class="container container--small">
+                <div class="sign-in__block">
+                  <div class="sign-in__title sign-in__title--mw-340">
+                    <div class="title">
+                      <h2 class="title title--h2 title--style-inter title--color-blue-whale">Восстановить пароль</h2>
+                    </div>
+                  </div>
+                  <div class="custom-input" data-validate-type="email">
+                    <label>
+                      <input type="email" name="user-email" placeholder="E-mail">
+                    </label>
+                    <div class="custom-input__error">Не корректный email</div>
+                  </div>
+                  <a class="btn" href="email-sent.html" aria-label="Send email">Отправить</a>
                 </div>
-                <a class="btn" href="email-sent.html" aria-label="Send email">Отправить</a>
               </div>
             </div>
           </form>

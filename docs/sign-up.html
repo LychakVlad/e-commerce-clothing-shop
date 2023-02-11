@@ -139,7 +139,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__top-block">
@@ -204,7 +204,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__bottom-block"><a class="header-menu__brand" href="#">Deha</a><a class="header-menu__brand" href="#">American vintage</a><a class="header-menu__brand" href="#">george gina lucy</a><a class="header-menu__brand" href="#">birkenstock</a>
@@ -214,60 +214,68 @@
       <main>
         <div data-validate>
           <form method="post">
-            <div class="sign-up__wrapper">
-              <div class="sign-up__block">
-                <h3 class="sign-up__title">Регистрация</h3>
-                <div class="sign-up__inputs-block">
-                  <div class="custom-input custom-input--long" data-validate-type="text" data-limitations="name">
-                    <label>
-                      <input type="text" name="user-name" minlength="2" placeholder="Имя">
-                    </label>
-                    <div class="custom-input__error">Не корректное имя</div>
+            <div class="sign-in__wrapper">
+              <div class="container container--small">
+                <div class="sign-in__block sign-in__block--red-links">
+                  <div class="sign-in__title">
+                    <div class="title">
+                      <h2 class="title title--h2 title--style-inter title--color-blue-whale">Регистрация</h2>
+                    </div>
                   </div>
-                  <div class="custom-input custom-input--long" data-limitations="surename">
-                    <label>
-                      <input type="text" name="user-surename" minlength="2" placeholder="Фамилия">
-                    </label>
+                  <div class="sign-in__inputs-block">
+                    <div class="custom-input custom-input--long" data-validate-type="text" data-limitations="name">
+                      <label>
+                        <input type="text" name="user-name" minlength="2" placeholder="Имя">
+                      </label>
+                      <div class="custom-input__error">Не корректное имя</div>
+                    </div>
+                    <div class="custom-input custom-input--long" data-limitations="surename">
+                      <label>
+                        <input type="text" name="user-surename" minlength="2" placeholder="Фамилия">
+                      </label>
+                    </div>
+                    <div class="custom-input custom-input--long" data-validate-type="email">
+                      <label>
+                        <input type="email" name="user-email" placeholder="E-mail">
+                      </label>
+                      <div class="custom-input__error">Не корректный email</div>
+                    </div>
+                    <div class="custom-input custom-input--long">
+                      <label>
+                        <input type="tel" name="user-tel" placeholder="Номер телефона">
+                      </label>
+                    </div>
+                    <div class="custom-input custom-input--long" data-validate-type="password">
+                      <label>
+                        <input type="password" name="user-password" placeholder="Пароль">
+                      </label>
+                      <div class="custom-input__error">Не корректный пароль</div>
+                    </div>
+                    <div class="custom-input custom-input--long" data-validate-type="password">
+                      <label>
+                        <input type="password" name="user-password" placeholder="Повторите пароль">
+                      </label>
+                      <div class="custom-input__error">Не корректный пароль</div>
+                    </div>
                   </div>
-                  <div class="custom-input custom-input--long" data-validate-type="email">
-                    <label>
-                      <input type="email" name="user-email" placeholder="E-mail">
-                    </label>
-                    <div class="custom-input__error">Не корректный email</div>
+                  <div class="sign-in__toggles-block">
+                    <div class="custom-toggle custom-toggle--checkbox">
+                      <label>
+                        <input type="checkbox" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подписаться на рассылку</span>
+                      </label>
+                      <div class="custom-toggle__error">Согласие является обязательным</div>
+                    </div>
+                    <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                      <label>
+                        <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Я согласен c&nbsp;<a class="link" href="#" target="_blank">политикой конфиденциальности</a></span>
+                      </label>
+                      <div class="custom-toggle__error">Согласие является обязательным</div>
+                    </div>
                   </div>
-                  <div class="custom-input custom-input--long">
-                    <label>
-                      <input type="tel" name="user-tel" placeholder="Номер телефона">
-                    </label>
+                  <div class="sign-in__button-block">
+                    <button class="btn" type="submit">Зарегистрироваться</button>
+                    <p class="sign-in__text">У меня уже есть аккаунт - <a href="sign-in.html">войти</a></p>
                   </div>
-                  <div class="custom-input custom-input--long" data-validate-type="password">
-                    <label>
-                      <input type="password" name="user-password" placeholder="Пароль">
-                    </label>
-                    <div class="custom-input__error">Не корректный пароль</div>
-                  </div>
-                  <div class="custom-input custom-input--long" data-validate-type="password">
-                    <label>
-                      <input type="password" name="user-password" placeholder="Повторите пароль">
-                    </label>
-                    <div class="custom-input__error">Не корректный пароль</div>
-                  </div>
-                </div>
-                <div class="custom-toggle custom-toggle--checkbox">
-                  <label>
-                    <input type="checkbox" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подписаться на рассылку</span>
-                  </label>
-                  <div class="custom-toggle__error">Согласие является обязательным</div>
-                </div>
-                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                  <label>
-                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Я согласен c&nbsp;<a class="link" href="#" target="_blank">политикой конфиденциальности</a></span>
-                  </label>
-                  <div class="custom-toggle__error">Согласие является обязательным</div>
-                </div>
-                <div class="sign-up__button-block">
-                  <button class="btn" type="submit">Зарегистрироваться</button>
-                  <p class="sign-up__text">У меня уже есть аккаунт - <a href="sign-in.html">войти</a></p>
                 </div>
               </div>
             </div>

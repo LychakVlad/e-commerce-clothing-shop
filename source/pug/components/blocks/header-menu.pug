@@ -13,8 +13,8 @@ mixin header-menu(data, brands)
                 .header-menu__item-input-wrapper
                   input(type="text").header-menu__item-input
           .header-menu__lang-wrapper
-            a(href="#").header__lang-item RU
-            a(href="#").header__lang-item EN
+            a(href="#").header-menu___lang-item RU
+            a(href="#").header-menu___lang-item EN
       .header-menu__top-block
         each item in data
           .header-menu__column(data-accordion="parent")
@@ -31,8 +31,8 @@ mixin header-menu(data, brands)
                 .header-menu__item-input-wrapper
                   input(type="text").header-menu__item-input
           .header-menu__lang-wrapper
-            a(href="#").header__lang-item RU
-            a(href="#").header__lang-item EN
+            a(href="#").header-menu___lang-item RU
+            a(href="#").header-menu___lang-item EN
       .header-menu__bottom-block
         each brand in brands
           a(href="#").header-menu__brand= brand

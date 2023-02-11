@@ -14,11 +14,12 @@ block main
 
   main
     .email-sent__wrapper
-      .email-sent__block
-        .email-sent__block-wrapper
-          +picture("content", 'email-sent', "png", 124, 124, "mail")
-          p.email-sent__text Ссылка для восстановления пароля отправлено на test@mail.com
-          +btn({text: "На главную", href: "index.html"})(aria-label="Send email" class='btn--small')
+      .container.container--small
+        .email-sent__block
+          .email-sent__block-wrapper
+            +picture("content", 'email-sent', "png", 124, 124, "mail")
+            p.email-sent__text Ссылка для восстановления пароля отправлено на test@mail.com
+            +btn({text: "На главную", href: "index.html"})(aria-label="Send email" class='btn--small')
 
 
 

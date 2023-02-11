@@ -16,22 +16,25 @@ block main
   main
     div(data-validate)
       form(method="post")
-        .sign-up__wrapper
-          .sign-up__block
-            h3.sign-up__title Регистрация
-            .sign-up__inputs-block
-              +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name", class='custom-input--long')
-              +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Фамилия"})(data-limitations="surename", class='custom-input--long')
-              +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email", class='custom-input--long')
-              +custom-input({inputType: "tel", inputName: "user-tel", inputPlaceholder: "Номер телефона", inputName: "user-tel"})(class='custom-input--long')
-              +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
-              +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Повторите пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
-            +custom-toggle({inputLabel: "Подписаться на рассылку", inputError: "Согласие является обязательным", inputName: "user-agreement"}).custom-toggle--checkbox
-            +custom-toggle({inputLabel: 'Я согласен c&nbsp;', labelLink: {text: 'политикой конфиденциальности', href: "#"}, inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
-            .sign-up__button-block
-              +btn({text: "Зарегистрироваться", type: "submit"})
-              p.sign-up__text=  'У меня уже есть аккаунт - '
-                a(href="sign-in.html") войти
+        .sign-in__wrapper
+          .container.container--small
+            .sign-in__block.sign-in__block--red-links
+              .sign-in__title
+                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Регистрация', titleColor: 'blue-whale'})
+              .sign-in__inputs-block
+                +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name", class='custom-input--long')
+                +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Фамилия"})(data-limitations="surename", class='custom-input--long')
+                +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email", class='custom-input--long')
+                +custom-input({inputType: "tel", inputName: "user-tel", inputPlaceholder: "Номер телефона", inputName: "user-tel"})(class='custom-input--long')
+                +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
+                +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Повторите пароль", inputName: "user-password"})(data-validate-type="password", class='custom-input--long')
+              .sign-in__toggles-block
+                +custom-toggle({inputLabel: "Подписаться на рассылку", inputError: "Согласие является обязательным", inputName: "user-agreement"}).custom-toggle--checkbox
+                +custom-toggle({inputLabel: 'Я согласен c&nbsp;', labelLink: {text: 'политикой конфиденциальности', href: "#"}, inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+              .sign-in__button-block
+                +btn({text: "Зарегистрироваться", type: "submit"})
+                p.sign-in__text=  'У меня уже есть аккаунт - '
+                  a(href="sign-in.html") войти
 
 
 

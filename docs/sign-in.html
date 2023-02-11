@@ -139,7 +139,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__top-block">
@@ -204,7 +204,7 @@
                   </form>
                 </div>
               </div>
-              <div class="header-menu__lang-wrapper"><a class="header__lang-item" href="#">RU</a><a class="header__lang-item" href="#">EN</a></div>
+              <div class="header-menu__lang-wrapper"><a class="header-menu___lang-item" href="#">RU</a><a class="header-menu___lang-item" href="#">EN</a></div>
             </div>
           </div>
           <div class="header-menu__bottom-block"><a class="header-menu__brand" href="#">Deha</a><a class="header-menu__brand" href="#">American vintage</a><a class="header-menu__brand" href="#">george gina lucy</a><a class="header-menu__brand" href="#">birkenstock</a>
@@ -215,24 +215,28 @@
         <div data-validate>
           <form method="post">
             <div class="sign-in__wrapper">
-              <div class="sign-in__block">
-                <div class="title">
-                  <h2 class="title title--h2 title--style-inter title--color-blue-whale">Вход</h2>
+              <div class="container container--small">
+                <div class="sign-in__block">
+                  <div class="sign-in__title">
+                    <div class="title">
+                      <h2 class="title title--h2 title--style-inter title--color-blue-whale">Вход</h2>
+                    </div>
+                  </div>
+                  <div class="custom-input" data-validate-type="text" data-limitations="name">
+                    <label>
+                      <input type="text" name="user-name" minlength="2" placeholder="Имя">
+                    </label>
+                    <div class="custom-input__error">Не корректное имя</div>
+                  </div>
+                  <div class="custom-input">
+                    <label>
+                      <input type="password" name="user-password" placeholder="Пароль">
+                    </label>
+                    <div class="custom-input__error">Не корректный пароль</div>
+                  </div>
+                  <button class="btn" type="submit">Войти</button>
+                  <div class="sign-in__text-block"><a class="sign-in__forgot-pass" href="forgot-pass.html">Забыли пароль</a><span> / </span><a class="sign-in__to-sign-up" href="sign-up.html">У меня нет акаунта</a></div>
                 </div>
-                <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label>
-                    <input type="text" name="user-name" minlength="2" placeholder="Имя">
-                  </label>
-                  <div class="custom-input__error">Не корректное имя</div>
-                </div>
-                <div class="custom-input">
-                  <label>
-                    <input type="password" name="user-password" placeholder="Пароль">
-                  </label>
-                  <div class="custom-input__error">Не корректный пароль</div>
-                </div>
-                <button class="btn" type="submit">Войти</button>
-                <div class="sign-in__text-block"><a class="sign-in__forgot-pass" href="forgot-pass.html">Забыли пароль</a><span> / </span><a class="sign-in__to-sign-up" href="sign-up.html">У меня нет акаунта</a></div>
               </div>
             </div>
           </form>
