@@ -1,11 +1,12 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {initCustomSelect} from './modules/form/init-custom-select';
-import {initFormValidate} from './modules/form/init-form-validate';
-import {initHeaderMenu} from './modules/init-header-menu';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { initCustomSelect } from './modules/form/init-custom-select';
+import { initFormValidate } from './modules/form/init-form-validate';
+import { initHeaderMenu } from './modules/init-header-menu';
+import { initAccordion } from './modules/handler-accordion';
+import { headerScroll } from './utils/header-scroll';
 
 import './modules/sliders/index';
-import {initAccordion} from './modules/handlerAccordion';
 
 
 // ---------------------------------
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  headerScroll();
 
   // Modules
   // ---------------------------------

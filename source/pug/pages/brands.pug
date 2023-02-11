@@ -79,29 +79,33 @@ block main
 
   main
     +title-block(firstBgBlock)
-    .container.container--medium
-      .brands-content-block
-        .brands-text-block__img.brands-text-block__img--left
-          +picture("content", firstTextBlock.img, "png", 261, 350, "photo")
-        +text-block(firstTextBlock)
+    .brands-content-block
+      .container.container--medium
+        .brands-content-wrapper
+          .brands-text-block__img.brands-text-block__img--left
+            +picture("content", firstTextBlock.img, "png", 261, 350, "photo")
+          +text-block(firstTextBlock)
     +title-block(secondBgBlock)
-    .container.container--medium
-      .brands-content-block
-        +text-block(secondTextBlock)
-        .brands-text-block__img.brands-text-block__img--right
-          +picture("content", secondTextBlock.img, "png", 261, 350, "photo")
+    .brands-content-block
+      .container.container--medium
+        .brands-content-wrapper
+          +text-block(secondTextBlock)
+          .brands-text-block__img.brands-text-block__img--right
+            +picture("content", secondTextBlock.img, "png", 261, 350, "photo")
     +title-block(thirdBgBlock)
-    .container.container--medium
-      .brands-content-block
-        .brands-text-block__img.brands-text-block__img--left
-          +picture("content", thirdTextBlock.img, "png", 261, 350, "photo")
-        +text-block(thirdTextBlock)
+    .brands-content-block
+      .container.container--medium
+        .brands-content-wrapper
+          .brands-text-block__img.brands-text-block__img--left
+            +picture("content", thirdTextBlock.img, "png", 261, 350, "photo")
+          +text-block(thirdTextBlock)
     +title-block(fourthBgBlock)
-    .container.container--medium
-      .brands-content-block
-        +text-block(fourthTextBlock)
-        .brands-text-block__img.brands-text-block__img--right
-          +picture("content", fourthTextBlock.img, "png", 261, 350, "photo")
+    .brands-content-block
+      .container.container--medium
+        .brands-content-wrapper
+          +text-block(fourthTextBlock)
+          .brands-text-block__img.brands-text-block__img--right
+            +picture("content", fourthTextBlock.img, "png", 261, 350, "photo")
 
 
 block modals

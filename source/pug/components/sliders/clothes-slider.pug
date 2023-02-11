@@ -1,11 +1,12 @@
 mixin clothes-slider(data, title)
-  .container.container--medium
-    .clothes-slider-block
-      +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: title, titleColor: 'blue-whale'})
-      .clothes-slider.swiper
-        .clothes-slider__wrapper.swiper-wrapper
-          each item in data
-            .clothes-slider__slide.swiper-slide
-              +item-card(item)
-      .clothes-slider__button-prev.swiper-button-prev
-      .clothes-slider__button-next.swiper-button-next
+  .clothes-slider-block
+    .container.container--medium
+      .clothes-slider-wrapper
+        +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: title, titleColor: 'blue-whale'})
+        .clothes-slider.swiper
+          .clothes-slider__wrapper.swiper-wrapper
+            each item in data
+              .clothes-slider__slide.swiper-slide
+                +item-card(item)
+        .clothes-slider__button-prev.swiper-button-prev
+        .clothes-slider__button-next.swiper-button-next

@@ -11,7 +11,22 @@
   z-index: 3;
   background-color: $color-default-white;
   border-bottom: 1px solid #EAE9E8;
-  min-width: 320px;
+  transition: all $trans-default;
+
+
+  &.is-hidden{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:-100px;
+  }
+
+  &.is-fixed{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 
   ul{
   list-style: none;

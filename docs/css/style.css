@@ -1736,18 +1736,18 @@ button,
   object-position: center;
 }
 
-.clothes-slider-block {
+.clothes-slider-wrapper {
   width: 100%;
   position: relative;
   margin-bottom: 100px;
 }
 
-.clothes-slider-block h2 {
+.clothes-slider-wrapper h2 {
   text-align: center;
 }
 
-.clothes-slider-block .swiper-button-prev,
-.clothes-slider-block .swiper-button-next {
+.clothes-slider-wrapper .swiper-button-prev,
+.clothes-slider-wrapper .swiper-button-next {
   position: absolute;
   color: #254A5A;
   width: 90px;
@@ -1756,12 +1756,12 @@ button,
   border-radius: 50%;
 }
 
-.clothes-slider-block .swiper-button-prev {
+.clothes-slider-wrapper .swiper-button-prev {
   top: 50%;
   left: -5%;
 }
 
-.clothes-slider-block .swiper-button-next {
+.clothes-slider-wrapper .swiper-button-next {
   top: 50%;
   right: -5%;
 }
@@ -1793,7 +1793,23 @@ button,
   z-index: 3;
   background-color: #ffffff;
   border-bottom: 1px solid #EAE9E8;
-  min-width: 320px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header.is-hidden {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: -100px;
+}
+
+.header.is-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .header ul {
@@ -2486,7 +2502,7 @@ button,
   margin-bottom: 15px;
 }
 
-.brands-content-block {
+.brands-content-wrapper {
   width: 100%;
   margin: 120px 0px;
   display: -webkit-box;
