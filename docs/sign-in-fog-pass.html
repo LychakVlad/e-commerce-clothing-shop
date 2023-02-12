@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Sign-in</title>
+    <title>sign-in-fog-pass</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -217,25 +217,18 @@
             <div class="sign-in__wrapper">
               <div class="container container--small">
                 <div class="sign-in__block">
-                  <div class="sign-in__title">
+                  <div class="sign-in__title sign-in__title--mw-340">
                     <div class="title">
-                      <h2 class="title title--h2 title--style-inter title--color-blue-whale">Вход</h2>
+                      <h2 class="title title--h2 title--style-inter title--color-blue-whale">Восстановить пароль</h2>
                     </div>
                   </div>
-                  <div class="custom-input" data-validate-type="text" data-limitations="name">
+                  <div class="custom-input" data-validate-type="email">
                     <label>
-                      <input type="text" name="user-name" minlength="2" placeholder="Имя">
+                      <input type="email" name="user-email" placeholder="E-mail">
                     </label>
-                    <div class="custom-input__error">Не корректное имя</div>
+                    <div class="custom-input__error">Не корректный email</div>
                   </div>
-                  <div class="custom-input">
-                    <label>
-                      <input type="password" name="user-password" placeholder="Пароль">
-                    </label>
-                    <div class="custom-input__error">Не корректный пароль</div>
-                  </div>
-                  <button class="btn" type="submit">Войти</button>
-                  <div class="sign-in__text-block"><a class="sign-in__forgot-pass" href="forgot-pass.html">Забыли пароль</a><span> / </span><a class="sign-in__to-sign-up" href="sign-up.html">У меня нет акаунта</a></div>
+                  <a class="btn" href="email-sent.html" aria-label="Send email">Отправить</a>
                 </div>
               </div>
             </div>

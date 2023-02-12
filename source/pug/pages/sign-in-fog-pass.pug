@@ -1,19 +1,19 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "forgot-pass" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "sign-in-fog-pass" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "forgot-pass.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "sign-in-fog-pass.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 
 block main
 
   main
-    div(data-validate)
+    div(data-validate).sign-in
       form(method="post")
         .sign-in__wrapper
           .container.container--small

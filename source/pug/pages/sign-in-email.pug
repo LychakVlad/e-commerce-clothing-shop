@@ -1,24 +1,24 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "email-sent" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "sign-in-email" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "email-sent.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "sign-in-email.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 
 block main
 
   main
-    .email-sent__wrapper
+    .sign-in-email
       .container.container--small
-        .email-sent__block
-          .email-sent__block-wrapper
+        .sign-in-email__block
+          .sign-in-email__wrapper
             +picture("content", 'email-sent', "png", 124, 124, "mail")
-            p.email-sent__text Ссылка для восстановления пароля отправлено на test@mail.com
+            p.sign-in-email__text Ссылка для восстановления пароля отправлено на test@mail.com
             +btn({text: "На главную", href: "index.html"})(aria-label="Send email" class='btn--small')
 
 
