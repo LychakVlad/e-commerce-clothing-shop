@@ -23,13 +23,13 @@
     left: -5%;
   }
   .swiper-button-next{
-    top:50%;
+    top: 50%;
     right: -5%;
   }
 
 }
 
-.clothes-slider{
+.clothes-slider-block{
   max-width: 1055px;
   width: 100%;
 
@@ -47,7 +47,7 @@
 
 
 @media (max-width: 770px) {
-  .clothes-slider-block{
+  .clothes-slider{
 
     .swiper-button-prev,
     .swiper-button-next{

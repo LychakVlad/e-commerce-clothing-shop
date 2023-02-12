@@ -1,20 +1,20 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Sign-up" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Sign-in-reg" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "sign-up.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "sign-in-reg.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 
 block main
 
 
   main
-    div(data-validate)
+    div(data-validate).sign-in
       form(method="post")
         .sign-in__wrapper
           .container.container--small

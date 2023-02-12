@@ -21,7 +21,7 @@ window.initClothesSwiper = () => {
   if (!document.querySelector('.main-slider')) {
     return;
   }
-  const clothesSwiper = new Swiper('.clothes-slider', {
+  const clothesSwiper = new Swiper('.clothes-slider-block', {
     breakpoints: {
       800: {
         slidesPerView: 4,

@@ -1,11 +1,11 @@
-.brands-content-wrapper{
+.brands-content__wrapper{
   width: 100%;
   margin: 120px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-.brands-text-block__img{
+.brands-content__img{
   width: 100%;
   height: 365px;
   max-width: 264px;
@@ -18,11 +18,11 @@
 }
 
 @media (max-width: 768px) {
-  .brands-content-block{
+  .brands{
     flex-direction: column;
   }
 
-  .brands-text-block__img{
+  .brands-content__img{
     align-self: center;
     &--left{
       margin-bottom: 60px;
@@ -32,6 +32,11 @@
       margin-top: 60px;
       margin-left: 0px;
     }
+  }
+
+  .brands-content__wrapper{
+    flex-direction: column;
+    align-items: center;
   }
 
 }
