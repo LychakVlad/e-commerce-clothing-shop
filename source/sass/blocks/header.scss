@@ -136,6 +136,7 @@
     cursor: pointer;
     transition: transform $trans-default;
 
+
   &.is-active{
     transform: rotate(45deg);
     width: 20px;

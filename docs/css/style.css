@@ -1609,8 +1609,8 @@ button,
 .item-card__text-block {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (minmax(25px, 50px))[2];
-  grid-template-rows: repeat(2, minmax(25px, 50px));
+  -ms-grid-rows: (minmax(25px, 70px))[2];
+  grid-template-rows: repeat(2, minmax(25px, 70px));
   row-gap: 40px;
 }
 
@@ -1778,6 +1778,10 @@ button,
 
 .clothes-slider__slide {
   max-width: 230px;
+}
+
+.card-slider {
+  max-width: 470px;
 }
 
 .header {
@@ -2765,6 +2769,16 @@ button,
   color: #0F303F;
   max-width: 323px;
   margin: 24px 0px 22px;
+}
+
+.card-page__top-block {
+  margin: 50px 0px;
+}
+
+.card-page__left-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .content-block {

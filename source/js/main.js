@@ -33,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     window.initMainSwiper();
     window.initClothesSwiper();
+    window.initCardSwiper();
   });
 });
 

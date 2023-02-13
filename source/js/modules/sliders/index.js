@@ -18,7 +18,7 @@ window.initMainSwiper = () => {
 
 
 window.initClothesSwiper = () => {
-  if (!document.querySelector('.main-slider')) {
+  if (!document.querySelector('.clothes-slider-block')) {
     return;
   }
   const clothesSwiper = new Swiper('.clothes-slider-block', {
@@ -40,6 +40,25 @@ window.initClothesSwiper = () => {
     navigation: {
       nextEl: '.clothes-slider__button-next',
       prevEl: '.clothes-slider__button-prev',
+    },
+  });
+}
+
+window.initCardSwiper = () => {
+  if (!document.querySelector('.card-slider')) {
+    return;
+  }
+
+  const cardSwiper = new Swiper('.card-slider', {
+    loop: true,
+    autoHeight: true,
+    slidesPerView: 1,
+    thumbs: {
+      swiper: {
+        el: '.mini-img-slider',
+        slidesPerView: 5,
+        direction: 'vertical',
+      }
     },
   });
 }
