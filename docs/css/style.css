@@ -681,9 +681,9 @@ button,
   background-color: #0F303F;
   border: none;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, background-color 0.3s ease;
+  -o-transition: opacity 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .btn--orange {
@@ -698,6 +698,7 @@ button,
 
 .btn--transparent.focus-visible:focus {
   opacity: 0.5;
+  background-color: #CEC6C4;
 }
 
 .btn:disabled {
@@ -1791,6 +1792,7 @@ button,
 
 .card-slider {
   max-width: 470px;
+  height: 1000px;
 }
 
 .card-slider__slide {
@@ -3687,6 +3689,7 @@ button,
 @media (hover: hover) {
   .btn--transparent:hover:not(.focus-visible) {
     opacity: 0.5;
+    background-color: #CEC6C4;
   }
 
   .btn:hover:not(.focus-visible) {

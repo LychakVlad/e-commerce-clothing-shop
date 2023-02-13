@@ -18,7 +18,7 @@
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition: opacity $trans-default, background-color $trans-default;
 
   &--orange {
     background-color: $color-cinnabar;
@@ -31,6 +31,7 @@
 
     @include hover-focus {
       opacity: 0.5;
+      background-color: $color-alto;
     }
 
   }
