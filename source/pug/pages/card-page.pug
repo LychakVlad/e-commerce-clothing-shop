@@ -18,31 +18,56 @@ block main
         .card-page__wrapper
           .card-page__top-block
             .card-page__left-column
-              .mini-img-slider.swiper
-                .mini-img-slider__wrapper.swiper-wrapper
-                  .mini-img-slider__slide.swiper-slide
-                    +picture("content", 'clothes-small', "png", 85, 109, "card")
-                  .mini-img-slider__slide.swiper-slide
-                    +picture("content", 'clothes-small', "png", 85, 109, "card")
-                  .mini-img-slider__slide.swiper-slide
-                    +picture("content", 'clothes-small', "png", 85, 109, "card")
-                  .mini-img-slider__slide.swiper-slide
-                    +picture("content", 'clothes-small', "png", 85, 109, "card")
-                  .mini-img-slider__slide.swiper-slide
-                    +picture("content", 'clothes-small', "png", 85, 109, "card")
+              .card-slider-mini.swiper
+                .card-slider-mini__wrapper.swiper-wrapper
+                  .card-slider-mini__slide.swiper-slide
+                    +picture("content", 'clothes-small', "png", 85, 131, "card")
+                  .card-slider-mini__slide.swiper-slide
+                    +picture("content", 'clothes-small', "png", 85, 131, "card")
+                  .card-slider-mini__slide.swiper-slide
+                    +picture("content", 'clothes-small', "png", 85, 131, "card")
+                  .card-slider-mini__slide.swiper-slide
+                    +picture("content", 'clothes-small', "png", 85, 131, "card")
+                  .card-slider-mini__slide.swiper-slide
+                    +picture("content", 'clothes-small', "png", 85, 131, "card")
               .card-slider.swiper
                 .card-slider__wrapper.swiper-wrapper
                   .card-slider__slide.swiper-slide
-                    +picture("content", 'clothes-big', "png", 470, 588, "card")
+                    +picture("content", 'clothes-big', "png", 470, 678, "card")
                   .card-slider__slide.swiper-slide
-                    +picture("content", 'clothes-big', "png", 470, 588, "card")
+                    +picture("content", 'clothes-big', "png", 470, 678, "card")
                   .card-slider__slide.swiper-slide
-                    +picture("content", 'clothes-big', "png", 470, 588, "card")
+                    +picture("content", 'clothes-big', "png", 470, 678, "card")
                   .card-slider__slide.swiper-slide
-                    +picture("content", 'clothes-big', "png", 470, 588, "card")
+                    +picture("content", 'clothes-big', "png", 470, 678, "card")
                   .card-slider__slide.swiper-slide
-                    +picture("content", 'clothes-big', "png", 470, 588, "card")
+                    +picture("content", 'clothes-big', "png", 470, 678, "card")
             .card-page__right-column
+              +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'American Vintage', titleColor: 'blue-whale'})
+              p.card-page__category Classic shirt
+              p.card-page__price 3800 UAH
+              +base-radio({name: "input-radio-test", title: 'Sizes'}, [{value: "XS", id: "size-radio-xs"}, {value: "S", checked: "true", id: "size-radio-s"}, {value: "M", checked: "true", id: "size-radio-m"}, {value: "L", checked: "true", id: "size-radio-l"}, {value: "XL", checked: "true", id: "size-radio-xl"}])
+              .card-page__size-chart
+                a(href="#" data-open-modal="modal-size-chart") Size chart
+              p.card-page__color-title Color
+              .card-page__colors
+                a(href="#").card-page__color
+                a(href="#").card-page__color.card-page__color--color-red
+                a(href="#").card-page__color.card-page__color--color-blue
+                a(href="#").card-page__color.card-page__color--color-black
+              .card-page__buttons
+                +btn({text: "Add to cart", type: "submit"}).btn--transparent
+                +btn({text: "Buy in one click", type: "submit"})
+              .card-page__delivery
+                p Deliver tomorrow or later
+                .card-page__delivery-block
+                  +icon('icon-car', 50, 30)
+                  p To the points of delivery - free of charge for the purchase of 5000 UAH or more
+                .card-page__delivery-block
+                  +icon('icon-box', 50, 30)
+                  p To the address by courier - free of charge for purchases from 10000 UAH
+
+
           .card-page__bottom-block
 
 
@@ -53,3 +78,5 @@ block modals
     +modal-payment()
   +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
     +modal-return()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-size-chart")
+    +modal-size-chart()

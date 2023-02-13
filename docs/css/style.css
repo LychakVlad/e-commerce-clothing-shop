@@ -670,7 +670,6 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding: 10px 0px;
-  max-width: 250px;
   height: 50px;
   width: 100%;
   font-family: "Inter";
@@ -689,6 +688,16 @@ button,
 
 .btn--orange {
   background-color: #E64926;
+}
+
+.btn--transparent {
+  background-color: transparent;
+  color: #0F303F;
+  border: #0F303F solid 2px;
+}
+
+.btn--transparent.focus-visible:focus {
+  opacity: 0.5;
 }
 
 .btn:disabled {
@@ -1335,11 +1344,11 @@ button,
 
 .radio__title {
   margin-top: 0;
-  margin-bottom: 17px;
+  margin-bottom: 8px;
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 400;
   color: #0F303F;
 }
 
@@ -1782,6 +1791,52 @@ button,
 
 .card-slider {
   max-width: 470px;
+}
+
+.card-slider__slide {
+  max-height: 680px;
+  width: 100%;
+}
+
+.card-slider__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.card-slider-mini {
+  margin-right: 17px;
+}
+
+.card-slider-mini .swiper-slide {
+  opacity: 0.5;
+}
+
+.card-slider-mini .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.card-slider-mini .swiper-slide-thumb-active img {
+  border: #CEC6C4 solid 1px;
+}
+
+.card-slider-mini__slide {
+  max-height: 126px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-slider-mini__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .header {
@@ -2771,14 +2826,127 @@ button,
   margin: 24px 0px 22px;
 }
 
+.card-page {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #0F303F;
+}
+
 .card-page__top-block {
   margin: 50px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card-page__left-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.card-page__right-column {
+  margin-left: 32px;
+  max-width: 300px;
+}
+
+.card-page__category {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-page__price {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card-page__size-chart {
+  margin-top: 8px;
+}
+
+.card-page__size-chart a {
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  color: #0F303F;
+  text-decoration: underline;
+}
+
+.card-page__size-chart a.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.card-page__color-title {
+  margin-top: 20px;
+}
+
+.card-page__colors {
+  margin-bottom: 20px;
+}
+
+.card-page__color {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #d2d2d2 solid 1px;
+  margin-right: 10px;
+}
+
+.card-page__color.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.card-page__color:active,
+.card-page__color:focus {
+  border: #0F303F solid 2px;
+  opacity: 0.8;
+}
+
+.card-page__color:last-child {
+  margin-right: 0px;
+}
+
+.card-page__color--color-red {
+  background-color: red;
+}
+
+.card-page__color--color-blue {
+  background-color: blue;
+}
+
+.card-page__color--color-black {
+  background-color: #000000;
+}
+
+.card-page__buttons {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 12px;
+}
+
+.card-page__delivery {
+  margin-top: 20px;
+}
+
+.card-page__delivery-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.card-page__delivery-block svg {
+  margin-right: 20px;
 }
 
 .content-block {
@@ -3517,6 +3685,10 @@ button,
 }
 
 @media (hover: hover) {
+  .btn--transparent:hover:not(.focus-visible) {
+    opacity: 0.5;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
@@ -3592,5 +3764,13 @@ button,
     opacity: 1;
     -webkit-transform: translate3d(0, 0.2em, 0);
     transform: translate3d(0, 0.2em, 0);
+  }
+
+  .card-page__size-chart a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .card-page__color:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 }

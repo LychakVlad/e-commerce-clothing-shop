@@ -51,11 +51,11 @@ window.initCardSwiper = () => {
 
   const cardSwiper = new Swiper('.card-slider', {
     loop: true,
-    autoHeight: true,
     slidesPerView: 1,
+    spaceBetween: 20,
     thumbs: {
       swiper: {
-        el: '.mini-img-slider',
+        el: '.card-slider-mini',
         slidesPerView: 5,
         direction: 'vertical',
       }
