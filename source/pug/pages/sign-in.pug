@@ -21,7 +21,7 @@ block main
               .sign-in__title
                 +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Вход', titleColor: 'blue-whale'})
               +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
-              +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})
+              +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
               +btn({text: "Войти", type: "submit"})
               .sign-in__text-block
                 a(href="sign-in-fog-pass.html").sign-in__forgot-pass Забыли пароль

@@ -21,8 +21,8 @@ mixin footer(footerMods)
     .container
       .footer__upper-menu
         h2.footer__heading.footer__heading--h2 Будьте в курсе событий
-        .footer__search
-          form
+        div(data-validate).footer__search
+          form(method="post")
             .footer__search-input-wrapper
               +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email").--footer
               button(type='submit').footer__search-button

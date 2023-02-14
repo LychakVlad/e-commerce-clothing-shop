@@ -48,9 +48,8 @@
 }
 
 .item-card__text-block{
-  display: grid;
-  grid-template-rows: repeat(2, minmax( 25px, 70px));
-  row-gap: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-card__old-price{

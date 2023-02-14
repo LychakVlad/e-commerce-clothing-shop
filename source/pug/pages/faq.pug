@@ -75,8 +75,8 @@ block main
                     +title({titleStyle: 'Inter', titleType: 'h4', titleText: item.question, titleColor: 'blue-whale'})
                   .faq-accordion-item__answer(data-accordion="content")= item.answer
           .faq__column
-            .faq__feedback-block
-              form
+            div(data-validate).faq__feedback-block
+              form(method="post")
                 .faq__feedback__wrapper
                   .faq__feedback__text.faq__feedback__text--title
                     +title({titleStyle: 'Inter', titleType: 'h4', titleText: 'Есть вопросы или предложения? Напишите нам', titleColor: 'blue-whale'})

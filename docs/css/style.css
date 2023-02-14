@@ -732,9 +732,13 @@ button,
 }
 
 .custom-input.--footer {
-  border-bottom: 1px solid #0F303F;
+  border-bottom: 2px solid #0F303F;
   width: 250px;
   margin-right: 20px;
+}
+
+.custom-input.--footer.is-invalid {
+  border-bottom: none;
 }
 
 .custom-input.--footer input {
@@ -1616,11 +1620,13 @@ button,
 }
 
 .item-card__text-block {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (minmax(25px, 70px))[2];
-  grid-template-rows: repeat(2, minmax(25px, 70px));
-  row-gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .item-card__old-price {

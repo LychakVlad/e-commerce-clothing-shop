@@ -19,9 +19,15 @@
   }
 
   &.--footer{
-    border-bottom: 1px solid  #0F303F;
+    border-bottom: 2px solid  #0F303F;
     width: 250px;
     margin-right: 20px;
+
+    &.is-invalid {
+      border-bottom: none;
+    }
+
+
     input{
       text-align: center;
       font-size: 16px;
