@@ -697,7 +697,6 @@ button,
 }
 
 .btn--transparent.focus-visible:focus {
-  opacity: 0.5;
   background-color: #CEC6C4;
 }
 
@@ -1774,6 +1773,10 @@ button,
 .clothes-slider-wrapper .swiper-button-next {
   top: 50%;
   right: -5%;
+}
+
+.clothes-slider {
+  overflow: hidden;
 }
 
 .clothes-slider-block {
@@ -3688,7 +3691,6 @@ button,
 
 @media (hover: hover) {
   .btn--transparent:hover:not(.focus-visible) {
-    opacity: 0.5;
     background-color: #CEC6C4;
   }
 

@@ -30,7 +30,6 @@
     border: $color-blue-whale solid 2px;
 
     @include hover-focus {
-      opacity: 0.5;
       background-color: $color-alto;
     }
 
