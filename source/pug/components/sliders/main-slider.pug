@@ -6,10 +6,10 @@ mixin main-slider(data)
           if(item.side)
             .main-slider__slide-wrapper
               .main-slider__slide-text-block
-                p.main-slider__brand бренд
+                p.main-slider__brand Brand
                 +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: item.title, titleColor: 'blue-whale'})
                 .main-slider__collection
-                  a(href="#") смотреть коллекцию
+                  a(href="#") View the collection
               if(item.img)
                 +picture("content", item.img, "png", 941, 584, "banner").main-slider__slide-img
           else
