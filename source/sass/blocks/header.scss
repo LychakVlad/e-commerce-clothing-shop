@@ -91,20 +91,26 @@
   &__item{
   margin-left: 12px;
 
-  a{
+  @include  hover-focus{
+    a{
+    color: $color-cinnabar;
     transition: color $trans-default;
+    }
+  }
 
-  &:focus,
-  &:active {
+  &.is-active {
+
+    a{
     text-decoration: underline;
     text-decoration-color: $color-cinnabar;
     text-underline-offset: 26px;
     text-decoration-thickness: 2px;
     color: $color-cinnabar;
-    }
   }
+
 }
 }
+  }
 
 
 .header-icons{

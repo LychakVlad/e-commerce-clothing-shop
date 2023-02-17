@@ -1,6 +1,6 @@
 // Константы и переменные
 
-const BASE_COUNTRY_CODE = '+7';
+const BASE_COUNTRY_CODE = '+1 ';
 const BASE_MATRIX = '(___) ___ __ __';
 const phoneLength = BASE_COUNTRY_CODE.length + BASE_MATRIX.length;
 
@@ -98,7 +98,7 @@ const simpleMatrix = (formElement, dataMatrix, dataMatrixLimitations) => {
 
 // Маска для телефона
 
-const onInputPhoneInput = ({target}) => {
+const onInputPhoneInput = ({ target }) => {
   const matrix = `${BASE_COUNTRY_CODE}${BASE_MATRIX}`;
   const def = matrix.replace(/\D/g, '');
   let i = 0;
@@ -145,7 +145,7 @@ const prettifyPhoneInput = (input) => {
   });
 };
 
-const onFocusPhoneInput = ({target}) => {
+const onFocusPhoneInput = ({ target }) => {
   if (!target.value) {
     target.value = BASE_COUNTRY_CODE;
   }
@@ -164,7 +164,7 @@ const onKeydownPhoneInput = (e) => {
   }
 };
 
-const onBlurPhoneInput = ({target}) => {
+const onBlurPhoneInput = ({ target }) => {
   if (target.value === BASE_COUNTRY_CODE) {
     const parent = target.closest('[data-validate-type="phone"]');
     target.value = '';

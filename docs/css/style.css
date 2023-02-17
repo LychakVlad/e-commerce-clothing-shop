@@ -671,7 +671,7 @@ button,
   align-items: center;
   padding: 10px 0px;
   height: 50px;
-  width: 100%;
+  width: 250px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1939,14 +1939,14 @@ button,
   margin-left: 12px;
 }
 
-.header .header-lang__item a {
+.header .header-lang__item.focus-visible:focus a {
+  color: #E64926;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-.header .header-lang__item a:focus,
-.header .header-lang__item a:active {
+.header .header-lang__item.is-active a {
   text-decoration: underline;
   -webkit-text-decoration-color: #E64926;
   text-decoration-color: #E64926;
@@ -3726,6 +3726,13 @@ button,
 
   .header .header-nav__list a:hover:not(.focus-visible) {
     color: #8F9597;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+
+  .header .header-lang__item:hover:not(.focus-visible) a {
+    color: #E64926;
     -webkit-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
