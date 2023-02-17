@@ -669,7 +669,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px 0px;
+  padding: 15px 50px;
   height: 50px;
   width: 250px;
   font-family: "Inter";
@@ -2169,6 +2169,30 @@ button,
   font-style: normal;
 }
 
+.modal table {
+  text-align: center;
+  width: 100%;
+  border-spacing: 20px 20px;
+  min-width: 700px;
+  color: #0F303F;
+}
+
+.modal table tr:first-child,
+.modal table tr:nth-child(9),
+.modal table tr:nth-child(17) {
+  position: relative;
+  font-weight: 700;
+  font-size: 24px;
+  bottom: 10px;
+}
+
+.modal table tr:nth-child(2),
+.modal table tr:nth-child(10),
+.modal table tr:nth-child(18) {
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .modal__content-block {
   margin-bottom: 32px;
   max-width: 410px;
@@ -2226,7 +2250,6 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
   padding: 40px;
   background-color: #ffffff;
 }
