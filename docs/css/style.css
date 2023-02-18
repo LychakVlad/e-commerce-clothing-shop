@@ -2193,23 +2193,19 @@ button,
   font-size: 16px;
 }
 
-.modal__content-block {
+.modal div {
   margin-bottom: 32px;
-  max-width: 410px;
-}
-
-.modal__content-block--return {
   max-width: 610px;
 }
 
-.modal__title {
+.modal h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
   color: #0F303F;
 }
 
-.modal__description {
+.modal p {
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;

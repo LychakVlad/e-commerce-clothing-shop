@@ -55,23 +55,20 @@
   font-family: 'Inter';
   font-style: normal;
 
-  &__content-block{
+  div{
     margin-bottom: 32px;
-    max-width: 410px;
+    max-width: 610px;
 
-    &--return{
-      max-width: 610px;
-    }
   }
 
-  &__title{
+  h3{
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     color: $color-blue-whale;
   }
 
-  &__description{
+  p{
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
