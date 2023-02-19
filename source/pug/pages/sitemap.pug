@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Список страниц"
+  - const title = "Page list"
 
 block main
   style.
@@ -51,27 +51,39 @@ block main
   -
     const pages = [
       {
-        name: "Главная — index.html",
+        name: "Main page — index.html",
         src: "index.html"
       },
       {
-        name: "О нас — about-us.html",
+        name: "About us — about-us.html",
         src: "about-us.html"
       },
       {
-        name: "Бренды — brands.html",
+        name: "Brands — brands.html",
         src: "brands.html"
       },
       {
-        name: "Популярные вопросы — faq.html",
+        name: "FAQ — faq.html",
         src: "faq.html"
       },
       {
-        name: "Вход — sign-in.html",
+        name: "Sign in — sign-in.html",
         src: "sign-in.html"
       },
       {
-        name: "Карточка товара — card-page.html",
+        name: "Sign up — sign-in-reg.html",
+        src: "sign-in-reg.html"
+      },
+      {
+        name: "Forgot password — sign-in-fog-pass.html",
+        src: "sign-in-fog-pass.html"
+      },
+      {
+        name: "Email sent — sign-in-email.html",
+        src: "sign-in-email.html"
+      },
+      {
+        name: "Card page — card-page.html",
         src: "card-page.html"
       },
       {
@@ -82,8 +94,8 @@ block main
 
   main
     .container
-      img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
-      h1 Список страниц
+      +icon("logo", 300, 100)
+      h1 Page list
       ol
         each page in pages
           li

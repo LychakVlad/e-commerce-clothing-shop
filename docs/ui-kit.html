@@ -326,7 +326,7 @@
         
       </style>
       <header class="header-ui">
-        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>Вернуться на разводящую</span></a>
+        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>Back to page list</span></a>
           <ul class="header-ui__inner-list">
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
@@ -345,18 +345,30 @@
             <p>
               <button class="btn" type="button" data-open-modal="success">modal-success</button>
             </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="modal-payment">modal-payment</button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="modal-return">modal-return</button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="modal-size-chart">modal-size-chart</button>
+            </p>
           </section>
           <section id="buttons">
             <h2>Buttons</h2>
-            <a class="btn" href="#">Текст</a>
-            <p>Пример вызова</p><code>
-              <pre>+btn({text: "Текст", href: "#"})</pre></code>
-            <a class="btn btn--orange" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст</a>
-            <p>Пример вызова</p><code>
-              <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--orange</pre></code>
-            <button class="btn" type="button" disabled>Текст</button>
-            <p>Пример вызова</p><code>
-              <pre>+btn({text: "Текст"})(disabled)</pre></code>
+            <a class="btn" href="#">Text</a>
+            <p>Example</p><code>
+              <pre>+btn({text: "Text", href: "#"})</pre></code>
+            <a class="btn btn--orange" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="link">Text</a>
+            <p>Example</p><code>
+              <pre>+btn({text: "Text", href: "#", isExternal: true})(aria-label="link").btn--orange</pre></code>
+            <a class="btn btn--transparent" href="#">Text</a>
+            <p>Example</p><code>
+              <pre>+btn({text: "Text", href: "#"}).btn--transparent</pre></code>
+            <button class="btn" type="button" disabled>Text</button>
+            <p>Example</p><code>
+              <pre>+btn({text: "Textт"})(disabled)</pre></code>
           </section>
           <section id="form-elements">
             <h2>Form elements</h2>
@@ -368,7 +380,7 @@
                   </label>
                   <div class="custom-input__error">Не корректное имя</div>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
                   <label>
@@ -376,7 +388,7 @@
                   </label>
                   <div class="custom-input__error">Не корректный телефон</div>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+custom-input({inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
                   <label>
@@ -384,14 +396,14 @@
                   </label>
                   <div class="custom-input__error">Не корректный email</div>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+custom-input({inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
                 <div class="custom-textarea">
                   <label>
                     <textarea name="user-info"></textarea>
                   </label>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+custom-textarea({inputName: "user-info"})</pre></code>
                 <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
@@ -414,7 +426,7 @@
                   </label>
                   <div class="custom-toggle__error">Согласие является обязательным</div>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
                 <div class="radio">
                   <div class="radio__input">
@@ -426,7 +438,7 @@
                     <label for="test-radio-2"><span class="radio__text">XL</span></label>
                   </div>
                 </div>
-                <p>Пример вызова</p><code>
+                <p>Example</p><code>
                   <pre>+base-radio({name: "product-size", title: "Размер"}, [{value: "40", id: "size-40"}, {value: "42", id: "size-42"}, {value: "44", id: "size-44", checked: "true"}, {value: "46", id: "size-46"}])</pre></code>
                 <button class="btn" type="reset">Сбросить форму</button>
                 <button class="btn" type="submit">Отправить форму</button>
@@ -731,7 +743,7 @@ navigationChanger.init();
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <p class="modal__description">Regular modal</p>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="25" height="25" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
@@ -744,7 +756,204 @@ navigationChanger.init();
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
+          <p class="modal__description">The size of this modal depends on the width of the content,<br>animation-scape disabled</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-payment">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div>
+            <h3>Payment</h3>
+            <p>Payment in cash upon receipt</p>
+            <p>Payment is made in cash to the courier directly on delivery of the order to the address of the recipient. Choosing this payment method, you get the opportunity to try on the ordered items.</p>
+            <p>If any item does not fit, you can simply return it to the courier without paying.</p>
+          </div>
+          <div>
+            <h3>With card on site (Visa, Mastercard).</h3>
+            <p>We accept payment by Visa and Mastercard at our webstore. Security of payments with us is guaranteed by eCommerceConnect system using modern "3-D Secure" standard.</p>
+          </div>
+          <div>
+            <h3>Delivery</h3>
+            <p>To the branch "Nova Postta".</p>
+            <p>Delivery of orders to customers online store ALLEGRIA is carried out on the territory of Ukraine by courier service "Nova Posta".</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-return">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div>
+            <h3>Returns and exchanges</h3>
+            <p>Return of goods purchased at ALLEGRIA online store is made in accordance with the Law of Ukraine "On Protection of Consumer Rights".</p>
+            <p>You can return the merchandise within 14 days of purchase.</p>
+          </div>
+          <div>
+            <h3>How to apply for a refund?</h3>
+            <p>If you don't like something you bought or it didn't fit - contact our Contact Center by phone 000 00 000 and we will help you to fill out a return form.</p>
+          </div>
+          <div>
+            <h3>What are the return policy?</h3>
+            <p>The exchange and return of goods is carried out if the specified goods were not used, its commodity form - without damage and traces of wear, original packing, and also tags, seals, labels, trademarks are completely preserved.</p>
+            <p>Swimwear, underwear, hosiery, personal care products, and gloves are not returned and cannot be exchanged.</p>
+            <p>You can return the goods directly to our retail stores located in Kiev, Kharkov, Dnepr and Odessa. For residents of other cities of Ukraine sending the goods by carrier New Mail or any other carrier to the warehouse of online store ALLEGRIA, located in Kharkov is carried out at the expense of the company.</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-size-chart">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <table>
+            <tr>
+              <td colspan="4">KNIT TOPS</td>
+            </tr>
+            <tr>
+              <td>SIZE</td>
+              <td>CHEST</td>
+              <td>WAIST</td>
+              <td>NECK</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+            </tr>
+            <tr>
+              <td colspan="4">WOMEN SHIRTS</td>
+            </tr>
+            <tr>
+              <td>SIZE</td>
+              <td>CHEST</td>
+              <td>WAIST</td>
+              <td>NECK</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+            </tr>
+            <tr>
+              <td colspan="4">SHORTS</td>
+            </tr>
+            <tr>
+              <td>SIZE</td>
+              <td>WAIST</td>
+              <td>HIP</td>
+              <td>INSEAM</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td>37-39</td>
+              <td>39-41</td>
+              <td>41-43</td>
+            </tr>
+          </table>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="25" height="25" aria-hidden="true">
               <use xlink:href="#icon-close"></use>

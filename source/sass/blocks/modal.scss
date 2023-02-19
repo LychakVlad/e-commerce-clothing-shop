@@ -55,12 +55,6 @@
   font-family: 'Inter';
   font-style: normal;
 
-  div{
-    margin-bottom: 32px;
-    max-width: 610px;
-
-  }
-
   h3{
     font-weight: 700;
     font-size: 14px;
@@ -118,6 +112,11 @@
       margin-bottom: 0;
     }
 
+    div{
+      margin-bottom: 32px;
+      max-width: 610px;
+    }
+
 
     @include vp-767 {
       width: 100%;
@@ -127,8 +126,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 12px;
+    right: 12px;
     z-index: 1;
 
     width: 40px;

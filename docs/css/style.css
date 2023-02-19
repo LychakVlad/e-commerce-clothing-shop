@@ -2193,11 +2193,6 @@ button,
   font-size: 16px;
 }
 
-.modal div {
-  margin-bottom: 32px;
-  max-width: 610px;
-}
-
 .modal h3 {
   font-weight: 700;
   font-size: 14px;
@@ -2254,10 +2249,15 @@ button,
   margin-bottom: 0;
 }
 
+.modal__content div {
+  margin-bottom: 32px;
+  max-width: 610px;
+}
+
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 12px;
+  right: 12px;
   z-index: 1;
   width: 40px;
   height: 40px;

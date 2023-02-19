@@ -1,8 +1,4 @@
 const header = document.querySelector('.header');
-const mainPage = document.querySelector('main');
-const firstBlock = mainPage.firstElementChild;
-const headerHeight = header.offsetHeight;
-const firstBlockHeight = firstBlock.offsetHeight;
 
 const headerScroll = () => {
   if (!header) {
@@ -11,6 +7,10 @@ const headerScroll = () => {
 
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
+    const mainPage = document.querySelector('main');
+    const firstBlock = mainPage.firstElementChild;
+    const headerHeight = header.offsetHeight;
+    const firstBlockHeight = firstBlock.offsetHeight;
 
     if (scrollDistance >= firstBlockHeight + headerHeight) {
       header.classList.add('is-fixed');
