@@ -1687,6 +1687,27 @@ button,
   object-position: center;
 }
 
+.fav-button label {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: #254A5A 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.fav-button input:checked + label svg {
+  fill: red;
+}
+
 .swiper-pagination--main {
   font-family: "Inter";
   font-style: normal;
