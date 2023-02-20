@@ -262,6 +262,7 @@
         }
         
         section > h2 {
+          color: #0F303F;
           margin: 0 0 20px 0;
           padding: 20px 0;
           position: relative;
@@ -329,6 +330,7 @@
         <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>Back to page list</span></a>
           <ul class="header-ui__inner-list">
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#titles" data-navigation-link>Titles</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
           </ul>
@@ -355,6 +357,27 @@
               <button class="btn" type="button" data-open-modal="modal-size-chart">modal-size-chart</button>
             </p>
           </section>
+          <section id="titles">
+            <h2>Titles</h2>
+            <div class="title">
+              <h1 class="title title--h1 title--style-cormoran title--color-blue-whale">Cormoran-title-h1</h1>
+            </div>
+            <div class="title">
+              <h2 class="title title--h2 title--style-cormoran title--color-blue-whale">Cormoran-title-h2</h2>
+            </div>
+            <div class="title">
+              <h3 class="title title--h3 title--style-cormoran title--color-blue-whale">Cormoran-title-h3</h3>
+            </div>
+            <div class="title">
+              <h1 class="title title--h1 title--style-inter title--color-blue-whale">Inter-title-h1</h1>
+            </div>
+            <div class="title">
+              <h2 class="title title--h2 title--style-inter title--color-blue-whale">Inter-title-h2</h2>
+            </div>
+            <div class="title">
+              <h3 class="title title--h3 title--style-inter title--color-blue-whale">Inter-title-h3</h3>
+            </div>
+          </section>
           <section id="buttons">
             <h2>Buttons</h2>
             <a class="btn" href="#">Text</a>
@@ -378,26 +401,26 @@
                   <label>
                     <input type="text" name="user-name" minlength="2">
                   </label>
-                  <div class="custom-input__error">Не корректное имя</div>
+                  <div class="custom-input__error">Invalid name</div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
+                  <pre>+custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
                   <label>
                     <input type="tel" name="user-phone">
                   </label>
-                  <div class="custom-input__error">Не корректный телефон</div>
+                  <div class="custom-input__error">Invalid tel</div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+custom-input({inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
+                  <pre>+custom-input({inputError: "Invalid tel", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
                   <label>
                     <input type="email" name="user-email">
                   </label>
-                  <div class="custom-input__error">Не корректный email</div>
+                  <div class="custom-input__error">Invalid email</div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+custom-input({inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
+                  <pre>+custom-input({inputError: "Invalid email", inputName: "user-email"})(data-validate-type="email")</pre></code>
                 <div class="custom-textarea">
                   <label>
                     <textarea name="user-info"></textarea>
@@ -405,30 +428,31 @@
                 </div>
                 <p>Example</p><code>
                   <pre>+custom-textarea({inputName: "user-info"})</pre></code>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
+                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Select the subject of the address</span>
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
                   <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Тема 1</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Subject 1</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Subject 2</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Subject 3</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Subject 4</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Subject 5</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Subject 6</li>
                   </ul>
                 </div><code>
-                  <pre></pre>+custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
-                  "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
-                  value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
+                  <pre></pre>+custom-select({error: "Select the subject of the address", optionsList: [{text: "Subject 1", value: "id-1"}, {text:
+                  "Subject 2", value: "id-2"}, {text: "Subject 3", value: "id-3"}, {text: "Subject 4", value: "id-4"}, {text: "Subject 5",
+                  value: "id-5"}, {text: "Subject 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
                   data-id="id-example").custom-select</code>
                 <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
                   <label>
-                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подтвердите своё согласие</span>
+                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Confirm your agreement</span>
                   </label>
-                  <div class="custom-toggle__error">Согласие является обязательным</div>
+                  <div class="custom-toggle__error">Confirm is mandatory</div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
+                  <pre>+custom-toggle({inputLabel: "Confirm your agreement", inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
                 <div class="radio">
+                  <p class="radio__title">Size</p>
                   <div class="radio__input">
                     <input class="visually-hidden" type="radio" id="test-radio-1" name="input-radio-test">
                     <label for="test-radio-1"><span class="radio__text">L</span></label>
@@ -439,9 +463,9 @@
                   </div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+base-radio({name: "product-size", title: "Размер"}, [{value: "40", id: "size-40"}, {value: "42", id: "size-42"}, {value: "44", id: "size-44", checked: "true"}, {value: "46", id: "size-46"}])</pre></code>
-                <button class="btn" type="reset">Сбросить форму</button>
-                <button class="btn" type="submit">Отправить форму</button>
+                  <pre>+base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])</pre></code>
+                <button class="btn" type="reset">Reset form</button>
+                <button class="btn" type="submit">Submit form</button>
               </form>
             </div>
           </section>

@@ -54,6 +54,7 @@ block main
     }
 
     section > h2 {
+      color: #0F303F;
       margin: 0 0 20px 0;
       padding: 20px 0;
       position: relative;
@@ -125,6 +126,8 @@ block main
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
         li.header-ui__inner-item
+          a.header-ui__inner-link(href="#titles", data-navigation-link) Titles
+        li.header-ui__inner-item
           a.header-ui__inner-link(href="#buttons", data-navigation-link) Buttons
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#form-elements", data-navigation-link) Form elements
@@ -145,6 +148,15 @@ block main
           +btn({text: "modal-return"})(data-open-modal="modal-return")
         p
           +btn({text: "modal-size-chart"})(data-open-modal="modal-size-chart")
+
+      section(id="titles")
+        h2 Titles
+        +title({titleStyle: 'Cormoran', titleType: 'h1', titleText: 'Cormoran-title-h1', titleColor: 'blue-whale'})
+        +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: 'Cormoran-title-h2', titleColor: 'blue-whale'})
+        +title({titleStyle: 'Cormoran', titleType: 'h3', titleText: 'Cormoran-title-h3', titleColor: 'blue-whale'})
+        +title({titleStyle: 'Inter', titleType: 'h1', titleText: 'Inter-title-h1', titleColor: 'blue-whale'})
+        +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Inter-title-h2', titleColor: 'blue-whale'})
+        +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Inter-title-h3', titleColor: 'blue-whale'})
 
       section(id="buttons")
         h2 Buttons
@@ -169,39 +181,39 @@ block main
         h2 Form elements
         div(data-validate)
           form(method="post")
-            +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name")
+            +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name")
             p Example
             code
-              pre +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
-            +custom-input({inputType: "tel",inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
+              pre +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
+            +custom-input({inputType: "tel",inputError: "Invalid tel", inputName: "user-phone"})(data-validate-type="phone")
             p Example
             code
-              pre +custom-input({inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
-            +custom-input({inputType: "email",inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
+              pre +custom-input({inputError: "Invalid tel", inputName: "user-phone"})(data-validate-type="phone")
+            +custom-input({inputType: "email",inputError: "Invalid email", inputName: "user-email"})(data-validate-type="email")
             p Example
             code
-              pre +custom-input({inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
+              pre +custom-input({inputError: "Invalid email", inputName: "user-email"})(data-validate-type="email")
             +custom-textarea({inputName: "user-info"})
             p Example
             code
               pre +custom-textarea({inputName: "user-info"})
-            +custom-select({error: "Выберите тему обращения", selectPlaceholder: 'true', optionsList: [{text: "Тема 1", value: "id-1", isActive: true}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
+            +custom-select({error: "Select the subject of the address", selectPlaceholder: 'true', optionsList: [{text: "Subject 1", value: "id-1", isActive: true}, {text: "Subject 2", value: "id-2"}, {text: "Subject 3", value: "id-3"}, {text: "Subject 4", value: "id-4"}, {text: "Subject 5", value: "id-5"}, {text: "Subject 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
             code
               pre
-              | +custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
-              | "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
-              | value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
+              | +custom-select({error: "Select the subject of the address", optionsList: [{text: "Subject 1", value: "id-1"}, {text:
+              | "Subject 2", value: "id-2"}, {text: "Subject 3", value: "id-3"}, {text: "Subject 4", value: "id-4"}, {text: "Subject 5",
+              | value: "id-5"}, {text: "Subject 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
               | data-id="id-example").custom-select
-            +custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+            +custom-toggle({inputLabel: "Confirm your agreement", inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
             p Example
             code
-              pre +custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
-            +base-radio({name: "input-radio-test"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])
+              pre +custom-toggle({inputLabel: "Confirm your agreement", inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+            +base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])
             p Example
             code
-              pre +base-radio({name: "product-size", title: "Размер"}, [{value: "40", id: "size-40"}, {value: "42", id: "size-42"}, {value: "44", id: "size-44", checked: "true"}, {value: "46", id: "size-46"}])
-            +btn({text: "Сбросить форму", type: "reset"})
-            +btn({text: "Отправить форму", type: "submit"})
+              pre +base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])
+            +btn({text: "Reset form", type: "reset"})
+            +btn({text: "Submit form", type: "submit"})
 
   script
     include ../../js/inline/ui-kit.js
