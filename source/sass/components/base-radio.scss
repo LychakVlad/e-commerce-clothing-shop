@@ -1,5 +1,4 @@
 .radio {
-  margin-bottom: -6px;
 
   &__title {
     margin-top: 0;
@@ -16,15 +15,11 @@
   &__input {
     border: 1px solid #F4F4F4;
 
-    margin-right: 4px;
-    margin-bottom: 6px;
-
     display: inline-block;
 
     label {
       display: block;
-
-      padding: 6px 14px 3px;
+      padding: 5px 0px;
 
       cursor: pointer;
       background-color: rgba($color-default-white, $alpha: 0.6);
@@ -60,6 +55,8 @@
     color: $color-blue-whale;
     opacity: 0.6;
     transition: color $trans-600, opacity $trans-600;
+
+      padding: 0px 15px;
   }
 }
 

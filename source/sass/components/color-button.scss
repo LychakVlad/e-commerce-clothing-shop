@@ -1,0 +1,20 @@
+.color-button-span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #d2d2d2 solid 1px;
+}
+
+.color-button{
+  label{
+    cursor: pointer;
+}
+
+input:checked +label {
+  span{
+    border: $color-blue-whale solid 2px;
+    opacity: 0.8;
+  }
+  }
+}

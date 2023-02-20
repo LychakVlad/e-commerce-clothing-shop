@@ -451,19 +451,69 @@
                 </div>
                 <p>Example</p><code>
                   <pre>+custom-toggle({inputLabel: "Confirm your agreement", inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
-                <div class="radio">
-                  <p class="radio__title">Size</p>
-                  <div class="radio__input">
-                    <input class="visually-hidden" type="radio" id="test-radio-1" name="input-radio-test">
-                    <label for="test-radio-1"><span class="radio__text">L</span></label>
+                <div class="mini-content-block">
+                  <div class="radio">
+                    <div class="radio__input">
+                      <input class="visually-hidden" type="radio" id="test-radio-xs" name="input-radio-test">
+                      <label for="test-radio-xs"><span class="radio__text">XS</span></label>
+                    </div>
                   </div>
-                  <div class="radio__input">
-                    <input class="visually-hidden" type="radio" id="test-radio-2" name="input-radio-test" checked>
-                    <label for="test-radio-2"><span class="radio__text">XL</span></label>
+                  <div class="radio">
+                    <div class="radio__input">
+                      <input class="visually-hidden" type="radio" id="test-radio-s" name="input-radio-test">
+                      <label for="test-radio-s"><span class="radio__text">S</span></label>
+                    </div>
+                  </div>
+                  <div class="radio">
+                    <div class="radio__input">
+                      <input class="visually-hidden" type="radio" id="test-radio-m" name="input-radio-test">
+                      <label for="test-radio-m"><span class="radio__text">M</span></label>
+                    </div>
+                  </div>
+                  <div class="radio">
+                    <div class="radio__input">
+                      <input class="visually-hidden" type="radio" id="test-radio-l" name="input-radio-test">
+                      <label for="test-radio-l"><span class="radio__text">L</span></label>
+                    </div>
+                  </div>
+                  <div class="radio">
+                    <div class="radio__input">
+                      <input class="visually-hidden" type="radio" id="test-radio-xl" name="input-radio-test">
+                      <label for="test-radio-xl"><span class="radio__text">XL</span></label>
+                    </div>
                   </div>
                 </div>
                 <p>Example</p><code>
-                  <pre>+base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])</pre></code>
+                  <pre>.mini-content-block
+ +base-radio({name: "input-radio-test"}, {value: "XS", id: "test-radio-xs"})
+ +base-radio({name: "input-radio-test"}, {value: "S", id: "test-radio-s"})
+ +base-radio({name: "input-radio-test"}, {value: "M", id: "test-radio-m"})
+ +base-radio({name: "input-radio-test"}, {value: "L", id: "test-radio-l"})
+ +base-radio({name: "input-radio-test"}, {value: "XL", id: "test-radio-xl"})</pre></code>
+                <div class="mini-content-block">
+                  <div class="color-button">
+                    <input class="visually-hidden" type="radio" id="test-button-white" name="color-button-test" checked>
+                    <label for="test-button-white"><span class="color-button-span" style="background-color: var(--color-white)"></span></label>
+                  </div>
+                  <div class="color-button">
+                    <input class="visually-hidden" type="radio" id="test-button-red" name="color-button-test" checked>
+                    <label for="test-button-red"><span class="color-button-span" style="background-color: var(--color-red)"></span></label>
+                  </div>
+                  <div class="color-button">
+                    <input class="visually-hidden" type="radio" id="test-button-blue" name="color-button-test" checked>
+                    <label for="test-button-blue"><span class="color-button-span" style="background-color: var(--color-blue)"></span></label>
+                  </div>
+                  <div class="color-button">
+                    <input class="visually-hidden" type="radio" id="test-button-black" name="color-button-test" checked>
+                    <label for="test-button-black"><span class="color-button-span" style="background-color: var(--color-black)"></span></label>
+                  </div>
+                </div>
+                <p>Example</p><code>
+                  <pre>.mini-content-block
+  +color-button({name: "color-button-test", color: '--color-white', checked: "true", id: "test-button-white"})
+  +color-button({name: "color-button-test", color: '--color-red', checked: "true", id: "test-button-red"})
+  +color-button({name: "color-button-test", color: '--color-blue', checked: "true", id: "test-button-blue"})
+  +color-button({name: "color-button-test", color: '--color-black', checked: "true", id: "test-button-black"})</pre></code>
                 <button class="btn" type="reset">Reset form</button>
                 <button class="btn" type="submit">Submit form</button>
               </form>

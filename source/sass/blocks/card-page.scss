@@ -7,7 +7,7 @@
   color: #0F303F;
 
 }
-.card-page__wrapper{}
+
 .card-page__top-block{
   margin: 50px 0px;
   display: flex;
@@ -42,46 +42,14 @@
     }
   }
 }
-.card-page__color-title{
+.card-page__sub-title{
   margin-top: 20px;
-}
-.card-page__colors{
-  margin-bottom: 20px;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
-.card-page__color{
-  display: inline-block;
-  background-color: $color-default-white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: #d2d2d2 solid 1px;
-  margin-right: 10px;
-
-  @include hover-focus{
-    opacity: 0.8;
-  }
-
-  &:active,
-  &:focus {
-    border: $color-blue-whale solid 2px;
-    opacity: 0.8;
-  }
-
-  &:last-child{
-    margin-right: 0px;
-
-  }
-&--color-red{
-  background-color: red;
-}
-&--color-blue{
-  background-color: blue;
-}
-&--color-black{
-  background-color: $color-default-black;
-}
-}
 
 .card-page__buttons{
   display: grid;

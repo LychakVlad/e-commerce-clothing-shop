@@ -416,6 +416,10 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  --color-white: #fff;
+  --color-red: red;
+  --color-blue: blue;
+  --color-black: black;
 }
 
 body {
@@ -623,6 +627,21 @@ button,
   padding: 0;
 }
 
+.mini-content-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0px;
+}
+
+.mini-content-block div {
+  margin-left: 10px;
+}
+
+.mini-content-block div:first-child {
+  margin-left: 0px;
+}
+
 .container {
   width: 100%;
   max-width: 1380px;
@@ -706,6 +725,23 @@ button,
 }
 
 .btn.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.color-button-span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #d2d2d2 solid 1px;
+}
+
+.color-button label {
+  cursor: pointer;
+}
+
+.color-button input:checked + label span {
+  border: #0F303F solid 2px;
   opacity: 0.8;
 }
 
@@ -1342,10 +1378,6 @@ button,
   text-transform: none;
 }
 
-.radio {
-  margin-bottom: -6px;
-}
-
 .radio__title {
   margin-top: 0;
   margin-bottom: 8px;
@@ -1358,14 +1390,12 @@ button,
 
 .radio__input {
   border: 1px solid #F4F4F4;
-  margin-right: 4px;
-  margin-bottom: 6px;
   display: inline-block;
 }
 
 .radio__input label {
   display: block;
-  padding: 6px 14px 3px;
+  padding: 5px 0px;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.6);
   -webkit-transition: background-color 0.6s ease;
@@ -1392,6 +1422,7 @@ button,
   -webkit-transition: color 0.6s ease, opacity 0.6s ease;
   -o-transition: color 0.6s ease, opacity 0.6s ease;
   transition: color 0.6s ease, opacity 0.6s ease;
+  padding: 0px 15px;
 }
 
 .radio--ellips .radio__input label {
@@ -2911,48 +2942,12 @@ button,
   opacity: 0.8;
 }
 
-.card-page__color-title {
+.card-page__sub-title {
   margin-top: 20px;
-}
-
-.card-page__colors {
-  margin-bottom: 20px;
-}
-
-.card-page__color {
-  display: inline-block;
-  background-color: #ffffff;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: #d2d2d2 solid 1px;
-  margin-right: 10px;
-}
-
-.card-page__color.focus-visible:focus {
-  opacity: 0.8;
-}
-
-.card-page__color:active,
-.card-page__color:focus {
-  border: #0F303F solid 2px;
-  opacity: 0.8;
-}
-
-.card-page__color:last-child {
-  margin-right: 0px;
-}
-
-.card-page__color--color-red {
-  background-color: red;
-}
-
-.card-page__color--color-blue {
-  background-color: blue;
-}
-
-.card-page__color--color-black {
-  background-color: #000000;
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .card-page__buttons {
@@ -3804,10 +3799,6 @@ button,
   }
 
   .card-page__size-chart a:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-
-  .card-page__color:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }

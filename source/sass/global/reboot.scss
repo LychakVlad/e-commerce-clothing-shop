@@ -26,6 +26,13 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+
+    --color-white: #fff;
+    --color-red: red;
+    --color-blue: blue;
+    --color-black: black;
+
 }
 
 body {

@@ -71,3 +71,19 @@
     margin: 0 auto;
     padding: 0;
 }
+
+.mini-content-block{
+
+  display: flex;
+
+  margin: 5px 0px;
+
+  div{
+    margin-left: 10px;
+
+  &:first-child{
+    margin-left: 0px;
+  }
+  }
+
+}

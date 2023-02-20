@@ -290,32 +290,59 @@
                   </div>
                   <p class="card-page__category">Classic shirt</p>
                   <p class="card-page__price">3800 UAH</p>
-                  <div class="radio">
-                    <p class="radio__title">Sizes</p>
-                    <div class="radio__input">
-                      <input class="visually-hidden" type="radio" id="size-radio-xs" name="input-radio-test">
-                      <label for="size-radio-xs"><span class="radio__text">XS</span></label>
+                  <p class="card-page__sub-title">Sizes</p>
+                  <div class="mini-content-block">
+                    <div class="radio">
+                      <div class="radio__input">
+                        <input class="visually-hidden" type="radio" id="size-radio-xs" name="input-radio-size-xs">
+                        <label for="size-radio-xs"><span class="radio__text">XS</span></label>
+                      </div>
                     </div>
-                    <div class="radio__input">
-                      <input class="visually-hidden" type="radio" id="size-radio-s" name="input-radio-test" checked>
-                      <label for="size-radio-s"><span class="radio__text">S</span></label>
+                    <div class="radio">
+                      <div class="radio__input">
+                        <input class="visually-hidden" type="radio" id="size-radio-s" name="input-radio-size-s">
+                        <label for="size-radio-s"><span class="radio__text">S</span></label>
+                      </div>
                     </div>
-                    <div class="radio__input">
-                      <input class="visually-hidden" type="radio" id="size-radio-m" name="input-radio-test" checked>
-                      <label for="size-radio-m"><span class="radio__text">M</span></label>
+                    <div class="radio">
+                      <div class="radio__input">
+                        <input class="visually-hidden" type="radio" id="size-radio-m" name="input-radio-size-m">
+                        <label for="size-radio-m"><span class="radio__text">M</span></label>
+                      </div>
                     </div>
-                    <div class="radio__input">
-                      <input class="visually-hidden" type="radio" id="size-radio-l" name="input-radio-test" checked>
-                      <label for="size-radio-l"><span class="radio__text">L</span></label>
+                    <div class="radio">
+                      <div class="radio__input">
+                        <input class="visually-hidden" type="radio" id="size-radio-l" name="input-radio-size-l">
+                        <label for="size-radio-l"><span class="radio__text">L</span></label>
+                      </div>
                     </div>
-                    <div class="radio__input">
-                      <input class="visually-hidden" type="radio" id="size-radio-xl" name="input-radio-test" checked>
-                      <label for="size-radio-xl"><span class="radio__text">XL</span></label>
+                    <div class="radio">
+                      <div class="radio__input">
+                        <input class="visually-hidden" type="radio" id="size-radio-xl" name="input-radio-size-xl">
+                        <label for="size-radio-xl"><span class="radio__text">XL</span></label>
+                      </div>
                     </div>
                   </div>
                   <div class="card-page__size-chart"><a href="#" data-open-modal="modal-size-chart">Size chart</a></div>
-                  <p class="card-page__color-title">Color</p>
-                  <div class="card-page__colors"><a class="card-page__color" href="#"></a><a class="card-page__color card-page__color--color-red" href="#"></a><a class="card-page__color card-page__color--color-blue" href="#"></a><a class="card-page__color card-page__color--color-black" href="#"></a></div>
+                  <div class="card-page__sub-title">Colors</div>
+                  <div class="mini-content-block">
+                    <div class="color-button">
+                      <input class="visually-hidden" type="radio" id="color-button-white" name="color-button" checked>
+                      <label for="color-button-white"><span class="color-button-span" style="background-color: var(--color-white)"></span></label>
+                    </div>
+                    <div class="color-button">
+                      <input class="visually-hidden" type="radio" id="color-button-red" name="color-button" checked>
+                      <label for="color-button-red"><span class="color-button-span" style="background-color: var(--color-red)"></span></label>
+                    </div>
+                    <div class="color-button">
+                      <input class="visually-hidden" type="radio" id="color-button-blue" name="color-button" checked>
+                      <label for="color-button-blue"><span class="color-button-span" style="background-color: var(--color-blue)"></span></label>
+                    </div>
+                    <div class="color-button">
+                      <input class="visually-hidden" type="radio" id="color-button-black" name="color-button" checked>
+                      <label for="color-button-black"><span class="color-button-span" style="background-color: var(--color-black)"></span></label>
+                    </div>
+                  </div>
                   <div class="card-page__buttons">
                     <button class="btn btn--transparent" type="submit">Add to cart</button>
                     <button class="btn" type="submit">Buy in one click</button>
@@ -373,8 +400,8 @@
                   <li class="footer__nav-item"><a href="about-us.html">About us</a></li>
                   <li class="footer__nav-item"><a href="faq.html">FAQ</a></li>
                   <li class="footer__nav-item"><a href="brands.html">Brands</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="success">Returns and Exchanges</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="feedback">Payment and Shipping</a></li>
+                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-return">Returns and Exchanges</a></li>
+                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-payment">Payment and Shipping</a></li>
                 </ul>
               </div>
             </nav>
@@ -388,7 +415,7 @@
         </div>
       </footer>
     </div>
-    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="feedback">
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-payment">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -415,7 +442,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-return">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

@@ -208,10 +208,38 @@ block main
             p Example
             code
               pre +custom-toggle({inputLabel: "Confirm your agreement", inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
-            +base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])
+            .mini-content-block
+              +base-radio({name: "input-radio-test"}, {value: "XS", id: "test-radio-xs"})
+              +base-radio({name: "input-radio-test"}, {value: "S", id: "test-radio-s"})
+              +base-radio({name: "input-radio-test"}, {value: "M", id: "test-radio-m"})
+              +base-radio({name: "input-radio-test"}, {value: "L", id: "test-radio-l"})
+              +base-radio({name: "input-radio-test"}, {value: "XL", id: "test-radio-xl"})
             p Example
             code
-              pre +base-radio({name: "input-radio-test",title: "Size"}, [{value: "L", id: "test-radio-1"}, {value: "XL", checked: "true", id: "test-radio-2"}])
+              pre
+                |.mini-content-block
+                |  +base-radio({name: "input-radio-test"}, {value: "XS", id: "test-radio-xs"})
+                |  +base-radio({name: "input-radio-test"}, {value: "S", id: "test-radio-s"})
+                |  +base-radio({name: "input-radio-test"}, {value: "M", id: "test-radio-m"})
+                |  +base-radio({name: "input-radio-test"}, {value: "L", id: "test-radio-l"})
+                |  +base-radio({name: "input-radio-test"}, {value: "XL", id: "test-radio-xl"})
+
+            .mini-content-block
+              +color-button({name: "color-button-test", color: '--color-white', checked: "true", id: "test-button-white"})
+              +color-button({name: "color-button-test", color: '--color-red', checked: "true", id: "test-button-red"})
+              +color-button({name: "color-button-test", color: '--color-blue', checked: "true", id: "test-button-blue"})
+              +color-button({name: "color-button-test", color: '--color-black', checked: "true", id: "test-button-black"})
+
+            p Example
+            code
+              pre
+                | .mini-content-block
+                |   +color-button({name: "color-button-test", color: '--color-white', checked: "true", id: "test-button-white"})
+                |   +color-button({name: "color-button-test", color: '--color-red', checked: "true", id: "test-button-red"})
+                |   +color-button({name: "color-button-test", color: '--color-blue', checked: "true", id: "test-button-blue"})
+                |   +color-button({name: "color-button-test", color: '--color-black', checked: "true", id: "test-button-black"})
+
+
             +btn({text: "Reset form", type: "reset"})
             +btn({text: "Submit form", type: "submit"})
 
