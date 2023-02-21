@@ -19,14 +19,14 @@ block main
           .container.container--small
             .sign-in__block
               .sign-in__title
-                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Вход', titleColor: 'blue-whale'})
-              +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
-              +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
-              +btn({text: "Войти", type: "submit"})
+                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Sign in', titleColor: 'blue-whale'})
+              +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
+              +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})(data-validate-type="password")
+              +btn({text: "Sign in", type: "submit"})
               .sign-in__text-block
-                a(href="sign-in-fog-pass.html").sign-in__forgot-pass Забыли пароль
+                a(href="sign-in-fog-pass.html").sign-in__forgot-pass Forgot password
                 span= ' / '
-                a(href="sign-in-reg.html").sign-in__to-sign-up У меня нет акаунта
+                a(href="sign-in-reg.html").sign-in__to-sign-up Don't have an account?
 
 
 

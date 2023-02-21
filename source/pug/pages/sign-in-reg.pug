@@ -20,21 +20,21 @@ block main
           .container.container--small
             .sign-in__block.sign-in__block--red-links
               .sign-in__title
-                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Регистрация', titleColor: 'blue-whale'})
+                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Sign up', titleColor: 'blue-whale'})
               .sign-in__inputs-block
-                +custom-input({inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Имя"})(data-validate-type="text", data-limitations="name")
-                +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Фамилия"})(data-limitations="name")
-                +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
-                +custom-input({inputType: "tel", inputPlaceholder: "Номер телефона", inputName: "user-tel"})(data-validate-type="phone")
-                +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Пароль", inputName: "user-password"})(data-validate-type="password")
-                +custom-input({inputType: "password", inputError: "Не корректный пароль", inputName: "user-password", inputPlaceholder: "Повторите пароль", inputName: "user-password"})(data-validate-type="password")
+                +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
+                +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Surename"})(data-limitations="name")
+                +custom-input({inputType: "email", inputError: "Invalid email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
+                +custom-input({inputType: "tel", inputPlaceholder: "Phone number", inputName: "user-tel"})
+                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})(data-validate-type="password")
+                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Repeat password", inputName: "user-password"})(data-validate-type="password")
               .sign-in__toggles-block
-                +custom-toggle({inputLabel: "Подписаться на рассылку", inputError: "Согласие является обязательным", inputName: "user-agreement"}).custom-toggle--checkbox
-                +custom-toggle({inputLabel: 'Я согласен c&nbsp;', labelLink: {text: 'политикой конфиденциальности', href: "#"}, inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Subscribe to newsletter", inputError: "Confirm is mandatory", inputName: "user-agreement"}).custom-toggle--checkbox
+                +custom-toggle({inputLabel: 'I agree to the&nbsp;', labelLink: {text: 'privacy policy', href: "#"}, inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
               .sign-in__button-block
-                +btn({text: "Зарегистрироваться", type: "submit"})
-                p.sign-in__text=  'У меня уже есть аккаунт - '
-                  a(href="sign-in.html") войти
+                +btn({text: "Sign up", type: "submit"})
+                p.sign-in__text=  'Already have an account? - '
+                  a(href="sign-in.html") Sign in
 
 
 

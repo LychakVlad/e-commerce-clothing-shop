@@ -19,9 +19,9 @@ block main
           .container.container--small
             .sign-in__block
               .sign-in__title.sign-in__title--mw-340
-                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Восстановить пароль', titleColor: 'blue-whale'})
-              +custom-input({inputType: "email", inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
-              +btn({text: "Отправить", href: "sign-in-email.html"})(aria-label="Send email")
+                +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Recover password', titleColor: 'blue-whale'})
+              +custom-input({inputType: "email", inputError: "Invalid email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
+              +btn({text: "Send", href: "sign-in-email.html"})(aria-label="Send email")
 
 
 
