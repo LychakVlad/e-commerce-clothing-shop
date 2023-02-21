@@ -1676,6 +1676,7 @@ button,
 .item-card__img {
   width: 100%;
   height: 365px;
+  position: relative;
 }
 
 .item-card__img img {
@@ -1687,12 +1688,17 @@ button,
   object-position: center;
 }
 
+.fav-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
 .fav-button label {
   cursor: pointer;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: #254A5A 1px solid;
+  border: #CEC6C4 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1706,6 +1712,13 @@ button,
 
 .fav-button input:checked + label svg {
   fill: red;
+}
+
+.fav-button__block {
+  z-index: 2;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
 }
 
 .swiper-pagination--main {
@@ -1853,12 +1866,13 @@ button,
 
 .card-slider {
   max-width: 470px;
-  height: 1000px;
+  position: relative;
 }
 
 .card-slider__slide {
   max-height: 680px;
   width: 100%;
+  position: relative;
 }
 
 .card-slider__slide img {

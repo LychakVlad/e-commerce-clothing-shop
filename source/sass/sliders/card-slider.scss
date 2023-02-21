@@ -1,12 +1,13 @@
 .card-slider{
   max-width: 470px;
-  height: 1000px;
+  position: relative;
 }
 
 
 .card-slider__slide{
   max-height: 680px;
   width: 100%;
+  position: relative;
   img{
     width: 100%;
     height: 100%;
@@ -14,6 +15,7 @@
     object-position: center;
   }
 }
+
 
 .card-slider-mini{
   margin-right: 17px;

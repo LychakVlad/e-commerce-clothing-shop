@@ -42,17 +42,19 @@ block main
                     +picture("content", 'clothes-big', "png", 470, 678, "card")
                   .card-slider__slide.swiper-slide
                     +picture("content", 'clothes-big', "png", 470, 678, "card")
+                .fav-button__block
+                  +fav-button({name: "fav-button", checked: false, id: "fav-button"})
             .card-page__right-column
               +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'American Vintage', titleColor: 'blue-whale'})
               p.card-page__category Classic shirt
               p.card-page__price 3800 UAH
               p.card-page__sub-title Sizes
               .mini-content-block
-                +base-radio({name: "input-radio-size-xs"}, {value: "XS", id: "size-radio-xs"})
-                +base-radio({name: "input-radio-size-s"}, {value: "S", id: "size-radio-s"})
-                +base-radio({name: "input-radio-size-m"}, {value: "M", id: "size-radio-m"})
-                +base-radio({name: "input-radio-size-l"}, {value: "L", id: "size-radio-l"})
-                +base-radio({name: "input-radio-size-xl"}, {value: "XL", id: "size-radio-xl"})
+                +base-radio({name: "input-radio-size"}, {value: "XS", id: "size-radio-xs"})
+                +base-radio({name: "input-radio-size"}, {value: "S", id: "size-radio-s"})
+                +base-radio({name: "input-radio-size"}, {value: "M", id: "size-radio-m"})
+                +base-radio({name: "input-radio-size"}, {value: "L", id: "size-radio-l"})
+                +base-radio({name: "input-radio-size"}, {value: "XL", id: "size-radio-xl"})
               .card-page__size-chart
                 a(href="#" data-open-modal="modal-size-chart") Size chart
               .card-page__sub-title Colors
