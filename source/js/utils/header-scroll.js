@@ -1,4 +1,8 @@
 const header = document.querySelector('.header');
+if (header) {
+  const headerHeight = header.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+}
 
 const headerScroll = () => {
   if (!header) {
@@ -8,8 +12,8 @@ const headerScroll = () => {
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
     const mainPage = document.querySelector('main');
-    const firstBlock = mainPage.firstElementChild;
     const headerHeight = header.offsetHeight;
+    const firstBlock = mainPage.firstElementChild;
     const firstBlockHeight = firstBlock.offsetHeight;
 
     if (scrollDistance >= firstBlockHeight + headerHeight) {
@@ -21,7 +25,7 @@ const headerScroll = () => {
     }
 
     if (scrollDistance >= headerHeight) {
-      header.classList.add('is-hidden')
+      header.classList.add('is-hidden');
       firstBlock.style.marginTop = '69px';
     } else {
       header.classList.remove('is-hidden');

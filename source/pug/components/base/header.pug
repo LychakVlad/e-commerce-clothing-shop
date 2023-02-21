@@ -3,7 +3,7 @@ mixin header(currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Main"
       },
     ]
 
@@ -45,19 +45,19 @@ mixin header(currentUrl)
         span.header__logo
           +icon('logo', 129, 16)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
+        a.header__logo(href="index.html", aria-label="Back to main page")
           +icon('logo', 129, 16)
       nav.header-nav
         .header-nav__wrapper
           ul.header-nav__list
             li.header-nav__item.nav-menu-open
-              a(href="#")  Женщины
+              a(href="#")  Women
             li.header-nav__item.nav-menu-open
-              a(href="#")  Мужчины
+              a(href="#")  Men
             li.header-nav__item
               form
                 .header-nav__item-form
-                  a(href="#")  Поиск
+                  a(href="#")  Search
                   +custom-input({inputName: "search-input", inputMinLength: "2"})(data-validate-type="text", data-limitations="search").--search
       .header-lang
         .header-lang__wrapper

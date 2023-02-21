@@ -1,6 +1,7 @@
 const menuButton = document.querySelectorAll('.nav-menu-open');
 const headerMenu = document.querySelector('.header-menu');
 const burgerIcon = document.querySelector('.header-menu-open');
+const selectBody = document.querySelector('body');
 
 const initHeaderMenu = () => {
   if (!headerMenu) {
@@ -15,12 +16,14 @@ const initHeaderMenu = () => {
 
   headerMenu.addEventListener('mouseleave', () => {
     headerMenu.classList.toggle('is-active');
-  })
+  });
 
   burgerIcon.addEventListener('click', () => {
     headerMenu.classList.toggle('is-active');
     burgerIcon.classList.toggle('is-active');
-  })
+    selectBody.classList.toggle('scroll-lock');
+
+  });
 };
 
 export { initHeaderMenu };
