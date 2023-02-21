@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 
 }
 
@@ -48,10 +49,9 @@
 }
 
 .header-menu__bottom-block{
-  padding: 20px 20px 25px;
+  padding: 20px 0px;
   max-width: 521px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
@@ -197,7 +197,7 @@
       height: 2px;
       background-color: $color-blue-whale;
       position: absolute;
-      left: 130%;
+      left: 100%;
       top: 50%;
       transform: rotate(-90deg);
       transition: transform .3s ease 0s;
@@ -209,7 +209,7 @@
       height: 2px;
       background-color: $color-blue-whale;
       position: absolute;
-      left: 130%;
+      left: 100%;
       top: 50%;
     }
 
@@ -225,16 +225,14 @@
     height: calc(100vh - var(--header-height, 1vh));
     width: 100%;
     overflow: auto;
-    margin: 0;
   }
 
   .header-menu__menu{
-    margin: 20px 0px 20px;
+    margin: 20px 0px;
     width: 100%;
     height: 100%;
     max-width: 950px;
     max-height: 18px;
-    padding: 0px 25px;
     display: flex;
     justify-content: space-between;
 
@@ -326,7 +324,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: none;
     margin: 30px auto;
 
@@ -336,7 +333,6 @@
   }
 
   .header-menu__bottom-block{
-    padding-bottom: 45px;
 
     &::after{
       height: 0px;
@@ -353,7 +349,7 @@
     max-height: 18px;
     width: 100%;
     justify-content: space-around;
-    padding: 0px 25px;
+
 
     font-family: 'Inter';
     font-style: normal;
@@ -363,6 +359,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $color-blue-whale;
+
+    &:last-child{
+      margin-top: 20px;
+    }
 
     a{
       color: $color-blue-whale;
@@ -378,16 +378,18 @@
     align-items: center;
     justify-content: center;
   }
+
+  .header-menu__item-search{
+    a{
+      margin-right: 10px;
+    }
+  }
 }
 
 @media (max-width: 500px) {
 
   .header-menu__brand{
-    font-size: 8px;
-  }
-
-  .header-menu__bottom-block{
-    padding-bottom: 25px;
+    font-size: 7px;
   }
 
   .header-menu__lang-wrapper{

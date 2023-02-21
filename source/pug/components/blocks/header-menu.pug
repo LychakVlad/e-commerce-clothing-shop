@@ -1,19 +1,19 @@
 mixin header-menu(data, brands)
-  .header-menu([data-fix-block])
+  .header-menu
     .header-menu__wrapper
       .header-menu__menu
         .header-menu__menu-left-block
-          span Men
-          span Women
+          a(href="#")  Women
+          a(href="#")  Men
         .header-menu__menu-right-block.header-menu__menu-right-block--top
           .header-menu__item-search
-            span Search
+            a(href="#")  Search
             .header-menu__item-form
               form
                 .header-menu__item-input-wrapper
                   input(type="text").header-menu__item-input
           .header-menu__lang-wrapper
-            a(href="#").header-menu___lang-item EN
+            a(href="#").header-menu___lang-item.is-active EN
             a(href="#").header-menu___lang-item UA
       .header-menu__top-block
         each item in data
@@ -25,13 +25,13 @@ mixin header-menu(data, brands)
                   a(href="#")= link
         .header-menu__menu-right-block.header-menu__menu-right-block--bottom
           .header-menu__item-search
-            span Search
+            a(href="#")  Search
             .header-menu__item-form
               form
                 .header-menu__item-input-wrapper
                   input(type="text").header-menu__item-input
           .header-menu__lang-wrapper
-            a(href="#").header-menu___lang-item EN
+            a(href="#").header-menu___lang-item.is-active EN
             a(href="#").header-menu___lang-item UA
       .header-menu__bottom-block
         each brand in brands

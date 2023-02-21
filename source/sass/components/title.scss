@@ -57,3 +57,20 @@
   }
 
 
+  @media (max-width: 600px) {
+    .title{
+
+      &--h1{
+        font-size: 70px;
+      }
+}
+  }
+
+  @media (max-width: 400px) {
+    .title{
+
+      &--h1{
+        font-size: 60px;
+      }
+}
+  }
