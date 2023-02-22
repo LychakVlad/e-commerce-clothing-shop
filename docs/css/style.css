@@ -3046,6 +3046,7 @@ button,
   margin: auto;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .content-block__column {
