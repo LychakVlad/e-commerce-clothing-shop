@@ -1,39 +1,48 @@
-mixin header-menu(data, brands)
-  .header-menu
-    .header-menu__wrapper
-      .header-menu__menu
-        .header-menu__menu-left-block
-          a(href="#")  Women
-          a(href="#")  Men
-        .header-menu__menu-right-block.header-menu__menu-right-block--top
-          .header-menu__item-search
-            a(href="#")  Search
-            .header-menu__item-form
-              form
-                .header-menu__item-input-wrapper
-                  input(type="text").header-menu__item-input
-          .header-menu__lang-wrapper
-            a(href="#").header-menu___lang-item.is-active EN
-            a(href="#").header-menu___lang-item UA
-      .header-menu__top-block
-        each item in data
-          .header-menu__column(data-accordion="parent")
-            h3.header-menu__title(data-accordion="button")= item.title
-            ul.header-menu__list(data-accordion="content")
-              each link in item.category
-                li.header-menu__item
-                  a(href="#")= link
-        .header-menu__menu-right-block.header-menu__menu-right-block--bottom
-          .header-menu__item-search
-            a(href="#")  Search
-            .header-menu__item-form
-              form
-                .header-menu__item-input-wrapper
-                  input(type="text").header-menu__item-input
-          .header-menu__lang-wrapper
-            a(href="#").header-menu___lang-item.is-active EN
-            a(href="#").header-menu___lang-item UA
-      .header-menu__bottom-block
-        each brand in brands
-          a(href="#").header-menu__brand= brand
+mixin header-menu(data, brands, type)
+  if(type === main)
+    .header-menu
+      .header-menu__wrapper
+        .header-menu__top-block
+          each item in data
+            .header-menu__column
+              h3.header-menu__title= item.title
+              ul.header-menu__list
+                each link in item.category
+                  li.header-menu__item
+                    a(href="#")= link
+        .header-menu__bottom-block
+          each brand in brands
+            a(href="#").header-menu__brand= brand
+  else
 
+
+
+        //- .header-menu__menu
+          //- .header-menu__menu-left-block
+          //-   a(href="#")  Women
+          //-   a(href="#")  Men
+          //- .header-menu__menu-right-block.header-menu__menu-right-block--top
+          //-   .header-menu__item-search
+          //-     a(href="#")  Search
+          //-     .header-menu__item-form
+          //-       form
+          //-         .header-menu__item-input-wrapper
+          //-           input(type="text").header-menu__item-input
+          //-   .header-menu__lang-wrapper
+          //-     a(href="#").header-menu___lang-item.is-active EN
+          //-     a(href="#").header-menu___lang-item UA
+          //- .header-menu__menu-right-block.header-menu__menu-right-block--bottom
+          //-   .header-menu__item-search
+          //-     a(href="#")  Search
+          //-     .header-menu__item-form
+          //-       form
+          //-         .header-menu__item-input-wrapper
+          //-           input(type="text").header-menu__item-input
+          //-   .header-menu__lang-wrapper
+          //-     a(href="#").header-menu___lang-item.is-active EN
+          //-     a(href="#").header-menu___lang-item UA
+
+
+            //- .header-menu__column(data-accordion="parent")
+            //-   h3.header-menu__title(data-accordion="button")= item.title
+            //-   ul.header-menu__list(data-accordion="content")

@@ -36,7 +36,21 @@
     color: $color-blue-whale;
   }
 
+
 .header-nav{
+
+  &__item{
+    display: flex;
+    height: var(--header-height);
+    align-items: center;
+    cursor: pointer;
+    position:relative;
+    margin-left: 40px;
+
+    &:first-child{
+      margin-left: 0px;
+    }
+  }
 
   &__list {
     display: flex;
@@ -46,13 +60,8 @@
     margin-top: -24px;
     position: relative;
 
-    li{
-      display: flex;
-      height: var(--header-height);
-      align-items: center;
-      cursor: pointer;
 
-    }
+
 
     a{
       @include hover {
@@ -60,16 +69,6 @@
         transition: color $trans-default;
         }
       }
-
-
-      li:first-child{
-        margin-left: 0px;
-      }
-
-      li{
-        margin-left: 40px;
-      }
-
   }
 
   &__item-input{

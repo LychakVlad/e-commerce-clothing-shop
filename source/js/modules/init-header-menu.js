@@ -9,13 +9,9 @@ const initHeaderMenu = () => {
   }
 
   menuButton.forEach((item) => {
-    item.addEventListener('mouseenter', function (e) {
+    item.addEventListener('click', function (e) {
       headerMenu.classList.toggle('is-active');
     });
-  });
-
-  headerMenu.addEventListener('mouseleave', () => {
-    headerMenu.classList.toggle('is-active');
   });
 
   burgerIcon.addEventListener('click', () => {
