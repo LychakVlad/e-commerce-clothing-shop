@@ -1,6 +1,6 @@
 .header-menu{
   transform: translateY(-120%);
-  z-index: -2;
+  z-index: 2;
   opacity: 0;
   position: fixed;
   background: $color-default-white;
@@ -8,11 +8,13 @@
   left: 0;
   top: 69px;
   transition: transform $trans-default, opacity $trans-default;;
+  pointer-events: none;
 
 
   &.is-active{
     transform: translateY(0px);
     opacity: 1;
+    pointer-events: all;
   }
 }
 

@@ -8,33 +8,63 @@ mixin header(currentUrl)
     ]
 
   -
-    const headerMenuItems = {
+    const womenHeaderMenuItems = {
       first: {
-        title: 'Одежда',
-        category: ['Свитшоты и худи','Платья юбки','Футболки и топы','Брюки и шорты','Рубашки','Комбинезоны','Леггинсы','Куртки','Пальто','Плащи','Желетки','Ветровки',
+        title:'Women',
+        category: ['Sweatshirts and hoodies', 'Skirt dresses', 'T-shirts and tops', 'Pants and shorts', 'Shirts', 'Overalls', 'Leggings', 'Jackets', 'Coats', 'Raincoats', 'Jellies', 'Windbreakers',
         ],
       },
       second: {
-        title: 'Обувь',
-        category: ['Кроссовки', 'Шлепанцы',
+        title:'Women',
+        category: ['Sneakers','Flip-flops',
         ],
       },
       third: {
-        title: 'Сумки',
-        category: ['Сумки','Рюкзаки','Кроссбоди','Поясные','Спортивные','Шопперы',
+        title:'Women',
+        category: ['Bags', 'Backpacks', 'Crossbody', 'Belted', 'Sporty', 'Choppers',
         ],
       },
       fourth: {
-        title: 'Аксессуары',
-        category: ['Головные уборы','Перчатки','Шарфы и платки','Носки','Гетры',
+        title:'Women',
+        category: ['Headwear','Gloves','Scarves & Shawls','Socks','Gaiters',
         ],
       },
       fivth: {
-        title: 'Белье',
-        category: ['Разное',
+        title:'Women',
+        category: ['Miscellaneous',
         ],
       },
     }
+
+  -
+    const menHeaderMenuItems = {
+      first: {
+        title:'Men',
+        category: ['Sweatshirts and hoodies', 'Skirt dresses', 'T-shirts and tops', 'Pants and shorts', 'Shirts', 'Overalls', 'Leggings', 'Jackets', 'Coats', 'Raincoats', 'Jellies', 'Windbreakers',
+        ],
+      },
+      second: {
+        title:'Men',
+        category: ['Sneakers','Flip-flops',
+        ],
+      },
+      third: {
+        title:'Men',
+        category: ['Bags', 'Backpacks', 'Crossbody', 'Belted', 'Sporty', 'Choppers',
+        ],
+      },
+      fourth: {
+        title:'Men',
+        category: ['Headwear','Gloves','Scarves & Shawls','Socks','Gaiters',
+        ],
+      },
+      fivth: {
+        title:'Men',
+        category: ['Miscellaneous',
+        ],
+      },
+    }
+
 
   -
     const headerBrands = ['Deha', 'American vintage', 'george gina lucy', 'birkenstock']
@@ -51,11 +81,13 @@ mixin header(currentUrl)
         .header-nav__wrapper
           ul.header-nav__list
             li.header-nav__item.nav-menu-open
-              a(href="#").header-nav__link  Women
-              +header-menu(headerMenuItems, headerBrands, main)
+              .header-nav__link
+                a(href="#")  Women
+              +header-menu(womenHeaderMenuItems, headerBrands, main)
             li.header-nav__item.nav-menu-open
-              a(href="#").header-nav__link  Men
-              +header-menu(headerMenuItems, headerBrands, main)
+              .header-nav__link
+                a(href="#")  Men
+              +header-menu(menHeaderMenuItems, headerBrands, main)
             li.header-nav__item
               form
                 .header-nav__item-form
