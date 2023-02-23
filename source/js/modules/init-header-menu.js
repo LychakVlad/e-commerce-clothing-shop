@@ -15,20 +15,13 @@ const initHeaderMenu = () => {
 
     const headerMenu = menuItem.lastElementChild
     const headerLink = menuItem.firstElementChild
-    const headerLINK = document.querySelectorAll('.header-nav__link')
 
     headerMenu.classList.toggle('is-active');
 
     if (headerMenu.classList.contains('is-active')) {
       headerLink.classList.add('is-active');
-      headerLINK.forEach((item) => {
-        item.classList.add('is-disabled')
-      });
     } else {
       headerLink.classList.remove('is-active');
-      headerLINK.forEach((item) => {
-        item.classList.remove('is-disabled')
-      });
     }
 
   }

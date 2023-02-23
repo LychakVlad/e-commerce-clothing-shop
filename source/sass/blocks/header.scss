@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 3;
+  z-index: 12;
   padding: 24px 0 26px;
   font-family: 'Inter';
   font-style: normal;
@@ -86,16 +86,19 @@
 
 .header-nav__link{
 
+  a{
+    color: $color-alto;
+    }
+
   &.is-active{
+    a{
     color: $color-blue-whale;
     text-decoration: underline;
     text-decoration-color: $color-cinnabar;
     text-underline-offset: 27px;
     text-decoration-thickness: 2px;
+    }
   }
-
-  &.is-disabled{
-    color: $color-alto;
   }
 }
 
@@ -189,7 +192,7 @@
   }
 }
 }
-}
+
 
 
 @media (max-width: 960px) {
