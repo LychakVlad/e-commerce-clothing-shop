@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 3;
   padding: 24px 0 26px;
   font-family: 'Inter';
   font-style: normal;
@@ -8,7 +10,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-blue-whale;
-  z-index: 3;
   background-color: $color-default-white;
   border-bottom: 1px solid #EAE9E8;
   transition: all $trans-default;
@@ -59,17 +60,7 @@
     list-style: none;
     margin-top: -24px;
     position: relative;
-
-
-
-
-    a{
-      @include hover {
-        color: $color-submarine;
-        transition: color $trans-default;
-        }
-      }
-  }
+}
 
   &__item-input{
     border: none;
@@ -90,6 +81,21 @@
     }
   }
 
+}
+
+.header-nav__link{
+
+  &.is-active{
+    color: $color-blue-whale;
+    text-decoration: underline;
+    text-decoration-color: $color-cinnabar;
+    text-underline-offset: 27px;
+    text-decoration-thickness: 2px;
+  }
+
+  &.is-disabled{
+    color: $color-alto;
+  }
 }
 
   .header-lang{

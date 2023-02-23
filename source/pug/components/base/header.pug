@@ -51,11 +51,11 @@ mixin header(currentUrl)
         .header-nav__wrapper
           ul.header-nav__list
             li.header-nav__item.nav-menu-open
-              a(href="#")  Women
-            +header-menu(headerMenuItems, headerBrands, main)
+              a(href="#").header-nav__link  Women
+              +header-menu(headerMenuItems, headerBrands, main)
             li.header-nav__item.nav-menu-open
-              a(href="#")  Men
-            +header-menu(headerMenuItems, headerBrands, main)
+              a(href="#").header-nav__link  Men
+              +header-menu(headerMenuItems, headerBrands, main)
             li.header-nav__item
               form
                 .header-nav__item-form
