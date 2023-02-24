@@ -6,7 +6,7 @@ import { initHeaderMenu } from './modules/init-header-menu';
 import { initAccordion } from './modules/handler-accordion';
 import { headerScroll } from './utils/header-scroll';
 
-import './modules/sliders/index';
+import { initSwipers } from './modules/sliders/init-sliders';
 
 
 // ---------------------------------
@@ -31,9 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
-    window.initMainSwiper();
-    window.initClothesSwiper();
-    window.initCardSwiper();
+    initSwipers();
   });
 });
 

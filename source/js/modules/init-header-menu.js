@@ -10,8 +10,8 @@ const initHeaderMenu = () => {
   }
 
   const handler = (evt) => {
-    const target = evt.target
-    const menuItem = evt.target.closest('.nav-menu-open');
+    const item = evt.target
+    const menuItem = item.closest('.nav-menu-open');
 
     const headerMenu = menuItem.lastElementChild
     const headerLink = menuItem.firstElementChild
@@ -22,8 +22,8 @@ const initHeaderMenu = () => {
       headerLink.classList.add('is-active');
     } else {
       headerLink.classList.remove('is-active');
-    }
 
+    }
   }
 
 

@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 12;
+  z-index: 13;
   padding: 24px 0 26px;
   font-family: 'Inter';
   font-style: normal;
@@ -60,7 +60,6 @@
     padding: 0;
     list-style: none;
     margin-top: -24px;
-    position: relative;
 }
 
   &__item-input{
@@ -124,7 +123,7 @@
     text-decoration: underline;
     text-decoration-color: $color-cinnabar;
     text-underline-offset: 26px;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
     color: $color-cinnabar;
   }
 
