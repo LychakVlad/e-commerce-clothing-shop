@@ -37,6 +37,7 @@ const initHeaderMenu = () => {
 
   burgerIcon.addEventListener('click', () => {
     burgerIcon.classList.toggle('is-active');
+    
     selectBody.classList.toggle('scroll-lock');
 
   });
