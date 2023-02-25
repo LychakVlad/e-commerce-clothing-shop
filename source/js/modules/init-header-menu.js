@@ -1,6 +1,7 @@
 const menuButton = document.querySelectorAll('.nav-menu-open');
 const burgerIcon = document.querySelector('.header-menu-open');
 const selectBody = document.querySelector('body');
+const headerMobMenu = document.querySelector('.header-menu-mob')
 
 
 
@@ -37,7 +38,7 @@ const initHeaderMenu = () => {
 
   burgerIcon.addEventListener('click', () => {
     burgerIcon.classList.toggle('is-active');
-    
+    headerMobMenu.classList.toggle('is-active');
     selectBody.classList.toggle('scroll-lock');
 
   });

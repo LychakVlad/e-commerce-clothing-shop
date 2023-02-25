@@ -16,6 +16,14 @@ mixin header-menu(data, brands, type)
   else if (type== 'sub')
     .header-menu-mob
       .header-menu-mob__wrapper
+        .header-menu-mob-nav
+          ul.header-nav__list
+            li.header-nav__item.nav-menu-open
+              .header-nav__link
+                a(href="#")  Women
+            li.header-nav__item.nav-menu-open
+              .header-nav__link
+                a(href="#")  Men
         .header-menu-mob__top-block
           each item in data
             .header-menu-mob__column(data-accordion="parent")
@@ -24,6 +32,19 @@ mixin header-menu(data, brands, type)
                 each link in item.category
                   li.header-menu-mob__item
                     a(href="#")= link
+        .header-menu-mob__search-block
+          li.header-nav__item
+            form
+              .header-nav__item-form
+                a(href="#")  Search
+                +custom-input({inputName: "search-input", inputMinLength: "2"})(data-validate-type="text", data-limitations="search").--search
+          .header-lang
+            .header-lang__wrapper
+              ul.header-lang__list
+                li.header-lang__item.is-active
+                  a(href="#") EN
+                li.header-lang__item
+                  a(href="#") UA
         .header-menu__bottom-block
           each brand in brands
             a(href="#").header-menu__brand= brand
