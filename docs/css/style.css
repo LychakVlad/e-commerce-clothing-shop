@@ -2554,6 +2554,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  max-height: 100%;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2564,7 +2565,7 @@ button,
 }
 
 .header-menu-mob__wrapper {
-  min-height: 100%;
+  height: calc(100vh - var(--header-height, 1vh));
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3633,6 +3634,18 @@ button,
 @media (max-width: 500px) {
   .header-menu__brand {
     font-size: 7px;
+  }
+
+  .header-menu-mob__search-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header-menu-mob__search-block .header-lang {
+    display: block;
+    margin-bottom: 22px;
   }
 }
 
