@@ -152,6 +152,8 @@
   max-height: 100%;
   transition: opacity $trans-default;
 
+  pointer-events: none;
+
   &.is-active{
     opacity: 1;
   }
@@ -249,6 +251,9 @@
 
 
 @media (max-width: 960px) {
+  .header-menu-mob{
+    pointer-events: all;
+  }
   .header-menu-mob-nav{
     display: flex;
     margin: 24px 0px;
