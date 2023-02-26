@@ -3239,6 +3239,31 @@ button,
   object-position: center;
 }
 
+.card-page__tab-review.is-hidden {
+  display: none;
+}
+
+.card-page__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 30px 0px 30px;
+}
+
+.card-page__review h3 {
+  margin-bottom: 16px;
+}
+
+.card-page__review-text-block {
+  max-width: 600px;
+}
+
 .content-block {
   background-color: #ffffff;
   margin-top: 120px;
