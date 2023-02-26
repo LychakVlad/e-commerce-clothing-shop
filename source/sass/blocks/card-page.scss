@@ -156,3 +156,23 @@
   max-width: 600px;
 }
 
+.card-page__tab-qa{
+  margin-top: 40px;
+  &.is-hidden{
+
+  }
+}
+.card-page__qa{
+  max-width: 700px;
+  h3{
+  margin-bottom: 8px;
+  }
+
+  h4{
+  margin-bottom: 14px;
+  }
+  p{
+  margin-bottom: 20px;
+  }
+}
+
