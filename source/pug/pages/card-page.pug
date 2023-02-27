@@ -76,11 +76,11 @@ block main
                   p To the address by courier - free of charge for purchases from 10000 UAH
           .card-page__bottom-block
             .card-page__tab-titles
-              a(href="#").tab-item.is-active About
-              a(href="#").tab-item Review
-              a(href="#").tab-item Questions
+              a(href="#tab-about").tab-item.is-active About
+              a(href="#tab-review").tab-item Review
+              a(href="#tab-qa").tab-item Questions
             .card-page__tab-content
-              .card-page__tab.is-active
+              div(id = 'tab-about').card-page__tab.is-active
                 .card-page__tab-about
                   .card-page__tab-about-left
                     p Denim top shirt, stand-up collar, oversize silhouette. Made of 100% cotton denim with fade effect. Topical cut allows you to wear shirt as a second layer on top of a T-shirt. Topical cut allows you to wear shirt as a second layer on top of a T-shirt.
@@ -88,7 +88,7 @@ block main
                     p Denim top shirt, stand-up collar, oversize silhouette. Made of 100% cotton denim with fade effect. Topical cut allows you to wear shirt as a second layer on top of a T-shirt. Topical cut allows you to wear shirt as a second layer on top of a T-shirt.
                   .card-page__tab-about-right
                     +picture("content", 'card-page-img', "png", 229, 278, "card")
-              .card-page__tab
+              div(id = 'tab-review').card-page__tab
                 .card-page__tab-review
                   .card-page__review
                     +icon("star-rating", 200, 100).card-page__review-svg
@@ -100,7 +100,7 @@ block main
                     .card-page__review-text-block
                       +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Mike', titleColor: 'blue-whale'})
                       p I must admit that I had pretty low expectations for this dress given the price point. Also, most tiered sundresses that I’ve tried have been too voluminous and just aren’t flattering on my straight figure. This dress exceeded my expectations. The material has a crinkle texture and is soft.
-              .card-page__tab
+              div(id = 'tab-qa').card-page__tab
                 .card-page__tab-qa
                   .card-page__qa
                     +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Jess', titleColor: 'blue-whale'})
