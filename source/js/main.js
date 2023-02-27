@@ -19,6 +19,30 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   headerScroll();
 
+  const tabItem = document.querySelectorAll('.tab-item');
+  const tabContent = document.querySelectorAll('.card-page__tab')
+
+  tabItem.forEach((item) => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      tabItem.forEach((child) => {
+        child.classList.remove('is-active')
+      })
+
+      tabContent.forEach((child) => {
+        child.classList.remove('is-active')
+      })
+
+      item.classList.add('is-active')
+      
+    })
+  })
+
+
+
+
+
   // Modules
   // ---------------------------------
   initHeaderMenu();

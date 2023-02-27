@@ -98,6 +98,15 @@
     text-decoration-thickness: 2px;
   }
 }
+
+.card-page__tab{
+  display:none;
+
+  &.is-active{
+    display: block;
+
+  }
+}
 .card-page__tab-about{
   display: flex;
   justify-content: space-between;
@@ -109,9 +118,6 @@
   line-height: 170%;
   color: #0F303F;
 
-  &.is-hidden{
-    display: none;
-  }
 }
 
 .card-page__tab-about-left{
@@ -136,9 +142,6 @@
 }
 
 .card-page__tab-review{
-  &.is-hidden{
-    display: none;
-  }
 }
 
 .card-page__review{
@@ -158,9 +161,6 @@
 
 .card-page__tab-qa{
   margin-top: 40px;
-  &.is-hidden{
-
-  }
 }
 .card-page__qa{
   max-width: 700px;

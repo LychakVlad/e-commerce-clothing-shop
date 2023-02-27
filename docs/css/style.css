@@ -3196,6 +3196,14 @@ button,
   text-decoration-thickness: 2px;
 }
 
+.card-page__tab {
+  display: none;
+}
+
+.card-page__tab.is-active {
+  display: block;
+}
+
 .card-page__tab-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3209,10 +3217,6 @@ button,
   font-size: 14px;
   line-height: 170%;
   color: #0F303F;
-}
-
-.card-page__tab-about.is-hidden {
-  display: none;
 }
 
 .card-page__tab-about-left {
@@ -3237,10 +3241,6 @@ button,
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
-}
-
-.card-page__tab-review.is-hidden {
-  display: none;
 }
 
 .card-page__review {
