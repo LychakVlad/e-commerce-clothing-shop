@@ -1,5 +1,6 @@
 .card-slider{
   max-width: 470px;
+  min-width: 320px;
   position: relative;
 }
 
@@ -47,3 +48,26 @@
 
 }
 
+@media (max-width: 960px) {
+  .card-slider-mini{
+    display: none;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+.card-slider{
+  max-width: 740px;
+}
+
+}
+
+
+@media (max-width: 550px) {
+
+  .card-slider{
+    max-width: 320px;
+  }
+
+  }

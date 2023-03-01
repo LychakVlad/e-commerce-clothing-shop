@@ -156,6 +156,7 @@
 
   &.is-active{
     opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -251,9 +252,7 @@
 
 
 @media (max-width: 960px) {
-  .header-menu-mob{
-    pointer-events: all;
-  }
+
   .header-menu-mob-nav{
     display: flex;
     margin: 24px 0px;
