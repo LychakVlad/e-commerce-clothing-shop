@@ -1,9 +1,9 @@
 mixin item-card(data)
-  .item-card
+  a(href="#").item-card
     .item-card__wrapper
       if(data.img)
         .item-card__img
-          +picture("content", data.img, "png", 230, 365, "card")
+          +picture("content", data.img, "png", 275, 365, "card")
           if(data.fav)
             .fav-button__block
               +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})
