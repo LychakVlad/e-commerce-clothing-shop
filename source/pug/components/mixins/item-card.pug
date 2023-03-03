@@ -5,8 +5,11 @@ mixin item-card(data)
         .item-card__img
           +picture("content", data.img, "png", 230, 365, "card")
           if(data.fav)
-          .fav-button__block
-            +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})
+            .fav-button__block
+              +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})
+          if(data.discount)
+            .discount-icon__block
+              +icon("discount", 50, 50)
       .item-card__text-block
         .item-card__top
           if(data.title)

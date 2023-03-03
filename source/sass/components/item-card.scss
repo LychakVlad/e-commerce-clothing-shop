@@ -50,6 +50,7 @@
 .item-card__text-block{
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .item-card__old-price{
@@ -77,6 +78,13 @@
     object-position: center;
 
   }
+}
+
+.discount-icon__block{
+  z-index: 2;
+  position: absolute;
+  top: 3%;
+  right: 3%;
 }
 
 

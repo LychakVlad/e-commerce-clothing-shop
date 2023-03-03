@@ -1658,6 +1658,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  text-align: center;
 }
 
 .item-card__old-price {
@@ -1686,6 +1687,13 @@ button,
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+}
+
+.discount-icon__block {
+  z-index: 2;
+  position: absolute;
+  top: 3%;
+  right: 3%;
 }
 
 .fav-button {
@@ -3281,6 +3289,25 @@ button,
 
 .card-page__qa p {
   margin-bottom: 20px;
+}
+
+.catalog__wrapper h2 {
+  margin: 40px 0px;
+}
+
+.catalog__catalog-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.catalog__button {
+  width: 100%;
+  height: 100%;
+  margin: 40px auto;
 }
 
 .content-block {
