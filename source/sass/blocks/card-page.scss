@@ -11,6 +11,7 @@
 .card-page__top-block{
   margin: 50px 0px;
   display: flex;
+  justify-content: space-between;
 }
 .card-page__left-column{
   display: flex;
@@ -73,8 +74,10 @@
 
 
 .card-page__bottom-block{
-  max-width: 900px;
+  max-width: 990px;
+  margin-bottom: 60px;
 }
+
 .card-page__tab-titles{
   font-family: 'Inter';
   font-style: normal;
@@ -123,7 +126,7 @@
 }
 
 .card-page__tab-about-left{
-  max-width: 585px;
+  max-width: 700px;
   margin-right: 30px;
 
   p{
@@ -152,14 +155,14 @@
 }
 
 .card-page__review-text-block{
-  max-width: 600px;
+  max-width: 990px;
 }
 
 .card-page__tab-qa{
   margin-top: 40px;
 }
 .card-page__qa{
-  max-width: 700px;
+  max-width: 900px;
   h3{
   margin-bottom: 8px;
   }

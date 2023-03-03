@@ -1,0 +1,25 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Catalog" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "catalog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+
+  main
+
+
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()

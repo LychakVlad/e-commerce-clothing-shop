@@ -3095,6 +3095,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .card-page__left-column {
@@ -3169,7 +3172,8 @@ button,
 }
 
 .card-page__bottom-block {
-  max-width: 900px;
+  max-width: 990px;
+  margin-bottom: 60px;
 }
 
 .card-page__tab-titles {
@@ -3222,7 +3226,7 @@ button,
 }
 
 .card-page__tab-about-left {
-  max-width: 585px;
+  max-width: 700px;
   margin-right: 30px;
 }
 
@@ -3255,7 +3259,7 @@ button,
 }
 
 .card-page__review-text-block {
-  max-width: 600px;
+  max-width: 990px;
 }
 
 .card-page__tab-qa {
@@ -3263,7 +3267,7 @@ button,
 }
 
 .card-page__qa {
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .card-page__qa h3 {
