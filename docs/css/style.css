@@ -3359,11 +3359,44 @@ button,
   background-color: #ffffff;
   right: 0;
   top: 0;
-  max-width: 300px;
+  width: 70vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.catalog-side__wrapper {
+  padding: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.catalog-side__filters {
+  margin: auto;
 }
 
 .catalog-side__column {
   margin: 0 auto;
+}
+
+.catalog-side__column.is-active .catalog__side__title::before {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background: #E64926;
+}
+
+.catalog-side__column.is-active .catalog__side__title::after {
+  background: #E64926;
+}
+
+.catalog-side__column.is-active .catalog__side__list {
+  opacity: 1;
 }
 
 .catalog__side__title {
@@ -3373,8 +3406,37 @@ button,
   font-size: 22px;
   line-height: 17px;
   color: #0F303F;
-  margin: 35px 0px 30px;
+  margin: 35px 0px 10px;
   text-transform: uppercase;
+  position: relative;
+}
+
+.catalog__side__title::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #0F303F;
+  position: absolute;
+  left: 90%;
+  top: 40%;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.catalog__side__title::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #0F303F;
+  position: absolute;
+  left: 90%;
+  top: 40%;
 }
 
 .catalog__side__list {
@@ -3391,6 +3453,15 @@ button,
   max-width: 150px;
   text-align: left;
   margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  pointer-events: none;
 }
 
 .content-block {
