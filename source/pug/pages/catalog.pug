@@ -111,11 +111,46 @@ block main
       .container.container--small
         .catalog__wrapper
           +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Jackets', titleColor: 'blue-whale'})
+          a(href="#").catalog__filters-icon
+            +icon('settings', 64, 64)
           .catalog__filters
             +custom-select({placeholder: "Size", error: "Select the subject of the address", selectPlaceholder: 'true', optionsList: [{text: "XS", value: "id-1"}, {text: "S", value: "id-2"}, {text: "M", value: "id-3"}, {text: "L", value: "id-4"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
             +custom-select({placeholder: "Price",error: "Select the subject of the address", selectPlaceholder: 'true', optionsList: [{text: "1000-2000", value: "id-1"}, {text: "2000-3000", value: "id-2"}, {text: "3000-4000", value: "id-3"}, {text: "4000-5000", value: "id-4"}, {text: "5000-10000", value: "id-5"}, {text: "10000+", value: "id-6"},]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
             +custom-select({placeholder: "Color",error: "Select the subject of the address", selectPlaceholder: 'true', optionsList: [{text: "White", value: "id-1"}, {text: "Black", value: "id-2"}, {text: "Red", value: "id-3"}, {text: "Blue", value: "id-4"}, {text: "Green", value: "id-5"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
             +custom-select({placeholder: "Brand",error: "Select the subject of the address", selectPlaceholder: 'true', optionsList: [{text: "American Vintage", value: "id-1"}, {text: "George Gina Lucy", value: "id-2"}, {text: "Birkenstock", value: "id-3"}, {text: "Deha", value: "id-4"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select
+          .catalog-side
+            +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Filters', titleColor: 'blue-whale'})
+            .catalog-side__column(data-accordion="parent")
+              h3.catalog__side__title(data-accordion="button") Size
+              .catalog__side__list(data-accordion="content")
+                +custom-toggle({inputLabel: "XS", inputName: "size"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "S", inputName: "size"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "M", inputName: "size"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "L", inputName: "size"})(data-validate-type="checkbox").custom-toggle--checkbox
+            .catalog-side__column(data-accordion="parent")
+              h3.catalog__side__title(data-accordion="button") Price
+              .catalog__side__list(data-accordion="content")
+                +custom-toggle({inputLabel: "1000-2000", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "2000-3000", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "3000-4000", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "4000-5000", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "5000-10000", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "10000+", inputName: "price"})(data-validate-type="checkbox").custom-toggle--checkbox
+            .catalog-side__column(data-accordion="parent")
+              h3.catalog__side__title(data-accordion="button") Color
+              .catalog__side__list(data-accordion="content")
+                +custom-toggle({inputLabel: "White", inputName: "color"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Black", inputName: "color"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Red", inputName: "color"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Blue", inputName: "color"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Green", inputName: "color"})(data-validate-type="checkbox").custom-toggle--checkbox
+            .catalog-side__column(data-accordion="parent")
+              h3.catalog__side__title(data-accordion="button") Brand
+              .catalog__side__list(data-accordion="content")
+                +custom-toggle({inputLabel: "American Vintage", inputName: "brand"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "George Gina Lucy", inputName: "brand"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Birkenstock", inputName: "brand"})(data-validate-type="checkbox").custom-toggle--checkbox
+                +custom-toggle({inputLabel: "Deha", inputName: "brand"})(data-validate-type="checkbox").custom-toggle--checkbox
 
           .catalog__catalog-block
             each item in cards

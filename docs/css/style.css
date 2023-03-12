@@ -3348,6 +3348,51 @@ button,
   margin-right: 20px;
 }
 
+.catalog__filters-icon {
+  display: none;
+}
+
+.catalog-side {
+  text-align: center;
+  position: absolute;
+  z-index: 14;
+  background-color: #ffffff;
+  right: 0;
+  top: 0;
+  max-width: 300px;
+}
+
+.catalog-side__column {
+  margin: 0 auto;
+}
+
+.catalog__side__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 17px;
+  color: #0F303F;
+  margin: 35px 0px 30px;
+  text-transform: uppercase;
+}
+
+.catalog__side__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 150px;
+  text-align: left;
+  margin: 0 auto;
+}
+
 .content-block {
   background-color: #ffffff;
   margin-top: 120px;
@@ -3856,6 +3901,22 @@ button,
   }
 }
 
+@media (max-width: 560px) {
+  .catalog__catalog-block {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .catalog__filters {
+    display: none;
+  }
+
+  .catalog__filters-icon {
+    display: block;
+  }
+}
+
 @media (max-width: 550px) {
   .card-slider {
     max-width: 320px;
@@ -3911,6 +3972,13 @@ button,
   .footer__heading {
     font-weight: 600;
     font-size: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .catalog__catalog-block {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
