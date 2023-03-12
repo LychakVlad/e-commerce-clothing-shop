@@ -1065,8 +1065,9 @@ button,
 
 .custom-select {
   position: relative;
-  width: 250px;
+  width: 185px;
   padding: 30px 0;
+  z-index: 3;
   /* &.is-valid {
     .custom-select__button {
       border: 2px solid $color-eucalyptus;
@@ -1702,7 +1703,7 @@ button,
 }
 
 .discount-icon__block {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: 3%;
   right: 3%;
@@ -3304,7 +3305,7 @@ button,
 }
 
 .catalog__wrapper h2 {
-  margin: 40px 0px;
+  margin: 40px 0px 0px;
 }
 
 .catalog__catalog-block {
@@ -3325,6 +3326,26 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   margin: 40px 0px;
+}
+
+.catalog__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 170%;
+  color: #0F303F;
+}
+
+.catalog__filters .custom-select__error {
+  pointer-events: none;
+}
+
+.catalog__filters div {
+  margin-right: 20px;
 }
 
 .content-block {

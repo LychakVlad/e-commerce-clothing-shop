@@ -1,8 +1,10 @@
 .custom-select {
   position: relative;
 
-  width: 250px;
+  width: 185px;
   padding: 30px 0;
+
+  z-index: 3;
 
   &__label {
     position: absolute;
