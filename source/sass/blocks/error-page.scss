@@ -1,0 +1,46 @@
+.error-page{
+  height: 100vh;
+
+  .container{
+    height: 100%;
+  }
+}
+.error-page__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  max-width: 500px;
+}
+.error-page__404{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 60px;
+line-height: 60px;
+
+color: #96A3AE;
+}
+.error-page__title{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 32px;
+line-height: 36px;
+letter-spacing: 0.8px;
+
+color: #001A34;
+}
+.error-page__text{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.4px;
+
+color: #96A3AE;
+
+margin-bottom: 30px;
+}

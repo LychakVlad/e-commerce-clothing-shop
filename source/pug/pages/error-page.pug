@@ -1,0 +1,29 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Error" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "error-page.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  main
+    .error-page
+      .container.container--small
+        .error-page__wrapper
+          h2.error-page__404 404
+          h1.error-page__title Page not found
+          p.error-page__text There is an error in the address or the page has been deleted.
+          +btn({text: "To main page", href: "index.html"})
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()

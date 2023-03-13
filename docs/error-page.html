@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Page list</title>
+    <title>Error</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -103,73 +103,72 @@
 </g></symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        .container {
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
-        
-        h1 {
-          font-size: 24px;
-          line-height: 28px;
-        }
-        
-        a {
-          color: rgb(10, 10, 175);
-        }
-        
-        li {
-          font-size: 18px;
-          line-height: 22px;
-          margin-bottom: 7px;
-        }
-        
-        img {
-          width: 100%;
-          max-width: 300px;
-          height: auto;
-          display: block;
-          margin-bottom: 40px;
-        }
-        
-        @media (max-width: 768px) {
-          .container {
-            padding-top: 20px;
-            padding-bottom: 20px;
-          }
-        
-          ol {
-            padding-left: 20px;
-          }
-        
-          ol li {
-            margin-bottom: 15px;
-          }
-        }
-        
-      </style>
       <main>
-        <div class="container">
-          <svg width="300" height="100" aria-hidden="true">
-            <use xlink:href="#logo"></use>
-          </svg>
-          <h1>Page list</h1>
-          <ol>
-            <li><a href="index.html">Main page — index.html</a></li>
-            <li><a href="about-us.html">About us — about-us.html</a></li>
-            <li><a href="brands.html">Brands — brands.html</a></li>
-            <li><a href="faq.html">FAQ — faq.html</a></li>
-            <li><a href="sign-in.html">Sign in — sign-in.html</a></li>
-            <li><a href="sign-in-reg.html">Sign up — sign-in-reg.html</a></li>
-            <li><a href="sign-in-fog-pass.html">Forgot password — sign-in-fog-pass.html</a></li>
-            <li><a href="sign-in-email.html">Email sent — sign-in-email.html</a></li>
-            <li><a href="card-page.html">Card page — card-page.html</a></li>
-            <li><a href="catalog.html">Catalog — catalog.html</a></li>
-            <li><a href="error-page.html">Error page — error-page.html</a></li>
-            <li><a href="ui-kit.html">UI-KIT — ui-kit.html</a></li>
-          </ol>
+        <div class="error-page">
+          <div class="container container--small">
+            <div class="error-page__wrapper">
+              <h2 class="error-page__404">404</h2>
+              <h1 class="error-page__title">Page not found</h1>
+              <p class="error-page__text">There is an error in the address or the page has been deleted.</p>
+              <a class="btn" href="index.html">To main page</a>
+            </div>
+          </div>
         </div>
       </main>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-payment">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div>
+            <h3>Payment</h3>
+            <p>Payment in cash upon receipt</p>
+            <p>Payment is made in cash to the courier directly on delivery of the order to the address of the recipient. Choosing this payment method, you get the opportunity to try on the ordered items.</p>
+            <p>If any item does not fit, you can simply return it to the courier without paying.</p>
+          </div>
+          <div>
+            <h3>With card on site (Visa, Mastercard).</h3>
+            <p>We accept payment by Visa and Mastercard at our webstore. Security of payments with us is guaranteed by eCommerceConnect system using modern "3-D Secure" standard.</p>
+          </div>
+          <div>
+            <h3>Delivery</h3>
+            <p>To the branch "Nova Postta".</p>
+            <p>Delivery of orders to customers online store ALLEGRIA is carried out on the territory of Ukraine by courier service "Nova Posta".</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-return">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div>
+            <h3>Returns and exchanges</h3>
+            <p>Return of goods purchased at ALLEGRIA online store is made in accordance with the Law of Ukraine "On Protection of Consumer Rights".</p>
+            <p>You can return the merchandise within 14 days of purchase.</p>
+          </div>
+          <div>
+            <h3>How to apply for a refund?</h3>
+            <p>If you don't like something you bought or it didn't fit - contact our Contact Center by phone 000 00 000 and we will help you to fill out a return form.</p>
+          </div>
+          <div>
+            <h3>What are the return policy?</h3>
+            <p>The exchange and return of goods is carried out if the specified goods were not used, its commodity form - without damage and traces of wear, original packing, and also tags, seals, labels, trademarks are completely preserved.</p>
+            <p>Swimwear, underwear, hosiery, personal care products, and gloves are not returned and cannot be exchanged.</p>
+            <p>You can return the goods directly to our retail stores located in Kiev, Kharkov, Dnepr and Odessa. For residents of other cities of Ukraine sending the goods by carrier New Mail or any other carrier to the warehouse of online store ALLEGRIA, located in Kharkov is carried out at the expense of the company.</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
