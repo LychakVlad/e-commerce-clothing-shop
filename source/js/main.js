@@ -42,9 +42,23 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+  const openSideIcon = document.querySelector('.catalog__filters-icon');
+  const closeSideIcon = document.querySelector('.catalog-side__close-icon');
+  const catalogSideMenu = document.querySelector('.catalog-side');
 
 
+  if (openSideIcon) {
+    return;
 
+    openSideIcon.addEventListener('click', () => {
+      catalogSideMenu.classList.add('is-active')
+    })
+
+    closeSideIcon.addEventListener('click', () => {
+      catalogSideMenu.classList.remove('is-active')
+    })
+
+  }
 
   // Modules
   // ---------------------------------

@@ -3350,10 +3350,14 @@ button,
 
 .catalog__filters-icon {
   display: none;
+  cursor: pointer;
 }
 
 .catalog-side {
   text-align: center;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   position: absolute;
   z-index: 14;
   background-color: #ffffff;
@@ -3362,6 +3366,12 @@ button,
   width: 70vw;
   height: 100vh;
   overflow: auto;
+  opacity: 0;
+}
+
+.catalog-side.is-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .catalog-side__wrapper {
@@ -3374,6 +3384,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.catalog-side__close-icon {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  cursor: pointer;
 }
 
 .catalog-side__filters {
@@ -3409,6 +3426,7 @@ button,
   margin: 35px 0px 10px;
   text-transform: uppercase;
   position: relative;
+  cursor: pointer;
 }
 
 .catalog__side__title::before {
@@ -3985,6 +4003,8 @@ button,
 
   .catalog__filters-icon {
     display: block;
+    width: 64px;
+    height: 64px;
   }
 }
 

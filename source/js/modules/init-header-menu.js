@@ -1,7 +1,7 @@
 const menuButton = document.querySelectorAll('.nav-menu-open');
 const burgerIcon = document.querySelector('.header-menu-open');
 const selectBody = document.querySelector('body');
-const headerMobMenu = document.querySelector('.header-menu-mob')
+const headerMobMenu = document.querySelector('.header-menu-mob');
 
 
 

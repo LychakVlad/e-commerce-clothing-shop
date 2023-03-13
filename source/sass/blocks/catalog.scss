@@ -38,10 +38,12 @@
 
 .catalog__filters-icon{
   display: none;
+  cursor: pointer;
 }
 
 .catalog-side{
   text-align: center;
+  transition: opacity $trans-default;
 
   position: absolute;
   z-index: 14;
@@ -52,6 +54,12 @@
   height: 100vh;
 
   overflow: auto;
+  opacity: 0;
+
+  &.is-active{
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .catalog-side__wrapper{
@@ -60,6 +68,13 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.catalog-side__close-icon{
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  cursor: pointer;
 }
 
 .catalog-side__filters{
@@ -97,6 +112,7 @@
   text-transform: uppercase;
 
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -150,6 +166,8 @@
 
   .catalog__filters-icon{
     display: block;
+    width: 64px;
+    height: 64px;
   }
 
 }

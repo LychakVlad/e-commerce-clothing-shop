@@ -121,6 +121,8 @@ block main
           .catalog-side
             .catalog-side__wrapper
               +title({titleStyle: 'Inter', titleType: 'h3', titleText: 'Filters', titleColor: 'blue-whale'})
+              .catalog-side__close-icon
+                +icon("icon-close", 25, 25)
               .catalog-side__filters
                 .catalog-side__column(data-accordion="parent")
                   h3.catalog__side__title(data-accordion="button") Size
