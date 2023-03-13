@@ -3355,9 +3355,11 @@ button,
 
 .catalog-side {
   text-align: center;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   position: absolute;
   z-index: 14;
   background-color: #ffffff;
@@ -3367,11 +3369,14 @@ button,
   height: 100vh;
   overflow: auto;
   opacity: 0;
+  pointer-events: none;
 }
 
 .catalog-side.is-active {
   opacity: 1;
   pointer-events: all;
+  -webkit-box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3);
 }
 
 .catalog-side__wrapper {
@@ -3414,6 +3419,7 @@ button,
 
 .catalog-side__column.is-active .catalog__side__list {
   opacity: 1;
+  pointer-events: all;
 }
 
 .catalog__side__title {

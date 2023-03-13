@@ -43,7 +43,7 @@
 
 .catalog-side{
   text-align: center;
-  transition: opacity $trans-default;
+  transition: opacity $trans-default, box-shadow $trans-default;
 
   position: absolute;
   z-index: 14;
@@ -55,10 +55,12 @@
 
   overflow: auto;
   opacity: 0;
+  pointer-events: none;
 
   &.is-active{
     opacity: 1;
     pointer-events: all;
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
   }
 }
 
@@ -98,6 +100,7 @@
 
     .catalog__side__list {
       opacity: 1;
+      pointer-events: all;
     }
   }
 }
@@ -152,6 +155,7 @@
   box-sizing: content-box;
   pointer-events: none;
 }
+
 
 @media (max-width: 560px) {
   .catalog__catalog-block{

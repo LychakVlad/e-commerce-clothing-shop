@@ -42,22 +42,26 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  const openSideIcon = document.querySelector('.catalog__filters-icon');
-  const closeSideIcon = document.querySelector('.catalog-side__close-icon');
-  const catalogSideMenu = document.querySelector('.catalog-side');
 
+  const initSideMenu = () => {
 
-  if (openSideIcon) {
-    return;
+    const openSideIcon = document.querySelector('.catalog__filters-icon');
+    const closeSideIcon = document.querySelector('.catalog-side__close-icon');
+    const catalogSideMenu = document.querySelector('.catalog-side');
+    const selectBody = document.querySelector('body');
 
+    if (!openSideIcon) {
+      return;
+    }
     openSideIcon.addEventListener('click', () => {
-      catalogSideMenu.classList.add('is-active')
+      catalogSideMenu.classList.add('is-active');
+      selectBody.classList.add('scroll-lock');
     })
 
     closeSideIcon.addEventListener('click', () => {
-      catalogSideMenu.classList.remove('is-active')
+      catalogSideMenu.classList.remove('is-active');
+      selectBody.classList.remove('scroll-lock');
     })
-
   }
 
   // Modules
@@ -73,6 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initFormValidate();
     initSwipers();
+    initSideMenu();
   });
 });
 
