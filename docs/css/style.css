@@ -1614,6 +1614,16 @@ button,
   height: 100%;
 }
 
+.item-card__wrapper--mini {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  padding: 26px;
+  position: relative;
+}
+
 .item-card__title {
   font-family: "Inter";
   font-style: normal;
@@ -1662,6 +1672,10 @@ button,
   text-align: center;
 }
 
+.item-card__text-block--mini {
+  text-align: left;
+}
+
 .item-card__old-price {
   font-family: "Inter";
   font-style: normal;
@@ -1702,11 +1716,28 @@ button,
   transform: scale(1.1);
 }
 
+.item-card__img--mini {
+  height: 170px;
+  width: 200px;
+  margin-right: 40px;
+}
+
 .discount-icon__block {
   z-index: 1;
   position: absolute;
   top: 3%;
   right: 3%;
+}
+
+.item-card__btn {
+  margin-top: 16px;
+}
+
+.item-card__close-icon {
+  position: absolute;
+  right: 7%;
+  top: 14%;
+  cursor: pointer;
 }
 
 .fav-button {
@@ -3697,6 +3728,26 @@ button,
   margin-bottom: 30px;
 }
 
+.fav-page__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.fav-page__title {
+  margin: 20px auto;
+  max-width: 200px;
+}
+
+.fav-page__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  -ms-grid-rows: minmax(100px, auto);
+  grid-template-rows: minmax(100px, auto);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -3754,6 +3805,13 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .fav-page__cards {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

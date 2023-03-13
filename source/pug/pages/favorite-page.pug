@@ -1,0 +1,56 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Favorite page" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "favorite-page.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  -
+    const firstClothesSliderCards = {
+      first:{
+        img: 'clothes-1',
+        name: 'fav-but-1',
+        id: 'fav-but-1',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+        btn: true,
+      },
+      second:{
+        img: 'clothes-2',
+        name: 'fav-but-2',
+        id: 'fav-but-2',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+        btn: true,
+      },
+    }
+
+  main
+    .fav-page
+      .container.container--medium
+        .fav-page__wrapper
+          .fav-page__title
+            +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Favorite', titleColor: 'blue-whale'})
+          .fav-page__cards
+            +item-card(firstClothesSliderCards.first, 'mini')
+            +item-card(firstClothesSliderCards.second , 'mini')
+            +item-card(firstClothesSliderCards.first, 'mini')
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()

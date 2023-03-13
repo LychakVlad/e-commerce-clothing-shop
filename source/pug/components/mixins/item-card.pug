@@ -1,27 +1,52 @@
-mixin item-card(data)
-  a(href="#").item-card
-    .item-card__wrapper
-      if(data.img)
-        .item-card__img
-          +picture("content", data.img, "png", 275, 365, "card")
-          if(data.fav)
-            .fav-button__block
-              +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})
-          if(data.discount)
-            .discount-icon__block
-              +icon("discount", 50, 50)
-      .item-card__text-block
-        .item-card__top
-          if(data.title)
-            p.item-card__title= data.title
-        .item-card__bottom
-          if(data.type)
-            p.item-card__type= data.type
-          if(data.oldPrice)
-            span.item-card__old-price= data.oldPrice
-          if(data.price)
+mixin item-card(data, type)
+  if(type = 'sub')
+    a(href="#").item-card
+      .item-card__wrapper.item-card__wrapper--mini
+        .item-card__close-icon
+          +icon("icon-close", 25, 25)
+        if(data.img)
+          .item-card__img.item-card__img--mini
+            +picture("content", data.img, "png", 200, 170, "card")
+        .item-card__text-block.item-card__text-block--mini
+          .item-card__top
+            if(data.title)
+              p.item-card__title= data.title
+          .item-card__bottom
+            if(data.type)
+              p.item-card__type= data.type
+            if(data.oldPrice)
+              span.item-card__old-price= data.oldPrice
+            if(data.price)
+              if(data.discount)
+                span.item-card__price.item-card__price--color-orange= data.price
+              else
+                span.item-card__price= data.price
+            if(data.btn)
+              .item-card__btn
+                +btn({text: "Add to cart", type: "submit"}).btn--transparent
+  else
+    a(href="card-page.html").item-card
+      .item-card__wrapper
+        if(data.img)
+          .item-card__img
+            +picture("content", data.img, "png", 275, 365, "card")
+            if(data.fav)
+              .fav-button__block
+                +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})
             if(data.discount)
-              span.item-card__price.item-card__price--color-orange= data.price
-            else
-              span.item-card__price= data.price
-
+              .discount-icon__block
+                +icon("discount", 50, 50)
+        .item-card__text-block
+          .item-card__top
+            if(data.title)
+              p.item-card__title= data.title
+          .item-card__bottom
+            if(data.type)
+              p.item-card__type= data.type
+            if(data.oldPrice)
+              span.item-card__old-price= data.oldPrice
+            if(data.price)
+              if(data.discount)
+                span.item-card__price.item-card__price--color-orange= data.price
+              else
+                span.item-card__price= data.price
