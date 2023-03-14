@@ -1718,7 +1718,7 @@ button,
 
 .item-card__img--mini {
   height: 170px;
-  width: 200px;
+  width: 158px;
   margin-right: 40px;
 }
 
@@ -3854,6 +3854,10 @@ button,
   border-top: #CEC6C4 1px solid;
 }
 
+.cart__card {
+  border-bottom: #CEC6C4 1px solid;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -4208,6 +4212,28 @@ button,
 
   .card-page__tab-about-left {
     margin: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cart__wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .cart__left-column {
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cart__card {
+    border: none;
+  }
+
+  .cart__total-price {
+    text-align: center;
+    padding: 30px 0px;
   }
 }
 

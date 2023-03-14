@@ -71,3 +71,30 @@
   padding: 30px 0px 30px 30px;
   border-top: $color-alto 1px solid;
 }
+
+.cart__card{
+  border-bottom: $color-alto 1px solid;
+}
+
+@media (max-width: 650px) {
+  .cart__wrapper{
+    display: block;
+    width: 100%;
+  }
+
+  .cart__left-column{
+    border: none;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .cart__card{
+    border: none;
+  }
+
+  .cart__total-price{
+    text-align: center;
+    padding: 30px 0px;
+  }
+}

@@ -56,8 +56,10 @@ block main
                 +btn({text: "Order", type: "submit"})
             .cart__right-column
               .cart__cards-block
-                +item-card(firstClothesSliderCards.first, 'mini')
-                +item-card(firstClothesSliderCards.second , 'mini')
+                .cart__card
+                  +item-card(firstClothesSliderCards.first, 'mini')
+                .cart__card
+                  +item-card(firstClothesSliderCards.second , 'mini')
               .cart__total-price
                 p TOTAL: 7600 UAH
 
