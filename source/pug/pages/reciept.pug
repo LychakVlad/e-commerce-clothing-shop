@@ -1,0 +1,81 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Reciept" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "reciept.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  -
+    const firstClothesSliderCards = {
+      first:{
+        name: 'fav-but-1',
+        id: 'fav-but-1',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+      second:{
+        name: 'fav-but-2',
+        id: 'fav-but-2',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+    }
+
+  main
+    .reciept
+      .container.container--medium
+        .reciept__wrapper
+          .reciept__title
+            +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Your Order', titleColor: 'blue-whale'})
+          .reciept__main
+            .reciept__logo
+              +icon('logo', 129, 16)
+            .reciept__order-number
+              p.reciept__number Order number
+              p.reciept__number 989076
+            .reciept__items
+              .reciept__item
+                p.reciept__text--thick Replay
+                p.reciept__text--thin Classic shoes
+                p.reciept__text--orange 3800 UAH
+              .reciept__item
+                p.reciept__text--thick Replay
+                p.reciept__text--thin Classic shoes
+                p.reciept__text--orange 3800 UAH
+              .reciept__item
+                p.reciept__total Total: 7600 UAH
+            .reciept__info
+              .reciept__info-item
+                +icon('personal-acc', 19, 16)
+                p.reciept__text--thin Lychak Vladislav
+              .reciept__info-item
+                +icon('convert', 19, 16)
+                p.reciept__text--thin lycakvladislav@gmail.com
+              .reciept__info-item
+                +icon('fav-icon', 19, 16)
+                p.reciept__text--thin 380 99 790 61 51
+              .reciept__info-item
+                +icon('location', 30, 16)
+                p.reciept__text--thin Odessa, Branch #1: Kievskoe Shosse (early Leningradskoe Shosse), 27 Branch "Novaia Pochta
+            .reciept__button
+              +btn({text: "To main page", href: "index.html"})
+
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()

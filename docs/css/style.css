@@ -3858,6 +3858,127 @@ button,
   border-bottom: #CEC6C4 1px solid;
 }
 
+.reciept {
+  color: #0F303F;
+  overflow: hidden;
+}
+
+.reciept__title {
+  margin: 20px auto 50px;
+  max-width: 260px;
+  position: relative;
+}
+
+.reciept__title::before {
+  content: " ";
+  height: 1px;
+  width: 1541px;
+  background-color: #eae9e8;
+  left: -208%;
+  bottom: -30%;
+  position: absolute;
+}
+
+.reciept__main {
+  max-width: 410px;
+  margin: 0 auto 220px;
+  border: #CEC6C4 1px solid;
+  padding: 20px 20px 50px;
+}
+
+.reciept__logo {
+  max-width: 130px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reciept__logo::before {
+  content: "";
+  height: 8px;
+  width: 410px;
+  background-color: #E64926;
+  border-radius: 6px;
+  left: -108%;
+  top: -100%;
+  position: absolute;
+}
+
+.reciept__order-number {
+  margin: 30px 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.reciept__number {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #E64926;
+}
+
+.reciept__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.reciept__text--thick {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.reciept__text--thin {
+  font-weight: 300;
+}
+
+.reciept__text--orange {
+  color: #E64926;
+  font-weight: 600;
+}
+
+.reciept__total {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #0F303F;
+}
+
+.reciept__item {
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: #CEC6C4 1px solid;
+}
+
+.reciept__info {
+  margin-top: 40px;
+}
+
+.reciept__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reciept__info-item svg {
+  margin-right: 16px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

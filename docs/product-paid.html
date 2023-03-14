@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Catalog</title>
+    <title>Reciept</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -378,503 +378,73 @@
         </div>
       </header>
       <main>
-        <div class="catalog">
-          <div class="container container--small">
-            <div class="catalog__wrapper">
-              <div class="title">
-                <h2 class="title title--h2 title--style-inter title--color-blue-whale">Jackets</h2>
-              </div><a class="catalog__filters-icon" href="#">
-                <svg width="64" height="64" aria-hidden="true">
-                  <use xlink:href="#settings"></use>
-                </svg></a>
-              <div class="catalog__filters">
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Select the subject of the address</span><span class="custom-select__placeholder">Size</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">XS</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">S</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">M</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">L</li>
-                  </ul>
-                </div>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Select the subject of the address</span><span class="custom-select__placeholder">Price</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">1000-2000</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">2000-3000</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">3000-4000</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">4000-5000</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">5000-10000</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">10000+</li>
-                  </ul>
-                </div>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Select the subject of the address</span><span class="custom-select__placeholder">Color</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">White</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Black</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Red</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Blue</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Green</li>
-                  </ul>
-                </div>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Select the subject of the address</span><span class="custom-select__placeholder">Brand</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">American Vintage</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">George Gina Lucy</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Birkenstock</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Deha</li>
-                  </ul>
+        <div class="reciept">
+          <div class="container container--medium">
+            <div class="reciept__wrapper">
+              <div class="reciept__title">
+                <div class="title">
+                  <h2 class="title title--h2 title--style-inter title--color-blue-whale">Your Order</h2>
                 </div>
               </div>
-              <div class="catalog-side">
-                <div class="catalog-side__bg"></div>
-                <div class="catalog-side__wrapper">
-                  <div class="title">
-                    <h3 class="title title--h3 title--style-inter title--color-blue-whale">Filters</h3>
+              <div class="reciept__main">
+                <div class="reciept__logo">
+                  <svg width="129" height="16" aria-hidden="true">
+                    <use xlink:href="#logo"></use>
+                  </svg>
+                </div>
+                <div class="reciept__order-number">
+                  <p class="reciept__number">Order number</p>
+                  <p class="reciept__number">989076</p>
+                </div>
+                <div class="reciept__items">
+                  <div class="reciept__item">
+                    <p class="reciept__text--thick">Replay</p>
+                    <p class="reciept__text--thin">Classic shoes</p>
+                    <p class="reciept__text--orange">3800 UAH</p>
                   </div>
-                  <div class="catalog-side__close-icon">
-                    <svg width="25" height="25" aria-hidden="true">
-                      <use xlink:href="#icon-close"></use>
+                  <div class="reciept__item">
+                    <p class="reciept__text--thick">Replay</p>
+                    <p class="reciept__text--thin">Classic shoes</p>
+                    <p class="reciept__text--orange">3800 UAH</p>
+                  </div>
+                  <div class="reciept__item">
+                    <p class="reciept__total">Total: 7600 UAH</p>
+                  </div>
+                </div>
+                <div class="reciept__info">
+                  <div class="reciept__info-item">
+                    <svg width="19" height="16" aria-hidden="true">
+                      <use xlink:href="#personal-acc"></use>
                     </svg>
+                    <p class="reciept__text--thin">Lychak Vladislav</p>
                   </div>
-                  <div class="catalog-side__filters">
-                    <div class="catalog-side__column" data-accordion="parent">
-                      <h3 class="catalog__side__title" data-accordion="button">Size</h3>
-                      <div class="catalog__side__list" data-accordion="content">
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="size"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">XS</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="size"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">S</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="size"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">M</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="size"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">L</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog-side__column" data-accordion="parent">
-                      <h3 class="catalog__side__title" data-accordion="button">Price</h3>
-                      <div class="catalog__side__list" data-accordion="content">
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">1000-2000</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">2000-3000</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">3000-4000</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">4000-5000</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">5000-10000</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="price"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">10000+</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog-side__column" data-accordion="parent">
-                      <h3 class="catalog__side__title" data-accordion="button">Color</h3>
-                      <div class="catalog__side__list" data-accordion="content">
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="color"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">White</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="color"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Black</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="color"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Red</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="color"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Blue</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="color"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Green</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog-side__column" data-accordion="parent">
-                      <h3 class="catalog__side__title" data-accordion="button">Brand</h3>
-                      <div class="catalog__side__list" data-accordion="content">
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="brand"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">American Vintage</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="brand"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">George Gina Lucy</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="brand"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Birkenstock</span>
-                          </label>
-                        </div>
-                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                          <label>
-                            <input type="checkbox" name="brand"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Deha</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="reciept__info-item">
+                    <svg width="19" height="16" aria-hidden="true">
+                      <use xlink:href="#convert"></use>
+                    </svg>
+                    <p class="reciept__text--thin">lycakvladislav@gmail.com</p>
+                  </div>
+                  <div class="reciept__info-item">
+                    <svg width="19" height="16" aria-hidden="true">
+                      <use xlink:href="#fav-icon"></use>
+                    </svg>
+                    <p class="reciept__text--thin">380 99 790 61 51</p>
+                  </div>
+                  <div class="reciept__info-item">
+                    <svg width="30" height="16" aria-hidden="true">
+                      <use xlink:href="#location"></use>
+                    </svg>
+                    <p class="reciept__text--thin">Odessa, Branch #1: Kievskoe Shosse (early Leningradskoe Shosse), 27 Branch "Novaia Pochta</p>
                   </div>
                 </div>
-              </div>
-              <div class="catalog__catalog-block">
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-1.webp"><img src="img/content/clothes-1.png" srcset="img/content/clothes-1@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-1" name="fav-but-1">
-                            <label for="fav-but-1">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="discount-icon__block">
-                          <svg width="50" height="50" aria-hidden="true">
-                            <use xlink:href="#discount"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
+                <div class="reciept__button">
+                  <a class="btn" href="index.html">To main page</a>
                 </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-2.webp"><img src="img/content/clothes-2.png" srcset="img/content/clothes-2@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-2" name="fav-but-2">
-                            <label for="fav-but-2">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__price">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-3.webp"><img src="img/content/clothes-3.png" srcset="img/content/clothes-3@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-3" name="fav-but-3">
-                            <label for="fav-but-3">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__price">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-4.webp"><img src="img/content/clothes-4.png" srcset="img/content/clothes-4@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-4" name="fav-but-4">
-                            <label for="fav-but-4">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__price">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-1.webp"><img src="img/content/clothes-1.png" srcset="img/content/clothes-1@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-5" name="fav-but-5">
-                            <label for="fav-but-5">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="discount-icon__block">
-                          <svg width="50" height="50" aria-hidden="true">
-                            <use xlink:href="#discount"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-2.webp"><img src="img/content/clothes-2.png" srcset="img/content/clothes-2@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-6" name="fav-but-6">
-                            <label for="fav-but-6">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="discount-icon__block">
-                          <svg width="50" height="50" aria-hidden="true">
-                            <use xlink:href="#discount"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-3.webp"><img src="img/content/clothes-3.png" srcset="img/content/clothes-3@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-7" name="fav-but-7">
-                            <label for="fav-but-7">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__price">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-4.webp"><img src="img/content/clothes-4.png" srcset="img/content/clothes-4@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-8" name="fav-but-8">
-                            <label for="fav-but-8">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__price">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="catalog__catalog-card"><a class="item-card" href="card-page.html">
-                    <div class="item-card__wrapper">
-                      <div class="item-card__img">
-                        <picture>
-                          <source type="image/webp" srcset="img/content/clothes-1.webp"><img src="img/content/clothes-1.png" srcset="img/content/clothes-1@2x.png 2x" width="275" height="365" alt="card">
-                        </picture>
-                        <div class="fav-button__block">
-                          <div class="fav-button">
-                            <input class="visually-hidden" type="checkbox" id="fav-but-9" name="fav-but-9">
-                            <label for="fav-but-9">
-                              <svg class="fav-button__svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25109 2.95131C4.18092 0.964146 7.3098 0.964146 9.23963 2.95131L11.2361 5.00707L13.2325 2.95131C15.1624 0.964146 18.2912 0.964146 20.2211 2.95131C22.1509 4.93848 22.1509 8.16032 20.2211 10.1475L11.2361 19.3994L2.25109 10.1475C0.321252 8.16032 0.321253 4.93848 2.25109 2.95131Z" stroke="#0F303F" stroke-linecap="round"></path>
-                              </svg>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="discount-icon__block">
-                          <svg width="50" height="50" aria-hidden="true">
-                            <use xlink:href="#discount"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="item-card__text-block">
-                        <div class="item-card__top">
-                          <p class="item-card__title">Replay</p>
-                        </div>
-                        <div class="item-card__bottom">
-                          <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
-                        </div>
-                      </div>
-                    </div></a>
-                </div>
-              </div>
-              <div class="catalog__button">
-                <button class="btn" type="submit">Show more</button>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__upper-menu">
-            <div class="footer__heading">
-              <div class="title">
-                <h2 class="title title--h2 title--style-cormoran title--color-blue-whale">Stay updated</h2>
-              </div>
-            </div>
-            <div class="footer__search" data-validate>
-              <form method="post">
-                <div class="footer__search-input-wrapper">
-                  <div class="custom-input --footer" data-validate-type="email">
-                    <label>
-                      <input type="email" name="user-email" placeholder="E-mail">
-                    </label>
-                    <div class="custom-input__error">Invalid email</div>
-                  </div>
-                  <button class="footer__search-button" type="submit">
-                    <svg width="18" height="18" aria-hidden="true">
-                      <use xlink:href="#mail-submitt"></use>
-                    </svg>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <nav class="footer__nav">
-              <div class="footer__nav-wrapper">
-                <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="about-us.html">About us</a></li>
-                  <li class="footer__nav-item"><a href="faq.html">FAQ</a></li>
-                  <li class="footer__nav-item"><a href="brands.html">Brands</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-return">Returns and Exchanges</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-payment">Payment and Shipping</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="footer__bottom-menu">
-            <div class="footer__all-right">
-              <p>All rights reserved © 2020 Allegria.com</p>
-            </div>
-            <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Development</a></div>
-          </div>
-        </div>
-      </footer>
     </div>
     <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="modal-payment">
       <div class="modal__wrapper">
