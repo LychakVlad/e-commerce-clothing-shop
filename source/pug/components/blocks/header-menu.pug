@@ -9,7 +9,7 @@ mixin header-menu(data, brands, type)
               ul.header-menu__list
                 each link in item.category
                   li.header-menu__item
-                    a(href="#")= link
+                    a(href="catalog.html")= link
         .header-menu__bottom-block
           each brand in brands
             a(href="#").header-menu__brand= brand
@@ -31,7 +31,7 @@ mixin header-menu(data, brands, type)
               ul.header-menu-mob__list(data-accordion="content")
                 each link in item.category
                   li.header-menu-mob__item
-                    a(href="#")= link
+                    a(href="catalog.html")= link
         .header-menu-mob__search-block
           li.header-nav__item
             form

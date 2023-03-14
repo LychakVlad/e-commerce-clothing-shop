@@ -123,6 +123,50 @@
   cursor: pointer;
 }
 
+@media (max-width: 1000px) {
+  .item-card__wrapper{
+    &--mini{
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .item-card__wrapper{
+    &--mini{
+      display: block;
+    }
+  }
+
+  .item-card__img{
+
+    &--mini{
+      height: 270px;
+      width: 250px;
+      margin-right: 0px;
+    }
+  }
+
+  .item-card__close-icon{
+    right: 11%;
+    top: 7%;
+    z-index: 20;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+}
 
 @media (max-width: 400px) {
   .item-card__price{

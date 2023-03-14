@@ -7,6 +7,6 @@ mixin clothes-slider(data, title)
           .clothes-slider__wrapper.swiper-wrapper
             each item in data
               .clothes-slider__slide.swiper-slide
-                +item-card(item)
+                +item-card(item, 'main')
         .clothes-slider__button-prev.swiper-button-prev
         .clothes-slider__button-next.swiper-button-next

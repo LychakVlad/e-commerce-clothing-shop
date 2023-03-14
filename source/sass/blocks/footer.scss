@@ -10,8 +10,8 @@
   position: relative;
 
   &::after{
-    content: ' ';
-    height: 1px;
+    content: '';
+    height: 4px;
     width: 1541px;
     background-color: #eae9e8;
     left: -8%;
