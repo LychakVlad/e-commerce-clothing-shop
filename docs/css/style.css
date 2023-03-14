@@ -2179,11 +2179,11 @@ button,
 
 .footer__upper-menu::after {
   content: "";
-  height: 4px;
+  height: 1px;
   width: 1541px;
   background-color: #eae9e8;
   left: -8%;
-  top: -33%;
+  top: -30%;
   position: absolute;
 }
 
@@ -3773,6 +3773,87 @@ button,
   position: absolute;
 }
 
+.cart__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #254A5A;
+}
+
+.cart__left-column {
+  border-left: #CEC6C4 1px solid;
+  border-right: #CEC6C4 1px solid;
+  padding: 30px;
+  max-width: 420px;
+}
+
+.cart__right-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height, 1vh));
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cart__sub-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 170%;
+  text-transform: uppercase;
+  color: #254A5A;
+}
+
+.cart__change-adress {
+  display: block;
+  color: #E64926;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.cart__submitt-button {
+  margin-top: 20px;
+}
+
+.cart__cards-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.cart__cards-block .item-card {
+  min-height: 0;
+}
+
+.cart__total-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0F303F;
+  width: 100%;
+  padding: 30px 0px 30px 30px;
+  border-top: #CEC6C4 1px solid;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -3841,7 +3922,6 @@ button,
   .fav-page__cards {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-    place-items: center;
   }
 }
 

@@ -1,0 +1,68 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Cart" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "cart.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+  -
+    const firstClothesSliderCards = {
+      first:{
+        img: 'clothes-1',
+        name: 'fav-but-1',
+        id: 'fav-but-1',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+      second:{
+        img: 'clothes-2',
+        name: 'fav-but-2',
+        id: 'fav-but-2',
+        title: 'Replay',
+        type: 'Classic shoes',
+        oldPrice: '6100 UAH',
+        price: '3800 UAH',
+        discount: true,
+      },
+    }
+
+  main
+    div(data-validate).cart
+      form(method="post")
+        .container.container--medium
+          .cart__wrapper
+            .cart__left-column
+              +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
+              +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Surename"})(data-limitations="name")
+              +custom-input({inputType: "email", inputError: "Invalid email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
+              +custom-input({inputType: "tel", inputPlaceholder: "Phone number", inputName: "user-tel"})
+              p.cart__sub-title Delivery
+              p.cart__adress Odessa, Branch #1: Kievskoe Shosse (early Leningradskoe Shosse), 27 Branch "Novaia Pochta
+              a(href="#").cart__change-adress Change adress
+              p.cart__sub-title Payment method
+              +custom-toggle({inputType: 'radio', inputLabel: "Card online", inputName: "payment-type", inputId: 'card'}).custom-toggle--radio
+              +custom-toggle({inputType: 'radio', inputLabel: "Upon receipt of order", inputName: "payment-type", inputId: 'card'}).custom-toggle--radio
+              .cart__submitt-button
+                +btn({text: "Order", type: "submit"})
+            .cart__right-column
+              .cart__cards-block
+                +item-card(firstClothesSliderCards.first, 'mini')
+                +item-card(firstClothesSliderCards.second , 'mini')
+              .cart__total-price
+                p TOTAL: 7600 UAH
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()
