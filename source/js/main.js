@@ -1,12 +1,16 @@
 import { iosVhFix } from './utils/ios-vh-fix';
+import { headerScroll } from './utils/header-scroll';
+
 import { initModals } from './modules/modals/init-modals';
 import { initCustomSelect } from './modules/form/init-custom-select';
 import { initFormValidate } from './modules/form/init-form-validate';
 import { initHeaderMenu } from './modules/init-header-menu';
 import { initAccordion } from './modules/handler-accordion';
-import { headerScroll } from './utils/header-scroll';
+import { initTabs } from './modules/handler-tabs';
+
 
 import { initSwipers } from './modules/sliders/init-sliders';
+import { initSideMenu } from './modules/init-side-menu';
 
 
 // ---------------------------------
@@ -19,56 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   headerScroll();
 
-  const tabItem = document.querySelectorAll('[data-tab="link"]');
-  const tabContent = document.querySelectorAll('[data-tab="content"]');
-
-
-  tabItem.forEach((item) => {
-    item.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const id = e.target.getAttribute('href').replace('#', '');
-
-      tabItem.forEach((child) => {
-        child.classList.remove('is-active');
-      });
-
-      tabContent.forEach((child) => {
-        child.classList.remove('is-active');
-      });
-
-
-      item.classList.add('is-active');
-      document.getElementById(id).classList.add('is-active');
-    })
-  })
-
-
-  const initSideMenu = () => {
-
-    const openSideIcon = document.querySelector('.catalog__filters-icon');
-    const closeSideIcon = document.querySelector('.catalog-side__close-icon');
-    const catalogSideMenu = document.querySelector('.catalog-side');
-    const selectBody = document.querySelector('body');
-
-    if (!openSideIcon) {
-      return;
-    }
-    openSideIcon.addEventListener('click', () => {
-      catalogSideMenu.classList.add('is-active');
-      selectBody.classList.add('scroll-lock');
-    })
-
-    closeSideIcon.addEventListener('click', () => {
-      catalogSideMenu.classList.remove('is-active');
-      selectBody.classList.remove('scroll-lock');
-    })
-  }
 
   // Modules
   // ---------------------------------
   initHeaderMenu();
   initAccordion();
+  initTabs();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
