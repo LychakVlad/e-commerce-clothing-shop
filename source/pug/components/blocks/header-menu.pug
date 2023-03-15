@@ -17,12 +17,12 @@ mixin header-menu(data, brands, type)
     .header-menu-mob
       .header-menu-mob__wrapper
         .header-menu-mob-nav
-          ul.header-nav__list
-            li.header-nav__item.nav-menu-open
-              .header-nav__link
+          ul.header-menu-mob__nav-list
+            li.header-menu-mob__nav-item.nav-menu-open
+              .header-menu-mob__nav-link
                 a(href="#")  Women
-            li.header-nav__item.nav-menu-open
-              .header-nav__link
+            li.header-menu-mob__nav-item.nav-menu-open
+              .header-menu-mob__nav-link
                 a(href="#")  Men
         .header-menu-mob__top-block
           each item in data
@@ -33,9 +33,9 @@ mixin header-menu(data, brands, type)
                   li.header-menu-mob__item
                     a(href="catalog.html")= link
         .header-menu-mob__search-block
-          li.header-nav__item
+          .header-menu-mob__nav-item
             form
-              .header-nav__item-form
+              .header-menu-mob__item-form
                 a(href="#")  Search
                 +custom-input({inputName: "search-input", inputMinLength: "2"})(data-validate-type="text", data-limitations="search").--search
           .header-lang
@@ -45,9 +45,9 @@ mixin header-menu(data, brands, type)
                   a(href="#") EN
                 li.header-lang__item
                   a(href="#") UA
-        .header-menu__bottom-block
+        .header-menu-mob__bottom-block
           each brand in brands
-            a(href="#").header-menu__brand= brand
+            a(href="#").header-menu-mob__brand= brand
 
 
 

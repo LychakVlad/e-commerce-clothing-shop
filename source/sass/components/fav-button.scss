@@ -1,6 +1,12 @@
 .fav-button{
   background-color: $color-default-white;
   border-radius: 50%;
+
+  z-index: 2;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+
   label{
     cursor: pointer;
     width: 50px;
@@ -20,9 +26,3 @@ input:checked + label {
   }
 }
 
-.fav-button__block{
-  z-index: 2;
-  position: absolute;
-  bottom: 3%;
-  right: 3%;
-}

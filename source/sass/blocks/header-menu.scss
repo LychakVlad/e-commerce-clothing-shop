@@ -34,7 +34,8 @@
   }
 }
 
-.header-menu__brand {
+.header-menu__brand,
+.header-menu-mob__brand {
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
@@ -45,7 +46,8 @@
   color: $color-arapawa;
 }
 
-.header-menu__bottom-block {
+.header-menu__bottom-block,
+.header-menu-mob__bottom-block {
   padding: 20px;
   max-width: 521px;
   width: 100%;
@@ -250,6 +252,56 @@
   }
 }
 
+.header-menu-mob__nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: -24px;
+}
+
+.header-menu-mob__nav-item{
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  cursor: pointer;
+  position:relative;
+  margin-left: 40px;
+
+  &:first-child{
+    margin-left: 0px;
+  }
+
+}
+
+.header-menu-mob__nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: -24px;
+}
+
+.header-menu-mob__item-input{
+  border: none;
+  border-bottom: 2px solid #0F303F;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  width: 150px;
+}
+
+
+.header-menu-mob__item-form{
+  display: flex;
+  align-items: center;
+
+  a{
+    margin-right: 20px;
+  }
+}
+
+
 
 @media (max-width: 960px) {
 
@@ -265,7 +317,8 @@
 }
 
 @media (max-width: 500px) {
-  .header-menu__brand {
+  .header-menu__brand,
+  .header-menu-mob__brand {
     font-size: 7px;
   }
 
