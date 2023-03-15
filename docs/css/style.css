@@ -1080,6 +1080,10 @@ button,
   } */
 }
 
+.custom-select--long {
+  width: 250px;
+}
+
 .custom-select__label {
   position: absolute;
   top: 50%;
@@ -3979,6 +3983,109 @@ button,
   margin-right: 16px;
 }
 
+.reciept__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.profile__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #254A5A;
+}
+
+.profile__left-column {
+  border-left: #CEC6C4 1px solid;
+  border-right: #CEC6C4 1px solid;
+  padding: 30px;
+  max-width: 420px;
+}
+
+.profile__right-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height, 1vh));
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.profile__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.profile__menu-item.is-active {
+  position: relative;
+}
+
+.profile__menu-item.is-active p {
+  color: #E64926;
+}
+
+.profile__menu-item.is-active::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: #E64926;
+  left: -15%;
+  bottom: -30%;
+  border-radius: 10px;
+}
+
+.profile__menu-item p {
+  pointer-events: none;
+}
+
+.profile__menu-item svg {
+  margin-right: 18px;
+}
+
+.profile__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  color: #0F303F;
+}
+
+.profile__tab-wrapper {
+  padding: 60px 0px 0px 50px;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+}
+
+.profile__tab {
+  display: none;
+}
+
+.profile__tab.is-active {
+  display: block;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -4355,6 +4462,17 @@ button,
   .cart__total-price {
     text-align: center;
     padding: 30px 0px;
+  }
+
+  .profile__wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .profile__left-column {
+    border: none;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

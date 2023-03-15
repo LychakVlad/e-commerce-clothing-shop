@@ -1,0 +1,67 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Profile" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "profile.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+
+
+  main
+    .profile
+      .container.container--medium
+        .profile__wrapper
+          .profile__left-column
+            a(href="#tab-personal-info", data-tab = 'link').profile__menu-item
+              +icon('personal-acc', 20, 26)
+              p.profile__text Personal info
+            a(href="#tab-adress", data-tab = 'link').profile__menu-item
+              +icon('location', 20, 26)
+              p.profile__text Adress
+            a(href="#tab-change-password", data-tab = 'link').profile__menu-item
+              +icon('change-pass', 20, 26)
+              p.profile__text Change password
+            a(href="#tab-purch-history", data-tab = 'link').profile__menu-item
+              +icon('pur-hist-icon', 20, 26)
+              p.profile__text Purchase history
+            a(href="index.html").profile__menu-item
+              +icon('exit-icon', 20, 26)
+              p.profile__text Exit
+          .profile__right-column
+            .profile__tab-wrapper
+              .profile__tab(id = 'tab-personal-info', data-tab = 'content')
+                div(data-validate).profile__tab-personal-info
+                  form(method="post")
+                    +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
+                    +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Surename"})(data-limitations="name")
+                    +custom-input({inputType: "email", inputError: "Invalid email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
+                    +custom-input({inputType: "tel", inputPlaceholder: "Phone number", inputName: "user-tel"})
+                    +btn({text: "Save", type: "submit"})
+              .profile__tab(id = 'tab-adress', data-tab = 'content')
+                div(data-validate).profile__tab-adress
+                  form(method="post")
+                    +custom-input({inputError: "Invalid adress", inputName: "user-adress", inputMinLength: "2" , inputPlaceholder: "Adress"})(data-validate-type="text", data-limitations="name")
+                    +custom-select({placeholder: "Type of delivery", error: "Select type of delivery", selectPlaceholder: 'true', optionsList: [{text: "Post Office", value: "type-1"}, {text: "Courier delivery", value: "type-2"}, {text: "Self-delivery", value: "type-3"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example").custom-select.custom-select--long
+                    +btn({text: "Save", type: "submit"})
+              .profile__tab(id = 'tab-change-password', data-tab = 'content')
+                div(data-validate).profile__tab-change-password
+                  form(method="post")
+                    +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Old Password", inputName: "user-password"})(data-validate-type="password")
+                    +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})(data-validate-type="password")
+                    +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Repeat password", inputName: "user-password"})(data-validate-type="password")
+                    +btn({text: "Save", type: "submit"})
+              .profile__tab(id = 'tab-purch-history', data-tab = 'content')
+                .profile__tab-purch-history
+                  p.profile__history-text The history of your purchases will be posted here
+
+block modals
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
+    +modal-payment()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-return")
+    +modal-return()

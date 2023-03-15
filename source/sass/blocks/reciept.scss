@@ -2,7 +2,7 @@
   color: #0F303F;
   overflow: hidden;
 }
-.reciept__wrapper{}
+
 .reciept__title{
   margin: 20px auto 50px;
   max-width: 260px;
@@ -61,7 +61,6 @@
   color: $color-cinnabar;
 }
 
-.reciept__items{}
 .reciept__text{
   font-family: 'Inter';
 font-style: normal;
@@ -119,4 +118,6 @@ line-height: 25px;
 }
 
 .reciept__button{
+  display: flex;
+  justify-content: center;
 }

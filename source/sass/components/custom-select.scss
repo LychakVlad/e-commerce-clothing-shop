@@ -6,6 +6,10 @@
 
   z-index: 3;
 
+  &--long{
+    width: 250px;
+  }
+
   &__label {
     position: absolute;
     top: 50%;

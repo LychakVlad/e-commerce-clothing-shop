@@ -19,14 +19,15 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   headerScroll();
 
-  const tabItem = document.querySelectorAll('.tab-item');
-  const tabContent = document.querySelectorAll('.card-page__tab')
+  const tabItem = document.querySelectorAll('[data-tab="link"]');
+  const tabContent = document.querySelectorAll('[data-tab="content"]');
+
 
   tabItem.forEach((item) => {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
-      const id = e.target.getAttribute('href').replace('#', '')
+      const id = e.target.getAttribute('href').replace('#', '');
 
       tabItem.forEach((child) => {
         child.classList.remove('is-active');
@@ -34,8 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       tabContent.forEach((child) => {
         child.classList.remove('is-active');
-
       });
+
 
       item.classList.add('is-active');
       document.getElementById(id).classList.add('is-active');

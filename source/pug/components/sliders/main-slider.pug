@@ -9,7 +9,7 @@ mixin main-slider(data)
                 p.main-slider__brand Brand
                 +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: item.title, titleColor: 'blue-whale'})
                 .main-slider__collection
-                  a(href="#") View the collection
+                  a(href="catalog.html") View the collection
               if(item.img)
                 +picture("content", item.img, "png", 941, 584, "banner").main-slider__slide-img
           else
