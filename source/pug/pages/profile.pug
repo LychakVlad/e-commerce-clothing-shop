@@ -18,7 +18,7 @@ block main
       .container.container--medium
         .profile__wrapper
           .profile__left-column
-            a(href="#tab-personal-info", data-tab = 'link').profile__menu-item
+            a(href="#tab-personal-info", data-tab = 'link').profile__menu-item.is-active
               +icon('personal-acc', 20, 26)
               p.profile__text Personal info
             a(href="#tab-adress", data-tab = 'link').profile__menu-item
@@ -35,7 +35,7 @@ block main
               p.profile__text Exit
           .profile__right-column
             .profile__tab-wrapper
-              .profile__tab(id = 'tab-personal-info', data-tab = 'content')
+              .profile__tab(id = 'tab-personal-info', data-tab = 'content').is-active
                 div(data-validate).profile__tab-personal-info
                   form(method="post")
                     +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
