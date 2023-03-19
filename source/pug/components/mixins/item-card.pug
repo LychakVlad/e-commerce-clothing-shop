@@ -1,11 +1,11 @@
 mixin item-card(data, type)
   if(type === 'mini')
-    .item-card
+    a(href="card-page.html").item-card
       .item-card__wrapper.item-card__wrapper--mini
         .item-card__close-icon
           +icon("icon-close", 25, 25)
         if(data.img)
-          a(href="card-page.html").item-card__img.item-card__img--mini
+          .item-card__img.item-card__img--mini
             +picture("content", data.img, "png", 158, 170, "card")
         .item-card__text-block.item-card__text-block--mini
           .item-card__top

@@ -17,12 +17,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    svg{
+
+    }
+  }
+
+  input + label {
+    svg{
+      fill: white;
+      transition: fill $trans-default;
+    }
   }
 
 input:checked + label {
   svg{
     fill: red;
+    transition: fill $trans-default;
   }
   }
 }
-
