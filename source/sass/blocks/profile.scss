@@ -30,24 +30,28 @@
   align-items: center;
   margin-bottom: 36px;
 
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 113%; top: -8px;
+    height: 0;
+    width: 4px;
+    background-color: $color-cinnabar;
+    transition: height $trans-default, opacity $trans-default;
+    border-radius: 5px;
+  }
+
   &.is-active{
 
     p{
     color: $color-cinnabar;
     }
-    position: relative;
-
     &::before{
-      content: '';
-      position: absolute;
-      width: 3px;
-      height: 40px;
-      background-color: $color-cinnabar;
-      left: -15%;
-      bottom: -30%;
-      border-radius: 10px;
-
+      height: 46px;
     }
+
   }
 
   p{
@@ -77,10 +81,13 @@
 }
 
 .profile__tab{
-  display:none;
+  opacity: 0;
+  max-height: 0;
 
   &.is-active{
-    display: block;
+    transition: opacity $trans-600;
+    opacity: 1;
+    max-height: 100%;
   }
 }
 
