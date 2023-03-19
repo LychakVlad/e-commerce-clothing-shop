@@ -25,6 +25,10 @@
   text-align: center;
 
   color: $color-blue-whale;
+
+  &--mt-130{
+    margin-top: 130px;
+  }
 }
 
 .about-us__big-img{
@@ -55,6 +59,8 @@
   .about-us__wrapper{
     flex-direction: column;
     justify-content: center;
+    margin-top: 60px;
+
 
   :last-child{
     margin-top: 50px;

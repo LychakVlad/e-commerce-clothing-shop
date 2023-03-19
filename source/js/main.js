@@ -23,12 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   headerScroll();
 
-
   // Modules
   // ---------------------------------
   initHeaderMenu();
   initAccordion();
   initTabs();
+  
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

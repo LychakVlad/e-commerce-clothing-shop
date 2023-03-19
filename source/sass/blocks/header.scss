@@ -87,17 +87,34 @@
 
   a{
     color: $color-alto;
+    position: relative;
+    transition: color $trans-default;
+
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -25px;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color-cinnabar;
+        transition: .3s;
+
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
   &.is-active{
-    a{
-    color: $color-blue-whale;
-    text-decoration: underline;
-    text-decoration-color: $color-cinnabar;
-    text-underline-offset: 27px;
-    text-decoration-thickness: 2px;
+      a{
+        color: $color-blue-whale;
+        &:after {
+          width: 100%;
+        }
+
+      }
     }
-  }
   }
 }
 
@@ -161,6 +178,30 @@
     cursor: pointer;
     transition: transform $trans-default;
 
+    position: relative;
+    transition: color $trans-default;
+
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color-arapawa;
+        transition: .3s;
+
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+      @include hover-focus {
+        &::after {
+          width: 100%;
+        }
+      }
+
 
   &.is-active{
     transform: rotate(45deg);
@@ -170,6 +211,7 @@
     padding-top: 2px;
 
     .header-icons__burger-icon{
+      transition: transform $trans-default;
     &::after{
       top: 0;
       width: 20px;

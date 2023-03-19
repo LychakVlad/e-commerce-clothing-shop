@@ -77,11 +77,29 @@
   a{
     color: #eae9e8;
     transition: opacity $trans-default;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -5px;
+      width: 0;
+      height: 1.5px;
+      background-color: #eae9e8;
+      transition: width $trans-default, opacity $trans-default;
+      border-radius: 5px;
+    }
 
     @include hover-focus{
       opacity: 0.8;
+
+      &::before{
+        width: 100%;
+        opacity: 0.8;
+      }
     }
   }
+
 }
 
 

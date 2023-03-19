@@ -120,20 +120,27 @@
     transition: color $trans-default;
   }
 
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-cinnabar;
+    position: absolute;
+    top: 32%;
+    left: -10%;
+    opacity: 0;
+
+    transition: opacity $trans-default;
+  }
+
   @include hover-focus {
     a {
       color: $color-cinnabar;
     }
 
     &::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: $color-cinnabar;
-      position: absolute;
-      top: 32%;
-      left: -10%;
+      opacity: 1;
     }
   }
 }
