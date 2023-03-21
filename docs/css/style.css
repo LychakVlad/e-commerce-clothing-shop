@@ -642,6 +642,21 @@ button,
   margin-left: 0px;
 }
 
+.cart-icon {
+  position: relative;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  background-color: #E64926;
+  bottom: 2%;
+  right: -20%;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1380px;

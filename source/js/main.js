@@ -28,7 +28,16 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeaderMenu();
   initAccordion();
   initTabs();
-  
+
+  const addToCartBtn = document.querySelectorAll('.btn--transparent'); // Поменять на .card-btn
+  const cartIcon = document.querySelector('.cart-icon');
+  addToCartBtn.forEach((item) => {
+    item.addEventListener('click', function () {
+      cartIcon.style.opacity = '1';
+      item.textContent = 'Item added to cart';
+    })
+  })
+
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
