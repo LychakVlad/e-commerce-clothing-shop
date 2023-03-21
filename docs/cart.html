@@ -430,23 +430,24 @@
                   <p class="cart__sub-title">Delivery</p>
                   <p class="cart__adress">Odessa, Branch #1: Kievskoe Shosse (early Leningradskoe Shosse), 27 Branch "Novaia Pochta</p><a class="cart__change-adress" href="profile.html">Change adress</a>
                   <p class="cart__sub-title">Payment method</p>
-                  <div class="custom-toggle custom-toggle--radio">
+                  <div class="custom-toggle custom-toggle--radio custom-toggle__cart">
                     <label>
                       <input type="radio" id="pay-card" name="payment-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Card online</span>
                     </label>
                   </div>
-                  <div class="custom-toggle custom-toggle--radio">
+                  <div class="custom-toggle custom-toggle--radio custom-toggle__cart">
                     <label>
                       <input type="radio" id="pay-order" name="payment-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Upon receipt of order</span>
                     </label>
                   </div>
                   <div class="cart__submitt-button">
-                    <a class="btn" href="reciept.html">Order</a>
+                    <a class="btn btn__order is-disabled" href="reciept.html">Order</a>
                   </div>
                 </div>
                 <div class="cart__right-column">
                   <div class="cart__cards-block">
-                    <div class="cart__card"><a class="item-card" href="card-page.html">
+                    <div class="cart__card">
+                      <div class="item-card">
                         <div class="item-card__wrapper item-card__wrapper--mini">
                           <div class="item-card__close-icon">
                             <svg width="25" height="25" aria-hidden="true">
@@ -466,9 +467,11 @@
                               <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
                             </div>
                           </div>
-                        </div></a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="cart__card"><a class="item-card" href="card-page.html">
+                    <div class="cart__card">
+                      <div class="item-card">
                         <div class="item-card__wrapper item-card__wrapper--mini">
                           <div class="item-card__close-icon">
                             <svg width="25" height="25" aria-hidden="true">
@@ -488,7 +491,8 @@
                               <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
                             </div>
                           </div>
-                        </div></a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="cart__total-price">

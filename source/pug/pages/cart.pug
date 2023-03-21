@@ -50,10 +50,10 @@ block main
               p.cart__adress Odessa, Branch #1: Kievskoe Shosse (early Leningradskoe Shosse), 27 Branch "Novaia Pochta
               a(href="profile.html").cart__change-adress Change adress
               p.cart__sub-title Payment method
-              +custom-toggle({inputType: 'radio', inputLabel: "Card online", inputName: "payment-type", inputId: 'pay-card'}).custom-toggle--radio
-              +custom-toggle({inputType: 'radio', inputLabel: "Upon receipt of order", inputName: "payment-type", inputId: 'pay-order'}).custom-toggle--radio
+              +custom-toggle({inputType: 'radio', inputLabel: "Card online", inputName: "payment-type", inputId: 'pay-card'}).custom-toggle--radio.custom-toggle__cart
+              +custom-toggle({inputType: 'radio', inputLabel: "Upon receipt of order", inputName: "payment-type", inputId: 'pay-order'}).custom-toggle--radio.custom-toggle__cart
               .cart__submitt-button
-                +btn({text: "Order", href: "reciept.html"})
+                +btn({text: "Order", href: "reciept.html", disabled }).btn__order.is-disabled
             .cart__right-column
               .cart__cards-block
                 .cart__card

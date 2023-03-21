@@ -20,6 +20,13 @@
 
   transition: opacity $trans-default, background-color $trans-default;
 
+  &__order{
+    &.is-disabled{
+    background-color: rgba(25, 54, 66, 0.2);
+    pointer-events: none;
+    }
+  }
+
   &--orange {
     background-color: $color-cinnabar;
   }
@@ -39,10 +46,17 @@
     background-color: rgba(25, 54, 66, 0.2);
 
     pointer-events: none;
+
+    &.btn--transparent {
+        background-color: $color-alto;
+
   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+}
+
+@include hover-focus {
+  opacity: 0.8;
+}
+
 
 }

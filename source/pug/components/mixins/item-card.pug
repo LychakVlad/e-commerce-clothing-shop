@@ -1,6 +1,6 @@
 mixin item-card(data, type)
   if(type === 'mini')
-    a(href="card-page.html").item-card
+    .item-card
       .item-card__wrapper.item-card__wrapper--mini
         .item-card__close-icon
           +icon("icon-close", 25, 25)
@@ -25,7 +25,7 @@ mixin item-card(data, type)
               .item-card__btn
                 +btn({text: "Add to cart"}).btn--transparent
   else
-    .item-card
+    a(href="card-page.html").item-card
       .item-card__wrapper
         if(data.img)
           .item-card__img
@@ -35,7 +35,7 @@ mixin item-card(data, type)
             if(data.discount)
               .item-card__discount-icon
                 +icon("discount", 50, 50)
-        a(href="card-page.html").item-card__text-block
+        .item-card__text-block
           .item-card__top
             if(data.title)
               p.item-card__title= data.title

@@ -31,12 +31,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const addToCartBtn = document.querySelectorAll('.btn--transparent'); // Поменять на .card-btn
   const cartIcon = document.querySelector('.cart-icon');
+
   addToCartBtn.forEach((item) => {
     item.addEventListener('click', function () {
       cartIcon.style.opacity = '1';
       item.textContent = 'Item added to cart';
+      item.disabled = true;
     })
   })
+
+  const paymentMethodCart = document.querySelectorAll('.custom-toggle__cart');
+  const orderButton = document.querySelector('.btn__order');
+
+  paymentMethodCart.forEach((item) => {
+    item.addEventListener('change', function () {
+      orderButton.classList.remove('is-disabled')
+    })
+  })
+
 
 
 
