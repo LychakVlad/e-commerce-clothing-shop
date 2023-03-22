@@ -81,29 +81,29 @@ block main
     .brands-content
       .container.container--medium
         .brands-content__wrapper
-          .brands-content__img.brands-content__img--left
+          .brands-content__img.brands-content__img--left.animate__animated.wow.animate__fadeInLeft( data-wow-duration='1.5s')
             +picture("content", firstTextBlock.img, "png", 261, 350, "photo")
-          +text-block(firstTextBlock)
+          +text-block(firstTextBlock)(class='animate__animated wow animate__fadeInRight' data-wow-duration='1.5s')
     +title-block(secondBgBlock)
     .brands-content
       .container.container--medium
         .brands-content__wrapper
-          +text-block(secondTextBlock)
-          .brands-content__img.brands-content__img--right
+          +text-block(secondTextBlock)(class='animate__animated wow animate__fadeInLeft' data-wow-duration='1.5s')
+          .brands-content__img.brands-content__img--right.animate__animated.wow.animate__fadeInRight( data-wow-duration='1.5s')
             +picture("content", secondTextBlock.img, "png", 261, 350, "photo")
     +title-block(thirdBgBlock)
     .brands-content
       .container.container--medium
         .brands-content__wrapper
-          .brands-content__img.brands-content__img--left
+          .brands-content__img.brands-content__img--left.animate__animated.wow.animate__fadeInLeft( data-wow-duration='1.5s')
             +picture("content", thirdTextBlock.img, "png", 261, 350, "photo")
-          +text-block(thirdTextBlock)
+          +text-block(thirdTextBlock)(class='animate__animated wow animate__fadeInRight' data-wow-duration='1.5s')
     +title-block(fourthBgBlock)
     .brands-content
       .container.container--medium
         .brands-content__wrapper
-          +text-block(fourthTextBlock)
-          .brands-content__img.brands-content__img--right
+          +text-block(fourthTextBlock)(class='animate__animated wow animate__fadeInLeft' data-wow-duration='1.5s')
+          .brands-content__img.brands-content__img--right.animate__animated.wow.animate__fadeInRight( data-wow-duration='1.5s')
             +picture("content", fourthTextBlock.img, "png", 261, 350, "photo")
 
 

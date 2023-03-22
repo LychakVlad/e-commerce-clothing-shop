@@ -2169,13 +2169,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: var(--header-height);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   cursor: pointer;
   position: relative;
   margin-left: 40px;
+  min-height: var(--header-height);
 }
 
 .header .header-nav__item:first-child {
@@ -2189,7 +2189,10 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: -24px;
+  min-height: var(--header-height);
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .header .header-nav__item-input {
@@ -2299,15 +2302,15 @@ button,
 .header-icons__icon {
   margin-left: 12px;
   cursor: pointer;
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  position: relative;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
 
 .header-icons__icon::after {

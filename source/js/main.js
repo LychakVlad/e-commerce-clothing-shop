@@ -29,15 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initTabs();
 
-  const WOW = require('wowjs');
-
-  window.wow = new WOW.WOW({
-    live: false,
-  });
-
-  window.wow.init();
-
-
   const addToCartBtn = document.querySelectorAll('.btn--transparent'); // Поменять на .card-btn
   const cartIcon = document.querySelector('.cart-icon');
   const cartModal = document.querySelector('.cart-confirm-modal');

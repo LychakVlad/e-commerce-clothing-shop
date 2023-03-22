@@ -42,11 +42,12 @@
 
   &__item{
     display: flex;
-    height: var(--header-height);
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     position:relative;
     margin-left: 40px;
+    min-height: var(--header-height);
+
 
     &:first-child{
       margin-left: 0px;
@@ -59,7 +60,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: -24px;
+    min-height: var(--header-height);
+    align-items: flex-start;
 }
 
   &__item-input{
@@ -151,6 +153,8 @@
 
 .header-icons{
 
+
+
 &__burger-icon{
   position: relative;
   width: 20px;
@@ -160,6 +164,7 @@
   background: $color-blue-whale;
   justify-content: center;
   display: none;
+
 
   &::after{
     content: ' ';
@@ -176,10 +181,10 @@
   &__icon{
     margin-left: 12px;
     cursor: pointer;
-    transition: transform $trans-default;
 
     position: relative;
     transition: color $trans-default;
+    transition: transform $trans-default;
 
 
       &::after {
@@ -204,6 +209,7 @@
 
 
   &.is-active{
+
     transform: rotate(45deg);
     width: 20px;
     top: 0px;

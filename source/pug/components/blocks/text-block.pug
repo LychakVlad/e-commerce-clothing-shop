@@ -1,6 +1,6 @@
 mixin text-block(data, page)
   if (page === 'main')
-    .text-block.text-block--main
+    .text-block.text-block--main&attributes(attributes)
       if(data.title)
         +title({titleStyle: 'Cormoran', titleType: 'h1', titleText: data.title, titleColor: 'white'})
       if(data.text)
@@ -10,7 +10,7 @@ mixin text-block(data, page)
         .text-block__collection
           a(href="catalog.html") View the collection
   else
-    .text-block
+    .text-block&attributes(attributes)
       .text-block__wrapper
         if(data.title)
           +title({titleStyle: 'Inter', titleType: 'h2', titleText: data.title, titleColor: 'blue-whale'})
