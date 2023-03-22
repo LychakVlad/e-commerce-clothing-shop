@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   </head>
   <body>
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
@@ -134,7 +135,7 @@
 </g></symbol></svg>
     </div>
     <div class="wrapper">
-      <header class="header">
+      <header class="header animate__animated wow animate__fadeIn" data-wow-duration="1.5s">
         <div class="container container--header"><span class="header__logo">
             <svg width="129" height="16" aria-hidden="true">
               <use xlink:href="#logo"></use>
@@ -402,7 +403,7 @@
         </div>
       </header>
       <main>
-        <div class="main-slider swiper">
+        <div class="main-slider swiper animate__animated wow animate__fadeIn" data-wow-duration="1.5s">
           <div class="main-slider__wrapper swiper-wrapper">
             <div class="swiper-slide">
               <div class="title-block title-block--main">
@@ -467,7 +468,7 @@
         </div>
         <div class="content-block">
           <div class="content-block__wrapper">
-            <div class="content-block__column content-block__column--left">
+            <div class="content-block__column content-block__column--left animate__animated wow animate__fadeInLeft" data-wow-duration="1.5s">
               <picture class="content-block__img content-block__img--left">
                 <source type="image/webp" srcset="img/content/main-block-img.webp"><img src="img/content/main-block-img.png" srcset="img/content/main-block-img@2x.png 2x" width="640" height="699" alt="img">
               </picture>
@@ -479,7 +480,7 @@
                 <div class="text-block__collection"><a href="catalog.html">View the collection</a></div>
               </div>
             </div>
-            <div class="content-block__column content-block__column--right">
+            <div class="content-block__column content-block__column--right animate__animated wow animate__fadeInRight" data-wow-duration="1.5s">
               <div class="content-block__img-wrapper">
                 <p class="content-block__img-text">We make and sell not only clothes, but also shoes and accessories created by our designers.</p>
                 <picture class="content-block__img content-block__img--right">
@@ -489,7 +490,7 @@
             </div>
           </div>
         </div>
-        <div class="clothes-slider">
+        <div class="clothes-slider animate__animated wow animate__fadeIn" data-wow-duration="1.5s">
           <div class="container container--medium">
             <div class="clothes-slider-wrapper">
               <div class="title">
@@ -763,7 +764,7 @@
         <svg class="middle-line" width="1443" height="14" aria-hidden="true">
           <use xlink:href="#middle-line"></use>
         </svg>
-        <div class="content-block content-block--second">
+        <div class="content-block content-block--second animate__animated wow animate__fadeIn" data-wow-duration="1.5s">
           <div class="content-block__wrapper content-block__wrapper--second">
             <div class="content-block__column content-block__column--second">
               <div class="text-block text-block--main">
@@ -784,49 +785,47 @@
           </div>
         </div>
       </main>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__upper-menu">
-            <div class="footer__heading">
-              <div class="title">
-                <h2 class="title title--h2 title--style-cormoran title--color-blue-whale">Stay updated</h2>
-              </div>
+      <footer class="footer animate__animated wow animate__fadeIn" data-wow-duration="1.5s">
+        <div class="footer__upper-menu">
+          <div class="footer__heading">
+            <div class="title">
+              <h2 class="title title--h2 title--style-cormoran title--color-blue-whale">Stay updated</h2>
             </div>
-            <div class="footer__search" data-validate>
-              <form method="post">
-                <div class="footer__search-input-wrapper">
-                  <div class="custom-input --footer" data-validate-type="email">
-                    <label>
-                      <input type="email" name="user-email" placeholder="E-mail">
-                    </label>
-                    <div class="custom-input__error">Invalid email</div>
-                  </div>
-                  <button class="footer__search-button" type="submit">
-                    <svg width="18" height="18" aria-hidden="true">
-                      <use xlink:href="#mail-submitt"></use>
-                    </svg>
-                  </button>
+          </div>
+          <div class="footer__search" data-validate>
+            <form method="post">
+              <div class="footer__search-input-wrapper">
+                <div class="custom-input --footer" data-validate-type="email">
+                  <label>
+                    <input type="email" name="user-email" placeholder="E-mail">
+                  </label>
+                  <div class="custom-input__error">Invalid email</div>
                 </div>
-              </form>
-            </div>
-            <nav class="footer__nav">
-              <div class="footer__nav-wrapper">
-                <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="about-us.html">About us</a></li>
-                  <li class="footer__nav-item"><a href="faq.html">FAQ</a></li>
-                  <li class="footer__nav-item"><a href="brands.html">Brands</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-return">Returns and Exchanges</a></li>
-                  <li class="footer__nav-item"><a href="#" data-open-modal="modal-payment">Payment and Shipping</a></li>
-                </ul>
+                <button class="footer__search-button" type="submit">
+                  <svg width="18" height="18" aria-hidden="true">
+                    <use xlink:href="#mail-submitt"></use>
+                  </svg>
+                </button>
               </div>
-            </nav>
+            </form>
           </div>
-          <div class="footer__bottom-menu">
-            <div class="footer__all-right">
-              <p>All rights reserved © 2020 Allegria.com</p>
+          <nav class="footer__nav">
+            <div class="footer__nav-wrapper">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="about-us.html">About us</a></li>
+                <li class="footer__nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="footer__nav-item"><a href="brands.html">Brands</a></li>
+                <li class="footer__nav-item"><a href="#" data-open-modal="modal-return">Returns and Exchanges</a></li>
+                <li class="footer__nav-item"><a href="#" data-open-modal="modal-payment">Payment and Shipping</a></li>
+              </ul>
             </div>
-            <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Development</a></div>
+          </nav>
+        </div>
+        <div class="footer__bottom-menu">
+          <div class="footer__all-right">
+            <p>All rights reserved © 2020 Allegria.com</p>
           </div>
+          <div class="footer__dev"><a href="https://github.com/LychakVlad" target="_blank">Development</a></div>
         </div>
       </footer>
     </div>
@@ -884,6 +883,7 @@
         </div>
       </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

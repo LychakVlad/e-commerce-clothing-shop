@@ -2376,6 +2376,7 @@ button,
 .footer {
   background-color: #ffffff;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .footer__upper-menu {

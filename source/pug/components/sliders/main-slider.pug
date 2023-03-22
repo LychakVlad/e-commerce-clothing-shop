@@ -1,5 +1,5 @@
 mixin main-slider(data)
-  .main-slider.swiper
+  .main-slider.swiper.animate__animated.wow.animate__fadeIn( data-wow-duration='1.5s')
     .main-slider__wrapper.swiper-wrapper
       each item in data
         .swiper-slide

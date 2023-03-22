@@ -2,15 +2,15 @@ mixin content-block(data, num)
   if(num === 'first')
     .content-block
       .content-block__wrapper
-        .content-block__column.content-block__column--left
+        .content-block__column.content-block__column--left.animate__animated.wow.animate__fadeInLeft( data-wow-duration='1.5s')
           +picture("content", 'main-block-img', "png", 640, 699, "img").content-block__img.content-block__img--left
           +text-block(data, 'main')
-        .content-block__column.content-block__column--right
+        .content-block__column.content-block__column--right.animate__animated.wow.animate__fadeInRight( data-wow-duration='1.5s')
           .content-block__img-wrapper
             p.content-block__img-text We make and sell not only clothes, but also shoes and accessories created by our designers.
             +picture("content", 'block-img', "png", 380, 380, "img").content-block__img.content-block__img--right
   else
-    .content-block.content-block--second
+    .content-block.content-block--second.animate__animated.wow.animate__fadeIn( data-wow-duration='1.5s')
       .content-block__wrapper.content-block__wrapper--second
         .content-block__column.content-block__column--second
           +text-block(data, 'main')

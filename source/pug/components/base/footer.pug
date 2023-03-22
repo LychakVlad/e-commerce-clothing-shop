@@ -17,8 +17,7 @@ mixin footer(footerMods)
     ]
 
 
-  footer.footer(class=footerMods)
-    .container
+  footer.footer(data-wow-duration='1.5s').animate__animated.wow.animate__fadeIn
       .footer__upper-menu
         .footer__heading
           +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: 'Stay updated', titleColor: 'blue-whale'})

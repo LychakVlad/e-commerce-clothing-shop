@@ -1,5 +1,5 @@
 mixin clothes-slider(data, title)
-  .clothes-slider
+  .clothes-slider.animate__animated.wow.animate__fadeIn( data-wow-duration='1.5s')
     .container.container--medium
       .clothes-slider-wrapper
         +title({titleStyle: 'Cormoran', titleType: 'h2', titleText: title, titleColor: 'blue-whale'})
