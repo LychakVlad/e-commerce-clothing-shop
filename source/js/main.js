@@ -58,44 +58,90 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  const counterPlus = document.querySelector('.counter-plus');
-  const counterMinus = document.querySelector('.counter-minus');
-
-  const oldPrices = document.querySelector('.item-card__old-price');
-  const totalPrice = document.querySelector('.cart__total-price');
-  const itemPrices = document.querySelector('.item-card__price');
-
-  const counter = document.querySelector('.counter-digit');
-
-  let calculationPrice = itemPrices.innerHTML.replace(/[^+\d]/g, '');
-  let calculationOldPrice = oldPrices.innerHTML.replace(/[^+\d]/g, '');
-  let calculationTotalPrice = totalPrice.innerHTML.replace(/[^+\d]/g, '');
-
-
-  counterPlus.onclick = function (e) {
-    e.preventDefault();
-    let countPlus = counter.innerHTML;
-    if (+countPlus <= 9) {
-      counter.innerHTML++;
-      countPlus = counter.innerHTML;
-      totalPrice.innerHTML = 'TOTAL : ' + ((+countPlus) * (+calculationTotalPrice)) + ' UAH';
-      oldPrices.innerHTML = ((+countPlus) * (+calculationOldPrice)) + ' UAH';
-      itemPrices.innerHTML = ((+countPlus) * (+calculationPrice)) + ' UAH';
+  const favCardsHandler = () => {
+    if (!document.querySelector('.fav-page')) {
+      return;
     }
+
+    const closeButton = document.querySelectorAll('[data-card="button-close"]');
+    const cardItem = document.querySelectorAll('[data-card="card"]');
+    const cardsBlock = document.querySelector('.fav-page__cards');
+    const emptyCart = document.querySelector('.cart__empty-card');
+    const favWrapper = document.querySelector('.fav__wrapper');
+
+    closeButton.forEach((item) => {
+      item.onclick = function (e) {
+        cardItem.forEach(() => {
+          e.target.parentNode.parentNode.parentNode.remove();
+        });
+        if (cardsBlock.innerText === '') {
+          emptyCart.classList.add('is-active');
+          favWrapper.classList.add('is-hidden');
+        }
+
+      };
+    });
   };
 
-  counterMinus.onclick = function (e) {
-    e.preventDefault();
-    let countMinus = counter.innerHTML;
-    if (+countMinus >= 2) {
-      counter.innerHTML--;
-      countMinus = counter.innerHTML;
-      totalPrice.innerHTML = 'TOTAL : ' + ((+countMinus) * (+calculationTotalPrice)) + ' UAH';
-      oldPrices.innerHTML = ((+countMinus) * (+calculationOldPrice)) + ' UAH';
-      itemPrices.innerHTML = ((+countMinus) * (+calculationPrice)) + ' UAH';
+  const cartCardsHandler = () => {
+    if (!document.querySelector('.cart')) {
+      return;
     }
-  };
 
+    const closeButton = document.querySelector('[data-card="button-close"]');
+    const cardItem = document.querySelector('[data-card="card"]');
+    const cardsBlock = document.querySelector('.cart__cards-block');
+    const emptyCart = document.querySelector('.cart__empty-card');
+    const cartWrapper = document.querySelector('.cart__wrapper');
+
+    closeButton.onclick = function () {
+      cardItem.remove();
+      if (cardsBlock.innerText === '') {
+        emptyCart.classList.add('is-active');
+        cartWrapper.classList.add('is-hidden');
+      }
+
+    };
+
+
+    const counterPlus = document.querySelector('.counter-plus');
+    const counterMinus = document.querySelector('.counter-minus');
+
+    const oldPrices = document.querySelector('.item-card__old-price');
+    const totalPrice = document.querySelector('.cart__total-price');
+    const itemPrices = document.querySelector('.item-card__price');
+
+    const counter = document.querySelector('.counter-digit');
+
+    let calculationPrice = itemPrices.innerHTML.replace(/[^+\d]/g, '');
+    let calculationOldPrice = oldPrices.innerHTML.replace(/[^+\d]/g, '');
+    let calculationTotalPrice = totalPrice.innerHTML.replace(/[^+\d]/g, '');
+
+
+    counterPlus.onclick = function (e) {
+      e.preventDefault();
+      let countPlus = counter.innerHTML;
+      if (+countPlus <= 9) {
+        counter.innerHTML++;
+        countPlus = counter.innerHTML;
+        totalPrice.innerHTML = 'TOTAL : ' + ((+countPlus) * (+calculationTotalPrice)) + ' UAH';
+        oldPrices.innerHTML = ((+countPlus) * (+calculationOldPrice)) + ' UAH';
+        itemPrices.innerHTML = ((+countPlus) * (+calculationPrice)) + ' UAH';
+      }
+    };
+
+    counterMinus.onclick = function (e) {
+      e.preventDefault();
+      let countMinus = counter.innerHTML;
+      if (+countMinus >= 2) {
+        counter.innerHTML--;
+        countMinus = counter.innerHTML;
+        totalPrice.innerHTML = 'TOTAL : ' + ((+countMinus) * (+calculationTotalPrice)) + ' UAH';
+        oldPrices.innerHTML = ((+countMinus) * (+calculationOldPrice)) + ' UAH';
+        itemPrices.innerHTML = ((+countMinus) * (+calculationPrice)) + ' UAH';
+      }
+    };
+  };
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -105,6 +151,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     initSwipers();
     initSideMenu();
+    cartCardsHandler();
+    favCardsHandler();
   });
 });
 

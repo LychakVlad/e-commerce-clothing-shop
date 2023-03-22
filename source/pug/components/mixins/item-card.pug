@@ -1,8 +1,8 @@
 mixin item-card(data, type)
   if(type === 'mini')
-    .item-card
+    .item-card(data-card="card")
       .item-card__wrapper.item-card__wrapper--mini
-        .item-card__close-icon
+        .item-card__close-icon(data-card="button-close")
           +icon("icon-close", 25, 25)
         if(data.img)
           .item-card__img.item-card__img--mini
@@ -24,7 +24,8 @@ mixin item-card(data, type)
             if(data.btn)
               .item-card__btn
                 +btn({text: "Add to cart"}).btn--transparent
-            +counter()
+            if(data.counter)
+              +counter()
   else
     .item-card
       .item-card__wrapper

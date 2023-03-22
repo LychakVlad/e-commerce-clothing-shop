@@ -40,6 +40,9 @@ block main
 
   main
     .fav-page
+      .cart__empty-card 
+        +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Your wish-list is empty', titleColor: 'blue-whale'})
+        +btn({text: "To catalog", href: "catalog.html"})
       .container.container--medium
         .fav-page__wrapper
           .fav-page__title
