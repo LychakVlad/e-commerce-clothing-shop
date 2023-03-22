@@ -651,10 +651,38 @@ button,
   background-color: #E64926;
   bottom: 2%;
   right: -20%;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
   opacity: 0;
+}
+
+.cart-confirm-modal {
+  position: fixed;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: none;
+  color: #254A5A;
+  width: 300px;
+  opacity: 0;
+  pointer-events: none;
+  right: 1%;
+  top: 10%;
+  border: #CEC6C4 1px solid;
+  padding: 24px;
+  background-color: #ffffff;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.1);
+  box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.1);
+}
+
+.cart-confirm-modal.is-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .container {
@@ -1848,6 +1876,35 @@ button,
   -webkit-transition: fill 0.3s ease;
   -o-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
+}
+
+.counter {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: #CEC6C4 2px solid;
+}
+
+.counter-plus {
+  padding: 0px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-left: #CEC6C4 2px solid;
+}
+
+.counter-digit {
+  padding: 12px 32px;
+  pointer-events: none;
+}
+
+.counter-minus {
+  margin: 0px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-right: #CEC6C4 2px solid;
 }
 
 .swiper-pagination--main {

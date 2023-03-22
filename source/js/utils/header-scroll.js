@@ -11,25 +11,25 @@ const headerScroll = () => {
 
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
-    const mainPage = document.querySelector('main');
+    const mainBlock = document.querySelector('main')
+    const mainPage = document.documentElement;
     const headerHeight = header.offsetHeight;
-    const firstBlock = mainPage.firstElementChild;
-    const firstBlockHeight = firstBlock.offsetHeight;
+    const firstBlock = mainPage.clientHeight;
 
-    if (scrollDistance >= firstBlockHeight + headerHeight) {
+    if (scrollDistance >= firstBlock + headerHeight) {
       header.classList.add('is-fixed');
-      firstBlock.style.marginTop = `${headerHeight}px`;
+      mainBlock.style.marginTop = `${headerHeight}px`;
     } else {
       header.classList.remove('is-fixed');
-      firstBlock.style.marginTop = null;
+      mainBlock.style.marginTop = null;
     }
 
     if (scrollDistance >= headerHeight) {
       header.classList.add('is-hidden');
-      firstBlock.style.marginTop = '69px';
+      mainBlock.style.marginTop = '69px';
     } else {
       header.classList.remove('is-hidden');
-      firstBlock.style.marginTop = null;
+      mainBlock.style.marginTop = null;
     }
   });
 };

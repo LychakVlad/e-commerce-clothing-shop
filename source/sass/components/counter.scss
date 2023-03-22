@@ -1,0 +1,25 @@
+.counter{
+  margin-top: 12px;
+  display: flex;
+  border: $color-alto 2px solid;
+}
+.counter-plus{
+  padding: 0px 24px;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: none;
+  border-left: $color-alto 2px solid;
+}
+.counter-digit {
+  padding: 12px 32px;
+  pointer-events: none;
+}
+.counter-minus{
+  margin: 0px 24px;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: none;
+  border-right: $color-alto 2px solid;
+}

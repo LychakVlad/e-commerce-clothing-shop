@@ -24,8 +24,9 @@ mixin item-card(data, type)
             if(data.btn)
               .item-card__btn
                 +btn({text: "Add to cart"}).btn--transparent
+            +counter()
   else
-    a(href="card-page.html").item-card
+    .item-card
       .item-card__wrapper
         if(data.img)
           .item-card__img

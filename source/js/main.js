@@ -31,23 +31,76 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const addToCartBtn = document.querySelectorAll('.btn--transparent'); // Поменять на .card-btn
   const cartIcon = document.querySelector('.cart-icon');
+  const cartModal = document.querySelector('.cart-confirm-modal');
+
+  const closeCartModal = () => {
+    cartModal.classList.remove('is-active');
+  };
 
   addToCartBtn.forEach((item) => {
     item.addEventListener('click', function () {
       cartIcon.style.opacity = '1';
       item.textContent = 'Item added to cart';
+      cartModal.classList.add('is-active');
       item.disabled = true;
-    })
-  })
+      setTimeout(closeCartModal, 1500);
+    });
+  });
+
 
   const paymentMethodCart = document.querySelectorAll('.custom-toggle__cart');
   const orderButton = document.querySelector('.btn__order');
 
   paymentMethodCart.forEach((item) => {
     item.addEventListener('change', function () {
-      orderButton.classList.remove('is-disabled')
-    })
-  })
+      orderButton.classList.remove('is-disabled');
+    });
+  });
+
+
+  const counterPlus = document.querySelector('.counter-plus');
+  const counter = document.querySelector('.counter-digit');
+  const counterMinus = document.querySelector('.counter-minus');
+  const itemPrices = document.querySelectorAll('.item-card__price');
+  const oldPrices = document.querySelectorAll('.item-card__old-price');
+  const totalPrice = document.querySelector('.cart__total-price');
+
+  let count = 1;
+
+
+  counterPlus.addEventListener('click', (e) => {
+    e.preventDefault();
+    counter.innerHTML = count;
+    itemPrices.forEach((item) => {
+      let price = item.innerHTML;
+      price = 3800 * count + ' UAH';
+      totalPrice.innerHTML = 'TOTAL : ' + price;
+      return price;
+    });
+    oldPrices.forEach((item) => {
+      item.innerHTML = 6100 * count + ' UAH';
+    });
+    return count++;
+  }
+  );
+
+
+  counterMinus.addEventListener('click', (e) => {
+    e.preventDefault();
+    counter.innerHTML = count;
+    itemPrices.forEach((item) => {
+      let currentNumber = item.innerHTML.replace(/[^+\d]/g, '');
+      item.innerHTML = currentNumber - 3800 + ' UAH';
+      totalPrice.innerHTML = 'TOTAL : ' - item.innerHTML;
+    });
+    oldPrices.forEach((item) => {
+      let currentNumber = item.innerHTML.replace(/[^+\d]/g, '');
+      item.innerHTML = currentNumber - 6100 + ' UAH';
+    });
+    return count--;
+  }
+  );
+
 
 
 

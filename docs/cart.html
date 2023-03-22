@@ -299,10 +299,12 @@
                     <svg width="20" height="20" aria-hidden="true">
                       <use xlink:href="#fav-icon"></use>
                     </svg></a></li>
-                <li class="header-icons__icon"><span class="cart-icon"></span><a href="cart.html">
+                <li class="header-icons__icon">
+                  <div class="cart-confirm-modal"><a href="cart.html">Item(s) added to your cart</a></div><span class="cart-icon"></span><a href="cart.html">
                     <svg width="16" height="18" aria-hidden="true">
                       <use xlink:href="#cart-icon"></use>
-                    </svg></a></li>
+                    </svg></a>
+                </li>
                 <li class="header-icons__icon header-menu-open"><a class="header-icons__burger-icon" href="#"></a></li>
               </ul>
             </div>
@@ -400,8 +402,8 @@
         </div>
       </header>
       <main>
-        <div class="cart" data-validate>
-          <form method="post">
+        <div class="cart">
+          <form>
             <div class="container container--medium">
               <div class="cart__wrapper">
                 <div class="cart__left-column">
@@ -440,9 +442,7 @@
                       <input type="radio" id="pay-order" name="payment-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Upon receipt of order</span>
                     </label>
                   </div>
-                  <div class="cart__submitt-button">
-                    <a class="btn btn__order is-disabled" href="reciept.html">Order</a>
-                  </div>
+                  <div class="cart__submitt-button"></div>
                 </div>
                 <div class="cart__right-column">
                   <div class="cart__cards-block">
@@ -465,30 +465,11 @@
                             </div>
                             <div class="item-card__bottom">
                               <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart__card">
-                      <div class="item-card">
-                        <div class="item-card__wrapper item-card__wrapper--mini">
-                          <div class="item-card__close-icon">
-                            <svg width="25" height="25" aria-hidden="true">
-                              <use xlink:href="#icon-close"></use>
-                            </svg>
-                          </div>
-                          <div class="item-card__img item-card__img--mini">
-                            <picture>
-                              <source type="image/webp" srcset="img/content/clothes-2.webp"><img src="img/content/clothes-2.png" srcset="img/content/clothes-2@2x.png 2x" width="158" height="170" alt="card">
-                            </picture>
-                          </div>
-                          <div class="item-card__text-block item-card__text-block--mini">
-                            <div class="item-card__top">
-                              <p class="item-card__title">Replay</p>
-                            </div>
-                            <div class="item-card__bottom">
-                              <p class="item-card__type">Classic shoes</p><span class="item-card__old-price">6100 UAH</span><span class="item-card__price item-card__price--color-orange">3800 UAH</span>
+                              <div class="counter">
+                                <button class="counter-minus">-</button>
+                                <div class="counter-digit">1</div>
+                                <button class="counter-plus">+</button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -496,7 +477,7 @@
                     </div>
                   </div>
                   <div class="cart__total-price">
-                    <p>TOTAL: 7600 UAH</p>
+                    <p class="cart__total-price-p">TOTAL: 7600 UAH</p>
                   </div>
                 </div>
               </div>

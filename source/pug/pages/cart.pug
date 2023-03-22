@@ -37,8 +37,8 @@ block main
     }
 
   main
-    div(data-validate).cart
-      form(method="post")
+    div.cart
+      form
         .container.container--medium
           .cart__wrapper
             .cart__left-column
@@ -53,15 +53,13 @@ block main
               +custom-toggle({inputType: 'radio', inputLabel: "Card online", inputName: "payment-type", inputId: 'pay-card'}).custom-toggle--radio.custom-toggle__cart
               +custom-toggle({inputType: 'radio', inputLabel: "Upon receipt of order", inputName: "payment-type", inputId: 'pay-order'}).custom-toggle--radio.custom-toggle__cart
               .cart__submitt-button
-                +btn({text: "Order", href: "reciept.html", disabled }).btn__order.is-disabled
+                //- +btn({text: "Order", href: "reciept.html"}).btn__order.is-disabled
             .cart__right-column
               .cart__cards-block
                 .cart__card
                   +item-card(firstClothesSliderCards.first, 'mini')
-                .cart__card
-                  +item-card(firstClothesSliderCards.second , 'mini')
               .cart__total-price
-                p TOTAL: 7600 UAH
+                p.cart__total-price-p TOTAL: 7600 UAH
 
 block modals
   +modal("modal--success modal--no-scale modal--fit-content")(data-modal="modal-payment")
