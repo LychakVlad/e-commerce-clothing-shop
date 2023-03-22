@@ -59,50 +59,42 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   const counterPlus = document.querySelector('.counter-plus');
-  const counter = document.querySelector('.counter-digit');
   const counterMinus = document.querySelector('.counter-minus');
-  const itemPrices = document.querySelectorAll('.item-card__price');
-  const oldPrices = document.querySelectorAll('.item-card__old-price');
+
+  const oldPrices = document.querySelector('.item-card__old-price');
   const totalPrice = document.querySelector('.cart__total-price');
+  const itemPrices = document.querySelector('.item-card__price');
 
-  let count = 1;
+  const counter = document.querySelector('.counter-digit');
+
+  let calculationPrice = itemPrices.innerHTML.replace(/[^+\d]/g, '');
+  let calculationOldPrice = oldPrices.innerHTML.replace(/[^+\d]/g, '');
+  let calculationTotalPrice = totalPrice.innerHTML.replace(/[^+\d]/g, '');
 
 
-  counterPlus.addEventListener('click', (e) => {
+  counterPlus.onclick = function (e) {
     e.preventDefault();
-    counter.innerHTML = count;
-    itemPrices.forEach((item) => {
-      let price = item.innerHTML;
-      price = 3800 * count + ' UAH';
-      totalPrice.innerHTML = 'TOTAL : ' + price;
-      return price;
-    });
-    oldPrices.forEach((item) => {
-      item.innerHTML = 6100 * count + ' UAH';
-    });
-    return count++;
-  }
-  );
+    let countPlus = counter.innerHTML;
+    if (+countPlus <= 9) {
+      counter.innerHTML++;
+      countPlus = counter.innerHTML;
+      totalPrice.innerHTML = 'TOTAL : ' + ((+countPlus) * (+calculationTotalPrice)) + ' UAH';
+      oldPrices.innerHTML = ((+countPlus) * (+calculationOldPrice)) + ' UAH';
+      itemPrices.innerHTML = ((+countPlus) * (+calculationPrice)) + ' UAH';
+    }
+  };
 
-
-  counterMinus.addEventListener('click', (e) => {
+  counterMinus.onclick = function (e) {
     e.preventDefault();
-    counter.innerHTML = count;
-    itemPrices.forEach((item) => {
-      let currentNumber = item.innerHTML.replace(/[^+\d]/g, '');
-      item.innerHTML = currentNumber - 3800 + ' UAH';
-      totalPrice.innerHTML = 'TOTAL : ' - item.innerHTML;
-    });
-    oldPrices.forEach((item) => {
-      let currentNumber = item.innerHTML.replace(/[^+\d]/g, '');
-      item.innerHTML = currentNumber - 6100 + ' UAH';
-    });
-    return count--;
-  }
-  );
-
-
-
+    let countMinus = counter.innerHTML;
+    if (+countMinus >= 2) {
+      counter.innerHTML--;
+      countMinus = counter.innerHTML;
+      totalPrice.innerHTML = 'TOTAL : ' + ((+countMinus) * (+calculationTotalPrice)) + ' UAH';
+      oldPrices.innerHTML = ((+countMinus) * (+calculationOldPrice)) + ' UAH';
+      itemPrices.innerHTML = ((+countMinus) * (+calculationPrice)) + ' UAH';
+    }
+  };
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

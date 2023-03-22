@@ -1900,7 +1900,7 @@ button,
 }
 
 .counter-minus {
-  margin: 0px 24px;
+  padding: 0px 24px;
   background-color: transparent;
   cursor: pointer;
   border: none;
