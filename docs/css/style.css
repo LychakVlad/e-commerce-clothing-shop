@@ -384,6 +384,54 @@ template {
   display: none;
 }
 
+@-webkit-keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+  }
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -1901,7 +1949,7 @@ button,
 }
 
 .fav-button input + label svg {
-  stroke: white;
+  fill: white;
   -webkit-transition: fill 0.3s ease, -webkit-transform 0.3s ease;
   transition: fill 0.3s ease, -webkit-transform 0.3s ease;
   -o-transition: fill 0.3s ease, transform 0.3s ease;
@@ -1910,8 +1958,8 @@ button,
 }
 
 .fav-button input:checked + label svg {
-  stroke: black;
   fill: red;
+  stroke: black;
 }
 
 .counter {
@@ -2264,7 +2312,7 @@ button,
 .header .header-nav__link a:after {
   position: absolute;
   content: "";
-  bottom: -25px;
+  bottom: -24px;
   display: block;
   width: 0;
   height: 2px;
@@ -2529,6 +2577,29 @@ button,
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   cursor: pointer;
+}
+
+.footer__dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__dev svg {
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+  fill: #0F303F;
+}
+
+.footer__dev-arrow {
+  -webkit-animation: arrow 2s ease-in-out infinite;
+  animation: arrow 2s ease-in-out infinite;
+  margin-left: 9px;
+  margin-right: 18px;
 }
 
 .modal {
@@ -4418,6 +4489,12 @@ button,
   position: relative;
 }
 
+.profile__menu-item p {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 .profile__menu-item::before {
   content: "";
   position: absolute;
@@ -4426,9 +4503,9 @@ button,
   height: 0;
   width: 4px;
   background-color: #E64926;
-  -webkit-transition: height 0.3s ease, opacity 0.3s ease;
-  -o-transition: height 0.3s ease, opacity 0.3s ease;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  -webkit-transition: height 0.6s ease, opacity 0.3s ease;
+  -o-transition: height 0.6s ease, opacity 0.3s ease;
+  transition: height 0.6s ease, opacity 0.3s ease;
   border-radius: 5px;
 }
 
@@ -4438,6 +4515,9 @@ button,
 
 .profile__menu-item.is-active::before {
   height: 46px;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 .profile__menu-item.is-active svg {
@@ -4631,6 +4711,10 @@ button,
     font-weight: 200;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .footer__dev-arrow {
+    display: none;
   }
 
   .header-menu-mob-nav {
@@ -4917,6 +5001,10 @@ button,
     width: 64px;
     height: 64px;
   }
+
+  .catalog__filters-icon svg {
+    fill: #0F303F;
+  }
 }
 
 @media (max-width: 550px) {
@@ -5093,6 +5181,10 @@ button,
     -webkit-transform: scale(1.4);
     -ms-transform: scale(1.4);
     transform: scale(1.4);
+  }
+
+  .footer__dev:hover:not(.focus-visible) svg {
+    fill: #CEC6C4;
   }
 
   .header-menu__bottom-block a:hover:not(.focus-visible),

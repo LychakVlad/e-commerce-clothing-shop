@@ -108,6 +108,33 @@
 
 }
 
+
+.footer__dev{
+  display: flex;
+  align-items: center;
+
+
+  @include hover {
+    svg{
+      fill: $color-alto;
+    }
+    }
+
+  svg{
+    transition: fill $trans-default;
+    fill: $color-blue-whale;
+  }
+
+}
+
+.footer__dev-arrow{
+    animation: arrow 2s ease-in-out infinite;
+    margin-left: 9px;
+    margin-right: 18px;
+}
+
+
+
 @media (max-width: 960px) {
 
   .footer{
@@ -128,6 +155,10 @@
     }
     }
   }
+
+  .footer__dev-arrow{
+    display: none;
+}
 }
 
 @media (max-width: 770px) {

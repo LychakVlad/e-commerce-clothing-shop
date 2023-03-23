@@ -32,6 +32,11 @@
 
   position: relative;
 
+  p{
+    transition: color $trans-default;
+    }
+
+
   &::before {
     content: '';
     position: absolute;
@@ -39,17 +44,19 @@
     height: 0;
     width: 4px;
     background-color: $color-cinnabar;
-    transition: height $trans-default, opacity $trans-default;
+    transition: height $trans-600, opacity $trans-default;
     border-radius: 5px;
   }
 
   &.is-active{
+
 
     p{
     color: $color-cinnabar;
     }
     &::before{
       height: 46px;
+      transition: height $trans-default;
     }
 
     svg{

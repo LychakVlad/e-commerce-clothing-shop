@@ -172,6 +172,10 @@
     display: block;
     width: 64px;
     height: 64px;
+
+    svg{
+      fill: $color-blue-whale;
+    }
   }
 
 }
