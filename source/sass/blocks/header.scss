@@ -183,14 +183,17 @@
     cursor: pointer;
 
     position: relative;
-    transition: color $trans-default;
-    transition: transform $trans-default;
+    transition: transform $trans-default, opacity $trans-default, color $trans-default;
+
+    svg{
+      fill: $color-blue-whale;
+    }
 
 
       &::after {
         position: absolute;
         content: '';
-        bottom: -19px;
+        bottom: -13px;
         display: block;
         width: 0;
         height: 2px;
@@ -202,6 +205,7 @@
       }
 
       @include hover-focus {
+        opacity: 0.7;
         &::after {
           width: 100%;
         }

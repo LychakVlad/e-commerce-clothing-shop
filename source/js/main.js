@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelectorAll('[data-card="button-close"]');
     const cardItem = document.querySelectorAll('[data-card="card"]');
     const cardsBlock = document.querySelector('.fav-page__cards');
-    const emptyCart = document.querySelector('.cart__empty-card');
+    const emptyCart = document.querySelector('.empty-page');
     const favWrapper = document.querySelector('.fav__wrapper');
 
     closeButton.forEach((item) => {
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector('[data-card="button-close"]');
     const cardItem = document.querySelector('[data-card="card"]');
     const cardsBlock = document.querySelector('.cart__cards-block');
-    const emptyCart = document.querySelector('.cart__empty-card');
+    const emptyCart = document.querySelector('.empty-page');
     const cartWrapper = document.querySelector('.cart__wrapper');
 
     closeButton.onclick = function () {

@@ -39,9 +39,7 @@ block main
 
   main
     .cart
-      .cart__empty-card 
-        +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Your cart is empty', titleColor: 'blue-whale'})
-        +btn({text: "To catalog", href: "catalog.html"})
+      +empty-page('Your cart is empty')
       form
         .container.container--medium
           .cart__wrapper

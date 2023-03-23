@@ -24,15 +24,15 @@
 
   input + label {
     svg{
-      fill: white;
-      transition: fill $trans-default;
+      stroke: white;
+      transition: fill $trans-default, transform $trans-default;
     }
   }
 
 input:checked + label {
   svg{
+    stroke: black;
     fill: red;
-    transition: fill $trans-default;
   }
   }
 }

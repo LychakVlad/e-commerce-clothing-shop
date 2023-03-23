@@ -105,16 +105,16 @@ mixin header(currentUrl)
           ul.header-icons__list
             li.header-icons__icon
               a(href="sign-in.html")
-                +icon('personal-acc', 16, 18)
+                +icon('user', 26, 26)
             li.header-icons__icon
               a(href="favorite-page.html")
-                +icon('fav-icon', 20, 20)
+                +icon('fav-icon', 26, 26)
             li.header-icons__icon
               .cart-confirm-modal
                 a(href="cart.html") Item(s) added to your cart
               span.cart-icon
               a(href="cart.html")
-                +icon('cart-icon', 16, 18)
+                +icon('cart-icon', 26, 26)
             li.header-icons__icon.header-menu-open
               a(href="#").header-icons__burger-icon
     +header-menu(menHeaderMenuItems, headerBrands, 'sub')

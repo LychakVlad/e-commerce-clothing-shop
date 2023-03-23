@@ -52,13 +52,21 @@
       height: 46px;
     }
 
+    svg{
+      margin-right: 18px;
+      fill: $color-cinnabar;
+    }
+
   }
 
   p{
     pointer-events: none;
   }
   svg{
+    transition: fill $trans-default;
+
     margin-right: 18px;
+    fill: #254A5A;
   }
 
 

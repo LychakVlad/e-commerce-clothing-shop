@@ -1,0 +1,5 @@
+mixin empty-page(title)
+
+  .empty-page
+    +title({titleStyle: 'Inter', titleType: 'h2', titleText: `${title}`, titleColor: 'blue-whale'})
+    +btn({text: "To catalog", href: "catalog.html"})

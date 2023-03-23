@@ -685,6 +685,42 @@ button,
   pointer-events: all;
 }
 
+.empty-page {
+  position: absolute;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 100%;
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.empty-page h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.empty-page.is-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .container {
   width: 100%;
   max-width: 1380px;
@@ -1865,17 +1901,17 @@ button,
 }
 
 .fav-button input + label svg {
-  fill: white;
-  -webkit-transition: fill 0.3s ease;
-  -o-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
+  stroke: white;
+  -webkit-transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+  transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: fill 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .fav-button input:checked + label svg {
+  stroke: black;
   fill: red;
-  -webkit-transition: fill 0.3s ease;
-  -o-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
 }
 
 .counter {
@@ -2303,20 +2339,21 @@ button,
   margin-left: 12px;
   cursor: pointer;
   position: relative;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header-icons__icon svg {
+  fill: #0F303F;
 }
 
 .header-icons__icon::after {
   position: absolute;
   content: "";
-  bottom: -19px;
+  bottom: -13px;
   display: block;
   width: 0;
   height: 2px;
@@ -2328,6 +2365,10 @@ button,
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
+}
+
+.header-icons__icon.focus-visible:focus {
+  opacity: 0.7;
 }
 
 .header-icons__icon.focus-visible:focus::after {
@@ -4092,42 +4133,6 @@ button,
   position: relative;
 }
 
-.cart__empty-card {
-  position: absolute;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 100%;
-  bottom: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: opacity 0.6s ease;
-  -o-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-  opacity: 0;
-}
-
-.cart__empty-card h2 {
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.cart__empty-card.is-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .cart__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4435,12 +4440,21 @@ button,
   height: 46px;
 }
 
+.profile__menu-item.is-active svg {
+  margin-right: 18px;
+  fill: #E64926;
+}
+
 .profile__menu-item p {
   pointer-events: none;
 }
 
 .profile__menu-item svg {
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
   margin-right: 18px;
+  fill: #254A5A;
 }
 
 .profile__text {
@@ -5056,6 +5070,10 @@ button,
     -webkit-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+
+  .header-icons__icon:hover:not(.focus-visible) {
+    opacity: 0.7;
   }
 
   .header-icons__icon:hover:not(.focus-visible)::after {
