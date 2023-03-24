@@ -44,7 +44,7 @@
     height: 0;
     width: 4px;
     background-color: $color-cinnabar;
-    transition: height $trans-600, opacity $trans-default;
+    transition: height $trans-default, opacity $trans-default;
     border-radius: 5px;
   }
 
@@ -56,7 +56,6 @@
     }
     &::before{
       height: 46px;
-      transition: height $trans-default;
     }
 
     svg{

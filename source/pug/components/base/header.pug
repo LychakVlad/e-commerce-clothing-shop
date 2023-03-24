@@ -83,11 +83,11 @@ mixin header(currentUrl)
             li.header-nav__item.nav-menu-open
               .header-nav__link
                 a(href="#")  Women
-              +header-menu(womenHeaderMenuItems, headerBrands, 'main')
+              +header-menu(womenHeaderMenuItems,'', headerBrands, 'main')
             li.header-nav__item.nav-menu-open
               .header-nav__link
                 a(href="#")  Men
-              +header-menu(menHeaderMenuItems, headerBrands, 'main')
+              +header-menu(menHeaderMenuItems,'', headerBrands, 'main')
             li.header-nav__item
               form
                 .header-nav__item-form
@@ -117,4 +117,4 @@ mixin header(currentUrl)
                 +icon('cart-icon', 26, 26)
             li.header-icons__icon.header-menu-open
               a(href="#").header-icons__burger-icon
-    +header-menu(menHeaderMenuItems, headerBrands, 'sub')
+    +header-menu(menHeaderMenuItems, womenHeaderMenuItems, headerBrands, 'sub')

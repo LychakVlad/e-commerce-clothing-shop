@@ -1,6 +1,5 @@
 
 
-
 const initTabs = () => {
   if (!document.querySelectorAll('[data-tab="link"]')) {
     return;
@@ -26,10 +25,10 @@ const initTabs = () => {
 
       item.classList.add('is-active');
       document.getElementById(id).classList.add('is-active');
-    })
-  })
+    });
+  });
 
-}
+};
 
 
 export { initTabs }

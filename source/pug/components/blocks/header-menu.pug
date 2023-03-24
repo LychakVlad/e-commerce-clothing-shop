@@ -1,4 +1,4 @@
-mixin header-menu(data, brands, type)
+mixin header-menu(data, data2, brands, type)
   if (type== 'main')
     .header-menu
       .header-menu__wrapper
@@ -18,20 +18,29 @@ mixin header-menu(data, brands, type)
       .header-menu-mob__wrapper
         .header-menu-mob-nav
           ul.header-menu-mob__nav-list
-            li.header-menu-mob__nav-item.nav-menu-open
+            li.header-menu-mob__nav-item
               .header-menu-mob__nav-link
-                a(href="#")  Women
-            li.header-menu-mob__nav-item.nav-menu-open
+                a(href="#tab-women", data-tab = 'link').is-active  Women
+            li.header-menu-mob__nav-item
               .header-menu-mob__nav-link
-                a(href="#")  Men
+                a(href="#tab-men", data-tab = 'link')  Men
         .header-menu-mob__top-block
-          each item in data
-            .header-menu-mob__column(data-accordion="parent")
-              h3.header-menu-mob__title(data-accordion="button")= item.title
-              ul.header-menu-mob__list(data-accordion="content")
-                each link in item.category
-                  li.header-menu-mob__item
-                    a(href="catalog.html")= link
+          div(id = 'tab-women', data-tab = 'content').header-menu-mob__tab.is-active
+            each item in data2
+              .header-menu-mob__column(data-accordion="parent")
+                h3.header-menu-mob__title(data-accordion="button")= item.title
+                ul.header-menu-mob__list(data-accordion="content")
+                  each link in item.category
+                    li.header-menu-mob__item
+                      a(href="catalog.html")= link
+          div(id = 'tab-men', data-tab = 'content').header-menu-mob__tab
+            each item in data
+              .header-menu-mob__column(data-accordion="parent")
+                h3.header-menu-mob__title(data-accordion="button")= item.title
+                ul.header-menu-mob__list(data-accordion="content")
+                  each link in item.category
+                    li.header-menu-mob__item
+                      a(href="catalog.html")= link
         .header-menu-mob__search-block
           .header-menu-mob__nav-item
             form
