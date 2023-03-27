@@ -11,6 +11,7 @@ import { initTabs } from './modules/handler-tabs';
 
 import { initSwipers } from './modules/sliders/init-sliders';
 import { initSideMenu } from './modules/init-side-menu';
+import { paymentMethodCheck } from './modules/form/init-payment-method';
 
 
 // ---------------------------------
@@ -28,34 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeaderMenu();
   initAccordion();
   initTabs();
-
-  const addToCartBtn = document.querySelectorAll('.btn--transparent'); // Поменять на .card-btn
-  const cartIcon = document.querySelector('.cart-icon');
-  const cartModal = document.querySelector('.cart-confirm-modal');
-
-  const closeCartModal = () => {
-    cartModal.classList.remove('is-active');
-  };
-
-  addToCartBtn.forEach((item) => {
-    item.addEventListener('click', function () {
-      cartIcon.style.opacity = '1';
-      item.textContent = 'Item added to cart';
-      cartModal.classList.add('is-active');
-      item.disabled = true;
-      setTimeout(closeCartModal, 1500);
-    });
-  });
-
-
-  const paymentMethodCart = document.querySelectorAll('.custom-toggle__cart');
-  const orderButton = document.querySelector('.btn__order');
-
-  paymentMethodCart.forEach((item) => {
-    item.addEventListener('change', function () {
-      orderButton.classList.remove('is-disabled');
-    });
-  });
 
 
   const favCardsHandler = () => {
@@ -153,6 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initSideMenu();
     cartCardsHandler();
     favCardsHandler();
+    paymentMethodCheck();
 
 
   });

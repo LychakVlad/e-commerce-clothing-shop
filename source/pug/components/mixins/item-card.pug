@@ -23,7 +23,7 @@ mixin item-card(data, type)
                 span.item-card__price= data.price
             if(data.btn)
               .item-card__btn
-                +btn({text: "Add to cart"}).btn--transparent
+                +btn({text: "Add to cart"}).btn--transparent.card-btn
             if(data.counter)
               +counter()
   else

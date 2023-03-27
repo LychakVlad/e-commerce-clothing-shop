@@ -580,6 +580,9 @@ const clearForm = (form) => {
 
 window.clearForm = clearForm;
 
+
+
+
 // Класс FormsValidate
 
 export default class FormsValidate {
