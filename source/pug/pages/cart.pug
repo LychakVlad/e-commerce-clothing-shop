@@ -34,6 +34,7 @@ block main
         oldPrice: '6100 UAH',
         price: '3800 UAH',
         discount: true,
+        counter: true
       },
     }
 
@@ -42,7 +43,7 @@ block main
       +empty-page('Your cart is empty')
       form
         .container.container--medium
-          .cart__wrapper
+          .cart__wrapper(data-card="wrapper")
             .cart__left-column
               +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
               +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Surename"})(data-limitations="name")
@@ -57,8 +58,9 @@ block main
               .cart__submitt-button
                 +btn({text: "Order", href: "reciept.html"}).btn__order.is-disabled
             .cart__right-column
-              .cart__cards-block
+              .cart__cards-block(data-card="container")
                 +item-card(firstClothesSliderCards.first, 'mini')
+                +item-card(firstClothesSliderCards.second , 'mini')
               .cart__total-price
                 p.cart__total-price-p TOTAL: 3800 UAH
 

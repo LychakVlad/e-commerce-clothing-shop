@@ -42,10 +42,10 @@ block main
     .fav-page
       +empty-page('Your wish-list is empty')
       .container.container--medium
-        .fav-page__wrapper
+        .fav-page__wrapper(data-card="wrapper")
           .fav-page__title
             +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Favorite', titleColor: 'blue-whale'})
-          .fav-page__cards
+          .fav-page__cards(data-card="container")
             +item-card(firstClothesSliderCards.first, 'mini')
             +item-card(firstClothesSliderCards.second , 'mini')
             +item-card(firstClothesSliderCards.first, 'mini')

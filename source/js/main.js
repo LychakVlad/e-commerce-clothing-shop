@@ -12,6 +12,7 @@ import { initTabs } from './modules/handler-tabs';
 import { initSwipers } from './modules/sliders/init-sliders';
 import { initSideMenu } from './modules/init-side-menu';
 import { paymentMethodCheck } from './modules/form/init-payment-method';
+import { cardsHandler } from './modules/handler-cards';
 
 
 // ---------------------------------
@@ -31,53 +32,14 @@ window.addEventListener('DOMContentLoaded', () => {
   initTabs();
 
 
-  const favCardsHandler = () => {
-    if (!document.querySelector('.fav-page')) {
-      return;
-    }
-
-    const closeButton = document.querySelectorAll('[data-card="button-close"]');
-    const cardItem = document.querySelectorAll('[data-card="card"]');
-    const cardsBlock = document.querySelector('.fav-page__cards');
-    const emptyCart = document.querySelector('.empty-page');
-    const favWrapper = document.querySelector('.fav__wrapper');
-
-    closeButton.forEach((item) => {
-      item.onclick = function (e) {
-        cardItem.forEach(() => {
-          e.target.parentNode.parentNode.parentNode.remove();
-        });
-        if (cardsBlock.innerText === '') {
-          emptyCart.classList.add('is-active');
-          favWrapper.classList.add('is-hidden');
-        }
-
-      };
-    });
-  };
 
   const cartCardsHandler = () => {
     if (!document.querySelector('.cart')) {
       return;
     }
 
-    const closeButton = document.querySelector('[data-card="button-close"]');
-    const cardItem = document.querySelector('[data-card="card"]');
-    const cardsBlock = document.querySelector('.cart__cards-block');
-    const emptyCart = document.querySelector('.empty-page');
-    const cartWrapper = document.querySelector('.cart__wrapper');
 
-    closeButton.onclick = function () {
-      cardItem.remove();
-      if (cardsBlock.innerText === '') {
-        emptyCart.classList.add('is-active');
-        cartWrapper.classList.add('is-hidden');
-      }
-
-    };
-
-
-    const counterPlus = document.querySelector('.counter-plus');
+    const counterPlus = document.querySelectorAll('.counter-plus');
     const counterMinus = document.querySelector('.counter-minus');
 
     const oldPrices = document.querySelector('.item-card__old-price');
@@ -90,31 +52,38 @@ window.addEventListener('DOMContentLoaded', () => {
     let calculationOldPrice = oldPrices.innerHTML.replace(/[^+\d]/g, '');
     let calculationTotalPrice = totalPrice.innerHTML.replace(/[^+\d]/g, '');
 
+    counterPlus.forEach((item) => {
+      item.onclick = function (e) {
+        e.preventDefault();
+        let countPlus = counter.innerHTML;
+        if (+countPlus <= 9) {
+          counter.innerHTML++;
+          countPlus = counter.innerHTML;
+          totalPrice.innerHTML = 'TOTAL : ' + ((+countPlus) * (+calculationTotalPrice)) + ' UAH';
+          oldPrices.innerHTML = ((+countPlus) * (+calculationOldPrice)) + ' UAH';
+          itemPrices.innerHTML = ((+countPlus) * (+calculationPrice)) + ' UAH';
+        }
+      };
+    });
 
-    counterPlus.onclick = function (e) {
-      e.preventDefault();
-      let countPlus = counter.innerHTML;
-      if (+countPlus <= 9) {
-        counter.innerHTML++;
-        countPlus = counter.innerHTML;
-        totalPrice.innerHTML = 'TOTAL : ' + ((+countPlus) * (+calculationTotalPrice)) + ' UAH';
-        oldPrices.innerHTML = ((+countPlus) * (+calculationOldPrice)) + ' UAH';
-        itemPrices.innerHTML = ((+countPlus) * (+calculationPrice)) + ' UAH';
-      }
-    };
 
-    counterMinus.onclick = function (e) {
-      e.preventDefault();
-      let countMinus = counter.innerHTML;
-      if (+countMinus >= 2) {
-        counter.innerHTML--;
-        countMinus = counter.innerHTML;
-        totalPrice.innerHTML = 'TOTAL : ' + ((+countMinus) * (+calculationTotalPrice)) + ' UAH';
-        oldPrices.innerHTML = ((+countMinus) * (+calculationOldPrice)) + ' UAH';
-        itemPrices.innerHTML = ((+countMinus) * (+calculationPrice)) + ' UAH';
-      }
-    };
+    counterMinus.forEach((item) => {
+
+      item.onclick = function (e) {
+        e.preventDefault();
+        let countMinus = counter.innerHTML;
+        if (+countMinus >= 2) {
+          counter.innerHTML--;
+          countMinus = counter.innerHTML;
+          totalPrice.innerHTML = 'TOTAL : ' + ((+countMinus) * (+calculationTotalPrice)) + ' UAH';
+          oldPrices.innerHTML = ((+countMinus) * (+calculationOldPrice)) + ' UAH';
+          itemPrices.innerHTML = ((+countMinus) * (+calculationPrice)) + ' UAH';
+        }
+      };
+    });
+
   };
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -125,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initSwipers();
     initSideMenu();
     cartCardsHandler();
-    favCardsHandler();
+    cardsHandler();
     paymentMethodCheck();
 
 
