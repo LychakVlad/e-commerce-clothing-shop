@@ -11,7 +11,7 @@ mixin main-slider(data)
                 .main-slider__collection
                   a(href="catalog.html") View the collection
               if(item.img)
-                +picture("content", item.img, "png", 941, 584, "banner").main-slider__slide-img
+                +picture("content", item.img, "jpg", 941, 584, "banner").main-slider__slide-img
           else
             +title-block(item, true)
     .swiper-pagination.swiper-pagination--main

@@ -3,7 +3,7 @@ mixin title-block(data, main)
     .title-block.title-block--main
       .title-block__wrapper.title-block__wrapper--main
         if(data.img)
-          +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img.title-block__bg-img--main
+          +picture("content", data.img, "jpg", 1440, 585, "bg-img").title-block__bg-img.title-block__bg-img--main
         .title-block__text-wrapper
           if(data.brand)
             p.title-block__brand= data.brand
@@ -19,7 +19,7 @@ mixin title-block(data, main)
     .title-block.animate__animated.wow.animate__fadeIn( data-wow-duration='1.5s')
       .title-block__wrapper
         if(data.img)
-          +picture("content", data.img, "png", 1440, 585, "bg-img").title-block__bg-img
+          +picture("content", data.img, "jpg", 1440, 585, "bg-img").title-block__bg-img
         .title-block__text-wrapper
           if(data.brand)
             p.title-block__brand= data.brand

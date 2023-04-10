@@ -5,7 +5,7 @@ mixin item-card(data, type)
         .item-card__close-icon(data-card="button-close")
           +icon("icon-close", 25, 25)
         if(data.img)
-          .item-card__img.item-card__img--mini
+          a(href="card-page.html").item-card__img.item-card__img--mini
             +picture("content", data.img, "jpg", 158, 170, "card")
         .item-card__text-block.item-card__text-block--mini
           .item-card__top
@@ -27,10 +27,10 @@ mixin item-card(data, type)
             if(data.counter)
               +counter()
   else
-    .item-card
+    a(href="card-page.html").item-card
       .item-card__wrapper
         if(data.img)
-          .item-card__img
+          a(href="card-page.html").item-card__img
             +picture("content", data.img, "jpg", 275, 365, "card")
             if(data.fav)
               +fav-button({name: `${data.name}`, checked: false, id: `${data.id}`})

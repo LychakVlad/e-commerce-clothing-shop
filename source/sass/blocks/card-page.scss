@@ -239,4 +239,14 @@
   .card-page__tab-about-left{
     margin: 0px;
   }
+
+  .tab-item{
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-page__tab-review{
+    flex-direction: column;
+  }
 }

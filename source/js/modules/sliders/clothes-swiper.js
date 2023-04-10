@@ -6,19 +6,25 @@ window.clothesSlider = () => {
 
   const clothesSwiper = new Swiper('.clothes-slider-block', {
     breakpoints: {
-      800: {
+      1000: {
         slidesPerView: 4,
+
       },
-      570: {
+      800: {
+        spaceBetween: 36,
         slidesPerView: 3,
       },
-      320: {
+      440: {
+        spaceBetween: 24,
         slidesPerView: 2,
       },
+      320: {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+      },
     },
-    spaceBetween: 45,
+    spaceBetween: 44,
     slidesPerGroup: 2,
-    slidesPerView: 4,
     navigation: {
       nextEl: '.clothes-slider__button-next',
       prevEl: '.clothes-slider__button-prev',
