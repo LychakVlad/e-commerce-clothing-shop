@@ -1,9 +1,11 @@
 .header-menu {
+
   z-index: 12;
   opacity: 0;
   position: fixed;
   background: $color-default-white;
-  width: 100%;
+  overflow: hidden;
+  width: 100vw;
   left: 0;
   top: 69px;
   transition: transform $trans-default, opacity $trans-default;
@@ -48,7 +50,7 @@
 
 .header-menu__bottom-block,
 .header-menu-mob__bottom-block {
-  padding: 20px;
+  padding: 20px 8px;
   max-width: 521px;
   width: 100%;
   display: flex;
@@ -151,14 +153,14 @@
   left: 0;
   top: var(--header-height);
   min-height: calc(100vh - var(--header-height, 1vh));
+  min-height: 100%;
   background-color: $color-default-white;
   text-align: center;
-  overflow: auto;
+
 
   display: flex;
   justify-content: center;
   width: 100%;
-  max-height: 100%;
   transition: opacity $trans-default;
 
   pointer-events: none;
@@ -169,13 +171,14 @@
   }
 }
 
-.header-menu-mob__wrapper {
-  height: calc(100vh - var(--header-height, 1vh));
-  width: 100%;
 
+.header-menu-mob__wrapper {
+  min-height: calc(100vh - var(--header-height, 1vh));
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 
 }
 
@@ -344,13 +347,10 @@
 
 .header-menu-mob__tab{
 
-  opacity: 0;
-  max-height: 0;
+  display: none;
 
   &.is-active{
-    transition: opacity $trans-600;
-    opacity: 1;
-    max-height: 100%;
+    display: block;
   }
 }
 

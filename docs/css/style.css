@@ -471,7 +471,8 @@ html {
 }
 
 body {
-  width: 100%;
+  overflow-x: hidden;
+  width: 100vw;
   height: 100%;
   background-color: #ffffff;
 }
@@ -650,7 +651,7 @@ button,
 }
 
 .scroll-lock {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .no-scrollbar {
@@ -2225,6 +2226,8 @@ button,
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .header.is-hidden {
@@ -2238,7 +2241,8 @@ button,
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .header ul {
@@ -2768,7 +2772,8 @@ button,
   opacity: 0;
   position: fixed;
   background: #ffffff;
-  width: 100%;
+  overflow: hidden;
+  width: 100vw;
   left: 0;
   top: 69px;
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
@@ -2828,7 +2833,7 @@ button,
 
 .header-menu__bottom-block,
 .header-menu-mob__bottom-block {
-  padding: 20px;
+  padding: 20px 8px;
   max-width: 521px;
   width: 100%;
   display: -webkit-box;
@@ -2933,9 +2938,9 @@ button,
   left: 0;
   top: var(--header-height);
   min-height: calc(100vh - var(--header-height, 1vh));
+  min-height: 100%;
   background-color: #ffffff;
   text-align: center;
-  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2943,7 +2948,6 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  max-height: 100%;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2956,8 +2960,8 @@ button,
 }
 
 .header-menu-mob__wrapper {
-  height: calc(100vh - var(--header-height, 1vh));
-  width: 100%;
+  min-height: calc(100vh - var(--header-height, 1vh));
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3157,16 +3161,11 @@ button,
 }
 
 .header-menu-mob__tab {
-  opacity: 0;
-  max-height: 0;
+  display: none;
 }
 
 .header-menu-mob__tab.is-active {
-  -webkit-transition: opacity 0.6s ease;
-  -o-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-  opacity: 1;
-  max-height: 100%;
+  display: block;
 }
 
 .faq__container {

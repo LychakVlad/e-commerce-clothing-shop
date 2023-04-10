@@ -25,6 +25,7 @@
   /* stylelint-enable */
 }
 
+
 .visually-hidden {
   position: absolute;
 
@@ -49,7 +50,8 @@
 }
 
 .scroll-lock {
-  overflow: hidden;
+
+  overflow-y: hidden;
 }
 
 .no-scrollbar {
