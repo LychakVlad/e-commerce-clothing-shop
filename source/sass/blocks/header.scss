@@ -13,7 +13,7 @@
   background-color: $color-default-white;
   border-bottom: 1px solid #EAE9E8;
   transition: all $trans-default;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
 
 
@@ -45,7 +45,7 @@
 
   &__item{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     position:relative;
     margin-left: 40px;
@@ -64,7 +64,7 @@
     padding: 0;
     list-style: none;
     min-height: var(--header-height);
-    align-items: flex-start;
+    align-items: center;
 }
 
   &__item-input{
@@ -99,10 +99,10 @@
       &:after {
         position: absolute;
         content: '';
-        bottom: -24px;
+        bottom: -26px;
         display: block;
         width: 0;
-        height: 2px;
+        height: 3px;
         background: $color-cinnabar;
         transition: .3s;
 
@@ -161,10 +161,10 @@
 &__burger-icon{
   position: relative;
   width: 20px;
-  height: 1px;
+  height:1.5px;
   margin-bottom: 7px;
   margin-top: 8px;
-  background: $color-blue-whale;
+  background: $color-arapawa;
   justify-content: center;
   display: none;
 
@@ -173,8 +173,8 @@
     content: ' ';
     position: absolute;
     width: 10px;
-    height: 1px;
-    background: $color-blue-whale;
+    height: 1.5px;
+    background: $color-arapawa;
     right: 0;
     top: 7px;
   }
@@ -196,10 +196,10 @@
       &::after {
         position: absolute;
         content: '';
-        bottom: -13px;
+        bottom: -18px;
         display: block;
         width: 0;
-        height: 2px;
+        height: 3px;
         background: $color-arapawa;
         transition: .3s;
 

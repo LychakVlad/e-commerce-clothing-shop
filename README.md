@@ -1,11 +1,13 @@
 
-Хедер меню при наведении
-Ссылка на карточке(Как правильно?)
-Почему багует анимация
 
 
 
 
 
 
+
+
+Change card links
+Change card photos
+Fix responsive clothes slider
 
