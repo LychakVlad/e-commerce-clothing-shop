@@ -21,8 +21,8 @@ block main
               .sign-in__title
                 +title({titleStyle: 'Inter', titleType: 'h2', titleText: 'Sign in', titleColor: 'blue-whale'})
               +custom-input({inputError: "Invalid name", inputName: "user-name", inputMinLength: "2" , inputPlaceholder: "Name"})(data-validate-type="text", data-limitations="name")
-              +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})(data-validate-type="password")
-              +btn({text: "Sign in", type: "submit", href: 'profile.html'})
+              +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})
+              +btn({text: "Sign in", type: "submit"})
               .sign-in__text-block
                 a(href="sign-in-fog-pass.html").sign-in__forgot-pass Forgot password
                 span= ' / '

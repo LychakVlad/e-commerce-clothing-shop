@@ -15,7 +15,7 @@ block main
 
   main
     div(data-validate).sign-in
-      form(method="post")
+      form
         .sign-in__wrapper
           .container.container--small
             .sign-in__block.sign-in__block--red-links
@@ -26,8 +26,8 @@ block main
                 +custom-input({inputName: "user-surename", inputMinLength: "2" , inputPlaceholder: "Surename"})(data-limitations="name")
                 +custom-input({inputType: "email", inputError: "Invalid email", inputName: "user-email", inputPlaceholder: "E-mail", inputName: "user-email"})(data-validate-type="email")
                 +custom-input({inputType: "tel", inputPlaceholder: "Phone number", inputName: "user-tel"})
-                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})(data-validate-type="password")
-                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Repeat password", inputName: "user-password"})(data-validate-type="password")
+                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Password", inputName: "user-password"})
+                +custom-input({inputType: "password", inputError: "Invalid password", inputName: "user-password", inputPlaceholder: "Repeat password", inputName: "user-password"})
               .sign-in__toggles-block
                 +custom-toggle({inputLabel: "Subscribe to newsletter", inputError: "Confirm is mandatory", inputName: "user-agreement"}).custom-toggle--checkbox
                 +custom-toggle({inputLabel: 'I agree to the&nbsp;', labelLink: {text: 'privacy policy', href: "#"}, inputError: "Confirm is mandatory", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox

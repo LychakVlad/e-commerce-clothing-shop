@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   </head>
-  <body>
+  <body data-fix="block">
     <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
 <clipPath id="clip0_155_1536">
 <rect width="129" height="16" fill="white"/>
@@ -461,13 +461,13 @@
                     </label>
                     <div class="custom-input__error">Invalid name</div>
                   </div>
-                  <div class="custom-input" data-validate-type="password">
+                  <div class="custom-input">
                     <label>
                       <input type="password" name="user-password" placeholder="Password">
                     </label>
                     <div class="custom-input__error">Invalid password</div>
                   </div>
-                  <a class="btn" href="profile.html" type="submit">Sign in</a>
+                  <button class="btn" type="submit">Sign in</button>
                   <div class="sign-in__text-block"><a class="sign-in__forgot-pass" href="sign-in-fog-pass.html">Forgot password</a><span> / </span><a class="sign-in__to-sign-up" href="sign-in-reg.html">Don't have an account?</a></div>
                 </div>
               </div>

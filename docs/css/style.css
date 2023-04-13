@@ -846,6 +846,7 @@ button,
   background-color: transparent;
   color: #0F303F;
   border: #0F303F solid 2px;
+  z-index: 2;
 }
 
 .btn--transparent.focus-visible:focus {
@@ -1798,6 +1799,7 @@ button,
 .item-card__wrapper {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .item-card__wrapper--mini {
@@ -1810,6 +1812,10 @@ button,
   position: relative;
 }
 
+.item-card__top {
+  margin-top: 32px;
+}
+
 .item-card__title {
   font-family: "Inter";
   font-style: normal;
@@ -1818,7 +1824,16 @@ button,
   line-height: 26px;
   text-transform: uppercase;
   color: #254A5A;
-  margin-top: 29px;
+}
+
+.item-card__title::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 1;
 }
 
 .item-card__type {
@@ -1882,6 +1897,7 @@ button,
   position: relative;
   overflow: hidden;
   display: block;
+  z-index: 2;
 }
 
 .item-card__img img {
@@ -1896,6 +1912,7 @@ button,
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  position: relative;
 }
 
 .item-card__img img.focus-visible:focus {
@@ -1919,7 +1936,9 @@ button,
 }
 
 .item-card__btn {
+  position: relative;
   margin-top: 16px;
+  z-index: 10;
 }
 
 .item-card__close-icon {
@@ -1927,6 +1946,7 @@ button,
   right: 7%;
   top: 14%;
   cursor: pointer;
+  z-index: 2;
 }
 
 .fav-button {
@@ -1970,12 +1990,14 @@ button,
 }
 
 .counter {
+  position: relative;
   margin-top: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border: #CEC6C4 2px solid;
   max-width: 191px;
+  z-index: 2;
 }
 
 .counter-plus {
@@ -2228,7 +2250,7 @@ button,
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100vw;
 }
 

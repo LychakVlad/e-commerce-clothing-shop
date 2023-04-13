@@ -1,8 +1,10 @@
 .counter{
+  position: relative;
   margin-top: 12px;
   display: flex;
   border: $color-alto 2px solid;
   max-width: 191px;
+  z-index: 2;
 }
 .counter-plus{
   padding: 0px 24px;

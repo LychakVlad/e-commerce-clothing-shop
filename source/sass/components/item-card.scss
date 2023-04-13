@@ -3,11 +3,13 @@
   max-height: 600px;
   min-height: 100%;
 
+
 }
 
 .item-card__wrapper{
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   &--mini{
     width: 100%;
@@ -18,6 +20,13 @@
   }
 }
 
+.item-card__top{
+    margin-top: 32px;
+
+}
+
+
+
 .item-card__title{
   font-family: 'Inter';
   font-style: normal;
@@ -26,7 +35,16 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $color-arapawa;
-  margin-top: 29px;
+
+  &::after{
+    content:'';
+    left: 0;
+    bottom: 0;
+    min-width:100vw;
+    min-height:100vh;
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .item-card__type{
@@ -88,6 +106,8 @@
   position: relative;
   overflow: hidden;
   display: block;
+  z-index: 2;
+
 
   img{
     width: 100%;
@@ -95,6 +115,7 @@
     object-fit: cover;
     object-position: center;
     transition: transform $trans-default;
+    position:relative;
 
     @include hover-focus{
       transform: scale(1.1);
@@ -117,7 +138,10 @@
 }
 
 .item-card__btn{
+  position: relative;
   margin-top: 16px;
+  z-index: 10;
+
 }
 
 .item-card__close-icon{
@@ -125,6 +149,8 @@
   right: 7%;
   top: 14%;
   cursor: pointer;
+  z-index: 2;
+
 }
 
 @media (max-width: 1000px) {

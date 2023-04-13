@@ -9,6 +9,7 @@ const resetForm = (form) => {
 
 const baseValidationSuccessCallback = (e) => {
   e.preventDefault();
+  location.href = 'profile.html';
   // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
   resetForm(e.target);
 };
