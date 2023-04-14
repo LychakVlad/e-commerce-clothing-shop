@@ -1,16 +1,19 @@
-
-
+import { ScrollLock } from "../utils/scroll-lock";
 
 const menuButton = document.querySelectorAll('.nav-menu-open');
 const burgerIcon = document.querySelector('.header-menu-open');
-const selectBody = document.querySelector('body');
+const selectBody = document.body;
 const headerMobMenu = document.querySelector('.header-menu-mob');
+
+window.scrollLock = new ScrollLock();
 
 
 const initHeaderMenu = () => {
   if (!menuButton) {
     return;
   }
+
+  const header = document.querySelector('header');
 
   const handler = (evt) => {
     const item = evt.target;
@@ -38,10 +41,19 @@ const initHeaderMenu = () => {
   });
 
 
-  burgerIcon.addEventListener('click', () => {
+  burgerIcon.addEventListener('click', (e) => {
+    e.preventDefault();
     burgerIcon.classList.toggle('is-active');
     headerMobMenu.classList.toggle('is-active');
 
+    if (headerMobMenu.classList.contains('is-active')) {
+      window.scrollLock.disableScrolling();
+      header.classList.add('is-fixed');
+
+    } else {
+      window.scrollLock.enableScrolling();
+
+    }
 
   });
 };

@@ -2265,7 +2265,7 @@ button,
   position: fixed;
   left: 0;
   top: 0;
-  overflow-x: hidden;
+  right: 0;
   width: 100vw;
 }
 

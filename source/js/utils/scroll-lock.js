@@ -1,4 +1,4 @@
-import {iosChecker} from './ios-checker';
+import { iosChecker } from './ios-checker';
 
 export class ScrollLock {
   constructor() {
@@ -30,6 +30,7 @@ export class ScrollLock {
     }
     document.body.style.top = `-${this._scrollTop}px`;
     document.body.classList.add(this._lockClass);
+
   }
 
   enableScrolling() {
@@ -42,7 +43,8 @@ export class ScrollLock {
     });
     document.body.removeAttribute('data-scroll');
     this._scrollTop = null;
+
   }
 }
 
-window.scrollLock = new ScrollLock();
+
