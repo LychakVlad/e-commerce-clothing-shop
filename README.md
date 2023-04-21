@@ -19,7 +19,7 @@
 
 ## About The Project
 
-The site I created to showcase my skills and projects
+This is an e-commerce website built with JavaScript, Gulp, Webpack, Pug, and Sass. It includes a product catalog, shopping cart, checkout process, form validation, and other features. An example from my previous work, a project that was not put into production.
 
 ### Built With
 
