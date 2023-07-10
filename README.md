@@ -25,7 +25,7 @@ This is an e-commerce website built with JavaScript, Gulp, Webpack, Pug, and Sas
 
 - JS
 - PUG
-- SASS
+- SCSS
 - GULP
 
 ## Preview some pages 
